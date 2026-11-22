@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "classification": "MATCHED_COPY",
+      "counterpart": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc",
+      "counterpart_offset": 1687252992,
+      "destination": null,
+      "length": 120181760,
+      "note": "igualdade de bytes gravados; plaintext continua desconhecido",
+      "sha256_source_region": "79fe15101c861d0e6e3353d24ebba158ae7e0ed61ea79ece199ca91763dba89a",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+      "source_offset": 0,
+      "transform": "identity"
+    },
+    {
+      "classification": "UNVERIFIED",
+      "destination": null,
+      "length": 3072,
+      "note": "cauda do arquivo em disco sem origem comprovada no XVC",
+      "sha256_source_region": "e53f529cbcea5dea0bf51c4dbfd6f54a4f46d7e5dfe58d8846d73af12ba52ce9",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+      "source_offset": 120181760,
+      "transform": "identity"
+    }
+  ],
+  "schema": "alpha_recovery.provenance/1"
+}

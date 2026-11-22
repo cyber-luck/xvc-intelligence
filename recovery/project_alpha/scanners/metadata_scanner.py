@@ -31,13 +31,14 @@ def scan_metadata_dir(d: Path) -> dict:
     layout_files = sorted(d.glob("layout_*.xml")) + sorted(d.glob("*.layout.xml"))
     for lf in layout_files:
         out["configs"][lf.name] = parse_layout_xml(read_head(lf, 8 << 20))
+    STRINGS_SCAN_MAX = 64 << 20
     for f in sorted(d.iterdir()):
-        if not f.is_file() or f.stat().st_size > 512 << 20:
+        if not f.is_file() or f.stat().st_size > STRINGS_SCAN_MAX:
             continue
         try:
             refs = strings_refs(f, max_results=200)
-        except OSError as exc:
-            out["problems"].append(f"{f.name}: {exc}")
+        except (OSError, MemoryError) as exc:
+            out["problems"].append(f"{f.name}: {type(exc).__name__}: {exc}")
             continue
         for r in refs:
             r["file"] = f.name

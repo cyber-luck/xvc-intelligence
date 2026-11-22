@@ -8,8 +8,9 @@ Para cada faixa de bytes do alvo, registra **de onde veio a evidência e qual a 
 força**. Trabalha junto com o `xvcintel` e reutiliza os parsers dele, além do
 scanner de `recovery/bin_pe_recovery/scripts/bin_pe_recovery.py`.
 
-> **Estado:** em desenvolvimento, ainda não versionado no git. `reports/shadow_pe/` existe,
-> mas está vazio; nenhum resultado contra o pacote real foi registrado até agora.
+> **Estado:** executado contra os artefatos reais em 2026-11-22. Classificação final
+> `METADATA_ONLY`: 0 bytes do conteúdo em claro do alvo recuperados (100% `ENCRYPTED_UNKNOWN`).
+> Relatório: [`reports/shadow_pe_final/RELATORIO_TECNICO.md`](../../reports/shadow_pe_final/RELATORIO_TECNICO.md).
 
 ## Regras impostas no código
 

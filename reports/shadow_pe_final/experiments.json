@@ -1,0 +1,224 @@
+{
+  "experiments": [
+    {
+      "conclusion": "MATCHED_COPY dos bytes gravados em 100% da sobreposicao: a copia em disco e proveniente do XVC; plaintext continua ENCRYPTED_UNKNOWN",
+      "data_used": {
+        "disk": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+        "disk_len": 120184832,
+        "xvc_len": 120181760,
+        "xvc_offset": "0x64917000"
+      },
+      "hypothesis": "a copia em disco do executavel e a mesma sequencia de bytes gravados no XVC (ciphertext), com um excedente de cauda",
+      "id": "E1-redundancia-entre-conteineres",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [
+        "so cobre a faixa de sobreposicao; cauda do disco analisada apenas por entropia/amostra"
+      ],
+      "negative_control": {
+        "result": {
+          "blocks_compared": 29,
+          "blocks_equal": 0,
+          "bytes_compared": 120181760,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "563a3c3f08dfb66a83566d5a0e9e53127969d12340578b9e024cdb7d434bf30c",
+              "sha256_b": "a6ceb4fd15afe96d709c0c5dc0075929977e36517beaf22cd508c4ecf043232e"
+            },
+            {
+              "relative_offset": 4194304,
+              "sha256_a": "6411b1f72e1def4607f0f4e3bb127ae8d9d4d649644bae9427a8e4d426df5e04",
+              "sha256_b": "bb8a9d6780aacfcb7dd46e5bb5a0f0499e38149358f61acc601e7e5e246d7b31"
+            },
+            {
+              "relative_offset": 8388608,
+              "sha256_a": "ac6edde90d830790b702703adc9ab11fed785eafd6d7715615592ed68408aab0",
+              "sha256_b": "d01594c793226f5b3b9bbec6b5fced071487af24df5b8d1aaec059e84d0c8576"
+            },
+            {
+              "relative_offset": 12582912,
+              "sha256_a": "5560f9a665312df37d2b7584850afa9f3e7782187664a40a676ec49f45a7bf50",
+              "sha256_b": "6eb4705a651b8c4cf8ee44773a3bbd64bc7ed55a30682525c10ea1527af8b719"
+            },
+            {
+              "relative_offset": 16777216,
+              "sha256_a": "560d8f1d7c2794d3deb3916dfec57d90fa59afb0d1f048e512a5d5445672fea9",
+              "sha256_b": "3a50ba03afc61c1cba632f2756b12cb1a3f09c05020099f6e217bdd73ac5ff14"
+            },
+            {
+              "relative_offset": 20971520,
+              "sha256_a": "acf3f6862138ff8e5a7d9fda05f4d8d1d02a1361d97c2672b245469fd3d8b086",
+              "sha256_b": "c33961f96df84691ff4776f2ee32537c0be8f5cde3e7bc66060aa03d6b2f723b"
+            },
+            {
+              "relative_offset": 25165824,
+              "sha256_a": "691507a3b0e993bfdec41c5c263794656df4bdc9279e3b35349e44fd47f2bcdb",
+              "sha256_b": "4d9151bd3196e12bd9fd5c3c2a357185fae7d1865710e701de48225c095d8b99"
+            },
+            {
+              "relative_offset": 29360128,
+              "sha256_a": "3f9304bb4d50fc4b73ae43a3484e54b1e556dee1407192f7117c891e99f1f15f",
+              "sha256_b": "099375af635fcd881b3287f681bace086e18d152884985d8c5fd7bb83ab764dc"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        },
+        "teste": "mesmo arquivo de disco contra regiao deslocada +0x100000000 no XVC; espera ~0% de blocos iguais"
+      },
+      "result": {
+        "disk_tail_beyond_xvc": {
+          "all_zero": false,
+          "entropy": 7.94092,
+          "head_hex": "4d192c771e0c3f0b73150a8b547a0dabbadba0990646414e943f6c5129ab3e5f",
+          "length": 3072,
+          "offset": 120181760,
+          "sampled_bytes": 3072
+        },
+        "match": {
+          "blocks_compared": 29,
+          "blocks_equal": 29,
+          "bytes_compared": 120181760,
+          "equal_intervals": [
+            {
+              "end": 120181760,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        }
+      },
+      "technical_basis": "correspondencia por SHA-256 de blocos de 4 MiB alinhados entre disco e a regiao do segmento no XVC; igualdade de ciphertext nao diz nada sobre plaintext"
+    },
+    {
+      "conclusion": "0% de blocos iguais: regiao XVC e cifrada (consistente com KeyId 0); nenhuma vulnerabilidade criptografica alegada",
+      "data_used": {
+        "dll": "amd_fidelityfx_loader_xbox.dll",
+        "len": 13312,
+        "xvc_offset": "0x6BBB5000"
+      },
+      "hypothesis": "a regiao da DLL no XVC (KeyId 0, opaca) nao contem os mesmos bytes do PE legivel em disco; a diferenca e o estado de cifragem, nao conteudo diferente",
+      "id": "E6-analise-diferencial-DLL",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [
+        "nao estabelece relacao plaintext-ciphertext; nao permite nenhuma conclusao sobre a chave"
+      ],
+      "negative_control": {
+        "result": {
+          "blocks_compared": 1,
+          "blocks_equal": 1,
+          "bytes_compared": 13312,
+          "equal_intervals": [
+            {
+              "end": 13312,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        },
+        "teste": "arquivo contra ele mesmo; espera 100% (sanidade do comparador)"
+      },
+      "result": {
+        "match_disk_vs_xvc": {
+          "blocks_compared": 1,
+          "blocks_equal": 0,
+          "bytes_compared": 13312,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "431bdd2e26c0c8214fd7601140eb9fe6d8a249f5000539453a9a9b6a0b7c0ee8",
+              "sha256_b": "371bfad44b1b1bef7d961f928d5a66459d721272db5355ed032744e53a9ea94f"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        }
+      },
+      "technical_basis": "comparacao por blocos entre plaintext em disco e bytes gravados no XVC; nenhuma derivacao de chave e tentada (regra absoluta)"
+    },
+    {
+      "conclusion": "MATCHED_COPY comprovado: o catalogo em disco e a extracao fiel da regiao legivel do XVC",
+      "data_used": {
+        "len": 815104,
+        "xvc_offset": "0x6484D000"
+      },
+      "hypothesis": "Catalog000.bin em disco e identico a sua regiao no XVC (regiao legivel, KeyId 0xFFFF)",
+      "id": "E1b-catalogo-legivel",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [],
+      "negative_control": {
+        "result": {
+          "blocks_compared": 1,
+          "blocks_equal": 0,
+          "bytes_compared": 815104,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "4afbdbe22aad2bc338a5ba1ffe83cccb96e072eb4e92f6a5dd90b49b2e227c59",
+              "sha256_b": "bd27cdbed5cc1bb27ceb8dc13ec5eb076c38b794893c51de1bfbd34879bd230d"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        },
+        "teste": "regiao deslocada +0x100000000; espera ~0%"
+      },
+      "result": {
+        "match": {
+          "blocks_compared": 1,
+          "blocks_equal": 1,
+          "bytes_compared": 815104,
+          "equal_intervals": [
+            {
+              "end": 815104,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        }
+      },
+      "technical_basis": "correspondencia por blocos entre o arquivo em disco e a regiao XVC"
+    },
+    {
+      "conclusion": "resultado negativo confirmado: nenhuma estrutura PE recuperavel no alvo",
+      "data_used": {
+        "disk": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+        "len": 120181760,
+        "xvc_offset": "0x64917000"
+      },
+      "hypothesis": "nenhum cabeçalho PE (MZ + PE\\\\0\\\\0 validos) existe em nenhuma das copias do executavel alvo",
+      "id": "E3-assinaturas-estruturais",
+      "implementation": "scanners/pe_carver sobre disco e regiao XVC",
+      "limitations": [
+        "ausencia de PE nao prova criptografia por si; combinada com KeyId 0 e entropia ~7.997 e consistente com cifragem"
+      ],
+      "negative_control": {
+        "result": "s01 recupera 1 PE; s04 recupera 0; o comparador nao aceita MZ sem estrutura",
+        "teste": "cenario sintetico s04 (MZ falso) e s01 (PE verdadeiro) do suite de testes"
+      },
+      "result": {
+        "mz_raw_hits_disk": 64,
+        "nota": "candidatos validos = 0; cabeçalho do alvo nunca observado",
+        "pe_validado": 0
+      },
+      "technical_basis": "varredura MZ com validacao estrita (e_lfanew, COFF, optional, secoes); MZ isolado nao e PE"
+    }
+  ],
+  "generated_utc": "2026-11-22T15:12:48+00:00",
+  "schema": "alpha_recovery.experiments/1"
+}

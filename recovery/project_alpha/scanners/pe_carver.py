@@ -51,7 +51,8 @@ def carve_file(path: Path, *, out_dir: Path | None = None, extract_partial: bool
                 blob.extend(b)
                 remaining -= len(b)
         suffix = ".partial.bin" if pe["truncated"] else pe.get("suggested_extension", ".bin")
-        name = f"direct_{path.stem[:24]}_0x{off:012x}{suffix}"
+        disc = hashlib.sha1(str(path.resolve()).lower().encode("utf-8")).hexdigest()[:6]
+        name = f"direct_{path.stem[:20]}_{disc}_0x{off:08x}{suffix}"
         dest = write_exclusive(out_dir / name, bytes(blob))
         extractions.append({
             "name": dest.name, "bytes": len(blob),

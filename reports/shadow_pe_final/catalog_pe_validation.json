@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": "",
+      "id": "MZ",
+      "ok": true
+    },
+    {
+      "detail": "0x40",
+      "id": "e_lfanew_bounds",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "id": "PE_signature",
+      "ok": true
+    },
+    {
+      "detail": "0x8664",
+      "id": "machine_known",
+      "ok": true
+    },
+    {
+      "detail": "1",
+      "id": "sections_range",
+      "ok": true
+    },
+    {
+      "detail": "0x020B",
+      "id": "optional_magic",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "id": "section_table_in_file",
+      "ok": true
+    },
+    {
+      "detail": "file=0x200 sect=0x1000",
+      "id": "alignments_pow2",
+      "ok": true
+    },
+    {
+      "detail": "0xC7000",
+      "id": "image_size_positive",
+      "ok": true
+    },
+    {
+      "detail": "raw 0x1000+0xC6000 vs 815104",
+      "id": "section_0_in_file",
+      "ok": true
+    },
+    {
+      "detail": "machine=0x8664 sections=1 imports=0 debug=0",
+      "id": "xvcintel_deep_parse",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "id": "rva_offset_map_consistent",
+      "ok": true
+    },
+    {
+      "detail": "",
+      "id": "pefile_cross_check",
+      "ok": true
+    }
+  ],
+  "note": "PE parseavel nao e o executavel original nem garantia de funcionamento; binarios reconstruidos nao sao executados",
+  "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\Catalog000.bin",
+  "pefile_note": {
+    "machine_match": true,
+    "sections_match": true
+  },
+  "size": 815104,
+  "truncated": false,
+  "valid": true
+}

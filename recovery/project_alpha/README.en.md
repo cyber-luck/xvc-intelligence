@@ -8,8 +8,9 @@ For each byte range of the target it records **where the evidence came from and 
 strong it is**. It runs alongside `xvcintel` and reuses its parsers, as well as the
 scanner in `recovery/bin_pe_recovery/scripts/bin_pe_recovery.py`.
 
-> **Status:** work in progress, not yet committed. `reports/shadow_pe/` exists but is
-> empty, so no results against the real package have been recorded yet.
+> **Status:** run against the real artifacts on 2026-11-22. Final classification
+> `METADATA_ONLY`: 0 plaintext bytes of the target recovered (100% `ENCRYPTED_UNKNOWN`).
+> Report: [`reports/shadow_pe_final/TECHNICAL_REPORT.en.md`](../../reports/shadow_pe_final/TECHNICAL_REPORT.en.md).
 
 ## Rules enforced in the code
 

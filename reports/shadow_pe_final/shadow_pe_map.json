@@ -1,0 +1,46 @@
+{
+  "base_label": "ENCRYPTED_UNKNOWN",
+  "conflicts": [],
+  "coverage": {
+    "by_class_bytes": {
+      "CONFLICTING_EVIDENCE": 0,
+      "ENCRYPTED_UNKNOWN": 120181760,
+      "EXACT_RECOVERED": 0,
+      "MATCHED_COPY": 0,
+      "MISSING": 0,
+      "STRUCTURAL_INFERENCE": 0,
+      "UNVERIFIED": 0
+    },
+    "note": "bytes recuperados com prova e bytes inferidos nunca sao somados na mesma taxa",
+    "pct": {
+      "CONFLICTING_EVIDENCE": 0.0,
+      "ENCRYPTED_UNKNOWN": 100.0,
+      "EXACT_RECOVERED": 0.0,
+      "MATCHED_COPY": 0.0,
+      "MISSING": 0.0,
+      "STRUCTURAL_INFERENCE": 0.0,
+      "UNVERIFIED": 0.0
+    },
+    "total_bytes": 120181760
+  },
+  "intervals": [
+    {
+      "classification": "ENCRYPTED_UNKNOWN",
+      "end": 120181760,
+      "evidence": [
+        {
+          "note": "segmento 12, KeyId 0, regiao cifrada; entropia ~7.997; sem MZ/PE (F-EXE-01/02/03)",
+          "sha256_of_stored_bytes": null,
+          "source_file": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc",
+          "source_offset": 1687252992
+        }
+      ],
+      "pe_section": null,
+      "region_segment": "XVC segment 12",
+      "start": 0,
+      "virtual_offset": 0
+    }
+  ],
+  "schema": "alpha_recovery.shadow_pe_map/1",
+  "total_bytes": 120181760
+}

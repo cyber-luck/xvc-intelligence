@@ -101,12 +101,14 @@ def build_candidates(meta_disk: dict, xvc_facts: dict | None, inventory: dict | 
         for r in inventory.get("files", []):
             nm = r["name"].lower()
             if nm.endswith((".exe", ".dll")):
+                disk_copy = {"path": r["path"], "size": r["size"], "format": r["format"],
+                             "format_kinds": r.get("format_kinds", [])}
                 existing = cands.get(r["name"])
                 if existing:
-                    existing["extra"]["disk_copy"] = {"path": r["path"], "size": r["size"], "format": r["format"]}
+                    existing["extra"]["disk_copy"] = disk_copy
                 else:
                     _add(r["name"], "inventario em disco", f"arquivo {r['name']} tamanho {r['size']} formato {r['format']}", CONFIRMED,
-                         disk_copy={"path": r["path"], "size": r["size"], "format": r["format"]})
+                         disk_copy=disk_copy)
 
     out = []
     for name, c in sorted(cands.items()):
@@ -122,8 +124,9 @@ def build_candidates(meta_disk: dict, xvc_facts: dict | None, inventory: dict | 
         if extra.get("key_id") == 0:
             state = "ENCRYPTED_UNKNOWN(opaco; KeyId 0; sem MZ)"
         if disk:
-            fmt = disk.get("format", "")
-            if fmt.startswith("PE"):
+            kinds = disk.get("format_kinds") or []
+            is_pe = any(k.startswith("PE(") for k in kinds)
+            if is_pe:
                 state = "PLAINTEXT_AVAILABLE_EM_DISCO"
             elif state.startswith("ENCRYPTED"):
                 state += " | copia_em_disco_tambem_opaca"

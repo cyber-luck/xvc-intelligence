@@ -27,5 +27,6 @@ python -I -m unittest discover -s recovery\shadow_pe_standalone\tests -v
 ```
 
 Only run these tools on artifacts whose origin is documented and legitimate. `project_alpha`
-output from real data goes to `reports/shadow_pe/`. Recovered binary fragments
+result on the real data (`METADATA_ONLY`, 0 target bytes recovered) is in
+`reports/shadow_pe_final/`, with the [technical report](../reports/shadow_pe_final/TECHNICAL_REPORT.en.md). Recovered binary fragments
 (`recovered_fragments/`) are not committed.

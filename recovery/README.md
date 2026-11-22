@@ -26,6 +26,7 @@ python -I -m pytest -q recovery\bin_pe_recovery\tests
 python -I -m unittest discover -s recovery\shadow_pe_standalone\tests -v
 ```
 
-Use essas ferramentas apenas em artefatos de origem documentada e legítima. As saídas do
-`project_alpha` contra dados reais ficam em `reports/shadow_pe/`. Os fragmentos binários
+Use essas ferramentas apenas em artefatos de origem documentada e legítima. O resultado do
+`project_alpha` contra os dados reais (`METADATA_ONLY`, 0 bytes do alvo recuperados) está em
+`reports/shadow_pe_final/`, com o [relatório técnico](../reports/shadow_pe_final/RELATORIO_TECNICO.md). Os fragmentos binários
 recuperados (`recovered_fragments/`) não são versionados.

@@ -25,3 +25,4 @@ Thumbs.db
 reports/shadow_pe/recovered_fragments/
 reports/shadow_pe/.cache/
 recovered_fragments/
+reports/**/.cache/
