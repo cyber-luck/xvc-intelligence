@@ -71,8 +71,10 @@ xvc-intelligence/
 │   ├── bin_pe_recovery/         scanner de PE em BIN/XVC/XVD (+ wrappers atualizados e amostras)
 │   ├── project_alpha/           reconstrutor shadow PE integrado ao xvcintel
 │   └── shadow_pe_standalone/    reconstrutor shadow PE autônomo (arquivo único)
-├── reports/                     saídas da última execução contra o pacote real
-│   └── shadow_pe_final2/        resultado final do reconstrutor shadow PE (+ execuções anteriores)
+├── reports/                     saídas das execuções contra o pacote real
+│   ├── shadow_pe_final2/        resultado final do reconstrutor shadow PE (+ execuções anteriores)
+│   └── shadow_pe_v3 · xts_real* · dll_provenance* · gameos · identity_report* · artifact_hunt · …
+│                                fase criptográfica e correlações (relatórios bilíngues)
 └── dist/                        pacotes .zip das ferramentas (ignorado pelo git)
 ```
 
@@ -200,6 +202,23 @@ O resultado válido é `reports/shadow_pe_final2/`. `reports/shadow_pe_final/` �
 com as mesmas conclusões, mas com valores fixos no código no lugar de medições (a seção 9 do
 relatório lista as diferenças). `reports/shadow_pe/` e `reports/shadow_pe_run/` são execuções
 incompletas.
+
+### Fase criptográfica e relatórios adicionais
+
+Em 2026-11-22 o pipeline ganhou uma fase criptográfica somente-leitura e novas correlações,
+todas seguindo as mesmas regras: nenhuma chave é extraída ou adivinhada; a descriptografia só
+roda com uma CIK externa legítima e, sem ela, permanece `BLOCKED_MISSING_AUTHORIZED_CIK`;
+nenhum byte do executável em claro foi recuperado. Cada relatório tem versão em português e inglês.
+
+| Relatório | Assunto | Português | English |
+|---|---|---|---|
+| Shadow PE v3 | catálogo semântico, escada `SOURCE_RECOVERED` ≠ `TARGET_IDENTITY_VERIFIED`, reconciliação de tamanho (cauda de 3.072 B = page slack, CONFIRMED) | [RELATORIO_TECNICO.md](reports/shadow_pe_v3/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/shadow_pe_v3/TECHNICAL_REPORT.en.md) |
+| Pipeline XTS (diagnóstico) | motor AES-XTS validado (IEEE P1619 + OpenSSL); KeyId 0 → keyslot `d4b2880b-…`, KeyMaterial zero (chave regional externa); alvo real `BLOCKED_MISSING_AUTHORIZED_CIK` | [RELATORIO_TECNICO.md](reports/xts_real/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/xts_real/TECHNICAL_REPORT.en.md) |
+| Laboratório cego A/B/C | geração → engenharia reversa sem chaves → revelação; auditoria integral das 29.342 folhas (consecutivas, 0 saltos); as duas ressalvas absorvidas | [RELATORIO_TECNICO.md](reports/xts_real_v2/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/xts_real_v2/TECHNICAL_REPORT.en.md) |
+| Proveniência das DLLs | 16/16 `ENCRYPTED_UNCOMPARABLE`; tamanhos exatos = metadados, não identidade (v2 retira o excesso de afirmação; identidade de build por RSDS) | [RELATORIO_TECNICO.md](reports/dll_provenance_v2/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/dll_provenance_v2/TECHNICAL_REPORT.en.md) |
+| Identidade (validação cruzada) | manifesto × pacote 104/104; GUID/age de PDB; PDB do alvo `ABSENT` | [RELATORIO_TECNICO.md](reports/identity_report_v2/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/identity_report_v2/TECHNICAL_REPORT.en.md) |
+| Caça a artefatos autorizados | 287.860 arquivos varridos; nenhum executável em claro nem PDB da build original | [RELATORIO_TECNICO.md](reports/artifact_hunt/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/artifact_hunt/TECHNICAL_REPORT.en.md) |
+| gameos.xvd (volume de sistema EraOS) | integridade recomputada ao vivo; KeyMaterial presente mas StandardOdk ausente; distinto do XVC do título | [RELATORIO_TECNICO.md](reports/gameos/RELATORIO_TECNICO.md) · [auditoria](reports/gameos/AUDITORIA_DESPERCEBIDOS.md) | [TECHNICAL_REPORT.en.md](reports/gameos/TECHNICAL_REPORT.en.md) · [audit](reports/gameos/MISSED_AUDIT.en.md) |
 
 ### As ferramentas
 
