@@ -10,7 +10,7 @@ scanner de `recovery/bin_pe_recovery/scripts/bin_pe_recovery.py`.
 
 > **Estado:** executado contra os artefatos reais em 2026-11-22. Classificação final
 > `METADATA_ONLY`: 0 bytes do conteúdo em claro do alvo recuperados (100% `ENCRYPTED_UNKNOWN`).
-> Relatório: [`reports/shadow_pe_final/RELATORIO_TECNICO.md`](../../reports/shadow_pe_final/RELATORIO_TECNICO.md).
+> Relatório: [`reports/shadow_pe_final2/RELATORIO_TECNICO.md`](../../reports/shadow_pe_final2/RELATORIO_TECNICO.md).
 
 ## Regras impostas no código
 

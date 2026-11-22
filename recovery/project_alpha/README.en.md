@@ -10,7 +10,7 @@ scanner in `recovery/bin_pe_recovery/scripts/bin_pe_recovery.py`.
 
 > **Status:** run against the real artifacts on 2026-11-22. Final classification
 > `METADATA_ONLY`: 0 plaintext bytes of the target recovered (100% `ENCRYPTED_UNKNOWN`).
-> Report: [`reports/shadow_pe_final/TECHNICAL_REPORT.en.md`](../../reports/shadow_pe_final/TECHNICAL_REPORT.en.md).
+> Report: [`reports/shadow_pe_final2/TECHNICAL_REPORT.en.md`](../../reports/shadow_pe_final2/TECHNICAL_REPORT.en.md).
 
 ## Rules enforced in the code
 

@@ -72,7 +72,7 @@ xvc-intelligence/
 │   ├── project_alpha/           shadow PE reconstructor integrated with xvcintel
 │   └── shadow_pe_standalone/    standalone shadow PE reconstructor (single file)
 ├── reports/                     output of the last run against the real package
-│   └── shadow_pe_final/         final shadow PE reconstructor result (+ earlier runs)
+│   └── shadow_pe_final2/        final shadow PE reconstructor result (+ earlier runs)
 └── dist/                        .zip bundles of the tools (ignored by git)
 ```
 
@@ -159,9 +159,10 @@ are never executed. None of them can recover data from encrypted regions.
 
 The full [`recovery/project_alpha/`](recovery/project_alpha/README.en.md) pipeline was run on
 2026-11-22, read-only, against the real package and the folder of extracted files: 369 files,
-449.7 GB scanned. **Final classification: `METADATA_ONLY`.** Full report:
-[`reports/shadow_pe_final/TECHNICAL_REPORT.en.md`](reports/shadow_pe_final/TECHNICAL_REPORT.en.md)
-([Português](reports/shadow_pe_final/RELATORIO_TECNICO.md)).
+449.7 GB. **Final classification: `METADATA_ONLY`.** Full report:
+[`reports/shadow_pe_final2/TECHNICAL_REPORT.en.md`](reports/shadow_pe_final2/TECHNICAL_REPORT.en.md)
+([Português](reports/shadow_pe_final2/RELATORIO_TECNICO.md)). Every value below was measured in
+that run.
 
 | Class | Target bytes (120,181,760) | % |
 |---|---:|---:|
@@ -170,31 +171,34 @@ The full [`recovery/project_alpha/`](recovery/project_alpha/README.en.md) pipeli
 | `ENCRYPTED_UNKNOWN` | 120,181,760 | 100% |
 | `MISSING` / `CONFLICTING_EVIDENCE` | 0 | 0% |
 
-- **No plaintext byte of the executable can be recovered.** The whole target sits in a KeyId 0
-  region, with no `MZ` and entropy of about 7.997. Without the AES-XTS content key this is a real
-  cryptographic barrier, not a limitation of the tool.
-- **Identity and location CONFIRMED** by 4 agreeing sources: name, version 1.0.2.1, Scarlett
-  platform, segment 12, offset `0x64917000`, SHA-256 of the stored bytes `79fe1510…`.
+- **No plaintext byte of the executable was recovered.** The whole target sits in a KeyId 0
+  region, with a measured entropy of 7.999998 bits/byte and 0 valid PEs among 1,874 `MZ`
+  occurrences. That the content is encrypted (AES-XTS, the scheme expected in XVD/XVC) is an
+  **inference** from these measurements; the tool has no key and does not verify the encryption.
+- **Name and location CONFIRMED:** `game_scarlett_master.exe` (`MicrosoftGame.Config`,
+  `appxmanifest.xml`, hive and XVC metadata), segment 12, offset `0x64917000`, SHA-256 of the stored
+  bytes `79fe1510…`. Version 1.0.2.1 is the package version (INFERRED); the PE's internal version is unknown.
 - **33 fragments recovered with provenance, none of them from the target:** the 16 shipped DLLs
   (readable in the on-disk copy), `Catalog000.bin` (an `XBOX_CODE_CATALOG` PE, independently
   validated) and tools from earlier sessions. These binaries are not committed.
 - `reconstructed.exe` and `shadow_pe_partial.bin` were **deliberately not generated**: there are no
   proven bytes, and artificial padding is not recovery.
 
-| Experiment | Result | Negative control |
+| Experiment | Result | Control |
 |---|---|---|
-| **E1**, redundancy between containers | The on-disk copy is identical to the bytes stored in the XVC at 100% (29/29 blocks of 4 MiB). That is ciphertext, not plaintext. The extra 3,072-byte tail stays `UNVERIFIED` | XVC region shifted by +4 GiB: 0/29 |
-| **E1b**, readable catalog | `Catalog000.bin` on disk is identical to the readable XVC region (KeyId 0xFFFF): 100% | Shifted region: ~0% |
-| **E6**, DLL differential | Readable DLL on disk vs. its XVC region (KeyId 0): 0% matching blocks, so the XVC region is encrypted. No cryptographic weakness is claimed | The file against itself: 100% |
-| **E3**, structural signatures | Negative confirmed: no valid PE in any copy of the target | Synthetic s01 (1 PE) and s04 (fake MZ, 0 PE) |
+| **E1**, redundancy between containers | The on-disk copy is identical to the bytes stored in the XVC at 100% (29/29 blocks of 4 MiB). That is ciphertext, not plaintext, and it counts as a single piece of evidence. The extra 3,072-byte tail stays `UNVERIFIED` | Non-overlapping XVC region at +4 GiB: 0/29 |
+| **E1b**, readable catalog | `Catalog000.bin` on disk is identical to the readable XVC region (KeyId 0xFFFF): 100% | Non-overlapping region: 0% |
+| **E6**, DLL differential | `amd_fidelityfx_loader_xbox.dll` (valid PE on disk) vs. its XVC region (KeyId 0 checked): 0% matching blocks, consistent with encryption. No cryptographic weakness is claimed | The file against itself: 100% |
+| **E3**, structural signatures | Measured negative: 0 valid PEs among 1,874 `MZ` in the whole file; covers the XVC region through E1's byte identity | Positive control executed: the same detector finds 1 PE in `Catalog000.bin` |
 | **E2**, comparison between builds | Not run: no other version of the package is available | — |
 
 **Next step with real potential:** obtain a legitimate artifact from the rights holder (a
 development build or a matching PDB) and cross-check it against the confirmed size of
 120,181,760 bytes. The pipeline automatically validates any candidate that turns up.
 
-`reports/shadow_pe/` and `reports/shadow_pe_run/` hold earlier, incomplete runs; the valid result
-is `reports/shadow_pe_final/`.
+The valid result is `reports/shadow_pe_final2/`. `reports/shadow_pe_final/` is the previous run,
+with the same conclusions but with values hardcoded in place of measurements (section 9 of the
+report lists the differences). `reports/shadow_pe/` and `reports/shadow_pe_run/` are incomplete runs.
 
 ### The tools
 
@@ -219,7 +223,7 @@ Each document exists in Portuguese (`.md`) and English (`.en.md`).
 | Full integrity check | [docs/pt/resumo-hashes-completos.md](docs/pt/resumo-hashes-completos.md) | [docs/en/full-hash-verification.md](docs/en/full-hash-verification.md) |
 | PE scanner (`bin_pe_recovery.py`) | [README.md](recovery/bin_pe_recovery/README.md) | [README.en.md](recovery/bin_pe_recovery/README.en.md) |
 | Shadow PE reconstructor (modular) | [README.md](recovery/project_alpha/README.md) | [README.en.md](recovery/project_alpha/README.en.md) |
-| Shadow PE reconstruction technical report | [RELATORIO_TECNICO.md](reports/shadow_pe_final/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/shadow_pe_final/TECHNICAL_REPORT.en.md) |
+| Shadow PE reconstruction technical report | [RELATORIO_TECNICO.md](reports/shadow_pe_final2/RELATORIO_TECNICO.md) | [TECHNICAL_REPORT.en.md](reports/shadow_pe_final2/TECHNICAL_REPORT.en.md) |
 | Shadow PE reconstructor (standalone) | [README.md](recovery/shadow_pe_standalone/README.md) | [README.en.md](recovery/shadow_pe_standalone/README.en.md) |
 
 ## License and use
