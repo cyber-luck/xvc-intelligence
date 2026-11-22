@@ -1,5 +1,7 @@
 # Auditoria dos scripts existentes (Etapa 1)
 
+**Idioma / Language:** Português · [English](../en/audit.md)
+
 Scripts auditados (cópias intactas em `legacy/`): `xvc_probe.py` (940 linhas), `pe_check.py` (192), `regf_dump.py` (81), `pfx_locate.py` (75).
 
 ## Matriz de funcionalidades

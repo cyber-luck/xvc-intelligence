@@ -1,0 +1,14 @@
+{
+  "command": "pytest.main([-q, tests] + extra) via scripts/test_summary.py; extra=",
+  "XVC_PATH_set": false,
+  "XVC_FULL": false,
+  "exit_code": 0,
+  "outcomes": {
+    "passed": 13
+  },
+  "failed": [],
+  "skipped_reasons": {},
+  "python": "3.13.5",
+  "pytest": "9.0.2",
+  "finished_utc": "2026-11-22T14:00:35+00:00"
+}

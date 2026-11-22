@@ -1,5 +1,7 @@
 # Notas de formato XVD/XVC (com rótulos de confiança)
 
+**Idioma / Language:** Português · [English](../en/format.md)
+
 Os offsets são absolutos no arquivo, salvo indicação. A coluna "Teste" aponta para o id da checagem (em `reports/findings.json`) ou para o teste pytest correspondente.
 
 ## Cabeçalho (xvdtool `XvdHeader`; comentário do xvdtool + 0x200 = offset absoluto)
@@ -52,8 +54,8 @@ O layout é cabeçalho 0x3000 | XVD embutido | MDU | hash tree | user data | Xvc
   - Não há entradas redundantes.
   - CONFIRMED (F-PT-01..03), com varredura completa.
 - Unidades de dados **repetem** dentro da mesma região: 44.179.883 páginas compartilham o valor com outra página, para 13.233.733 valores distintos. Em 400 pares amostrados (mesma unidade, mesma região) o hash gravado nunca é igual. CONFIRMED (F-PT-04); motivo UNKNOWN.
-- Hash de região (+0x60, 8 bytes) = SHA-256(bytes gravados da região)[:8]. CONFIRMED para 13 regiões ≤ 160 MB; a região XVC-EXVD usa o PDUID; XVC-HD e XVC-MD compartilham 5c2b65ad36990544 (UNKNOWN).
-- Hash do update segment = SHA-256(páginas do segmento)[:8]. CONFIRMED para 49/49 segmentos ≤ 160 MB; os 59 maiores não foram testados (a regra fica INFERRED para eles).
+- Hash de região (+0x60, 8 bytes) = SHA-256(bytes gravados da região)[:8]. CONFIRMED para as 28 regiões testadas, em cobertura completa (antes, só 13 regiões ≤ 160 MB); a região XVC-EXVD usa o PDUID; XVC-HD e XVC-MD compartilham 5c2b65ad36990544 (UNKNOWN). Ver [resumo-hashes-completos.md](resumo-hashes-completos.md).
+- Hash do update segment = SHA-256(páginas do segmento)[:8]. CONFIRMED para 108/108 segmentos, em cobertura completa (antes, só os 49 segmentos ≤ 160 MB).
 - Flags de região: 0x1 nas regiões de metadados, 0x0 nas de conteúdo e 0x4 na região InitialPlay. Os nomes do enum do xvdtool não batem com esse uso. UNKNOWN (F-RG-04).
 - InitialPlayOffset = fim da região InitialPlay = tamanho do arquivo. CONFIRMED (F-RG-05).
 

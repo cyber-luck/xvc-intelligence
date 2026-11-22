@@ -1,0 +1,43 @@
+{
+  "schema": "bin-pe-recovery/1",
+  "generated_utc": "2026-11-22T13:58:45+00:00",
+  "source": "/mnt/data/bat.bin",
+  "size": 4096,
+  "header_kind": "unknown_bin",
+  "scan": {
+    "bytes_scanned": 4096,
+    "file_bytes": 4096,
+    "coverage": 1.0,
+    "entire_file_scanned": true,
+    "max_candidates_reached": {
+      "mz": false,
+      "gzip": false,
+      "xz": false,
+      "bzip2": false,
+      "zstd": false,
+      "lz4": false
+    },
+    "raw_mz_hits": 0
+  },
+  "entropy_samples": [
+    {
+      "offset": 0,
+      "bytes": 4096,
+      "entropy": 7.96216
+    }
+  ],
+  "pe_candidates": [],
+  "compressed_streams": [],
+  "extractions": [],
+  "capability": {
+    "plain_pe_carving": true,
+    "known_compression": false,
+    "cryptographic_decryption": false,
+    "xvd_key_recovery": false
+  },
+  "limitations": [
+    "MZ scanning cannot reveal AES-XTS-encrypted PE data",
+    "PE section carving may exclude overlay or external file dependencies",
+    "PE header validity does not establish a working executable"
+  ]
+}

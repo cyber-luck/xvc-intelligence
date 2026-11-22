@@ -1,10 +1,15 @@
-# XVC Intelligence Engine
+# XVC Intelligence Engine: uso e arquitetura
+
+**Idioma / Language:** Português · [English](../en/README.md)
 
 Ferramenta de pesquisa estrutural, **somente leitura**, para um pacote Xbox XVD/XVC.
 
 O que a ferramenta não faz:
 
 - não escreve no pacote;
+- não usa, não procura e não deriva chaves;
+- não decifra conteúdo nem contorna proteção de acesso;
+- não trata entropia alta como prova de criptografia.
 
 Cada conclusão leva um destes rótulos:
 
@@ -45,7 +50,9 @@ scripts/      xvc_probe.py, pe_check.py, regf_dump.py (wrappers compatíveis), t
 tests/        synthxvc.py (gerador de pacote XVC sintético completo, ~1 MB), fixtures/ (extratos pequenos), test_*.py
 legacy/       cópias intactas dos scripts originais (usadas em teste de compatibilidade)
 reports/      saídas da última execução contra o pacote real
-docs/         este arquivo, auditoria.md, formato.md, pe-requisitos.md
+recovery/    ferramentas de recuperação de PE (ver recovery/README.md)
+docs/pt/      este arquivo, auditoria, formato, pe-requisitos, resumo-hashes-completos
+docs/en/      as mesmas páginas em inglês
 ```
 
 Dependências: `formats` não conhece `engines`; `engines` lê o pacote só por `ByteSource`; `evidence` só consome resultados.
@@ -60,3 +67,10 @@ Dependências: `formats` não conhece `engines`; `engines` lê o pacote só por 
 | Modelo RLE da tabela | início, meio e fim de cada uma das 76.469 sequências | `--full-pages` (todas as 54.605.307 páginas de drive, lendo só as folhas) |
 
 Por padrão, o projeto calcula o hash completo apenas das regiões e segmentos até 160 MB; acima disso é pulado e relatado. Rodando com `--cap-mb` acima do tamanho do pacote (hash completo, ~440 GB lidos), as 15 regiões e 59 segmentos acima de 160 MB **foram verificados**: 28/28 regiões e 108/108 segmentos conferem. As regras de hash de região e segmento estão, portanto, CONFIRMED em cobertura completa — ver [resumo-hashes-completos.md](resumo-hashes-completos.md) e `reports/full_hashes_result.json`.
+
+## Outros documentos
+
+- [formato.md](formato.md): o formato XVD/XVC como decodificado aqui.
+- [pe-requisitos.md](pe-requisitos.md): o que falta para analisar o PE interno.
+- [auditoria.md](auditoria.md): auditoria dos scripts originais.
+- [resumo-hashes-completos.md](resumo-hashes-completos.md): verificação completa de integridade.

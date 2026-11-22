@@ -1,0 +1,53 @@
+{
+  "schema": "bin-pe-recovery/1",
+  "generated_utc": "2026-11-22T13:58:44+00:00",
+  "source": "/mnt/data/ex_userdata.bin",
+  "size": 33107968,
+  "header_kind": "unknown_bin",
+  "scan": {
+    "bytes_scanned": 33107968,
+    "file_bytes": 33107968,
+    "coverage": 1.0,
+    "entire_file_scanned": true,
+    "max_candidates_reached": {
+      "mz": false,
+      "gzip": false,
+      "xz": false,
+      "bzip2": false,
+      "zstd": false,
+      "lz4": false
+    },
+    "raw_mz_hits": 504
+  },
+  "entropy_samples": [
+    {
+      "offset": 0,
+      "bytes": 65536,
+      "entropy": 7.99699
+    },
+    {
+      "offset": 16521216,
+      "bytes": 65536,
+      "entropy": 7.99758
+    },
+    {
+      "offset": 33042432,
+      "bytes": 65536,
+      "entropy": 7.9973
+    }
+  ],
+  "pe_candidates": [],
+  "compressed_streams": [],
+  "extractions": [],
+  "capability": {
+    "plain_pe_carving": true,
+    "known_compression": false,
+    "cryptographic_decryption": false,
+    "xvd_key_recovery": false
+  },
+  "limitations": [
+    "MZ scanning cannot reveal AES-XTS-encrypted PE data",
+    "PE section carving may exclude overlay or external file dependencies",
+    "PE header validity does not establish a working executable"
+  ]
+}

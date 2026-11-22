@@ -241,7 +241,7 @@ def build_findings(pkg: Package, checks: list[CheckResult], profile: dict | None
             "nao o PE.", seg.get("level", UNKNOWN), tests=["integrity.segment_hash", "fingerprint"])
         add("F-EXE-03", "executavel", "Os bytes gravados nao tem MZ/PE; imports, exports, secoes, entry point e funcoes "
             "do executavel sao UNKNOWN. Os nomes das 16 DLLs do pacote nao sao evidencia de import.", UNKNOWN,
-            tests=["fingerprint"], how="Requer um PE legivel obtido legitimamente (ver docs/pe-requisitos.md).")
+            tests=["fingerprint"], how="Requer um PE legivel obtido legitimamente (ver docs/pt/pe-requisitos.md).")
         cat = profile.get("code_catalog")
         if cat:
             add("F-EXE-04", "executavel", f"Catalog000.bin (PE {cat['pe_subsystem']}) nao contem o SHA-256/SHA-1 dos bytes "

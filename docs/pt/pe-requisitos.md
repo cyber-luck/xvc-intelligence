@@ -1,5 +1,7 @@
 # O que falta para analisar as estruturas PE internas de `game_scarlett_master.exe`
 
+**Idioma / Language:** Português · [English](../en/pe-requirements.md)
+
 ## Situação
 
 Todo o armazenamento do executável está verificado contra os bytes do pacote (CONFIRMED):

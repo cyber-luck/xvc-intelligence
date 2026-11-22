@@ -20,3 +20,8 @@ venv/
 # OS
 Thumbs.db
 .DS_Store
+
+# Recovery outputs: carved third-party binaries and caches are never committed
+reports/shadow_pe/recovered_fragments/
+reports/shadow_pe/.cache/
+recovered_fragments/

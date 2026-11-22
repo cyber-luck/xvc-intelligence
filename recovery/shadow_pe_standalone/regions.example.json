@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "path": "G:\\CAMINHO\\PACOTE\\container.xvc",
+      "regions": [
+        {
+          "offset": 1048576,
+          "length": 4096,
+          "state": "ENCRYPTED_UNKNOWN",
+          "label": "EXAMPLE ONLY: segment 12, region 0x3E9; insert verified physical offset"
+        }
+      ]
+    }
+  ]
+}

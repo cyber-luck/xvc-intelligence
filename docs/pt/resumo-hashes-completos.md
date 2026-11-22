@@ -1,5 +1,7 @@
 # Verificação completa de hashes de região e segmento
 
+**Idioma / Language:** Português · [English](../en/full-hash-verification.md)
+
 **Data:** 2026-11-22 · **Modo:** somente leitura · **Pacote intocado** (225.336.647.680 bytes, mtime inalterado)
 
 ## O que foi feito

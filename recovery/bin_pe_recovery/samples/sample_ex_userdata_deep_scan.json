@@ -1,0 +1,824 @@
+{
+  "schema": "bin-pe-recovery/1",
+  "generated_utc": "2026-11-22T13:59:55+00:00",
+  "source": "/mnt/data/ex_userdata.bin",
+  "size": 33107968,
+  "header_kind": "unknown_bin",
+  "scan": {
+    "bytes_scanned": 33107968,
+    "file_bytes": 33107968,
+    "coverage": 1.0,
+    "entire_file_scanned": true,
+    "max_candidates_reached": {
+      "mz": false,
+      "gzip": false,
+      "xz": false,
+      "bzip2": false,
+      "zstd": false,
+      "lz4": false,
+      "zlib": true
+    },
+    "raw_mz_hits": 504,
+    "streams_attempted": 128
+  },
+  "entropy_samples": [
+    {
+      "offset": 0,
+      "bytes": 65536,
+      "entropy": 7.99699
+    },
+    {
+      "offset": 16521216,
+      "bytes": 65536,
+      "entropy": 7.99758
+    },
+    {
+      "offset": 33042432,
+      "bytes": 65536,
+      "entropy": 7.9973
+    }
+  ],
+  "pe_candidates": [],
+  "compressed_streams": [
+    {
+      "offset": 4660772,
+      "codec": "gzip",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 10081743,
+      "codec": "gzip",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 20877643,
+      "codec": "gzip",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 5092274,
+      "codec": "bzip2",
+      "status": "invalid_stream:OSError",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 14178196,
+      "codec": "bzip2",
+      "status": "invalid_stream:OSError",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 30243814,
+      "codec": "bzip2",
+      "status": "invalid_stream:OSError",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 36944,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 247949,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 301364,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 311007,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 600256,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 604239,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 776070,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 846184,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 865075,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 911167,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1041352,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1062522,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1177883,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1311918,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1609600,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1711120,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1779257,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1880756,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2006820,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2252085,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2325040,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2329371,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2432235,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2481144,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2500019,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2527374,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2658711,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2740651,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2784405,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2916256,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3138940,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3169241,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3196552,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3265785,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3328404,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3330694,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3420895,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3512139,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3521446,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3545850,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3553836,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3643177,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3647330,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3678259,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3715772,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3734085,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3795497,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 41302,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 48975,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 123512,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 125360,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 196029,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 319335,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 323078,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 352962,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 366922,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 374100,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 402144,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 456168,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 466632,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 539225,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 718598,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 781386,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 804701,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 847999,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 881578,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 888814,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 967150,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 980445,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1019014,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1028875,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1144483,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1147814,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1193458,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1250288,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1306104,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1327450,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1498629,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1500652,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1525720,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1593053,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1612909,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1667849,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1702498,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1711646,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1754485,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1836460,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1886598,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1906277,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 1961532,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2337745,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2360114,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2480467,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2512446,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2523199,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2528983,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2679171,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2811277,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2860367,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2986098,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3046210,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3289661,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3358566,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3426948,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3490486,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3517093,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3528104,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3627939,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3640850,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3718873,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3737329,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3852691,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3867247,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3891172,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3981404,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 3987635,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 4109146,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 4137263,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 2061,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 76829,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 132718,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    },
+    {
+      "offset": 222498,
+      "codec": "zlib",
+      "status": "invalid_stream:error",
+      "decoded_bytes": 0
+    }
+  ],
+  "extractions": [],
+  "capability": {
+    "plain_pe_carving": true,
+    "known_compression": true,
+    "cryptographic_decryption": false,
+    "xvd_key_recovery": false
+  },
+  "limitations": [
+    "MZ scanning cannot reveal AES-XTS-encrypted PE data",
+    "PE section carving may exclude overlay or external file dependencies",
+    "PE header validity does not establish a working executable"
+  ]
+}

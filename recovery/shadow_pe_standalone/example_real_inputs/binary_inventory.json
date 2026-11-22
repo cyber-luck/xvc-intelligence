@@ -1,0 +1,102 @@
+{
+  "schema": "shadow-pe/1.0",
+  "sources": [
+    {
+      "source": "/mnt/data/bat.bin",
+      "size": 4096,
+      "type": "unknown_binary",
+      "hash": {
+        "sha256": "b3dda51b1c705efa773696bc53fa262899b1a92f49ba6c16aa84fbe4a1860b24",
+        "hashed_bytes": 4096,
+        "complete": true,
+        "kind": "full_sha256"
+      },
+      "entropy_samples": [
+        {
+          "offset": 0,
+          "length": 4096,
+          "bits_per_byte": 7.96216
+        }
+      ],
+      "regions": [],
+      "confidence": "file_observed_metadata_not_decrypted",
+      "scan": {
+        "scanned_bytes": 4096,
+        "file_size": 4096,
+        "whole_file_scanned": true,
+        "raw_mz_hits": 0,
+        "mz_hits_omitted_due_to_cap": 0,
+        "pe_hit_limit_reached": false,
+        "stream_candidate_cap_reached": true
+      }
+    },
+    {
+      "source": "/mnt/data/ex_header.bin",
+      "size": 12288,
+      "type": "xvd_or_xvc_container",
+      "hash": {
+        "sha256": "635c39a18047718b0acde9f758176aa67eccd7c234034642d091f5c189b09aa5",
+        "hashed_bytes": 12288,
+        "complete": true,
+        "kind": "full_sha256"
+      },
+      "entropy_samples": [
+        {
+          "offset": 0,
+          "length": 12288,
+          "bits_per_byte": 0.89818
+        }
+      ],
+      "regions": [],
+      "confidence": "file_observed_metadata_not_decrypted",
+      "scan": {
+        "scanned_bytes": 12288,
+        "file_size": 12288,
+        "whole_file_scanned": true,
+        "raw_mz_hits": 0,
+        "mz_hits_omitted_due_to_cap": 0,
+        "pe_hit_limit_reached": false,
+        "stream_candidate_cap_reached": true
+      }
+    },
+    {
+      "source": "/mnt/data/ex_userdata.bin",
+      "size": 33107968,
+      "type": "unknown_binary",
+      "hash": {
+        "sha256": "94126b18f1f8140747bb171c7e5dfd462c323b06e372fc58ad5bfee54a5bb462",
+        "hashed_bytes": 33107968,
+        "complete": true,
+        "kind": "full_sha256"
+      },
+      "entropy_samples": [
+        {
+          "offset": 0,
+          "length": 16384,
+          "bits_per_byte": 7.98905
+        },
+        {
+          "offset": 16545792,
+          "length": 16384,
+          "bits_per_byte": 7.99066
+        },
+        {
+          "offset": 33091584,
+          "length": 16384,
+          "bits_per_byte": 7.98798
+        }
+      ],
+      "regions": [],
+      "confidence": "file_observed_metadata_not_decrypted",
+      "scan": {
+        "scanned_bytes": 33107968,
+        "file_size": 33107968,
+        "whole_file_scanned": true,
+        "raw_mz_hits": 504,
+        "mz_hits_omitted_due_to_cap": 0,
+        "pe_hit_limit_reached": false,
+        "stream_candidate_cap_reached": true
+      }
+    }
+  ]
+}

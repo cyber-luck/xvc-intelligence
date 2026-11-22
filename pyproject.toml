@@ -19,8 +19,8 @@ xvcintel = "xvcintel.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src", "tests"]
-testpaths = ["tests"]
+pythonpath = ["src", "tests", "recovery/project_alpha"]
+testpaths = ["tests", "recovery/project_alpha/tests"]
 markers = ["real: testes de integracao contra o .xvc real (exigem XVC_PATH)"]
 addopts = "-ra"
 asyncio_default_fixture_loop_scope = "function"

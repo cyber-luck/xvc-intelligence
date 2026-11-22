@@ -1,0 +1,24 @@
+{
+  "schema": "shadow-pe/1.0",
+  "classification": "NO_RECOVERABLE_PE_OBSERVED",
+  "files_analyzed": 3,
+  "files_limit_reached": false,
+  "pe_candidates": 0,
+  "fragments_written": 0,
+  "executable_original_proved": false,
+  "ciphertext_decrypted": false,
+  "total_scanned_bytes": 33124352,
+  "all_files_fully_scanned": true,
+  "bytes_of_original_executable_recovered_proven": null,
+  "reason_original_recovery_percent_unknown": "original executable identity and total byte extent not proven",
+  "regions_claiming_encrypted_based_on_user_annotations": 0,
+  "limitations": [
+    "no brute-force or decryption",
+    "high entropy does not prove encryption",
+    "structural PE candidate is not verification of original executable",
+    "user-supplied region annotations are not independently verified",
+    "partial scan cannot prove absence elsewhere in file",
+    "PE minimum extent may exclude overlays and external dependencies"
+  ],
+  "warnings": []
+}
