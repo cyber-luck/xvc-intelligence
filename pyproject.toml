@@ -11,6 +11,8 @@ dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+# recovery/crypto_lab (laboratorio sintetico AES-XTS); sem ela os testes do laboratorio sao pulados
+lab = ["cryptography>=41"]
 
 [project.scripts]
 xvcintel = "xvcintel.cli:main"
@@ -20,7 +22,7 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src", "tests", "recovery/project_alpha"]
-testpaths = ["tests", "recovery/project_alpha/tests"]
+testpaths = ["tests", "recovery/project_alpha/tests", "recovery/crypto_lab/tests"]
 markers = ["real: testes de integracao contra o .xvc real (exigem XVC_PATH)"]
 addopts = "-ra"
 asyncio_default_fixture_loop_scope = "function"

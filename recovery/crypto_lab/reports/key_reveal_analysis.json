@@ -1,0 +1,805 @@
+{
+  "schema": "crypto_lab.key_reveal/1",
+  "generated_utc": "2026-11-22T17:46:27+00:00",
+  "authorization": "segunda execucao autorizada; somente chaves sinteticas do proprio laboratorio",
+  "xvd": {
+    "steps": [
+      {
+        "step": "unwrap_cik",
+        "odk_slot": "0x1AB5",
+        "key_material": "9d94b209cb68e32f39b1478a22f5c6268aec8e30ca48a8e6b1df875eb8572c44",
+        "cik_sha256": "992ac031b9d71421aa41412d131d711f19e8a721e2bad6aa826914ef8f33eb01"
+      },
+      {
+        "step": "xts_decrypt",
+        "section_id": 1,
+        "pages": 182,
+        "data_units_first": [
+          0,
+          1,
+          2
+        ],
+        "data_units_source": "folha (entry+0x14)"
+      }
+    ],
+    "user_data_descriptor": {
+      "files": [
+        {
+          "drive_offset": 0,
+          "name": "lab_plaintext.exe",
+          "size": 739840
+        }
+      ],
+      "marker": "LAB_SYNTHETIC",
+      "profile": "A-XVD-ODK-CIK"
+    },
+    "roundtrip_reencrypt_equals_stored": true,
+    "unwrapped_cik_equals_ground_truth": true,
+    "cik_split": {
+      "tweak_key_equals_truth": true,
+      "data_key_equals_truth": true
+    }
+  },
+  "xvc": {
+    "regions": [
+      {
+        "region": "0x3E9",
+        "key_id": 0,
+        "offset": 61440,
+        "length": 741376,
+        "key_guid": "64a803b6-2523-4906-845d-a64fd964a55b",
+        "status": "decifrada",
+        "section_id_used": "0x3E9",
+        "first_hashed_page": 7,
+        "pages": 181,
+        "data_units_first": [
+          2050756608,
+          2050756609,
+          2050756610
+        ],
+        "roundtrip_reencrypt_equals_stored": true,
+        "cik_sha256": "81bfc6b79ad57d2b5d2cbe73aa43920fa667473f273b706ca0386e803626a3ab"
+      },
+      {
+        "region": "0x3EA",
+        "key_id": 1,
+        "offset": 802816,
+        "length": 741376,
+        "key_guid": "aaadbc56-03b9-4729-8ef8-78864958cfe3",
+        "status": "decifrada",
+        "section_id_used": "0x3EA",
+        "first_hashed_page": 188,
+        "pages": 181,
+        "data_units_first": [
+          0,
+          1,
+          2
+        ],
+        "roundtrip_reencrypt_equals_stored": true,
+        "cik_sha256": "2acb67fcbfa67446b0f6668913712773b0fd97260e83f92a25a7c322c70baade"
+      }
+    ],
+    "file_regions": {
+      "lab_public_notes.txt": {
+        "region": "0x40000003",
+        "key_id": 65535,
+        "encrypted": false
+      },
+      "lab_decoy_fake_pe.bin": {
+        "region": "0x40000003",
+        "key_id": 65535,
+        "encrypted": false
+      },
+      "lab_plaintext.exe": {
+        "region": "0x3E9",
+        "key_id": 0,
+        "encrypted": true
+      },
+      "lab_plaintext_build_b.exe": {
+        "region": "0x3EA",
+        "key_id": 1,
+        "encrypted": true
+      }
+    },
+    "roundtrip_reencrypt_equals_stored": true,
+    "odk_used": false
+  },
+  "hash_tree": {
+    "xvd": {
+      "top_and_links": {
+        "top_ok": true,
+        "links_checked": 2,
+        "ok": true
+      },
+      "leaves": {
+        "keyed_ok": 182,
+        "keyed_bad": 0,
+        "plain_ok": 0,
+        "plain_bad": 0,
+        "ok": true
+      }
+    },
+    "xvc": {
+      "top_and_links": {
+        "top_ok": true,
+        "links_checked": 3,
+        "ok": true
+      },
+      "leaves": {
+        "keyed_ok": 362,
+        "keyed_bad": 0,
+        "plain_ok": 7,
+        "plain_bad": 0,
+        "ok": true
+      }
+    }
+  },
+  "recovered": {
+    "xvd/lab_plaintext.exe": {
+      "recovered_path": "reports\\work\\key_reveal\\recovered\\xvd\\lab_plaintext.exe",
+      "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+      "vs_original": {
+        "bytes_total": 739840,
+        "bytes_equal": 739840,
+        "pct_equal": 100.0,
+        "sha256_equal": true,
+        "size_equal": true,
+        "pages_different": 0,
+        "first_different_pages": []
+      },
+      "pe": {
+        "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "size": 739840,
+        "mz": true,
+        "parse_ok": true,
+        "machine": "0x8664",
+        "magic": "0x20B",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "resources": {
+          "leaf_count": 2,
+          "by_type": {
+            "RCDATA": 1,
+            "MANIFEST": 1
+          }
+        },
+        "problems": [],
+        "conclusion": "PE com ponto de entrada; execucao nao verificada",
+        "project_alpha_validate_pe": {
+          "valid": true,
+          "passed": 17,
+          "total": 17,
+          "failed": []
+        },
+        "strings_min8_count": 183
+      },
+      "ground_truth_strings_found": [
+        "LAB_SYNTHETIC::PROJECT_ALPHA::CRYPTO_LAB",
+        "LABID-fae05d22693b25e5",
+        "BUILD_A",
+        "crypto_lab synthetic executable build A - never executed",
+        "XVD/XVC AES-XTS laboratory test string 0001",
+        "XVD/XVC AES-XTS laboratory test string 0002",
+        "Este executavel e sintetico e foi gerado pelo lab_pe_generator.py"
+      ],
+      "ground_truth_strings_total": 7
+    },
+    "xvc/lab_public_notes.txt": {
+      "recovered_path": "reports\\work\\key_reveal\\recovered\\xvc\\lab_public_notes.txt",
+      "sha256": "3bad6a358ee1a891d4cc68f8dc09a8d0d278805926a1b8ddf9e9eddfb2aca7e3",
+      "vs_original": {
+        "sha256_equal": true,
+        "note": "arquivo publico (regiao sem KeyId); legivel tambem sem chave"
+      }
+    },
+    "xvc/lab_decoy_fake_pe.bin": {
+      "recovered_path": "reports\\work\\key_reveal\\recovered\\xvc\\lab_decoy_fake_pe.bin",
+      "sha256": "7fb47ec17f1e06aeba8965d17845fdffd884489abdd91d3c65842f4b10957aa1",
+      "vs_original": {
+        "sha256_equal": true,
+        "note": "arquivo publico (regiao sem KeyId); legivel tambem sem chave"
+      }
+    },
+    "xvc/lab_plaintext.exe": {
+      "recovered_path": "reports\\work\\key_reveal\\recovered\\xvc\\lab_plaintext.exe",
+      "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+      "vs_original": {
+        "bytes_total": 739840,
+        "bytes_equal": 739840,
+        "pct_equal": 100.0,
+        "sha256_equal": true,
+        "size_equal": true,
+        "pages_different": 0,
+        "first_different_pages": []
+      },
+      "pe": {
+        "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "size": 739840,
+        "mz": true,
+        "parse_ok": true,
+        "machine": "0x8664",
+        "magic": "0x20B",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "resources": {
+          "leaf_count": 2,
+          "by_type": {
+            "RCDATA": 1,
+            "MANIFEST": 1
+          }
+        },
+        "problems": [],
+        "conclusion": "PE com ponto de entrada; execucao nao verificada",
+        "project_alpha_validate_pe": {
+          "valid": true,
+          "passed": 17,
+          "total": 17,
+          "failed": []
+        },
+        "strings_min8_count": 183
+      },
+      "ground_truth_strings_found": [
+        "LAB_SYNTHETIC::PROJECT_ALPHA::CRYPTO_LAB",
+        "LABID-fae05d22693b25e5",
+        "BUILD_A",
+        "crypto_lab synthetic executable build A - never executed",
+        "XVD/XVC AES-XTS laboratory test string 0001",
+        "XVD/XVC AES-XTS laboratory test string 0002",
+        "Este executavel e sintetico e foi gerado pelo lab_pe_generator.py"
+      ],
+      "ground_truth_strings_total": 7
+    },
+    "xvc/lab_plaintext_build_b.exe": {
+      "recovered_path": "reports\\work\\key_reveal\\recovered\\xvc\\lab_plaintext_build_b.exe",
+      "sha256": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175",
+      "vs_original": {
+        "bytes_total": 739840,
+        "bytes_equal": 739840,
+        "pct_equal": 100.0,
+        "sha256_equal": true,
+        "size_equal": true,
+        "pages_different": 0,
+        "first_different_pages": []
+      },
+      "pe": {
+        "sha256": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175",
+        "size": 739840,
+        "mz": true,
+        "parse_ok": true,
+        "machine": "0x8664",
+        "magic": "0x20B",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "resources": {
+          "leaf_count": 2,
+          "by_type": {
+            "RCDATA": 1,
+            "MANIFEST": 1
+          }
+        },
+        "problems": [],
+        "conclusion": "PE com ponto de entrada; execucao nao verificada",
+        "project_alpha_validate_pe": {
+          "valid": true,
+          "passed": 17,
+          "total": 17,
+          "failed": []
+        },
+        "strings_min8_count": 183
+      },
+      "ground_truth_strings_found": [
+        "LAB_SYNTHETIC::PROJECT_ALPHA::CRYPTO_LAB",
+        "LABID-fae05d22693b25e5",
+        "BUILD_B",
+        "crypto_lab synthetic executable build B - never executed",
+        "XVD/XVC AES-XTS laboratory test string 0001",
+        "XVD/XVC AES-XTS laboratory test string 0002",
+        "Este executavel e sintetico e foi gerado pelo lab_pe_generator.py"
+      ],
+      "ground_truth_strings_total": 7
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "wrong_cik",
+      "description": "CIK aleatoria no lugar da correta",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3978,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3743,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3978,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "wrong_odk",
+      "description": "ODK aleatoria (perfil XVD: desembrulha uma CIK errada sem erro)",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3982,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": false,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": false
+        }
+      }
+    },
+    {
+      "control": "wrong_vduid",
+      "description": "VDUID com o primeiro byte trocado no tweak",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3848,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3863,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.397,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "wrong_region_id",
+      "description": "RegionId/section id errado no tweak (XVD: 0 em vez de 1; XVC: ids das regioes trocados)",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.367,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3908,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3939,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "data_unit_page_index",
+      "description": "data unit = indice da pagina na secao (ignora a folha)",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": true,
+              "pct_bytes_equal": 100.0,
+              "mz_header": true,
+              "pe_parse_ok": true,
+              "plaintext_validation": "PASS",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": true
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3899,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": true,
+              "pct_bytes_equal": 100.0,
+              "mz_header": true,
+              "pe_parse_ok": true,
+              "plaintext_validation": "PASS",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "data_unit_plus_one",
+      "description": "data unit da folha + 1",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3986,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.397,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3993,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "swapped_cik_halves",
+      "description": "metades tweak/dados da CIK trocadas",
+      "results": {
+        "xvd": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.392,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "descritor ilegivel; medido no inicio do drive decifrado"
+            }
+          },
+          "unwrapped_cik_equals_true_cik": null,
+          "user_data_descriptor_parsed": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3904,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3932,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "wrong_region_key",
+      "description": "XVC: regiao 0x3EA decifrada com a CIK do KeyId 0",
+      "results": {
+        "xvd": {
+          "applicable": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": true,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": true,
+              "pct_bytes_equal": 100.0,
+              "mz_header": true,
+              "pe_parse_ok": true,
+              "plaintext_validation": "PASS",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3829,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "decifrada",
+              "section_id_used": "0x3E9"
+            },
+            {
+              "region": "0x3EA",
+              "status": "decifrada",
+              "section_id_used": "0x3EA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "control": "missing_key",
+      "description": "XVC: GUID ausente do keystore (equivale a nao ter a chave)",
+      "results": {
+        "xvd": {
+          "applicable": false
+        },
+        "xvc": {
+          "applicable": true,
+          "roundtrip_reencrypt_equals_stored": null,
+          "files": {
+            "lab_plaintext.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.3985,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            },
+            "lab_plaintext_build_b.exe": {
+              "sha256_equal": false,
+              "pct_bytes_equal": 0.4005,
+              "mz_header": false,
+              "pe_parse_ok": false,
+              "plaintext_validation": "FAIL",
+              "extraction": "pelo mapa/descritor decifrado"
+            }
+          },
+          "regions": [
+            {
+              "region": "0x3E9",
+              "status": "sem chave: Did not find CIK 64a803b6-2523-4906-845d-a64fd964a55b loaded in Keystorage"
+            },
+            {
+              "region": "0x3EA",
+              "status": "sem chave: Did not find CIK aaadbc56-03b9-4729-8ef8-78864958cfe3 loaded in Keystorage"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "originals_untouched": {
+    "before": {
+      "lab_xvc_encrypted.bin": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+      "lab_xvd_encrypted.bin": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+    },
+    "after": {
+      "lab_xvc_encrypted.bin": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+      "lab_xvd_encrypted.bin": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+    },
+    "unchanged": true
+  }
+}

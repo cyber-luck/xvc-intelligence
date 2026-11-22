@@ -81,7 +81,13 @@ def check_level_links(pkg: Package, tr: TreeReader, opt: IntegrityOptions) -> li
 
 def _keyed_for_offset(pkg: Package, off: int) -> tuple[bool, str]:
     xi = pkg.xvcinfo
-    r = xi.region_at(off) if xi else None
+    if xi is None:
+        # XVD nao-XVC: o xvdtool usa DataHashEntryLength = 0x14 quando a cifra esta ligada
+        # (XVDFile.cs:128) e cifra tudo de UserDataOffset ao fim. Achado do crypto_lab.
+        if not pkg.header.encryption_disabled:
+            return True, "XVD cifrado (sem XvcInfo)"
+        return False, "XVD sem cifra"
+    r = xi.region_at(off)
     if r is None:
         return False, "?"
     return r.keyed, r.label()

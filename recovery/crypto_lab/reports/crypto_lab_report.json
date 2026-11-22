@@ -1,0 +1,763 @@
+{
+  "schema": "crypto_lab.report/1",
+  "generated_utc": "2026-11-22T17:46:50+00:00",
+  "domains": {
+    "synthetic_lab": "conteineres, chaves e PEs gerados aqui; todas as medicoes deste relatorio",
+    "documented_model": "regras extraidas do codigo do xvdtool/XanaduXVD (ver reference_model)",
+    "real_package": "nao acessado; nenhuma afirmacao sobre o executavel real; ver reports/shadow_pe_final2 (METADATA_ONLY)"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cryptography": "50.0.2"
+  },
+  "run": {
+    "seed": 20261122,
+    "mode": "deterministic-test-seed",
+    "lab_id": "fae05d22693b25e5"
+  },
+  "reference_model": {
+    "sources": {
+      "xvdtool": {
+        "repo": "https://github.com/emoose/xvdtool",
+        "commit": "6fc28862cc5fb711843c0e717101ce4034acf805"
+      },
+      "XanaduXVD": {
+        "repo": "https://github.com/xboxoneresearch/XanaduXVD",
+        "commit": "50aa0dc89350de580b77f26ade1018b16b0bc1f8"
+      }
+    },
+    "rules": [
+      {
+        "id": "R01",
+        "topic": "CIK do cabecalho XVD (nao-XVC)",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "Header.KeyMaterial (32 bytes, offset relativo 0x14C = absoluto 0x34C) e a CIK cifrada com a ODK por AES-ECB sem padding e IV nulo; CryptHeaderCik decifra in-place.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "269-300 CryptHeaderCik"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDStructs.cs",
+            "lines": "61 KeyMaterial @0x14C"
+          },
+          {
+            "repo": "XanaduXVD",
+            "file": "src/XVDTypes.h",
+            "lines": "247-250 key_material: 'encrypted or sealed CIK'"
+          }
+        ],
+        "lab": "lab_xvd_profile.wrap_cik / unwrap_cik",
+        "test": "test_keys.TestProfileA"
+      },
+      {
+        "id": "R02",
+        "topic": "Tamanho da ODK",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "A ODK e uma chave AES de 32 bytes (DurangoKeyEntry dataSize 0x20) -> AES-256-ECB.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/Keys/DurangoKeys.cs",
+            "lines": "20-22 OdkStorage (dataSize 0x20)"
+          }
+        ],
+        "lab": "ODK sintetica de 32 bytes",
+        "test": "test_keys.TestProfileA"
+      },
+      {
+        "id": "R03",
+        "topic": "Selecao da ODK",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "ODKKeyslotID (relativo 0x29C = absoluto 0x49C) escolhe a ODK, salvo OverrideOdk.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "277"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDStructs.cs",
+            "lines": "105"
+          },
+          {
+            "repo": "XanaduXVD",
+            "file": "src/XVDTypes.h",
+            "lines": "302-306 odk_id: zero => inferida pelo ContentType"
+          }
+        ],
+        "lab": "slot sintetico 0x1AB5 (nao corresponde a nenhum slot real)",
+        "test": "test_keys"
+      },
+      {
+        "id": "R04",
+        "topic": "XVC nao usa a ODK",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "CryptHeaderCik retorna sem fazer nada quando IsXvcFile; as CIKs das regioes XVC vem da tabela XvcInfo.EncryptionKeyIds (GUID) e de um armazenamento de chaves/licencas (GetXvcKeyByGuid).",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "271-275"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "1008-1060 GetXvcKey/GetXvcKeyByGuid"
+          }
+        ],
+        "lab": "lab_xvc_profile.get_xvc_key (sem ODK)",
+        "test": "test_keys.TestProfileB"
+      },
+      {
+        "id": "R05",
+        "topic": "Selecao da CIK regional",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "Region.KeyId e indice em EncryptionKeyIds[]; KeyId 0xFFFF (XVC_KEY_NONE) = regiao sem cifra; regioes com KeyId+1 > KeyCount sao ignoradas.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "302-320 CryptXvcRegion"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XvcConstants.cs",
+            "lines": "5"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDStructs.cs",
+            "lines": "467-495 XvcInfo (EncryptionKeyIds @0x10, KeyCount @0xD1E)"
+          }
+        ],
+        "lab": "lab_xvc_profile",
+        "test": "test_keys.TestProfileB"
+      },
+      {
+        "id": "R06",
+        "topic": "Divisao da CIK",
+        "status": "CONFIRMED_BY_VECTOR",
+        "rule": "CIK[0:16] = chave AES-128 do tweak; CIK[16:32] = chave AES-128 dos dados.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "343-350"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne.Tests/AesXtsTests.cs",
+            "lines": "7-17"
+          }
+        ],
+        "lab": "lab_xts.split_cik",
+        "test": "test_xts.test_xvdtool_vector"
+      },
+      {
+        "id": "R07",
+        "topic": "Seed do tweak",
+        "status": "CONFIRMED_BY_VECTOR",
+        "rule": "seed[0:4]=data_unit LE32, seed[4:8]=headerId LE32, seed[8:16]=VDUID[0:8].",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "352-355"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/Crypto/AesXts.cs",
+            "lines": "63-64"
+          }
+        ],
+        "lab": "lab_xts.build_tweak_seed",
+        "test": "test_xts"
+      },
+      {
+        "id": "R08",
+        "topic": "headerId para XVD nao-XVC",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "Decrypt/Encrypt de XVD nao-XVC chamam CryptSectionXts com headerId = 0x1, de UserDataOffset ate o fim do arquivo. O proprio codigo marca como 'todo: check ... any other headerId besides 0x1'.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "427-430"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "461-463"
+          }
+        ],
+        "lab": "lab_xvd_profile.SECTION_ID_XVD = 1",
+        "test": "test_containers"
+      },
+      {
+        "id": "R09",
+        "topic": "headerId para XVC",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "CryptXvcRegion passa (uint)RegionHeader.Id como headerId; o xvdtool nao consulta o flag RegionIdInXts.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "319"
+          }
+        ],
+        "lab": "lab_xvc_profile",
+        "test": "test_decrypt.test_wrong_region_id"
+      },
+      {
+        "id": "R10",
+        "topic": "XTS = IEEE 1619",
+        "status": "CONFIRMED_BY_VECTOR",
+        "rule": "T0 = AES(tweak_key, seed); C_i = E(P_i ^ T_i) ^ T_i; T_{i+1} = T_i*x em GF(2^128) com reducao 0x87, little-endian. Equivale ao XTS-AES-128 do IEEE 1619 com Key1=dados, Key2=tweak.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/Crypto/AesXts.cs",
+            "lines": "38-97"
+          }
+        ],
+        "lab": "lab_xts.AesXtsTransform (+ verificacao cruzada com OpenSSL)",
+        "test": "test_xts"
+      },
+      {
+        "id": "R11",
+        "topic": "Sem ciphertext stealing",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "TransformDataUnit so processa inputCount/16 blocos; as paginas sao sempre 0x1000.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/Crypto/AesXts.cs",
+            "lines": "72"
+          }
+        ],
+        "lab": "lab_xts (ValueError se nao multiplo de 16)",
+        "test": "test_xts.test_partial_block_rejected"
+      },
+      {
+        "id": "R12",
+        "topic": "Unidade de dados",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "Uma pagina 0x1000 = um data unit. Com integridade ligada, o data unit vem dos 4 ultimos bytes da entrada de hash de nivel 0 da pagina (entry+0x14); sem integridade, e o indice da pagina dentro da secao.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "327-340"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "377"
+          }
+        ],
+        "lab": "lab_hash_tree.data_unit_of_page",
+        "test": "test_hash_tree / test_decrypt.test_wrong_data_unit"
+      },
+      {
+        "id": "R13",
+        "topic": "Entrada de hash de dados cifrados",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "HASH_ENTRY_LENGTH = 0x18; com cifra, so os primeiros 0x14 bytes sao SHA-256(pagina gravada) (DataHashEntryLength). Entrada = SHA256(ciphertext)[:20] || LE32(data_unit).",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "27-28, 128"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "883-917 VerifyDataHashTree"
+          }
+        ],
+        "lab": "lab_hash_tree.leaf_entry_encrypted",
+        "test": "test_hash_tree"
+      },
+      {
+        "id": "R14",
+        "topic": "Niveis superiores",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "Nivel k+1 guarda SHA-256(pagina do nivel k)[:0x18]; 0xAA entradas por pagina; topo primeiro; TopHashBlockHash = SHA-256(primeira pagina da arvore).",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "921-1006"
+          },
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XvdMath.cs",
+            "lines": "91-187"
+          }
+        ],
+        "lab": "xvcintel.formats.hashtree.build_tree (reaproveitado)",
+        "test": "test_hash_tree"
+      },
+      {
+        "id": "R15",
+        "topic": "Hash cobre ciphertext",
+        "status": "CONFIRMED_BY_CODE",
+        "rule": "VerifyDataHashTree le os bytes gravados; a integridade pode ser verificada sem chave e nao diz nada sobre o plaintext.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "897-903"
+          }
+        ],
+        "lab": "tools/validate_xts.py",
+        "test": "test_blind"
+      },
+      {
+        "id": "R16",
+        "topic": "Folha de pagina sem KeyId",
+        "status": "PROJECT_OBSERVATION",
+        "rule": "No pacote real (xvcintel), paginas sem KeyId guardam SHA-256[:0x18] completo; com KeyId, [:0x14] + data unit. O xvdtool so compara 0x14 bytes quando IsEncrypted.",
+        "source": [
+          {
+            "repo": "xvc-intelligence",
+            "file": "src/xvcintel/formats/hashtree.py",
+            "lines": "leaf_matches"
+          }
+        ],
+        "lab": "lab_hash_tree.leaf_entry_plain",
+        "test": "test_containers (xvcintel integrity PASS)"
+      },
+      {
+        "id": "R17",
+        "topic": "Tabela de paginas RLE",
+        "status": "PROJECT_OBSERVATION",
+        "rule": "XvcInfo apos os segmentos: array por segmento e tabela (PageNum, Value) cujo Value governa o data unit por RLE. Nao lido pelo xvdtool.",
+        "source": [
+          {
+            "repo": "xvc-intelligence",
+            "file": "src/xvcintel/engines/pages.py",
+            "lines": "modelo RLE"
+          }
+        ],
+        "lab": "lab_xvc_profile (tabela gerada)",
+        "test": "test_containers"
+      },
+      {
+        "id": "H01",
+        "topic": "Flag RegionIdInXts (0x40)",
+        "status": "HYPOTHESIS",
+        "rule": "O nome sugere que o console escolhe entre RegionId e 1 no tweak por este flag. O xvdtool nao le o flag; usa RegionId para XVC e 1 para XVD por tipo de conteudo.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDEnums.cs",
+            "lines": "76"
+          },
+          {
+            "repo": "XanaduXVD",
+            "file": "src/XVDTypes.h",
+            "lines": "81"
+          }
+        ],
+        "lab": "flag gravado (0x40 no XVC, ausente no XVD), mas a decisao segue o xvdtool",
+        "test": "-"
+      },
+      {
+        "id": "H02",
+        "topic": "Etapa difusiva",
+        "status": "HYPOTHESIS",
+        "rule": "XanaduXVD nomeia o bit DiffusiveDisabled (0x400) em VolumeFlags. Nenhuma referencia implementa um difusor; o vetor do xvdtool e reproduzido por XTS puro. NAO implementado no laboratorio.",
+        "source": [
+          {
+            "repo": "XanaduXVD",
+            "file": "src/XVDTypes.h",
+            "lines": "85"
+          }
+        ],
+        "lab": "nao implementado (por decisao)",
+        "test": "-"
+      },
+      {
+        "id": "H03",
+        "topic": "ODK por ContentType",
+        "status": "HYPOTHESIS",
+        "rule": "Comentario do XanaduXVD: odk_id == 0 => ODK inferida pelo ContentType. Sem codigo.",
+        "source": [
+          {
+            "repo": "XanaduXVD",
+            "file": "src/XVDTypes.h",
+            "lines": "302-306"
+          }
+        ],
+        "lab": "nao modelado",
+        "test": "-"
+      },
+      {
+        "id": "N01",
+        "topic": "Criptografia no XanaduXVD",
+        "status": "NOT_IMPLEMENTED",
+        "rule": "README do XanaduXVD: 'Package decryption', 'XVC support' e 'Hash tree verification' nao marcados.",
+        "source": [
+          {
+            "repo": "XanaduXVD",
+            "file": "README.md",
+            "lines": "14-22 (checklist)"
+          }
+        ],
+        "lab": "XanaduXVD usado so para nomes de campos",
+        "test": "-"
+      },
+      {
+        "id": "N02",
+        "topic": "Hash do XvcInfo em pacotes retail",
+        "status": "NOT_IMPLEMENTED",
+        "rule": "VerifyXvcHash: 'todo: investigate why this gets the correct hash for dev XVCs but fails for retail'.",
+        "source": [
+          {
+            "repo": "xvdtool",
+            "file": "LibXboxOne/XVD/XVDFile.cs",
+            "lines": "697"
+          }
+        ],
+        "lab": "OriginalXvcDataHash nao reproduzido",
+        "test": "-"
+      },
+      {
+        "id": "N03",
+        "topic": "Assinatura do cabecalho",
+        "status": "NOT_IMPLEMENTED",
+        "rule": "O laboratorio nao assina o cabecalho (0x200 bytes de assinatura RSA). A area guarda o marcador LAB_SYNTHETIC; nenhum console aceitaria estes arquivos.",
+        "source": [],
+        "lab": "marcador LAB_SYNTHETIC na area de assinatura",
+        "test": "test_containers"
+      },
+      {
+        "id": "N04",
+        "topic": "Sistema de arquivos do drive XVD",
+        "status": "NOT_IMPLEMENTED",
+        "rule": "O drive do perfil A guarda o PE cru alinhado em pagina, sem NTFS/exFAT. Simplificacao do laboratorio.",
+        "source": [],
+        "lab": "descritor LAB no user data (cifrado) informa offset/tamanho",
+        "test": "-"
+      }
+    ],
+    "by_status": {
+      "CONFIRMED_BY_CODE": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R08",
+        "R09",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "CONFIRMED_BY_VECTOR": [
+        "R06",
+        "R07",
+        "R10"
+      ],
+      "PROJECT_OBSERVATION": [
+        "R16",
+        "R17"
+      ],
+      "HYPOTHESIS": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "NOT_IMPLEMENTED": [
+        "N01",
+        "N02",
+        "N03",
+        "N04"
+      ]
+    },
+    "disclaimer": "Confirmado pelo codigo = comportamento da ferramenta de referencia. Compatibilidade com o console Xbox NAO foi demonstrada por teste independente."
+  },
+  "artifacts": {
+    "public": {
+      "lab_manifest.json": "5858d627fbb40703069c15b66a6a1734380c9e85e43db8a19ead9e5ac7f39a16",
+      "lab_xvc_encrypted.bin": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+      "lab_xvd_encrypted.bin": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+    },
+    "sealed_names": [
+      "lab_ground_truth.json",
+      "lab_keystore.json",
+      "lab_plaintext.exe",
+      "lab_plaintext_build_b.exe"
+    ],
+    "pe_A_sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+    "pe_B_sha256": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175"
+  },
+  "acceptance_criteria": [
+    {
+      "id": "C1",
+      "criterion": "AES-256-ECB desembrulha corretamente a CIK sintetica",
+      "status": "PASS",
+      "evidence": "key_reveal_analysis.json xvd.unwrapped_cik_equals_ground_truth + FIPS-197 C.3"
+    },
+    {
+      "id": "C2",
+      "criterion": "AES-XTS reproduz os vetores de teste conhecidos",
+      "status": "PASS",
+      "evidence": "xts_roundtrip_results.json known_vectors (IEEE 1619 x3, xvdtool xts_cipher.bin, 3 implementacoes)"
+    },
+    {
+      "id": "C3",
+      "criterion": "conteineres gerados corretamente (parseaveis, arvore integra, marcador LAB_SYNTHETIC)",
+      "status": "PASS",
+      "evidence": "blind_analysis.json containers.*.validate_xts + crypto_lab_report.json project_alpha_integration.xvcintel_engines"
+    },
+    {
+      "id": "C4",
+      "criterion": "a auditoria sem chave nao alega recuperar codigo que nao recuperou",
+      "status": "PASS",
+      "evidence": "blind_analysis.json recovery_claim, shadow_pe_reconstructor (METADATA_ONLY), pe_carving"
+    },
+    {
+      "id": "C5",
+      "criterion": "descriptografia com a chave correta recupera 100% dos bytes",
+      "status": "PASS",
+      "evidence": "pe_recovery_comparison.json per_target"
+    },
+    {
+      "id": "C6",
+      "criterion": "SHA-256 identicos aos da referencia",
+      "status": "PASS",
+      "evidence": "key_reveal_analysis.json recovered.*.vs_original.sha256_equal"
+    },
+    {
+      "id": "C7",
+      "criterion": "PE recuperado passa na validacao estrutural",
+      "status": "PASS",
+      "evidence": "validate_pe (project_alpha) + parse_pe (xvcintel)"
+    },
+    {
+      "id": "C8",
+      "criterion": "controles negativos detectam os erros (conforme a matriz esperada)",
+      "status": "PASS",
+      "evidence": "pe_recovery_comparison.json negative_controls"
+    },
+    {
+      "id": "C9",
+      "criterion": "arquivos originais permanecem intactos",
+      "status": "PASS",
+      "evidence": "hashes dos conteineres e do plaintext selado antes x depois de todas as fases"
+    },
+    {
+      "id": "C10",
+      "criterion": "experimentos reproduziveis",
+      "status": "PASS",
+      "evidence": "crypto_lab_report.json reproducibility"
+    },
+    {
+      "id": "C+",
+      "criterion": "separacao ENCRYPTOR x ANALYZER comprovada por auditoria de acesso",
+      "status": "PASS",
+      "evidence": "blind_analysis.json access_audit"
+    },
+    {
+      "id": "C+",
+      "criterion": "integracao project_alpha/xvcintel validada no laboratorio",
+      "status": "PASS",
+      "evidence": "crypto_lab_report.json project_alpha_integration"
+    }
+  ],
+  "acceptance_all_pass": true,
+  "reproducibility": {
+    "same_seed_identical_containers": true,
+    "same_seed_identical_keys": true,
+    "random_mode_keys_differ": true,
+    "random_mode_containers_differ": true,
+    "random_mode_label": "secure-random-keys",
+    "seed": 20261122,
+    "random_mode_exact_recovery": true,
+    "all_pass": true
+  },
+  "project_alpha_integration": {
+    "reconstructor_locator_precision": {
+      "rows": [
+        {
+          "file": "lab_public_notes.txt",
+          "offset_ok": true,
+          "size_ok": true,
+          "key_id_ok": true,
+          "key_guid_ok": true
+        },
+        {
+          "file": "lab_decoy_fake_pe.bin",
+          "offset_ok": true,
+          "size_ok": true,
+          "key_id_ok": true,
+          "key_guid_ok": true
+        },
+        {
+          "file": "lab_plaintext.exe",
+          "offset_ok": true,
+          "size_ok": true,
+          "key_id_ok": true,
+          "key_guid_ok": true
+        },
+        {
+          "file": "lab_plaintext_build_b.exe",
+          "offset_ok": true,
+          "size_ok": true,
+          "key_id_ok": true,
+          "key_guid_ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    "tweak_model_data_units": {
+      "pages_checked": 362,
+      "mismatches": 0,
+      "ok": true
+    },
+    "xvcintel_engines": {
+      "xvc": {
+        "integrity.top_hash": "PASS",
+        "integrity.link_L0_to_L1": "PASS",
+        "integrity.leaf_vs_data": "PARTIAL",
+        "integrity.region_hash": "PASS",
+        "integrity.segment_hash": "PASS",
+        "hypothesis.metadata_hash": "INFO",
+        "embedded.header": "SKIPPED",
+        "pages.value_eq_leaf_du": "PASS",
+        "pages.rle_model": "PARTIAL",
+        "pages.no_redundant_entries": "PASS",
+        "pages.transitions": "INFO",
+        "pages.data_unit_reuse": "INFO",
+        "pages.segment_values": "PASS"
+      },
+      "xvd": {
+        "integrity.top_hash": "PASS",
+        "integrity.link_L0_to_L1": "PASS",
+        "integrity.leaf_vs_data": "PARTIAL",
+        "integrity.region_hash": "SKIPPED",
+        "integrity.segment_hash": "SKIPPED",
+        "hypothesis.metadata_hash": "SKIPPED",
+        "embedded.header": "SKIPPED"
+      }
+    },
+    "xvcintel_engines_ok": true,
+    "carver_plaintext_vs_ciphertext": {
+      "plaintext_pe_candidates": 1,
+      "plaintext_candidate_offset0": true,
+      "ciphertext_container_pe_candidates": 0,
+      "ok": true
+    },
+    "real_package": "NAO ACESSADO. O laboratorio valida o comportamento do codigo; chaves sinteticas nunca sao aplicadas ao pacote real e nada aqui afirma que o executavel real foi decifrado.",
+    "all_ok": true
+  },
+  "originals_intact": {
+    "before": {
+      "public": {
+        "lab_manifest.json": "5858d627fbb40703069c15b66a6a1734380c9e85e43db8a19ead9e5ac7f39a16",
+        "lab_xvc_encrypted.bin": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+        "lab_xvd_encrypted.bin": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+      },
+      "sealed": {
+        "lab_ground_truth.json": "5713a79fa7fef2b91fa80496a2ceab90d0503a915fec9691e28034f618fb0b52",
+        "lab_keystore.json": "2e3cdf7727f994ad0de93f6aaf574dc68f9d59fa05285b1e889809d08818a125",
+        "lab_plaintext.exe": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "lab_plaintext_build_b.exe": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175"
+      }
+    },
+    "after": {
+      "public": {
+        "lab_manifest.json": "5858d627fbb40703069c15b66a6a1734380c9e85e43db8a19ead9e5ac7f39a16",
+        "lab_xvc_encrypted.bin": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+        "lab_xvd_encrypted.bin": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+      },
+      "sealed": {
+        "lab_ground_truth.json": "5713a79fa7fef2b91fa80496a2ceab90d0503a915fec9691e28034f618fb0b52",
+        "lab_keystore.json": "2e3cdf7727f994ad0de93f6aaf574dc68f9d59fa05285b1e889809d08818a125",
+        "lab_plaintext.exe": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "lab_plaintext_build_b.exe": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175"
+      }
+    },
+    "unchanged": true
+  },
+  "regression": {
+    "ran": true,
+    "command": "python -I -m pytest -q -p no:cacheprovider (raiz do repositorio)",
+    "exit_code": 1,
+    "summary": "3 failed, 216 passed, 11 skipped, 1 warning in 14.73s",
+    "failed": [
+      "FAILED tests/test_pe.py::test_all_fixtures_covered - AssertionError: assert {...",
+      "FAILED tests/test_pe.py::test_ported_fixture[s_raw_desalinhado.bin] - FileNot...",
+      "FAILED tests/test_pe.py::test_legacy_pe_header_identical_to_original[s_raw_desalinhado.bin]"
+    ],
+    "tail": [
+      "            encoding = io.text_encoding(encoding)",
+      ">       return io.open(self, mode, buffering, encoding, errors, newline)",
+      "               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\Reverse Engeenering\\\\xvc-intelligence\\\\tests\\\\fixtures\\\\pe\\\\s_raw_desalinhado.bin'",
+      "",
+      "C:\\Users\\lguimaraes\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\pathlib\\__init__.py:771: FileNotFoundError",
+      "============================== warnings summary ===============================",
+      "C:\\Users\\LGUIMA~1\\AppData\\Local\\Temp\\claude\\290f4d9b7cf68b79\\f6f7c8c3-82b3-49b1-929b-150061bade32\\scratchpad\\venv\\Lib\\site-packages\\_pytest\\config\\__init__.py:1636",
+      "  C:\\Users\\LGUIMA~1\\AppData\\Local\\Temp\\claude\\290f4d9b7cf68b79\\f6f7c8c3-82b3-49b1-929b-150061bade32\\scratchpad\\venv\\Lib\\site-packages\\_pytest\\config\\__init__.py:1636: PytestConfigWarning: Unknown config option: asyncio_default_fixture_loop_scope",
+      "  ",
+      "    self._warn_or_fail_if_strict(f\"Unknown config option: {key}\\n\")",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "=========================== short test summary info ===========================",
+      "SKIPPED [5] tests\\test_pe.py:114: could not import 'pefile': No module named 'pefile'",
+      "SKIPPED [1] tests\\test_real_package.py:30: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "SKIPPED [1] tests\\test_real_package.py:44: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "SKIPPED [1] tests\\test_real_package.py:51: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "SKIPPED [1] tests\\test_real_package.py:64: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "SKIPPED [1] tests\\test_real_package.py:81: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "SKIPPED [1] tests\\test_real_package.py:93: XVC_PATH nao definido: teste de integracao com o pacote real pulado",
+      "FAILED tests/test_pe.py::test_all_fixtures_covered - AssertionError: assert {...",
+      "FAILED tests/test_pe.py::test_ported_fixture[s_raw_desalinhado.bin] - FileNot...",
+      "FAILED tests/test_pe.py::test_legacy_pe_header_identical_to_original[s_raw_desalinhado.bin]",
+      "3 failed, 216 passed, 11 skipped, 1 warning in 14.73s"
+    ],
+    "deleted_tracked_files": [
+      "tests/fixtures/pe/s_raw_desalinhado.bin"
+    ],
+    "failures_cause": "pre-existentes: tests/test_pe.py le tests/fixtures/pe/, e tests/fixtures/pe/s_raw_desalinhado.bin esta apagado no working tree (nao pelo laboratorio). A linha de base antes do laboratorio tinha as mesmas 3 falhas."
+  },
+  "tool_findings": [
+    {
+      "tool": "xvcintel integrity.leaf_vs_data",
+      "finding": "em XVD nao-XVC cifrado comparava 0x18 bytes (regra de XVC sem XvcInfo) e falhava; o xvdtool usa 0x14 (DataHashEntryLength, XVDFile.cs:128)",
+      "action": "corrigido em src/xvcintel/engines/integrity.py (_keyed_for_offset) com teste"
+    },
+    {
+      "tool": "xvcintel header summary",
+      "finding": "KeyMaterial nao-zero rotulado 'nao usado' tambem em XVD nao-XVC, onde e a CIK selada",
+      "action": "rotulo corrigido em src/xvcintel/formats/xvd_header.py"
+    },
+    {
+      "tool": "inspect_xvd.py / validate_xts.py",
+      "finding": "citados no prompt, inexistentes no repositorio",
+      "action": "criados em recovery/crypto_lab/tools/ (sem chave, somente leitura)"
+    },
+    {
+      "tool": "xvc_probe.py (XVD)",
+      "finding": "sem chave nao ha mapa de arquivos: JSON nao gerado",
+      "action": "comportamento correto; registrado"
+    }
+  ],
+  "phases_reports": [
+    "blind_analysis.json",
+    "key_reveal_analysis.json",
+    "xts_roundtrip_results.json",
+    "pe_recovery_comparison.json",
+    "crypto_lab_final_report.html"
+  ]
+}

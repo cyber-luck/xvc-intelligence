@@ -1,0 +1,51 @@
+{
+  "schema": "crypto_lab.known_vectors/1",
+  "note": "Vetores publicos. CIK no formato xvdtool = tweak_key(16) || data_key(16). Seed = LE32(data_unit) || LE32(section_id) || VDUID[0:8].",
+  "xvdtool": {
+    "source": "emoose/xvdtool @ 6fc28862cc5fb711843c0e717101ce4034acf805, LibXboxOne.Tests/AesXtsTests.cs + Resources/DataBlobs/xts_{plain,cipher}.bin",
+    "cik": "8221d4acf4319d95e28e722e82a3b5e232ba06dd968615913f6bf810d08916a0",
+    "section_id": 1,
+    "vduid8": "34ff8790cadb1422",
+    "data_units": [0, 1, 2],
+    "plaintext_rule": "a frase de 48 bytes abaixo repetida 256 vezes (0x3000 bytes); conferido contra xts_plain.bin (sha256 aeebe0d184dfda4b9c3490ffc0b9a7f5f2b1469e9ca5521d0c519585dbac8412)",
+    "plaintext_unit": "SOME PLAINTEXT DATA BEFORE XTS TRANSFORMATION   ",
+    "plaintext_sha256": "aeebe0d184dfda4b9c3490ffc0b9a7f5f2b1469e9ca5521d0c519585dbac8412",
+    "ciphertext_sha256": "e1c91a60d28906b7b9c99ec05cf44889b1315d3430560c7d7d1edd57ac08d9e3",
+    "ciphertext_head32": "93ba1b6d50445ceb324c77f033b4cb6d909e4afd0767d0496a9b8134881f7ad5"
+  },
+  "ieee1619": [
+    {
+      "name": "IEEE P1619 XTS-AES-128 vetor 1",
+      "key1_data": "00000000000000000000000000000000",
+      "key2_tweak": "00000000000000000000000000000000",
+      "data_unit": 0, "section_id": 0, "vduid8": "0000000000000000",
+      "plaintext": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext": "917cf69ebd68b2ec9b9fe9a3eadda692cd43d2f59598ed858c02c2652fbf922e",
+      "openssl_accepts": false
+    },
+    {
+      "name": "IEEE P1619 XTS-AES-128 vetor 2 (data unit 0x3333333333: byte 4 cai no campo section_id)",
+      "key1_data": "11111111111111111111111111111111",
+      "key2_tweak": "22222222222222222222222222222222",
+      "data_unit": 858993459, "section_id": 51, "vduid8": "0000000000000000",
+      "plaintext": "4444444444444444444444444444444444444444444444444444444444444444",
+      "ciphertext": "c454185e6a16936e39334038acef838bfb186fff7480adc4289382ecd6d394f0",
+      "openssl_accepts": true
+    },
+    {
+      "name": "IEEE P1619 XTS-AES-128 vetor 3",
+      "key1_data": "fffefdfcfbfaf9f8f7f6f5f4f3f2f1f0",
+      "key2_tweak": "22222222222222222222222222222222",
+      "data_unit": 858993459, "section_id": 51, "vduid8": "0000000000000000",
+      "plaintext": "4444444444444444444444444444444444444444444444444444444444444444",
+      "ciphertext": "af85336b597afc1a900b2eb21ec949d292df4c047e0b21532186a5971a227a89",
+      "openssl_accepts": true
+    }
+  ],
+  "aes256_ecb_fips197": {
+    "source": "FIPS-197 Apendice C.3",
+    "key": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "plaintext": "00112233445566778899aabbccddeeff",
+    "ciphertext": "8ea2b7ca516745bfeafc49904b496089"
+  }
+}
