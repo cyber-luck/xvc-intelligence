@@ -1,0 +1,587 @@
+{
+  "target": "game_scarlett_master.exe",
+  "schema": "xvcintel.executable_profile/1",
+  "identity": {
+    "declared_in_MicrosoftGame.config": {
+      "value": {
+        "Name": "game_scarlett_master.exe",
+        "Id": "GTAO",
+        "TargetDeviceFamily": "Scarlett",
+        "OverrideDisplayName": "Grand Theft Auto VI",
+        "IsDevOnly": "false"
+      },
+      "level": "CONFIRMED",
+      "source": "userdata:MicrosoftGame.config",
+      "test": null
+    },
+    "declared_in_appxmanifest": {
+      "value": {
+        "Id": "GTAO",
+        "Executable": "game_scarlett_master.exe",
+        "EntryPoint": "GamingProxyApp.Application.EntryPoint"
+      },
+      "level": "CONFIRMED",
+      "source": "userdata:appxmanifest.xml",
+      "test": null
+    },
+    "declared_in_gameconfig_hive": {
+      "value": {
+        "Name": "game_scarlett_master.exe",
+        "TargetDeviceFamily": "Scarlett",
+        "Id": "GTAO",
+        "IsDevOnly": 0,
+        "OverrideDisplayName": "Grand Theft Auto VI"
+      },
+      "level": "CONFIRMED",
+      "source": "userdata:microsoft_gameconfig.bin",
+      "test": null
+    },
+    "application_id_consistent_across_3_configs": {
+      "value": true,
+      "level": "CONFIRMED",
+      "source": "3 configs",
+      "test": "fingerprint.identity"
+    },
+    "TitleId": {
+      "value": "7952987A",
+      "level": "CONFIRMED",
+      "source": "userdata:MicrosoftGame.config",
+      "test": null
+    },
+    "StoreId": {
+      "value": "9NL3WWNZLZZN",
+      "level": "CONFIRMED",
+      "source": "userdata:MicrosoftGame.config",
+      "test": null
+    },
+    "MSAAppId": {
+      "value": "000000004060F900",
+      "level": "CONFIRMED",
+      "source": "userdata:MicrosoftGame.config",
+      "test": null
+    },
+    "package_identity": {
+      "value": {
+        "Name": "RockstarGamesInc.28872443D20A7",
+        "Publisher": "CN=3164F9C2-2C28-4832-BBE3-A642A4EF0054",
+        "Version": "1.0.2.1"
+      },
+      "level": "CONFIRMED",
+      "source": "userdata:MicrosoftGame.config",
+      "test": null
+    },
+    "package_version_header_vs_config": {
+      "value": {
+        "header_0x3BC": "1.0.2.1",
+        "config": "1.0.2.1"
+      },
+      "level": "CONFIRMED",
+      "source": "xvc:cabecalho 0x3BC x MicrosoftGame.config",
+      "test": "fingerprint.package_version"
+    }
+  },
+  "storage": {
+    "segment_index": {
+      "value": 12,
+      "level": "CONFIRMED",
+      "source": "SegmentMetadata.bin + XvcInfo",
+      "test": "filemap"
+    },
+    "region_id": {
+      "value": "0x3E9",
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao",
+      "test": "filemap"
+    },
+    "region_offset": {
+      "value": "0x64917000",
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao +0x50",
+      "test": null
+    },
+    "region_length": {
+      "value": "0x729E000",
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao +0x58",
+      "test": null
+    },
+    "region_flags": {
+      "value": "0x0",
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao +0x8",
+      "test": null
+    },
+    "region_is_single_file": {
+      "value": true,
+      "level": "CONFIRMED",
+      "source": "XvcInfo",
+      "test": null
+    },
+    "key_id_index": {
+      "value": 0,
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao +0x4",
+      "test": null
+    },
+    "key_id_guid": {
+      "value": "d4b2880b-884d-cf1b-eea5-bef5a2a7d4f6",
+      "level": "CONFIRMED",
+      "source": "XvcInfo +0x10 (identificador da chave; nenhuma chave usada)",
+      "test": null
+    },
+    "absolute_offset": {
+      "value": "0x64917000",
+      "level": "CONFIRMED",
+      "source": "drive data (layout do cabecalho) + pagina do SegmentMetadata",
+      "test": null
+    },
+    "end_offset_exclusive": {
+      "value": "0x6BBB4400",
+      "level": "CONFIRMED",
+      "source": "offset + Size",
+      "test": null
+    },
+    "size": {
+      "value": 120181760,
+      "level": "CONFIRMED",
+      "source": "SegmentMetadata.bin",
+      "test": null
+    },
+    "pages": {
+      "value": 29342,
+      "level": "CONFIRMED",
+      "source": "Size / 0x1000",
+      "test": null
+    },
+    "relative_page": {
+      "value": "0xD4C",
+      "level": "CONFIRMED",
+      "source": "SegmentMetadata.bin",
+      "test": null
+    },
+    "segment_slack_bytes": {
+      "value": 0,
+      "level": "CONFIRMED",
+      "source": "segmento x paginas do arquivo",
+      "test": null
+    },
+    "page_table_entries_in_segment": {
+      "value": 1,
+      "level": "CONFIRMED",
+      "source": "XvcInfo tabela de paginas",
+      "test": null
+    },
+    "segment_value_u32": {
+      "value": "0xE5046EA2",
+      "level": "CONFIRMED",
+      "source": "XvcInfo array por segmento",
+      "test": null
+    }
+  },
+  "integrity": {
+    "sha256_stored_bytes": {
+      "value": "79fe15101c861d0e6e3353d24ebba158ae7e0ed61ea79ece199ca91763dba89a",
+      "level": "CONFIRMED",
+      "source": "SHA-256 dos 120181760 bytes gravados (nao e hash do PE decifrado)",
+      "test": null
+    },
+    "sha1_stored_bytes": {
+      "value": "0db4a46e0e896d48511a8fa5bb9c3110ece6b5cd",
+      "level": "CONFIRMED",
+      "source": "SHA-1 dos bytes gravados",
+      "test": null
+    },
+    "segment_hash": {
+      "value": {
+        "stored": "3b221181d8be52ba",
+        "computed": "3b221181d8be52ba",
+        "match": true
+      },
+      "level": "CONFIRMED",
+      "source": "XvcInfo update segment +4",
+      "test": "integrity.segment_hash"
+    },
+    "region_hash": {
+      "value": {
+        "stored": "3b221181d8be52ba",
+        "match": true
+      },
+      "level": "CONFIRMED",
+      "source": "XvcInfo regiao +0x60 (regiao = segmento)",
+      "test": "integrity.region_hash"
+    },
+    "leaf_hashes_sampled": {
+      "value": "16/16",
+      "level": "CONFIRMED",
+      "source": "amostra de 16 paginas (semente 1234); entry[:0x14]",
+      "test": "integrity.leaf_vs_data"
+    },
+    "first_page_leaf_entry_offset": {
+      "value": "0x1537B888",
+      "level": "CONFIRMED",
+      "source": "geometria da hash tree",
+      "test": null
+    },
+    "first_page_data_unit": {
+      "value": "0xE5046EA2",
+      "level": "CONFIRMED",
+      "source": "entry[0x14:0x18]; significado (unidade XTS) INFERRED do xvdtool",
+      "test": null
+    },
+    "rule_coverage_whole_package": {
+      "value": {
+        "regions_tested": 28,
+        "regions_ok": 28,
+        "segments_tested": 108,
+        "segments_ok": 108,
+        "skipped_by_size": 0
+      },
+      "level": "CONFIRMED",
+      "source": "hash completo de todas as regioes/segmentos (sem limite); ~440 GB lidos. Confirma que a regra de hash de regiao/segmento do executavel vale em 100% do pacote, nao so nos itens <= 160 MB. Ver reports/full_hashes_result.json",
+      "test": "integrity.region_hash / integrity.segment_hash"
+    }
+  },
+  "stored_content": {
+    "first_16_bytes_hex": {
+      "value": "6f 1b bc ae 19 c6 79 90 87 1d 1c fd 7f b3 0c 9d",
+      "level": "CONFIRMED",
+      "source": "bytes gravados",
+      "test": null
+    },
+    "mz_signature_at_0": {
+      "value": false,
+      "level": "CONFIRMED",
+      "source": "bytes gravados",
+      "test": null
+    },
+    "pe_parse": {
+      "value": "[PE] bad_magic @0x0: sem cabecalho MZ",
+      "level": "CONFIRMED",
+      "source": "formats.pe.parse_pe",
+      "test": null
+    },
+    "entropy_first_64kb": {
+      "value": 7.9974,
+      "level": "CONFIRMED",
+      "source": "amostra",
+      "test": null
+    },
+    "entropy_16_windows_64kb": {
+      "value": [
+        7.9974,
+        7.9974,
+        7.997,
+        7.9972,
+        7.9975,
+        7.9976,
+        7.9973,
+        7.997,
+        7.9971,
+        7.9971,
+        7.9971,
+        7.9974,
+        7.9972,
+        7.9971,
+        7.9975,
+        7.9976
+      ],
+      "level": "CONFIRMED",
+      "source": "16 janelas de 64 KB espalhadas",
+      "test": null
+    },
+    "encryption_inference": {
+      "value": "regiao com KeyId != 0xFFFF e bytes sem estrutura reconhecivel; consistente com conteudo cifrado, mas entropia nao prova criptografia",
+      "level": "INFERRED",
+      "source": "KeyId + entropia + flags do cabecalho (EncryptionDisabled ausente)",
+      "test": null
+    }
+  },
+  "pe_content": {
+    "machine": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "sections": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "entry_point": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "imports": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "exports": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "resources": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "debug_pdb": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "tls": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "load_config": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "functions": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "strings": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    },
+    "compiler_linker": {
+      "value": null,
+      "level": "UNKNOWN",
+      "source": "UNKNOWN: os bytes gravados nao formam um PE legivel (sem MZ); nada pode ser afirmado",
+      "test": null
+    }
+  },
+  "co_packaged_dlls": {
+    "level": "CONFIRMED",
+    "source": "SegmentMetadata.bin",
+    "note": "apenas presenca no mesmo pacote; NAO prova que o executavel importa estas DLLs",
+    "items": [
+      {
+        "name": "amd_fidelityfx_loader_xbox.dll",
+        "segment": 13,
+        "region": "0x3EA",
+        "size": 13312,
+        "key_id": 0
+      },
+      {
+        "name": "amd_fidelityfx_upscaler_xbox.dll",
+        "segment": 14,
+        "region": "0x3EA",
+        "size": 786432,
+        "key_id": 0
+      },
+      {
+        "name": "Bink2Scarlett.dll",
+        "segment": 15,
+        "region": "0x3EA",
+        "size": 255488,
+        "key_id": 0
+      },
+      {
+        "name": "concrt140.dll",
+        "segment": 16,
+        "region": "0x3EA",
+        "size": 298992,
+        "key_id": 0
+      },
+      {
+        "name": "libHttpClient.GDK.dll",
+        "segment": 17,
+        "region": "0x3EA",
+        "size": 975856,
+        "key_id": 0
+      },
+      {
+        "name": "msvcp140.dll",
+        "segment": 18,
+        "region": "0x3EA",
+        "size": 565232,
+        "key_id": 0
+      },
+      {
+        "name": "msvcp140_1.dll",
+        "segment": 19,
+        "region": "0x3EA",
+        "size": 26104,
+        "key_id": 0
+      },
+      {
+        "name": "msvcp140_2.dll",
+        "segment": 20,
+        "region": "0x3EA",
+        "size": 187888,
+        "key_id": 0
+      },
+      {
+        "name": "msvcp140_atomic_wait.dll",
+        "segment": 21,
+        "region": "0x3EA",
+        "size": 57312,
+        "key_id": 0
+      },
+      {
+        "name": "msvcp140_codecvt_ids.dll",
+        "segment": 22,
+        "region": "0x3EA",
+        "size": 22008,
+        "key_id": 0
+      },
+      {
+        "name": "vccorlib140.dll",
+        "segment": 23,
+        "region": "0x3EA",
+        "size": 336888,
+        "key_id": 0
+      },
+      {
+        "name": "vcomp140.dll",
+        "segment": 24,
+        "region": "0x3EA",
+        "size": 72176,
+        "key_id": 0
+      },
+      {
+        "name": "vcruntime140.dll",
+        "segment": 25,
+        "region": "0x3EA",
+        "size": 97776,
+        "key_id": 0
+      },
+      {
+        "name": "vcruntime140_1.dll",
+        "segment": 26,
+        "region": "0x3EA",
+        "size": 37848,
+        "key_id": 0
+      },
+      {
+        "name": "XboxBvhBuilder.dll",
+        "segment": 27,
+        "region": "0x3EA",
+        "size": 884224,
+        "key_id": 0
+      },
+      {
+        "name": "XCurl.dll",
+        "segment": 28,
+        "region": "0x3EA",
+        "size": 199152,
+        "key_id": 0
+      }
+    ]
+  },
+  "launch_config": {
+    "appx_entry_point": {
+      "value": "GamingProxyApp.Application.EntryPoint",
+      "level": "CONFIRMED",
+      "source": "appxmanifest.xml Application@EntryPoint",
+      "test": null
+    },
+    "target_device_family": {
+      "value": "Scarlett",
+      "level": "CONFIRMED",
+      "source": "MicrosoftGame.config",
+      "test": null
+    },
+    "is_dev_only": {
+      "value": "false",
+      "level": "CONFIRMED",
+      "source": "MicrosoftGame.config",
+      "test": null
+    },
+    "virtual_machine": {
+      "value": {
+        "SMTEnabled": "true",
+        "XboxLockhartTitleMemory": "Advanced",
+        "XboxAnacondaTitleMemory": "Advanced"
+      },
+      "level": "CONFIRMED",
+      "source": "MicrosoftGame.config",
+      "test": null
+    },
+    "persistent_local_storage_MB": {
+      "value": {
+        "config": 2048,
+        "header_0x46C": 2048
+      },
+      "level": "CONFIRMED",
+      "source": "MicrosoftGame.config x cabecalho 0x46C",
+      "test": "fingerprint.pls"
+    },
+    "protocols": {
+      "value": [
+        "ms-xbl-7952987a"
+      ],
+      "level": "CONFIRMED",
+      "source": "appxmanifest.xml",
+      "test": null
+    },
+    "dependencies": {
+      "value": [
+        {
+          "kind": "TargetDeviceFamily",
+          "Name": "Windows.Universal",
+          "MinVersion": "10.0.18362.0",
+          "MaxVersionTested": "10.0.18362.0"
+        },
+        {
+          "kind": "OSPackageDependency",
+          "Name": "Microsoft.GameOs",
+          "Version": "10.0.18362.0"
+        }
+      ],
+      "level": "CONFIRMED",
+      "source": "appxmanifest.xml",
+      "test": null
+    },
+    "capabilities": {
+      "value": [
+        "internetClient",
+        "microphone"
+      ],
+      "level": "CONFIRMED",
+      "source": "appxmanifest.xml",
+      "test": null
+    },
+    "gdk_version": {
+      "value": "10.0.26100.7822",
+      "level": "CONFIRMED",
+      "source": "Summary.json",
+      "test": null
+    }
+  },
+  "code_catalog": {
+    "file": "Catalog000.bin",
+    "segment": 10,
+    "pe_subsystem": "XBOX_CODE_CATALOG",
+    "sha256_catalog": "4afbdbe22aad2bc338a5ba1ffe83cccb96e072eb4e92f6a5dd90b49b2e227c59",
+    "sha256_catalog_equals_PECatalogHash": false,
+    "byte_search_in_catalog": {
+      "sha256_stored_exe": false,
+      "sha1_stored_exe": false,
+      "PECatalogHash_header": false,
+      "segment_hash_exe": false
+    },
+    "level": "CONFIRMED",
+    "note": "busca de bytes exatos; ausencia nao exclui que o catalogo descreva o executavel (pode usar hash do conteudo decifrado ou outro formato)"
+  }
+}

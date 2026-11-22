@@ -1,0 +1,2625 @@
+{
+  "schema": "xvcintel.findings/1",
+  "generated_utc": "2026-11-22T13:41:16Z",
+  "source": {
+    "path": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc",
+    "size": 225336647680,
+    "vduid": "3202719e-b4b4-421c-9f8f-70d1c4a7d60b",
+    "bytes_read": 4072150377
+  },
+  "options": {
+    "cap_bytes": 167772160,
+    "full_leaf_level": true,
+    "full_page_scan": true,
+    "leaf_level_samples": 64,
+    "seed": 1234
+  },
+  "read_only": "o pacote foi aberto apenas em modo 'rb'; nenhuma escrita, decifragem ou uso de chave",
+  "summary": {
+    "findings_by_level": {
+      "CONFIRMED": 27,
+      "INFERRED": 3,
+      "UNKNOWN": 8
+    },
+    "checks_by_status": {
+      "PASS": 29,
+      "PARTIAL": 1,
+      "INFO": 5
+    }
+  },
+  "findings": [
+    {
+      "id": "F-HDR-01",
+      "category": "cabecalho",
+      "statement": "MutableDataPageCount fica no byte 0x470 (xvdtool +0x270); vale 1 e coincide com o comprimento da regiao XVC-MDU. O probe antigo lia 0x5E0 (errado).",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "MutableDataPageCount",
+          "offset": 1136,
+          "value": "1",
+          "test_id": "layout.mdu_vs_region",
+          "offset_hex": "0x470"
+        }
+      ],
+      "tests": [
+        "layout.mdu_vs_region",
+        "layout.xvcinfo_anchor"
+      ],
+      "how_to_test": "Refutado se XVC-MDU.Length != 0x470 * 0x1000 em outro pacote.",
+      "notes": ""
+    },
+    {
+      "id": "F-HDR-02",
+      "category": "cabecalho",
+      "statement": "Layout calculado do cabecalho fecha exatamente com o tamanho do arquivo (fim 0x34771C6000) e as regioes XVC-HD/EXVD/MDU/MD coincidem com ele.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "layout.end_equals_size",
+        "layout.regions_match",
+        "layout.hash_tree_size"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HDR-03",
+      "category": "cabecalho",
+      "statement": "PackageVersion (0x3BC, 4 x u16 = (1, 2, 0, 1)) lido em ordem inversa = 1.0.2.1, igual ao Identity@Version do MicrosoftGame.config.",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "PackageVersion",
+          "offset": 956,
+          "value": "(1, 2, 0, 1)",
+          "test_id": null,
+          "offset_hex": "0x3BC"
+        }
+      ],
+      "tests": [
+        "fingerprint.package_version"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HDR-04",
+      "category": "cabecalho",
+      "statement": "PersistentLocalStorageSize (0x46C) = 2048 == SizeMB do MicrosoftGame.config (2048).",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "PersistentLocalStorageSize",
+          "offset": 1132,
+          "value": "2048",
+          "test_id": null,
+          "offset_hex": "0x46C"
+        }
+      ],
+      "tests": [
+        "fingerprint.pls"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HDR-05",
+      "category": "cabecalho",
+      "statement": "VolumeFlags 0x41 = ReadOnly|RegionIdInXts (nomes do enum do xvdtool). O bit EncryptionDisabled nao esta setado.",
+      "level": "INFERRED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "VolumeFlags",
+          "offset": 520,
+          "value": "0x41",
+          "test_id": null,
+          "offset_hex": "0x208"
+        },
+        {
+          "source": "xvdtool",
+          "field": "XvdVolumeFlags",
+          "offset": null,
+          "value": null,
+          "test_id": null
+        }
+      ],
+      "tests": [],
+      "how_to_test": "Confirmaria com um XVD de conteudo conhecido com EncryptionDisabled setado (bytes legiveis) e outro sem.",
+      "notes": "valor do campo CONFIRMED; significado dos bits vem do xvdtool (INFERRED)"
+    },
+    {
+      "id": "F-HDR-06",
+      "category": "cabecalho",
+      "statement": "0x494..0x49B (xvdtool MinSysVersion) = ('0x25af', '0x65f4', '0x0', '0x800a'); lendo em ordem inversa como o PackageVersion: 0x800A.0.26100.9647 (26100 = 0x65F4 coincide com a familia do GDKVersion 10.0.26100.7822). O bit alto 0x8000 do primeiro componente e o valor 0x0A sem ele (=10) sugerem 10.0.26100.x, mas o significado do bit e desconhecido.",
+      "level": "INFERRED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "MinSysVersion",
+          "offset": 1172,
+          "value": null,
+          "test_id": null,
+          "offset_hex": "0x494"
+        }
+      ],
+      "tests": [],
+      "how_to_test": "Comparar com outro pacote/GDK conhecido; o XVD embutido tem o mesmo padrao em 0x3BC.",
+      "notes": ""
+    },
+    {
+      "id": "F-HDR-07",
+      "category": "cabecalho",
+      "statement": "Unknown471 (0x471) = 0x4; campos zerados: KeyMaterial=zero, UserDataHash=zero, SandboxId=zero, PECatalogCaps=zero, PECatalogs=zero.",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "Unknown471",
+          "offset": 1137,
+          "value": "0x4",
+          "test_id": null,
+          "offset_hex": "0x471"
+        }
+      ],
+      "tests": [
+        "test_headers.py"
+      ],
+      "how_to_test": "Significado de 0x471 UNKNOWN: comparar com outros pacotes (o XVD embutido tem 0).",
+      "notes": "significado de 0x471 UNKNOWN"
+    },
+    {
+      "id": "F-HDR-08",
+      "category": "cabecalho",
+      "statement": "ProductId (0x39C) 394e4c3357574e30c05a4c5a5a4eaa00 contem os 12 caracteres ASCII do StoreId 9NL3WWNZLZZN em ordem: [0:7]='9NL3WWN' e [9:14]='ZLZZN'; bytes 7-8 = 30c0 e 14-15 = aa00 nao sao ASCII.",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "ProductId",
+          "offset": 924,
+          "value": "394e4c3357574e30c05a4c5a5a4eaa00",
+          "test_id": null,
+          "offset_hex": "0x39C"
+        },
+        {
+          "source": "userdata:MicrosoftGame.config",
+          "field": "StoreId",
+          "offset": null,
+          "value": null,
+          "test_id": null
+        }
+      ],
+      "tests": [
+        "test_headers.py::test_product_id_storeid"
+      ],
+      "how_to_test": "Hipotese de codificacao (GUID bytes_le com nibble de versao 3 em byte 7 e variante 0b110 em byte 8) fica INFERRED; confirmaria com outro pacote cujo StoreId seja conhecido.",
+      "notes": "leitura como GUID: 334c4e39-5757-304e-c05a-4c5a5a4eaa00 (versao 3, variante Microsoft) - INFERRED"
+    },
+    {
+      "id": "F-HT-01",
+      "category": "hash tree",
+      "statement": "Geometria do xvdtool confirmada: 54605734 paginas hasheadas (drive + user data + XvcInfo + dynamic header), niveis L0..L3 = [321211, 1890, 12, 1], topo gravado primeiro (inicios [1903, 13, 1, 0]).",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "layout.hash_tree_size",
+        "test_hashtree.py"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HT-02",
+      "category": "hash tree",
+      "statement": "SHA-256(pagina 0 da arvore) == TopHashBlockHash (0x240).",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.top_hash"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HT-03",
+      "category": "hash tree",
+      "statement": "SHA-256(pagina filha)[:0x18] == entrada do pai em todos os niveis. Cobertura: link_L2_to_L3 12/12 conferem (completo); link_L1_to_L2 1890/1890 conferem (completo); link_L0_to_L1 321211/321211 conferem (completo)",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.link_L2_to_L3",
+        "integrity.link_L1_to_L2",
+        "integrity.link_L0_to_L1"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-HT-04",
+      "category": "hash tree",
+      "statement": "Folhas: em regioes com KeyId != 0xFFFF, entry[:0x14] == SHA-256(pagina gravada)[:0x14] e entry[0x14:0x18] e um u32 separado; em regioes 0xFFFF e metadados, entry == SHA-256[:0x18]. 116/116 conferem; regioes com KeyId: 106 ok/0 falha (entry[:0x14]); sem KeyId/metadados: 10 ok/0 falha (entry[:0x18]) - amostra de 116 de 54605734 paginas hasheadas (inicio/meio/fim de cada regiao + 32 aleatorias, semente 1234)",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.leaf_vs_data"
+      ],
+      "how_to_test": "Amostrado; a varredura completa das folhas contra L1 e feita por --full-leaf.",
+      "notes": ""
+    },
+    {
+      "id": "F-HT-05",
+      "category": "hash tree",
+      "statement": "O u32 em entry[0x14:0x18] e a 'unidade de dados' usada como tweak XTS (xvdtool). Nao verificado aqui (exigiria chave); documentado apenas como estrutura.",
+      "level": "INFERRED",
+      "evidence": [
+        {
+          "source": "xvdtool",
+          "field": "XVDFile.CryptSectionXts",
+          "offset": null,
+          "value": null,
+          "test_id": null
+        }
+      ],
+      "tests": [],
+      "how_to_test": "Nao testavel sem chave (fora do escopo por regra). O que e testavel - a relacao com a tabela de paginas - esta em F-PT-02.",
+      "notes": ""
+    },
+    {
+      "id": "F-PT-01",
+      "category": "tabela de paginas",
+      "statement": "Tabela (u32 PageNum, u32 Value) em XvcInfo apos o array por segmento: 76468/76469 conferem; divergencias: [{'entry': 0, 'page': '0x63BCB', 'value': '0x0', 'leaf_du': '0xD81EC061', 'region': '0x40000002', 'keyed': False}]",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.value_eq_leaf_du"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-PT-02",
+      "category": "tabela de paginas",
+      "statement": "A tabela e uma codificacao run-length das unidades de dados: para toda pagina de regiao com KeyId, unidade(p) = Value + (p - PageNum) da entrada que governa p. paginas com KeyId: 54601906/54601906 conferem; sem KeyId: 11/3401 conferem (as que conferem sao as paginas que abrem entrada, cujo Value e copia dos bytes da folha); excecoes por regiao: 0x40000002=sem KeyId:2457, 0x40000003=sem KeyId:933. Cobertura: completo: 54605307 paginas do drive data",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.rle_model"
+      ],
+      "how_to_test": "Refutado por qualquer pagina com KeyId que nao siga a regra (--full-pages varre todas).",
+      "notes": "as unicas excecoes esperadas sao paginas de regioes 0xFFFF, onde entry[0x14:0x18] faz parte do hash"
+    },
+    {
+      "id": "F-PT-03",
+      "category": "tabela de paginas",
+      "statement": "Nenhuma entrada redundante (codificacao minima). 0 entradas redundantes",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.no_redundant_entries"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-PT-04",
+      "category": "tabela de paginas",
+      "statement": "Unidades de dados NAO sao unicas por pagina dentro de uma regiao: 44179883 de 54601906 paginas compartilham a unidade de dados com outra pagina da mesma regiao (13233733 valores distintos); amostra direta: 400/400 pares com a mesma unidade nas folhas, 0/400 com o mesmo hash gravado (entry[:0x14])",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.data_unit_reuse"
+      ],
+      "how_to_test": "Contagem derivada do modelo RLE (F-PT-02); pares conferidos diretamente nas folhas.",
+      "notes": "o motivo e UNKNOWN; hipotese: valores herdados de versoes anteriores do pacote (atualizacao por paginas) - testavel comparando com outra versao do mesmo titulo"
+    },
+    {
+      "id": "F-PT-05",
+      "category": "tabela de paginas",
+      "statement": "Entre entradas consecutivas da mesma regiao, Value volta para tras em 49875 casos e salta para frente em 26557.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.transitions"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-PT-06",
+      "category": "XvcInfo",
+      "statement": "Array u32 por segmento (logo apos os update segments; xvdtool nao o le) == unidade de dados da 1a pagina do segmento em 105/108 conferem",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "pages.segment_values"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-PT-07-seg78",
+      "category": "XvcInfo",
+      "statement": "Excecao no segmento 78 (anim.rpf): valor 0x049EA1FD, unidade da 1a pagina 0x049EA1FE (diferenca -1); nao e unidade+1 da pagina anterior (0xA57E03B4); nao aparece como unidade em +/-janela ([]) nem dentro de nenhuma sequencia da tabela (False).",
+      "level": "UNKNOWN",
+      "evidence": [
+        {
+          "source": "xvc:XvcInfo",
+          "field": "segment value [78]",
+          "offset": 1671598960,
+          "value": "0x049EA1FD",
+          "test_id": null,
+          "offset_hex": "0x63A29370"
+        }
+      ],
+      "tests": [
+        "pages.segment_values"
+      ],
+      "how_to_test": "Proximo teste: comparar com o mesmo arquivo em outra versao do pacote; testar se o valor e uma unidade de dados 'virtual' anterior a uma pagina removida.",
+      "notes": "fato da divergencia CONFIRMED; causa UNKNOWN"
+    },
+    {
+      "id": "F-PT-07-seg90",
+      "category": "XvcInfo",
+      "statement": "Excecao no segmento 90 (pack\\story000\\story000_script.rpf): valor 0x11F80453, unidade da 1a pagina 0x11F80478 (diferenca -37); nao e unidade+1 da pagina anterior (0x1204223F); nao aparece como unidade em +/-janela ([]) nem dentro de nenhuma sequencia da tabela (False).",
+      "level": "UNKNOWN",
+      "evidence": [
+        {
+          "source": "xvc:XvcInfo",
+          "field": "segment value [90]",
+          "offset": 1671599008,
+          "value": "0x11F80453",
+          "test_id": null,
+          "offset_hex": "0x63A293A0"
+        }
+      ],
+      "tests": [
+        "pages.segment_values"
+      ],
+      "how_to_test": "Proximo teste: comparar com o mesmo arquivo em outra versao do pacote; testar se o valor e uma unidade de dados 'virtual' anterior a uma pagina removida.",
+      "notes": "fato da divergencia CONFIRMED; causa UNKNOWN"
+    },
+    {
+      "id": "F-PT-07-seg107",
+      "category": "XvcInfo",
+      "statement": "Excecao no segmento 107 (Update.alignmentchunk): valor 0x16EA0DE4, unidade da 1a pagina 0xF420B93D (diferenca +583619751); nao e unidade+1 da pagina anterior (0xB5C96F96); nao aparece como unidade em +/-janela ([]) nem dentro de nenhuma sequencia da tabela (False).",
+      "level": "UNKNOWN",
+      "evidence": [
+        {
+          "source": "xvc:XvcInfo",
+          "field": "segment value [107]",
+          "offset": 1671599076,
+          "value": "0x16EA0DE4",
+          "test_id": null,
+          "offset_hex": "0x63A293E4"
+        }
+      ],
+      "tests": [
+        "pages.segment_values"
+      ],
+      "how_to_test": "Proximo teste: comparar com o mesmo arquivo em outra versao do pacote; testar se o valor e uma unidade de dados 'virtual' anterior a uma pagina removida.",
+      "notes": "fato da divergencia CONFIRMED; causa UNKNOWN"
+    },
+    {
+      "id": "F-RG-01",
+      "category": "regioes",
+      "statement": "Hash de regiao (8 bytes em +0x60, xvdtool 'aka RegionPDUID', nao calculado pelo xvdtool) == SHA-256(bytes gravados da regiao)[:8]: 28/28 testadas conferem; 0 puladas (cobertura completa, incluindo as 15 regioes > 160 MB antes INFERRED). Regioes grandes confirmadas: ['0x3EB', '0x3ED', '0x3EE', '0x3EF', '0x3F0', '0x3F1', '0x3F2', '0x3F3', '0x3F4', '0x3F5', '0xBB8', '0xBBA', '0xBBB', '0xBBE', '0xBBF'].",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.region_hash"
+      ],
+      "how_to_test": "Rodado sem limite (cap_bytes = tamanho do pacote); ~218 GB lidos em streaming. Ver reports/full_hashes_result.json.",
+      "notes": ""
+    },
+    {
+      "id": "F-RG-02",
+      "category": "regioes",
+      "statement": "Hash da regiao XVC-EXVD == EmbeddedXVD_PDUID[:8] (e PDUID do XVD embutido).",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.region_hash",
+        "embedded.pduid_link"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-RG-03",
+      "category": "regioes",
+      "statement": "XVC-HD e XVC-MD compartilham o mesmo hash de regiao; nenhuma das 9 serializacoes testadas (incl. VerifyXvcHash do xvdtool) reproduz esse valor nem o OriginalXvcDataHash.",
+      "level": "UNKNOWN",
+      "evidence": [],
+      "tests": [
+        "hypothesis.metadata_hash"
+      ],
+      "how_to_test": "Hipoteses refutadas listadas em hypothesis.metadata_hash; proximo candidato: hash sobre a versao 'pre-hash-tree' do pacote inteiro de metadados (nao reproduzivel sem o empacotador).",
+      "notes": ""
+    },
+    {
+      "id": "F-SG-01",
+      "category": "segmentos",
+      "statement": "Hash do update segment (+4, 8 bytes) == SHA-256(paginas gravadas do segmento ate o proximo segmento ou fim da regiao)[:8]: 108/108 testados conferem; 0 pulados (cobertura completa, incluindo os 59 segmentos > 160 MB antes INFERRED).",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.segment_hash"
+      ],
+      "how_to_test": "Rodado sem limite (cap_bytes = tamanho do pacote); ~218 GB lidos em streaming. Ver reports/full_hashes_result.json.",
+      "notes": ""
+    },
+    {
+      "id": "F-RG-04",
+      "category": "regioes",
+      "statement": "Flags de regiao observadas: metadados 0x1, conteudo 0x0, regiao InitialPlay (0xBC1) 0x4. Pelo enum do xvdtool 0x4 seria Preview e InitialPlay seria 0x2: os nomes do enum nao batem com o uso aqui.",
+      "level": "UNKNOWN",
+      "evidence": [],
+      "tests": [
+        "test_formats.py::test_xvcinfo_regions"
+      ],
+      "how_to_test": "Comparar flags de regiao em pacotes com PreviewRegionId != 0 ou com mais regioes InitialPlay.",
+      "notes": "valores CONFIRMED; significado UNKNOWN"
+    },
+    {
+      "id": "F-RG-05",
+      "category": "XvcInfo",
+      "statement": "InitialPlayOffset (0xD28) = 0x34771C6000 == fim da regiao InitialPlay == tamanho do arquivo.",
+      "level": "CONFIRMED",
+      "evidence": [
+        {
+          "source": "xvc:XvcInfo",
+          "field": "InitialPlayOffset",
+          "offset": 1671593256,
+          "value": "0x34771C6000",
+          "test_id": null,
+          "offset_hex": "0x63A27D28"
+        }
+      ],
+      "tests": [],
+      "how_to_test": "Pacote com regiao InitialPlay que nao seja a ultima diria se o campo e 'fim da regiao' ou 'fim do arquivo'.",
+      "notes": "significado (fim da parte jogavel inicial?) INFERRED"
+    },
+    {
+      "id": "F-XI-01",
+      "category": "XvcInfo",
+      "statement": "RegionSpecifierCount (0xD50) = 0; PageTableCount (0xD54, 'ReservedD54' no xvdtool) = 76469; a tabela fecha em +0x97990 e o resto do XvcInfo e zero.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "xvcinfo.struct.10"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-FM-01",
+      "category": "arquivos",
+      "statement": "108 arquivos do SegmentMetadata.bin mapeados 1:1 para segmentos e regioes; todas as checagens de intervalo passaram.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "filemap",
+        "drive data do cabecalho == inicio da regiao FS-MD",
+        "drive data termina no fim do arquivo",
+        "quantidade de arquivos == quantidade de segmentos",
+        "inicio do arquivo == PageNum do segmento",
+        "todo arquivo comeca dentro de uma regiao",
+        "todo arquivo termina dentro da sua regiao",
+        "todo arquivo cabe no seu segmento (nao invade o seguinte)",
+        "todo arquivo termina antes do fim do .xvc",
+        "nenhuma sobreposicao entre arquivos",
+        "arquivos na mesma ordem dos segmentos",
+        "arquivos ocupam exatamente as paginas do segmento"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-FM-02",
+      "category": "arquivos",
+      "statement": "GUID do SegmentMetadata (b364c736-a183-4185-b6ca-2145e57dcc38) procurado (bytes_le e big-endian): cabecalho=ausente, XvcInfo=ausente, outros arquivos do user data (inclui hive)=ausente.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "findings: busca de bytes"
+      ],
+      "how_to_test": "",
+      "notes": "significado do GUID UNKNOWN"
+    },
+    {
+      "id": "F-EX-01",
+      "category": "XVD embutido",
+      "statement": "A regiao XVC-EXVD contem um segundo XVD legivel pelo mesmo parser: ContentType 3 (EraOS no enum do xvdtool), Type 1 (Dynamic), DriveSize 0x20000000, VolumeFlags 0x1.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "embedded.top_hash",
+        "embedded.link_L0_L1"
+      ],
+      "how_to_test": "Nomes de enum: so confirmaveis com documentacao oficial; layout: top hash/link/folha ja testados.",
+      "notes": "nomes dos enums INFERRED; o layout calculado da arvore do embutido confere (top hash)"
+    },
+    {
+      "id": "F-EX-02",
+      "category": "XVD embutido",
+      "statement": "O fim do layout calculado do XVD embutido nao fecha com EmbeddedXVDLength (XVD dinamico: o drive data so ocupa os blocos alocados).",
+      "level": "UNKNOWN",
+      "evidence": [],
+      "tests": [],
+      "how_to_test": "Decodificar a BAT do dynamic header (0xCCC bytes) e conferir os blocos alocados.",
+      "notes": ""
+    },
+    {
+      "id": "F-EX-03",
+      "category": "XVD embutido",
+      "statement": "UserDataHash do XVD embutido nao e SHA-256 dos bytes gravados do seu user data.",
+      "level": "UNKNOWN",
+      "evidence": [],
+      "tests": [
+        "embedded.user_data_hash"
+      ],
+      "how_to_test": "Hipotese restante (hash do conteudo decifrado) nao e testavel sem chave.",
+      "notes": ""
+    },
+    {
+      "id": "F-EXE-01",
+      "category": "executavel",
+      "statement": "game_scarlett_master.exe: segmento 12, regiao 0x3E9 (regiao de um unico arquivo), KeyId 0, offset 0x64917000, 120181760 bytes, 1 entrada(s) na tabela de paginas (uma unica sequencia de unidades de dados).",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "filemap",
+        "fingerprint"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-EXE-02",
+      "category": "executavel",
+      "statement": "Bytes gravados do executavel: SHA-256 79fe15101c861d0e6e3353d24ebba158ae7e0ed61ea79ece199ca91763dba89a; hash de segmento e de regiao conferem ({'stored': '3b221181d8be52ba', 'computed': '3b221181d8be52ba', 'match': True}). Isto identifica os bytes cifrados/gravados, nao o PE.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "integrity.segment_hash",
+        "fingerprint"
+      ],
+      "how_to_test": "",
+      "notes": ""
+    },
+    {
+      "id": "F-EXE-03",
+      "category": "executavel",
+      "statement": "Os bytes gravados nao tem MZ/PE; imports, exports, secoes, entry point e funcoes do executavel sao UNKNOWN. Os nomes das 16 DLLs do pacote nao sao evidencia de import.",
+      "level": "UNKNOWN",
+      "evidence": [],
+      "tests": [
+        "fingerprint"
+      ],
+      "how_to_test": "Requer um PE legivel obtido legitimamente (ver docs/pe-requisitos.md).",
+      "notes": ""
+    },
+    {
+      "id": "F-EXE-04",
+      "category": "executavel",
+      "statement": "Catalog000.bin (PE XBOX_CODE_CATALOG) nao contem o SHA-256/SHA-1 dos bytes gravados do executavel, nem o hash de segmento; SHA-256 do catalogo == PECatalogHash: False.",
+      "level": "CONFIRMED",
+      "evidence": [],
+      "tests": [
+        "fingerprint"
+      ],
+      "how_to_test": "Com um PE legivel do executavel: procurar seus hashes (SHA-1/SHA-256/Authenticode) no catalogo.",
+      "notes": "relacao entre o catalogo e o executavel UNKNOWN"
+    }
+  ],
+  "checks": [
+    {
+      "id": "layout.xvcinfo_anchor",
+      "title": "XvcInfo.ContentID == VDUID no offset calculado pelo layout",
+      "status": "PASS",
+      "detail": "calculado 0x63A27000; ancora 0x63A27000",
+      "coverage": "",
+      "counts": {},
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "MutableDataPageCount",
+          "offset": 1136,
+          "value": "1",
+          "test_id": null,
+          "offset_hex": "0x470"
+        },
+        {
+          "source": "xvc:XvcInfo",
+          "field": "ContentID",
+          "offset": 1671589888,
+          "value": null,
+          "test_id": "layout.xvcinfo_anchor",
+          "offset_hex": "0x63A27000"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "id": "layout.mdu_vs_region",
+      "title": "MutableDataPageCount (0x470) x comprimento da regiao XVC-MDU",
+      "status": "PASS",
+      "detail": "0x470=1 pagina(s); XVC-MDU 0x1000",
+      "coverage": "",
+      "counts": {},
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "MutableDataPageCount",
+          "offset": 1136,
+          "value": "1",
+          "test_id": null,
+          "offset_hex": "0x470"
+        },
+        {
+          "source": "xvc:XvcInfo",
+          "field": "region XVC-MDU Length",
+          "offset": 1671593728,
+          "value": "0x1000",
+          "test_id": null,
+          "offset_hex": "0x63A27F00"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "id": "layout.hash_tree_size",
+      "title": "tamanho da hash tree: formula xvdtool x regiao XVC-MD",
+      "status": "PASS",
+      "detail": "formula 0x4EE2A000, observado 0x4EE2A000",
+      "coverage": "",
+      "counts": {
+        "levels": [
+          321211,
+          1890,
+          12,
+          1
+        ],
+        "hashed_pages": 54605734
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "layout.regions_match",
+      "title": "regioes XVC-HD/EXVD/MDU/MD == layout calculado",
+      "status": "PASS",
+      "detail": "4/4 coincidem",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.00",
+      "title": "Ids de regiao unicos",
+      "status": "PASS",
+      "detail": "31 regioes",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.01",
+      "title": "padding/reservado das regioes zerados",
+      "status": "PASS",
+      "detail": "regioes com bytes nao-zero: []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.02",
+      "title": "KeyId < KeyCount (ou 0xFFFF)",
+      "status": "PASS",
+      "detail": "regioes invalidas: []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.03",
+      "title": "regioes ladrilham o arquivo sem lacuna/sobreposicao",
+      "status": "PASS",
+      "detail": "fim 0x34771c6000, arquivo 0x34771c6000; lacunas/sobreposicoes []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.04",
+      "title": "PageNum dos segmentos crescente",
+      "status": "PASS",
+      "detail": "",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.05",
+      "title": "todo segmento dentro de uma regiao",
+      "status": "PASS",
+      "detail": "orfaos: []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.06",
+      "title": "FirstSegmentIndex/contiguidade/inicio da regiao",
+      "status": "PASS",
+      "detail": "regioes: []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.07",
+      "title": "tabela de paginas estritamente crescente",
+      "status": "PASS",
+      "detail": "",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.08",
+      "title": "toda pagina de segmento abre uma entrada da tabela",
+      "status": "PASS",
+      "detail": "ausentes: []",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.09",
+      "title": "entradas da tabela dentro de regioes",
+      "status": "PASS",
+      "detail": "0 fora",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "xvcinfo.struct.10",
+      "title": "bytes apos a tabela sao zero",
+      "status": "PASS",
+      "detail": "+0x97990, 1099376 bytes, 0 nao-zero",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "layout.end_equals_size",
+      "title": "fim do layout calculado == tamanho do arquivo",
+      "status": "PASS",
+      "detail": "0x34771C6000 vs 0x34771C6000",
+      "coverage": "",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "integrity.top_hash",
+      "title": "SHA-256(pagina 0 da arvore) == TopHashBlockHash",
+      "status": "PASS",
+      "detail": "calculado cbf7b09e0ee745d4dbc3cb5004889a00d929f23fa26113e3b1f64a491c834fd6",
+      "coverage": "1 pagina (completo)",
+      "counts": {},
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "TopHashBlockHash",
+          "offset": 576,
+          "value": "cbf7b09e0ee745d4dbc3cb5004889a00d929f23fa26113e3b1f64a491c834fd6",
+          "test_id": "integrity.top_hash",
+          "offset_hex": "0x240"
+        },
+        {
+          "source": "xvc:hash tree",
+          "field": "pagina 0",
+          "offset": 348086272,
+          "value": "cbf7b09e0ee745d4dbc3cb5004889a00d929f23fa26113e3b1f64a491c834fd6",
+          "test_id": null,
+          "offset_hex": "0x14BF6000"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "id": "integrity.link_L2_to_L3",
+      "title": "SHA-256(pagina do nivel L2)[:0x18] == entrada no nivel L3",
+      "status": "PASS",
+      "detail": "12/12 conferem",
+      "coverage": "completo",
+      "counts": {
+        "checked": 12,
+        "level_pages": 12,
+        "mismatches": 0
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "integrity.link_L1_to_L2",
+      "title": "SHA-256(pagina do nivel L1)[:0x18] == entrada no nivel L2",
+      "status": "PASS",
+      "detail": "1890/1890 conferem",
+      "coverage": "completo",
+      "counts": {
+        "checked": 1890,
+        "level_pages": 1890,
+        "mismatches": 0
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "integrity.link_L0_to_L1",
+      "title": "SHA-256(pagina do nivel L0)[:0x18] == entrada no nivel L1",
+      "status": "PASS",
+      "detail": "321211/321211 conferem",
+      "coverage": "completo",
+      "counts": {
+        "checked": 321211,
+        "level_pages": 321211,
+        "mismatches": 0
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "integrity.leaf_vs_data",
+      "title": "folha da arvore x SHA-256 da pagina gravada (regra por KeyId)",
+      "status": "PARTIAL",
+      "detail": "116/116 conferem; regioes com KeyId: 106 ok/0 falha (entry[:0x14]); sem KeyId/metadados: 10 ok/0 falha (entry[:0x18])",
+      "coverage": "amostra de 116 de 54605734 paginas hasheadas (inicio/meio/fim de cada regiao + 32 aleatorias, semente 1234)",
+      "counts": {
+        "keyed_ok": 106,
+        "keyed_bad": 0,
+        "plain_ok": 10,
+        "plain_bad": 0
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "integrity.region_hash",
+      "title": "hash de regiao (+0x60) x SHA-256(bytes gravados)[:8] (EXVD: PDUID do XVD embutido)",
+      "status": "PASS",
+      "detail": "28/28 testadas conferem; puladas por limite: []",
+      "coverage": "todas as regioes com a regra SHA-256 (sem limite de tamanho); ~218 GB lidos",
+      "counts": {
+        "tested": 28,
+        "ok": 28,
+        "skipped_by_cap": 0
+      },
+      "evidence": [],
+      "data": {
+        "regions": [
+          {
+            "region": "0x40000005",
+            "desc": "XVC-HD",
+            "length": 12288,
+            "stored": "5c2b65ad36990544",
+            "rule": "nao testado aqui (ver hipoteses)",
+            "match": null
+          },
+          {
+            "region": "0x40000004",
+            "desc": "XVC-EXVD",
+            "length": 348069888,
+            "stored": "b78ddf1f2d874e4a",
+            "rule": "== EmbeddedXVD_PDUID[:8]",
+            "match": true
+          },
+          {
+            "region": "0x40000006",
+            "desc": "XVC-MDU",
+            "length": 4096,
+            "stored": "0000000000000000",
+            "rule": "nao testado aqui (ver hipoteses)",
+            "match": null
+          },
+          {
+            "region": "0x40000001",
+            "desc": "XVC-MD",
+            "length": 1325223936,
+            "stored": "5c2b65ad36990544",
+            "rule": "nao testado aqui (ver hipoteses)",
+            "match": null
+          },
+          {
+            "region": "0x40000002",
+            "desc": "FS-MD",
+            "length": 10063872,
+            "stored": "0b76230b71a80710",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "0b76230b71a80710",
+            "match": true
+          },
+          {
+            "region": "0x40000003",
+            "desc": "",
+            "length": 3866624,
+            "stored": "6f8c58f0dd230b5d",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "6f8c58f0dd230b5d",
+            "match": true
+          },
+          {
+            "region": "0x3E8",
+            "desc": "",
+            "length": 12288,
+            "stored": "c30240a3dfbc82ba",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "c30240a3dfbc82ba",
+            "match": true
+          },
+          {
+            "region": "0x3E9",
+            "desc": "",
+            "length": 120184832,
+            "stored": "3b221181d8be52ba",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "3b221181d8be52ba",
+            "match": true
+          },
+          {
+            "region": "0x3EA",
+            "desc": "",
+            "length": 4841472,
+            "stored": "f3541468dbe6ba84",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "f3541468dbe6ba84",
+            "match": true
+          },
+          {
+            "region": "0x3EB",
+            "desc": "",
+            "length": 61010341888,
+            "stored": "1627e371f340c8d0",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "1627e371f340c8d0",
+            "match": true
+          },
+          {
+            "region": "0x3EC",
+            "desc": "",
+            "length": 6643712,
+            "stored": "f014c3716e6a6225",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "f014c3716e6a6225",
+            "match": true
+          },
+          {
+            "region": "0x3ED",
+            "desc": "",
+            "length": 8832483328,
+            "stored": "6fb1b7d6afa17742",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "6fb1b7d6afa17742",
+            "match": true
+          },
+          {
+            "region": "0x3EE",
+            "desc": "",
+            "length": 411697152,
+            "stored": "48de4e8a3e0213ee",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "48de4e8a3e0213ee",
+            "match": true
+          },
+          {
+            "region": "0x3EF",
+            "desc": "",
+            "length": 4407627776,
+            "stored": "9a66438e984fc770",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "9a66438e984fc770",
+            "match": true
+          },
+          {
+            "region": "0x3F0",
+            "desc": "",
+            "length": 481546240,
+            "stored": "b3ec081c604111ca",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "b3ec081c604111ca",
+            "match": true
+          },
+          {
+            "region": "0x3F1",
+            "desc": "",
+            "length": 76155068416,
+            "stored": "417534028103e399",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "417534028103e399",
+            "match": true
+          },
+          {
+            "region": "0x3F2",
+            "desc": "",
+            "length": 6707515392,
+            "stored": "a531d27d4ad69a61",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "a531d27d4ad69a61",
+            "match": true
+          },
+          {
+            "region": "0x3F3",
+            "desc": "",
+            "length": 4798214144,
+            "stored": "7f8dd80e3169e835",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "7f8dd80e3169e835",
+            "match": true
+          },
+          {
+            "region": "0x3F4",
+            "desc": "",
+            "length": 192585728,
+            "stored": "8fcf9e0ef5673587",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "8fcf9e0ef5673587",
+            "match": true
+          },
+          {
+            "region": "0x3F5",
+            "desc": "",
+            "length": 28543455232,
+            "stored": "766ce6474daae458",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "766ce6474daae458",
+            "match": true
+          },
+          {
+            "region": "0x3F6",
+            "desc": "",
+            "length": 4362240,
+            "stored": "491aa7f631fcee80",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "491aa7f631fcee80",
+            "match": true
+          },
+          {
+            "region": "0xBB8",
+            "desc": "",
+            "length": 21023608832,
+            "stored": "d013dedbfc0713a2",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "d013dedbfc0713a2",
+            "match": true
+          },
+          {
+            "region": "0xBB9",
+            "desc": "",
+            "length": 8192,
+            "stored": "f270d78cd0225972",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "f270d78cd0225972",
+            "match": true
+          },
+          {
+            "region": "0xBBA",
+            "desc": "",
+            "length": 198356992,
+            "stored": "4cd997a2f02ab355",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "4cd997a2f02ab355",
+            "match": true
+          },
+          {
+            "region": "0xBBB",
+            "desc": "",
+            "length": 1005535232,
+            "stored": "71b12e428e8e7b6c",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "71b12e428e8e7b6c",
+            "match": true
+          },
+          {
+            "region": "0xBBC",
+            "desc": "",
+            "length": 61988864,
+            "stored": "eb7be044a9380631",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "eb7be044a9380631",
+            "match": true
+          },
+          {
+            "region": "0xBBD",
+            "desc": "",
+            "length": 16384,
+            "stored": "0b36176329cddaf6",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "0b36176329cddaf6",
+            "match": true
+          },
+          {
+            "region": "0xBBE",
+            "desc": "",
+            "length": 8297922560,
+            "stored": "380d660d1d91f5d6",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "380d660d1d91f5d6",
+            "match": true
+          },
+          {
+            "region": "0xBBF",
+            "desc": "",
+            "length": 1384525824,
+            "stored": "faf4a998ee3aeb07",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "faf4a998ee3aeb07",
+            "match": true
+          },
+          {
+            "region": "0xBC0",
+            "desc": "",
+            "length": 835584,
+            "stored": "cc463395825708bc",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "cc463395825708bc",
+            "match": true
+          },
+          {
+            "region": "0xBC1",
+            "desc": "",
+            "length": 28672,
+            "stored": "27e2c1f0cdf20f58",
+            "rule": "SHA-256(regiao gravada)[:8]",
+            "computed": "27e2c1f0cdf20f58",
+            "match": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "integrity.segment_hash",
+      "title": "hash de segmento x SHA-256(paginas gravadas do segmento)[:8]",
+      "status": "PASS",
+      "detail": "108/108 testados conferem; 0 pulados por limite",
+      "coverage": "todos os 108 segmentos (sem limite de tamanho); ~218 GB lidos",
+      "counts": {
+        "tested": 108,
+        "ok": 108,
+        "skipped_by_cap": 0
+      },
+      "evidence": [],
+      "data": {
+        "segments": [
+          {
+            "segment": 0,
+            "page": "0x64564",
+            "length": 8192,
+            "stored": "27735d6ca90ff4eb",
+            "computed": "27735d6ca90ff4eb",
+            "match": true
+          },
+          {
+            "segment": 1,
+            "page": "0x64566",
+            "length": 4096,
+            "stored": "fd347d794b12c43a",
+            "computed": "fd347d794b12c43a",
+            "match": true
+          },
+          {
+            "segment": 2,
+            "page": "0x64567",
+            "length": 57344,
+            "stored": "c808254351655cc1",
+            "computed": "c808254351655cc1",
+            "match": true
+          },
+          {
+            "segment": 3,
+            "page": "0x64575",
+            "length": 8192,
+            "stored": "e32122e4b6a4facd",
+            "computed": "e32122e4b6a4facd",
+            "match": true
+          },
+          {
+            "segment": 4,
+            "page": "0x64577",
+            "length": 2510848,
+            "stored": "d211f31daa5d9838",
+            "computed": "d211f31daa5d9838",
+            "match": true
+          },
+          {
+            "segment": 5,
+            "page": "0x647DC",
+            "length": 32768,
+            "stored": "c2d7d48d605c4e6c",
+            "computed": "c2d7d48d605c4e6c",
+            "match": true
+          },
+          {
+            "segment": 6,
+            "page": "0x647E4",
+            "length": 405504,
+            "stored": "5e580974f6773ee4",
+            "computed": "5e580974f6773ee4",
+            "match": true
+          },
+          {
+            "segment": 7,
+            "page": "0x64847",
+            "length": 4096,
+            "stored": "72b5137efdb39c1c",
+            "computed": "72b5137efdb39c1c",
+            "match": true
+          },
+          {
+            "segment": 8,
+            "page": "0x64848",
+            "length": 16384,
+            "stored": "b5ee2ab590a1cae6",
+            "computed": "b5ee2ab590a1cae6",
+            "match": true
+          },
+          {
+            "segment": 9,
+            "page": "0x6484C",
+            "length": 4096,
+            "stored": "193faa19451f6d2c",
+            "computed": "193faa19451f6d2c",
+            "match": true
+          },
+          {
+            "segment": 10,
+            "page": "0x6484D",
+            "length": 815104,
+            "stored": "4afbdbe22aad2bc3",
+            "computed": "4afbdbe22aad2bc3",
+            "match": true
+          },
+          {
+            "segment": 11,
+            "page": "0x64914",
+            "length": 12288,
+            "stored": "c30240a3dfbc82ba",
+            "computed": "c30240a3dfbc82ba",
+            "match": true
+          },
+          {
+            "segment": 12,
+            "page": "0x64917",
+            "length": 120184832,
+            "stored": "3b221181d8be52ba",
+            "computed": "3b221181d8be52ba",
+            "match": true
+          },
+          {
+            "segment": 13,
+            "page": "0x6BBB5",
+            "length": 16384,
+            "stored": "e2efe67f3387eefc",
+            "computed": "e2efe67f3387eefc",
+            "match": true
+          },
+          {
+            "segment": 14,
+            "page": "0x6BBB9",
+            "length": 786432,
+            "stored": "83e0c2a3f0ccea40",
+            "computed": "83e0c2a3f0ccea40",
+            "match": true
+          },
+          {
+            "segment": 15,
+            "page": "0x6BC79",
+            "length": 258048,
+            "stored": "ccc4f77820dd9e24",
+            "computed": "ccc4f77820dd9e24",
+            "match": true
+          },
+          {
+            "segment": 16,
+            "page": "0x6BCB8",
+            "length": 299008,
+            "stored": "c3c8554f21f78d7b",
+            "computed": "c3c8554f21f78d7b",
+            "match": true
+          },
+          {
+            "segment": 17,
+            "page": "0x6BD01",
+            "length": 978944,
+            "stored": "abeaa851719a6c93",
+            "computed": "abeaa851719a6c93",
+            "match": true
+          },
+          {
+            "segment": 18,
+            "page": "0x6BDF0",
+            "length": 565248,
+            "stored": "61ed26af36509bac",
+            "computed": "61ed26af36509bac",
+            "match": true
+          },
+          {
+            "segment": 19,
+            "page": "0x6BE7A",
+            "length": 28672,
+            "stored": "df343cdab85e487f",
+            "computed": "df343cdab85e487f",
+            "match": true
+          },
+          {
+            "segment": 20,
+            "page": "0x6BE81",
+            "length": 188416,
+            "stored": "0b5b68890b1ae378",
+            "computed": "0b5b68890b1ae378",
+            "match": true
+          },
+          {
+            "segment": 21,
+            "page": "0x6BEAF",
+            "length": 57344,
+            "stored": "c64bf6c00fea3e68",
+            "computed": "c64bf6c00fea3e68",
+            "match": true
+          },
+          {
+            "segment": 22,
+            "page": "0x6BEBD",
+            "length": 24576,
+            "stored": "9aaa815cbbcb379e",
+            "computed": "9aaa815cbbcb379e",
+            "match": true
+          },
+          {
+            "segment": 23,
+            "page": "0x6BEC3",
+            "length": 339968,
+            "stored": "eaa9614977bc50eb",
+            "computed": "eaa9614977bc50eb",
+            "match": true
+          },
+          {
+            "segment": 24,
+            "page": "0x6BF16",
+            "length": 73728,
+            "stored": "e81d0394f94e9e48",
+            "computed": "e81d0394f94e9e48",
+            "match": true
+          },
+          {
+            "segment": 25,
+            "page": "0x6BF28",
+            "length": 98304,
+            "stored": "b239519eb1039f4e",
+            "computed": "b239519eb1039f4e",
+            "match": true
+          },
+          {
+            "segment": 26,
+            "page": "0x6BF40",
+            "length": 40960,
+            "stored": "fce5bc951d822c24",
+            "computed": "fce5bc951d822c24",
+            "match": true
+          },
+          {
+            "segment": 27,
+            "page": "0x6BF4A",
+            "length": 884736,
+            "stored": "4e1ec1cdc6c0d27f",
+            "computed": "4e1ec1cdc6c0d27f",
+            "match": true
+          },
+          {
+            "segment": 28,
+            "page": "0x6C022",
+            "length": 200704,
+            "stored": "47605fd18557863a",
+            "computed": "47605fd18557863a",
+            "match": true
+          },
+          {
+            "segment": 29,
+            "page": "0x6C053",
+            "length": 34414592,
+            "stored": "9eee4ca2e6a8d50b",
+            "computed": "9eee4ca2e6a8d50b",
+            "match": true
+          },
+          {
+            "segment": 30,
+            "page": "0x6E125",
+            "length": 883204096,
+            "stored": "86458cbb6117f76c",
+            "computed": "86458cbb6117f76c",
+            "match": true
+          },
+          {
+            "segment": 31,
+            "page": "0xA2B6F",
+            "length": 898113536,
+            "stored": "028a5a5f4285edef",
+            "computed": "028a5a5f4285edef",
+            "match": true
+          },
+          {
+            "segment": 32,
+            "page": "0xD83F1",
+            "length": 881434624,
+            "stored": "c37e5626f5b509f1",
+            "computed": "c37e5626f5b509f1",
+            "match": true
+          },
+          {
+            "segment": 33,
+            "page": "0x10CC8B",
+            "length": 900878336,
+            "stored": "139672ae2ee282a7",
+            "computed": "139672ae2ee282a7",
+            "match": true
+          },
+          {
+            "segment": 34,
+            "page": "0x1427B0",
+            "length": 151535616,
+            "stored": "a9f079fa67571975",
+            "computed": "a9f079fa67571975",
+            "match": true
+          },
+          {
+            "segment": 35,
+            "page": "0x14B834",
+            "length": 1765683200,
+            "stored": "ed4d23b96ef5bb20",
+            "computed": "ed4d23b96ef5bb20",
+            "match": true
+          },
+          {
+            "segment": 36,
+            "page": "0x1B4C17",
+            "length": 1746190336,
+            "stored": "fa872ac0acffe067",
+            "computed": "fa872ac0acffe067",
+            "match": true
+          },
+          {
+            "segment": 37,
+            "page": "0x21CD63",
+            "length": 1818808320,
+            "stored": "81e745af0285c373",
+            "computed": "81e745af0285c373",
+            "match": true
+          },
+          {
+            "segment": 38,
+            "page": "0x2893F0",
+            "length": 1787351040,
+            "stored": "f0da452b16193188",
+            "computed": "f0da452b16193188",
+            "match": true
+          },
+          {
+            "segment": 39,
+            "page": "0x2F3C7D",
+            "length": 1791672320,
+            "stored": "1a794ad8c39901d5",
+            "computed": "1a794ad8c39901d5",
+            "match": true
+          },
+          {
+            "segment": 40,
+            "page": "0x35E929",
+            "length": 1840029696,
+            "stored": "750e3e29fc4d8249",
+            "computed": "750e3e29fc4d8249",
+            "match": true
+          },
+          {
+            "segment": 41,
+            "page": "0x3CC3F3",
+            "length": 1745924096,
+            "stored": "38773e70ed671ea8",
+            "computed": "38773e70ed671ea8",
+            "match": true
+          },
+          {
+            "segment": 42,
+            "page": "0x4344FE",
+            "length": 1755750400,
+            "stored": "de1a79461c14df3e",
+            "computed": "de1a79461c14df3e",
+            "match": true
+          },
+          {
+            "segment": 43,
+            "page": "0x49CF68",
+            "length": 494317568,
+            "stored": "cdca07c4618488dc",
+            "computed": "cdca07c4618488dc",
+            "match": true
+          },
+          {
+            "segment": 44,
+            "page": "0x4BA6D3",
+            "length": 510001152,
+            "stored": "5d9fa04bb88ebfe6",
+            "computed": "5d9fa04bb88ebfe6",
+            "match": true
+          },
+          {
+            "segment": 45,
+            "page": "0x4D8D33",
+            "length": 491507712,
+            "stored": "6a81e2900883d39e",
+            "computed": "6a81e2900883d39e",
+            "match": true
+          },
+          {
+            "segment": 46,
+            "page": "0x4F61F0",
+            "length": 497393664,
+            "stored": "4725c849e3dc168a",
+            "computed": "4725c849e3dc168a",
+            "match": true
+          },
+          {
+            "segment": 47,
+            "page": "0x513C4A",
+            "length": 135680000,
+            "stored": "c47d178745fe2dbc",
+            "computed": "c47d178745fe2dbc",
+            "match": true
+          },
+          {
+            "segment": 48,
+            "page": "0x51BDAF",
+            "length": 953118720,
+            "stored": "e4dd391933b0e67c",
+            "computed": "e4dd391933b0e67c",
+            "match": true
+          },
+          {
+            "segment": 49,
+            "page": "0x554AA6",
+            "length": 965558272,
+            "stored": "ca08e45a21fc00d8",
+            "computed": "ca08e45a21fc00d8",
+            "match": true
+          },
+          {
+            "segment": 50,
+            "page": "0x58E37A",
+            "length": 937701376,
+            "stored": "f879844dfb10a11f",
+            "computed": "f879844dfb10a11f",
+            "match": true
+          },
+          {
+            "segment": 51,
+            "page": "0x5C61BD",
+            "length": 957292544,
+            "stored": "264345c93a9580ca",
+            "computed": "264345c93a9580ca",
+            "match": true
+          },
+          {
+            "segment": 52,
+            "page": "0x5FF2AF",
+            "length": 983621632,
+            "stored": "dcfb47a004da5625",
+            "computed": "dcfb47a004da5625",
+            "match": true
+          },
+          {
+            "segment": 53,
+            "page": "0x639CBD",
+            "length": 1304461312,
+            "stored": "c219cc3f1b3dd85c",
+            "computed": "c219cc3f1b3dd85c",
+            "match": true
+          },
+          {
+            "segment": 54,
+            "page": "0x6878C5",
+            "length": 1256910848,
+            "stored": "61cd87941d83b57a",
+            "computed": "61cd87941d83b57a",
+            "match": true
+          },
+          {
+            "segment": 55,
+            "page": "0x6D2774",
+            "length": 1239994368,
+            "stored": "2785adf0870023bd",
+            "computed": "2785adf0870023bd",
+            "match": true
+          },
+          {
+            "segment": 56,
+            "page": "0x71C601",
+            "length": 1328914432,
+            "stored": "7686d6852d1fe0b4",
+            "computed": "7686d6852d1fe0b4",
+            "match": true
+          },
+          {
+            "segment": 57,
+            "page": "0x76B95B",
+            "length": 2775085056,
+            "stored": "31f1ac8e4b7527b9",
+            "computed": "31f1ac8e4b7527b9",
+            "match": true
+          },
+          {
+            "segment": 58,
+            "page": "0x810FE2",
+            "length": 2739445760,
+            "stored": "003ec49d9f6174cc",
+            "computed": "003ec49d9f6174cc",
+            "match": true
+          },
+          {
+            "segment": 59,
+            "page": "0x8B446C",
+            "length": 2780147712,
+            "stored": "ffc55f5367a71d27",
+            "computed": "ffc55f5367a71d27",
+            "match": true
+          },
+          {
+            "segment": 60,
+            "page": "0x959FC7",
+            "length": 2718683136,
+            "stored": "ba8fbf1c6cf37476",
+            "computed": "ba8fbf1c6cf37476",
+            "match": true
+          },
+          {
+            "segment": 61,
+            "page": "0x9FC084",
+            "length": 2741342208,
+            "stored": "ac116aa6da34b4fa",
+            "computed": "ac116aa6da34b4fa",
+            "match": true
+          },
+          {
+            "segment": 62,
+            "page": "0xA9F6DD",
+            "length": 2674380800,
+            "stored": "d9c1fb999a2dce2b",
+            "computed": "d9c1fb999a2dce2b",
+            "match": true
+          },
+          {
+            "segment": 63,
+            "page": "0xB3ED5A",
+            "length": 2688811008,
+            "stored": "f8c4545a79f52f60",
+            "computed": "f8c4545a79f52f60",
+            "match": true
+          },
+          {
+            "segment": 64,
+            "page": "0xBDF19A",
+            "length": 2828300288,
+            "stored": "a0db36884c9fce6c",
+            "computed": "a0db36884c9fce6c",
+            "match": true
+          },
+          {
+            "segment": 65,
+            "page": "0xC87AE1",
+            "length": 1946071040,
+            "stored": "270604566a04e968",
+            "computed": "270604566a04e968",
+            "match": true
+          },
+          {
+            "segment": 66,
+            "page": "0xCFBACC",
+            "length": 1890979840,
+            "stored": "a289e734a54eac0a",
+            "computed": "a289e734a54eac0a",
+            "match": true
+          },
+          {
+            "segment": 67,
+            "page": "0xD6C62D",
+            "length": 225280,
+            "stored": "f26d45112d3869ad",
+            "computed": "f26d45112d3869ad",
+            "match": true
+          },
+          {
+            "segment": 68,
+            "page": "0xD6C664",
+            "length": 845119488,
+            "stored": "1dd7054a91f0bcc3",
+            "computed": "1dd7054a91f0bcc3",
+            "match": true
+          },
+          {
+            "segment": 69,
+            "page": "0xD9EC5C",
+            "length": 195420160,
+            "stored": "1394795ba7c6322f",
+            "computed": "1394795ba7c6322f",
+            "match": true
+          },
+          {
+            "segment": 70,
+            "page": "0xDAA6BA",
+            "length": 838475776,
+            "stored": "7686cd2c3c44569e",
+            "computed": "7686cd2c3c44569e",
+            "match": true
+          },
+          {
+            "segment": 71,
+            "page": "0xDDC65C",
+            "length": 890208256,
+            "stored": "30c764ff4ff8eaba",
+            "computed": "30c764ff4ff8eaba",
+            "match": true
+          },
+          {
+            "segment": 72,
+            "page": "0xE11754",
+            "length": 238899200,
+            "stored": "15d2f7b1efb640de",
+            "computed": "15d2f7b1efb640de",
+            "match": true
+          },
+          {
+            "segment": 73,
+            "page": "0xE1FB29",
+            "length": 1421520896,
+            "stored": "be128d49d69b96e3",
+            "computed": "be128d49d69b96e3",
+            "match": true
+          },
+          {
+            "segment": 74,
+            "page": "0xE746D4",
+            "length": 739762176,
+            "stored": "23877344cd99482e",
+            "computed": "23877344cd99482e",
+            "match": true
+          },
+          {
+            "segment": 75,
+            "page": "0xEA0852",
+            "length": 6643712,
+            "stored": "f014c3716e6a6225",
+            "computed": "f014c3716e6a6225",
+            "match": true
+          },
+          {
+            "segment": 76,
+            "page": "0xEA0EA8",
+            "length": 8832483328,
+            "stored": "6fb1b7d6afa17742",
+            "computed": "6fb1b7d6afa17742",
+            "match": true
+          },
+          {
+            "segment": 77,
+            "page": "0x10AF5F8",
+            "length": 411697152,
+            "stored": "48de4e8a3e0213ee",
+            "computed": "48de4e8a3e0213ee",
+            "match": true
+          },
+          {
+            "segment": 78,
+            "page": "0x10C7E98",
+            "length": 4407627776,
+            "stored": "9a66438e984fc770",
+            "computed": "9a66438e984fc770",
+            "match": true
+          },
+          {
+            "segment": 79,
+            "page": "0x11CEA09",
+            "length": 481546240,
+            "stored": "b3ec081c604111ca",
+            "computed": "b3ec081c604111ca",
+            "match": true
+          },
+          {
+            "segment": 80,
+            "page": "0x11EB546",
+            "length": 76155068416,
+            "stored": "417534028103e399",
+            "computed": "417534028103e399",
+            "match": true
+          },
+          {
+            "segment": 81,
+            "page": "0x23A6868",
+            "length": 6707515392,
+            "stored": "a531d27d4ad69a61",
+            "computed": "a531d27d4ad69a61",
+            "match": true
+          },
+          {
+            "segment": 82,
+            "page": "0x2536531",
+            "length": 4798214144,
+            "stored": "7f8dd80e3169e835",
+            "computed": "7f8dd80e3169e835",
+            "match": true
+          },
+          {
+            "segment": 83,
+            "page": "0x2654520",
+            "length": 192585728,
+            "stored": "8fcf9e0ef5673587",
+            "computed": "8fcf9e0ef5673587",
+            "match": true
+          },
+          {
+            "segment": 84,
+            "page": "0x265FCCA",
+            "length": 28543455232,
+            "stored": "766ce6474daae458",
+            "computed": "766ce6474daae458",
+            "match": true
+          },
+          {
+            "segment": 85,
+            "page": "0x2D051F3",
+            "length": 4362240,
+            "stored": "491aa7f631fcee80",
+            "computed": "491aa7f631fcee80",
+            "match": true
+          },
+          {
+            "segment": 86,
+            "page": "0x2D0561C",
+            "length": 697380864,
+            "stored": "89898c000a1f7caa",
+            "computed": "89898c000a1f7caa",
+            "match": true
+          },
+          {
+            "segment": 87,
+            "page": "0x2D2EF2F",
+            "length": 222334976,
+            "stored": "98c2674fa3029ad4",
+            "computed": "98c2674fa3029ad4",
+            "match": true
+          },
+          {
+            "segment": 88,
+            "page": "0x2D3C338",
+            "length": 3358720,
+            "stored": "ce28f611d67783ff",
+            "computed": "ce28f611d67783ff",
+            "match": true
+          },
+          {
+            "segment": 89,
+            "page": "0x2D3C66C",
+            "length": 20022509568,
+            "stored": "bd4924ed70abd014",
+            "computed": "bd4924ed70abd014",
+            "match": true
+          },
+          {
+            "segment": 90,
+            "page": "0x31E5D60",
+            "length": 78024704,
+            "stored": "1c48cb7c2f02bcbb",
+            "computed": "1c48cb7c2f02bcbb",
+            "match": true
+          },
+          {
+            "segment": 91,
+            "page": "0x31EA7C9",
+            "length": 8192,
+            "stored": "f270d78cd0225972",
+            "computed": "f270d78cd0225972",
+            "match": true
+          },
+          {
+            "segment": 92,
+            "page": "0x31EA7CB",
+            "length": 198356992,
+            "stored": "4cd997a2f02ab355",
+            "computed": "4cd997a2f02ab355",
+            "match": true
+          },
+          {
+            "segment": 93,
+            "page": "0x31F64F6",
+            "length": 810582016,
+            "stored": "e187d72bb9eac0eb",
+            "computed": "e187d72bb9eac0eb",
+            "match": true
+          },
+          {
+            "segment": 94,
+            "page": "0x32269FE",
+            "length": 193523712,
+            "stored": "9faebdde2a2cd1f6",
+            "computed": "9faebdde2a2cd1f6",
+            "match": true
+          },
+          {
+            "segment": 95,
+            "page": "0x323228D",
+            "length": 1429504,
+            "stored": "2c66733520331eea",
+            "computed": "2c66733520331eea",
+            "match": true
+          },
+          {
+            "segment": 96,
+            "page": "0x32323EA",
+            "length": 61988864,
+            "stored": "eb7be044a9380631",
+            "computed": "eb7be044a9380631",
+            "match": true
+          },
+          {
+            "segment": 97,
+            "page": "0x3235F08",
+            "length": 16384,
+            "stored": "0b36176329cddaf6",
+            "computed": "0b36176329cddaf6",
+            "match": true
+          },
+          {
+            "segment": 98,
+            "page": "0x3235F0C",
+            "length": 8297922560,
+            "stored": "380d660d1d91f5d6",
+            "computed": "380d660d1d91f5d6",
+            "match": true
+          },
+          {
+            "segment": 99,
+            "page": "0x3424890",
+            "length": 1295761408,
+            "stored": "bd7801918f9ec0c3",
+            "computed": "bd7801918f9ec0c3",
+            "match": true
+          },
+          {
+            "segment": 100,
+            "page": "0x3471C4C",
+            "length": 21082112,
+            "stored": "51b65c13112f425c",
+            "computed": "51b65c13112f425c",
+            "match": true
+          },
+          {
+            "segment": 101,
+            "page": "0x3473067",
+            "length": 24530944,
+            "stored": "2300f8548eac7dc3",
+            "computed": "2300f8548eac7dc3",
+            "match": true
+          },
+          {
+            "segment": 102,
+            "page": "0x34747CC",
+            "length": 35287040,
+            "stored": "0852b0063f1c9438",
+            "computed": "0852b0063f1c9438",
+            "match": true
+          },
+          {
+            "segment": 103,
+            "page": "0x3476973",
+            "length": 4730880,
+            "stored": "a6305e4afcfce269",
+            "computed": "a6305e4afcfce269",
+            "match": true
+          },
+          {
+            "segment": 104,
+            "page": "0x3476DF6",
+            "length": 3133440,
+            "stored": "e67f529d6e00782a",
+            "computed": "e67f529d6e00782a",
+            "match": true
+          },
+          {
+            "segment": 105,
+            "page": "0x34770F3",
+            "length": 794624,
+            "stored": "71be7e4c5a37e956",
+            "computed": "71be7e4c5a37e956",
+            "match": true
+          },
+          {
+            "segment": 106,
+            "page": "0x34771B5",
+            "length": 40960,
+            "stored": "277f0cac09f6db63",
+            "computed": "277f0cac09f6db63",
+            "match": true
+          },
+          {
+            "segment": 107,
+            "page": "0x34771BF",
+            "length": 28672,
+            "stored": "27e2c1f0cdf20f58",
+            "computed": "27e2c1f0cdf20f58",
+            "match": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "hypothesis.metadata_hash",
+      "title": "candidatos para OriginalXvcDataHash e para o hash compartilhado XVC-HD/XVC-MD",
+      "status": "INFO",
+      "detail": "nenhum candidato confere (hipoteses refutadas)",
+      "coverage": "9 serializacoes testadas",
+      "counts": {},
+      "evidence": [],
+      "data": {
+        "results": [
+          {
+            "candidate": "xvdtool VerifyXvcHash (com ajuste da hash tree)",
+            "sha256": "17f6115caaa0657bb15e819da4aa1e33b73abe8d93873b0c8818e751b54f0ecf",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "xvdtool VerifyXvcHash (sem ajuste)",
+            "sha256": "ebe9c88d2bfdf91f27bccb1e0003d7fd61bedf52c0bcfda16648e83e99955412",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "XvcInfo gravado inteiro",
+            "sha256": "570dd79e31077dd1c2bc09ed63cad83537d8e772f3289700468aaad05cb90faf",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "XvcInfo gravado ate o fim da tabela",
+            "sha256": "7c5d1b68a24a028ea611883524454a5604faa3e7050404ebbd43238705069af5",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "cabecalho 0x3000",
+            "sha256": "4b8470e17a1a7041f9660e47d2b72bc8dd1cffbc153ad72b0650942ba4803875",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "cabecalho 0x200..0x3000",
+            "sha256": "58cc3496e86a5f6f9e9b3a06b02c62b0d8aaaa8dc7436f6c8a0e36416f42df89",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "cabecalho 0x200..0x1000",
+            "sha256": "0ed11728adc53f4170b20624f65c38fb1ef46ed87c18f72a822cd3fc629c2055",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "user data (UserDataLength)",
+            "sha256": "172bfac694a2405643670274b5e3637e2cdd96e1fdb9cebe732907875da00d71",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          },
+          {
+            "candidate": "user data (paginas)",
+            "sha256": "c19ad4ee4b6c8e36f112f0fcfac19510ca475ba349453a7166d235b0ca612b7d",
+            "== OriginalXvcDataHash": false,
+            "[:8] == hash XVC-HD/XVC-MD": {
+              "XVC-HD": false,
+              "XVC-MD": false
+            }
+          }
+        ],
+        "targets": {
+          "XVC-HD": "5c2b65ad36990544",
+          "XVC-MD": "5c2b65ad36990544"
+        }
+      }
+    },
+    {
+      "id": "embedded.pduid_link",
+      "title": "cabecalho principal EmbeddedXVD_PDUID == PDUID do XVD embutido",
+      "status": "PASS",
+      "detail": "principal b78ddf1f2d874e4abf8b9b507a3f322e / embutido b78ddf1f2d874e4abf8b9b507a3f322e",
+      "coverage": "",
+      "counts": {},
+      "evidence": [
+        {
+          "source": "xvc:cabecalho",
+          "field": "EmbeddedXVD_PDUID",
+          "offset": 812,
+          "value": null,
+          "test_id": null,
+          "offset_hex": "0x32C"
+        },
+        {
+          "source": "xvc:XVD embutido",
+          "field": "PDUID",
+          "offset": 13228,
+          "value": null,
+          "test_id": null,
+          "offset_hex": "0x33AC"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "id": "embedded.top_hash",
+      "title": "XVD embutido: SHA-256(pagina 0 da arvore no layout calculado) == TopHashBlockHash",
+      "status": "PASS",
+      "detail": "arvore em 0x6000; niveis [819, 5, 1]",
+      "coverage": "1 pagina",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "embedded.link_L0_L1",
+      "title": "XVD embutido: L0[0] -> entrada em L1",
+      "status": "PASS",
+      "detail": "",
+      "coverage": "1 pagina",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "embedded.leaf_user_data0",
+      "title": "XVD embutido: folha 0 x SHA-256(1a pagina do user data)",
+      "status": "PASS",
+      "detail": "[:0x18] igual: False; [0x14:0x18]=0x0",
+      "coverage": "1 pagina",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "embedded.user_data_hash",
+      "title": "hipotese: UserDataHash == SHA-256(user data gravado do XVD embutido)",
+      "status": "INFO",
+      "detail": "nao confere (hipotese refutada para bytes gravados; pode ser sobre o conteudo decifrado - nao testavel sem chave)",
+      "coverage": "33107968 bytes",
+      "counts": {},
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "pages.value_eq_leaf_du",
+      "title": "Value da entrada == unidade de dados da folha na pagina PageNum",
+      "status": "PASS",
+      "detail": "76468/76469 conferem; divergencias: [{'entry': 0, 'page': '0x63BCB', 'value': '0x0', 'leaf_du': '0xD81EC061', 'region': '0x40000002', 'keyed': False}]",
+      "coverage": "completo (todas as entradas)",
+      "counts": {
+        "entries": 76469,
+        "mismatches": 1,
+        "mismatches_in_keyed_regions": 0
+      },
+      "evidence": [],
+      "data": {
+        "mismatches": [
+          {
+            "entry": 0,
+            "page": "0x63BCB",
+            "value": "0x0",
+            "leaf_du": "0xD81EC061",
+            "region": "0x40000002",
+            "keyed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "pages.rle_model",
+      "title": "unidade de dados(p) == Value + (p - PageNum) da entrada que governa p",
+      "status": "PASS",
+      "detail": "paginas com KeyId: 54601906/54601906 conferem; sem KeyId: 11/3401 conferem (as que conferem sao as paginas que abrem entrada, cujo Value e copia dos bytes da folha); excecoes por regiao: 0x40000002=sem KeyId:2457, 0x40000003=sem KeyId:933",
+      "coverage": "completo: 54605307 paginas do drive data",
+      "counts": {
+        "checked": 54605307,
+        "exceptions": 3390,
+        "exceptions_in_keyed": 0,
+        "keyed_checked": 54601906
+      },
+      "evidence": [],
+      "data": {
+        "exceptions_by_region": {
+          "0x40000002": {
+            "keyed": false,
+            "count": 2457,
+            "examples": [
+              "0x63BCB:du=0xD81EC061",
+              "0x63BCC:du=0xFE042F88",
+              "0x63BCD:du=0x7A7CB47C"
+            ]
+          },
+          "0x40000003": {
+            "keyed": false,
+            "count": 933,
+            "examples": [
+              "0x64565:du=0x10E26E3B",
+              "0x64568:du=0xD34F85E2",
+              "0x64569:du=0xDDB2F422"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "pages.no_redundant_entries",
+      "title": "nenhuma entrada apenas continua a sequencia anterior (codificacao minima)",
+      "status": "PASS",
+      "detail": "0 entradas redundantes",
+      "coverage": "completo (tabela)",
+      "counts": {
+        "redundant": 0
+      },
+      "evidence": [],
+      "data": {}
+    },
+    {
+      "id": "pages.transitions",
+      "title": "mudanca de Value entre entradas consecutivas na mesma regiao (Value - continuacao)",
+      "status": "INFO",
+      "detail": "para tras 49875, para frente 26557",
+      "coverage": "completo (tabela)",
+      "counts": {
+        "backward": 49875,
+        "forward": 26557
+      },
+      "evidence": [],
+      "data": {
+        "histogram": {
+          "->4096": 4748,
+          "+>4096": 2920,
+          "-<=16": 28508,
+          "+<=16": 17724,
+          "-<=4096": 16619,
+          "+<=4096": 5913
+        }
+      }
+    },
+    {
+      "id": "pages.data_unit_reuse",
+      "title": "unidades de dados repetidas dentro da mesma regiao com KeyId",
+      "status": "INFO",
+      "detail": "44179883 de 54601906 paginas compartilham a unidade de dados com outra pagina da mesma regiao (13233733 valores distintos); amostra direta: 400/400 pares com a mesma unidade nas folhas, 0/400 com o mesmo hash gravado (entry[:0x14])",
+      "coverage": "contagem pelo modelo RLE (completa); 400 pares conferidos nas folhas (semente 1234)",
+      "counts": {
+        "keyed_pages": 54601906,
+        "pages_sharing": 44179883,
+        "distinct": 13233733,
+        "pairs_checked": 400,
+        "pairs_same_du": 400,
+        "pairs_same_stored_hash": 0
+      },
+      "evidence": [],
+      "data": {
+        "per_region": {
+          "0x3EB": {
+            "pages": 14895103,
+            "distinct_data_units": 8204722,
+            "pages_sharing_a_data_unit": 8615996
+          },
+          "0x3EC": {
+            "pages": 1622,
+            "distinct_data_units": 1596,
+            "pages_sharing_a_data_unit": 52
+          },
+          "0x3ED": {
+            "pages": 2156368,
+            "distinct_data_units": 2049908,
+            "pages_sharing_a_data_unit": 205576
+          },
+          "0x3EE": {
+            "pages": 100512,
+            "distinct_data_units": 100179,
+            "pages_sharing_a_data_unit": 623
+          },
+          "0x3EF": {
+            "pages": 1076081,
+            "distinct_data_units": 47336,
+            "pages_sharing_a_data_unit": 1053539
+          },
+          "0x3F0": {
+            "pages": 117565,
+            "distinct_data_units": 33469,
+            "pages_sharing_a_data_unit": 94747
+          },
+          "0x3F1": {
+            "pages": 18592546,
+            "distinct_data_units": 278882,
+            "pages_sharing_a_data_unit": 18444456
+          },
+          "0x3F2": {
+            "pages": 1637577,
+            "distinct_data_units": 61649,
+            "pages_sharing_a_data_unit": 1632274
+          },
+          "0x3F3": {
+            "pages": 1171439,
+            "distinct_data_units": 106874,
+            "pages_sharing_a_data_unit": 1106444
+          },
+          "0x3F4": {
+            "pages": 47018,
+            "distinct_data_units": 43306,
+            "pages_sharing_a_data_unit": 5336
+          },
+          "0x3F5": {
+            "pages": 6968617,
+            "distinct_data_units": 847606,
+            "pages_sharing_a_data_unit": 6332563
+          },
+          "0x3F6": {
+            "pages": 1065,
+            "distinct_data_units": 1037,
+            "pages_sharing_a_data_unit": 51
+          },
+          "0xBB8": {
+            "pages": 5132717,
+            "distinct_data_units": 935392,
+            "pages_sharing_a_data_unit": 4412044
+          },
+          "0xBBA": {
+            "pages": 48427,
+            "distinct_data_units": 29628,
+            "pages_sharing_a_data_unit": 32643
+          },
+          "0xBBB": {
+            "pages": 245492,
+            "distinct_data_units": 80277,
+            "pages_sharing_a_data_unit": 197659
+          },
+          "0xBBC": {
+            "pages": 15134,
+            "distinct_data_units": 10958,
+            "pages_sharing_a_data_unit": 6740
+          },
+          "0xBBE": {
+            "pages": 2025860,
+            "distinct_data_units": 42134,
+            "pages_sharing_a_data_unit": 2022431
+          },
+          "0xBBF": {
+            "pages": 338019,
+            "distinct_data_units": 328036,
+            "pages_sharing_a_data_unit": 16709
+          }
+        }
+      }
+    },
+    {
+      "id": "pages.segment_values",
+      "title": "array u32 por segmento (XvcInfo apos os segmentos) == unidade de dados da 1a pagina",
+      "status": "INFO",
+      "detail": "105/108 conferem; excecoes: seg 78 (anim.rpf) -1, seg 90 (pack\\story000\\story000_script.rpf) -37, seg 107 (Update.alignmentchunk) +583619751",
+      "coverage": "completo (todos os segmentos); janela de busca +/-2000 paginas para excecoes",
+      "counts": {
+        "segments": 108,
+        "exceptions": 3
+      },
+      "evidence": [],
+      "data": {
+        "exceptions": [
+          {
+            "segment": 78,
+            "file": "anim.rpf",
+            "page": "0x10C7E98",
+            "region": "0x3EF",
+            "value": "0x049EA1FD",
+            "du_first_page": "0x049EA1FE",
+            "value_minus_du": -1,
+            "du_previous_page": "0xA57E03B4",
+            "value_eq_du_prev_plus_1": false,
+            "segment_pages": 1076081,
+            "runs_in_segment": 2478,
+            "window_pages_with_du_eq_value": [],
+            "runs_where_value_is_a_data_unit": [],
+            "value_in_any_run": false,
+            "governing_entry": {
+              "index": 3313,
+              "page": "0x10C7E98",
+              "value": "0x49EA1FE"
+            }
+          },
+          {
+            "segment": 90,
+            "file": "pack\\story000\\story000_script.rpf",
+            "page": "0x31E5D60",
+            "region": "0xBB8",
+            "value": "0x11F80453",
+            "du_first_page": "0x11F80478",
+            "value_minus_du": -37,
+            "du_previous_page": "0x1204223F",
+            "value_eq_du_prev_plus_1": false,
+            "segment_pages": 19049,
+            "runs_in_segment": 32,
+            "window_pages_with_du_eq_value": [],
+            "runs_where_value_is_a_data_unit": [],
+            "value_in_any_run": false,
+            "governing_entry": {
+              "index": 70917,
+              "page": "0x31E5D60",
+              "value": "0x11F80478"
+            }
+          },
+          {
+            "segment": 107,
+            "file": "Update.alignmentchunk",
+            "page": "0x34771BF",
+            "region": "0xBC1",
+            "value": "0x16EA0DE4",
+            "du_first_page": "0xF420B93D",
+            "value_minus_du": 583619751,
+            "du_previous_page": "0xB5C96F96",
+            "value_eq_du_prev_plus_1": false,
+            "segment_pages": 7,
+            "runs_in_segment": 1,
+            "window_pages_with_du_eq_value": [],
+            "runs_where_value_is_a_data_unit": [],
+            "value_in_any_run": false,
+            "governing_entry": {
+              "index": 76468,
+              "page": "0x34771BF",
+              "value": "0xF420B93D"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "file_map_checks": [
+    {
+      "name": "drive data do cabecalho == inicio da regiao FS-MD",
+      "passed": true,
+      "detail": "cabecalho 0x63bcb000, FS-MD 0x63bcb000"
+    },
+    {
+      "name": "drive data termina no fim do arquivo",
+      "passed": true,
+      "detail": "0x34771c6000 vs 0x34771c6000"
+    },
+    {
+      "name": "quantidade de arquivos == quantidade de segmentos",
+      "passed": true,
+      "detail": "108 arquivos, 108 segmentos"
+    },
+    {
+      "name": "inicio do arquivo == PageNum do segmento",
+      "passed": true,
+      "detail": "108/108"
+    },
+    {
+      "name": "todo arquivo comeca dentro de uma regiao",
+      "passed": true,
+      "detail": "sem regiao: []"
+    },
+    {
+      "name": "todo arquivo termina dentro da sua regiao",
+      "passed": true,
+      "detail": "ultrapassam: []"
+    },
+    {
+      "name": "todo arquivo cabe no seu segmento (nao invade o seguinte)",
+      "passed": true,
+      "detail": "invadem: []"
+    },
+    {
+      "name": "todo arquivo termina antes do fim do .xvc",
+      "passed": true,
+      "detail": "ultrapassam: []"
+    },
+    {
+      "name": "nenhuma sobreposicao entre arquivos",
+      "passed": true,
+      "detail": "pares: []"
+    },
+    {
+      "name": "arquivos na mesma ordem dos segmentos",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arquivos ocupam exatamente as paginas do segmento",
+      "passed": true,
+      "detail": "107/108 exatos; seg 107 sobra 0x6000"
+    }
+  ],
+  "regression": {
+    "schema_keys_equal": true,
+    "file_count_old": 108,
+    "file_count_new": 108,
+    "field_differences": [],
+    "source_differences": {
+      "drive_data_offset_source": {
+        "old": "layout calculado do cabecalho XVD (MDU pela regiao XVC-MDU)",
+        "new": "layout calculado do cabecalho XVD (MutableDataPageCount em 0x470, conferido com a regiao XVC-MDU)"
+      }
+    },
+    "validation_equal": true,
+    "classification_rules_equal": true,
+    "missing_in_new": [],
+    "added_in_new": [],
+    "passed": true,
+    "baseline": "C:\\Users\\Lguimaraes\\AppData\\Local\\Temp\\claude\\6eefec8481ace4a4\\ad4626f3-809d-4f34-b4d3-7eb8d9b004d7\\scratchpad\\xvc-intelligence\\tests\\fixtures\\xvc_files_report_baseline.json"
+  },
+  "tests": {
+    "command": "python -I scripts/test_summary.py reports/tests_summary.json  (XVC_PATH=<pacote real>, XVC_FULL=1)",
+    "XVC_PATH_set": true,
+    "XVC_FULL": true,
+    "exit_code": 0,
+    "outcomes": {
+      "passed": 143
+    },
+    "failed": [],
+    "skipped_reasons": {},
+    "python": "3.13.7",
+    "pytest": "8.3.5",
+    "finished_utc": "2026-11-22T06:25:24+00:00"
+  },
+  "next_investigations": [
+    "Obter, por via legitima, um PE legivel de game_scarlett_master.exe (build de desenvolvimento ou dump autorizado) e rodar `xvcintel pe` nele; sem isso nenhuma estrutura interna do executavel e acessivel.",
+    "Comparar com outra versao do mesmo pacote (ex.: 1.0.2.0): testar se paginas/unidades de dados sao herdadas (explicaria a reutilizacao de unidades de dados e as excecoes dos segmentos 78/90).",
+    "Decodificar a BAT do dynamic header do XVD embutido (EraOS) para fechar seu layout.",
+    "Testar outras serializacoes para o hash compartilhado XVC-HD/XVC-MD e para OriginalXvcDataHash."
+  ]
+}

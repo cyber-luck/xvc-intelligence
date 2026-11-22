@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap7="http://schemas.microsoft.com/appx/manifest/uap/windows10/7" xmlns:wincap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap uap7 wincap rescap" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+  <Identity Name="RockstarGamesInc.28872443D20A7" Publisher="CN=3164F9C2-2C28-4832-BBE3-A642A4EF0054" Version="1.0.2.1" />
+  <Properties>
+    <DisplayName>Grand Theft Auto VI</DisplayName>
+    <PublisherDisplayName>Rockstar Games</PublisherDisplayName>
+    <Logo>xbs_logo_store.png</Logo>
+    <Description>Grand Theft Auto VI</Description>
+    <uap:SupportedUsers>multiple</uap:SupportedUsers>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.18362.0" MaxVersionTested="10.0.18362.0" />
+    <uap7:OSPackageDependency Name="Microsoft.GameOs" Version="10.0.18362.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="en-US" />
+    <Resource Language="en-GB" />
+    <Resource Language="en-AU" />
+    <Resource Language="en-CA" />
+    <Resource Language="en-NZ" />
+    <Resource Language="en-IE" />
+    <Resource Language="en-HK" />
+    <Resource Language="en-SG" />
+    <Resource Language="en-IN" />
+    <Resource Language="en-SA" />
+    <Resource Language="en-ZA" />
+    <Resource Language="en-AE" />
+    <Resource Language="en-IL" />
+    <Resource Language="en-CZ" />
+    <Resource Language="en-HU" />
+    <Resource Language="en-SK" />
+    <Resource Language="en-GR" />
+    <Resource Language="zh-HK" />
+    <Resource Language="zh-TW" />
+    <Resource Language="zh-SG" />
+    <Resource Language="fr-FR" />
+    <Resource Language="fr-CA" />
+    <Resource Language="fr-BE" />
+    <Resource Language="fr-CH" />
+    <Resource Language="de-DE" />
+    <Resource Language="de-AT" />
+    <Resource Language="de-CH" />
+    <Resource Language="it-IT" />
+    <Resource Language="ko-KR" />
+    <Resource Language="pl-PL" />
+    <Resource Language="pt-PT" />
+    <Resource Language="pt-BR" />
+    <Resource Language="ru-RU" />
+    <Resource Language="es-MX" />
+    <Resource Language="es-ES" />
+    <Resource Language="es-US" />
+    <Resource Language="es-AR" />
+    <Resource Language="es-CL" />
+    <Resource Language="es-CO" />
+  </Resources>
+  <Applications>
+    <Application Id="GTAO" Executable="game_scarlett_master.exe" EntryPoint="GamingProxyApp.Application.EntryPoint">
+      <uap:VisualElements DisplayName="Grand Theft Auto VI" Square150x150Logo="xbs_logo_150.png" Square44x44Logo="xbs_logo_44.png" Description="Grand Theft Auto VI" ForegroundText="light" BackgroundColor="#000000">
+        <uap:SplashScreen Image="xbs_splash.png" />
+        <uap:DefaultTile Wide310x150Logo="xbs_logo_480.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="ms-xbl-7952987a" />
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
+</Package>

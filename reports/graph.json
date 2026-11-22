@@ -1,0 +1,6158 @@
+{
+ "schema": "xvcintel.graph/1",
+ "nodes": [
+  {
+   "id": "package",
+   "kind": "package",
+   "path": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc",
+   "size": 225336647680,
+   "vduid": "3202719e-b4b4-421c-9f8f-70d1c4a7d60b",
+   "package_version": "1.0.2.1",
+   "content_type": "Title"
+  },
+  {
+   "id": "key:0",
+   "kind": "key_id",
+   "guid": "d4b2880b-884d-cf1b-eea5-bef5a2a7d4f6",
+   "note": "identificador; nenhuma chave e usada"
+  },
+  {
+   "id": "region:0x40000005",
+   "kind": "region",
+   "description": "XVC-HD",
+   "offset": "0x0",
+   "length": 12288,
+   "key_id": 65535,
+   "flags": "0x1",
+   "hash": "5c2b65ad36990544",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x40000004",
+   "kind": "region",
+   "description": "XVC-EXVD",
+   "offset": "0x3000",
+   "length": 348069888,
+   "key_id": 65535,
+   "flags": "0x1",
+   "hash": "b78ddf1f2d874e4a",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x40000006",
+   "kind": "region",
+   "description": "XVC-MDU",
+   "offset": "0x14BF5000",
+   "length": 4096,
+   "key_id": 65535,
+   "flags": "0x1",
+   "hash": "0000000000000000",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x40000001",
+   "kind": "region",
+   "description": "XVC-MD",
+   "offset": "0x14BF6000",
+   "length": 1325223936,
+   "key_id": 65535,
+   "flags": "0x1",
+   "hash": "5c2b65ad36990544",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x40000002",
+   "kind": "region",
+   "description": "FS-MD",
+   "offset": "0x63BCB000",
+   "length": 10063872,
+   "key_id": 65535,
+   "flags": "0x1",
+   "hash": "0b76230b71a80710",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x40000003",
+   "kind": "region",
+   "description": "",
+   "offset": "0x64564000",
+   "length": 3866624,
+   "key_id": 65535,
+   "flags": "0x0",
+   "hash": "6f8c58f0dd230b5d",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x3E8",
+   "kind": "region",
+   "description": "",
+   "offset": "0x64914000",
+   "length": 12288,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "c30240a3dfbc82ba",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x3E9",
+   "kind": "region",
+   "description": "",
+   "offset": "0x64917000",
+   "length": 120184832,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "3b221181d8be52ba",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x3EA",
+   "kind": "region",
+   "description": "",
+   "offset": "0x6BBB5000",
+   "length": 4841472,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "f3541468dbe6ba84",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x3EB",
+   "kind": "region",
+   "description": "",
+   "offset": "0x6C053000",
+   "length": 61010341888,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "1627e371f340c8d0",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3EC",
+   "kind": "region",
+   "description": "",
+   "offset": "0xEA0852000",
+   "length": 6643712,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "f014c3716e6a6225",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0x3ED",
+   "kind": "region",
+   "description": "",
+   "offset": "0xEA0EA8000",
+   "length": 8832483328,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "6fb1b7d6afa17742",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3EE",
+   "kind": "region",
+   "description": "",
+   "offset": "0x10AF5F8000",
+   "length": 411697152,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "48de4e8a3e0213ee",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3EF",
+   "kind": "region",
+   "description": "",
+   "offset": "0x10C7E98000",
+   "length": 4407627776,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "9a66438e984fc770",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F0",
+   "kind": "region",
+   "description": "",
+   "offset": "0x11CEA09000",
+   "length": 481546240,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "b3ec081c604111ca",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F1",
+   "kind": "region",
+   "description": "",
+   "offset": "0x11EB546000",
+   "length": 76155068416,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "417534028103e399",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F2",
+   "kind": "region",
+   "description": "",
+   "offset": "0x23A6868000",
+   "length": 6707515392,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "a531d27d4ad69a61",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F3",
+   "kind": "region",
+   "description": "",
+   "offset": "0x2536531000",
+   "length": 4798214144,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "7f8dd80e3169e835",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F4",
+   "kind": "region",
+   "description": "",
+   "offset": "0x2654520000",
+   "length": 192585728,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "8fcf9e0ef5673587",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F5",
+   "kind": "region",
+   "description": "",
+   "offset": "0x265FCCA000",
+   "length": 28543455232,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "766ce6474daae458",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0x3F6",
+   "kind": "region",
+   "description": "",
+   "offset": "0x2D051F3000",
+   "length": 4362240,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "491aa7f631fcee80",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0xBB8",
+   "kind": "region",
+   "description": "",
+   "offset": "0x2D0561C000",
+   "length": 21023608832,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "d013dedbfc0713a2",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0xBB9",
+   "kind": "region",
+   "description": "",
+   "offset": "0x31EA7C9000",
+   "length": 8192,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "f270d78cd0225972",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0xBBA",
+   "kind": "region",
+   "description": "",
+   "offset": "0x31EA7CB000",
+   "length": 198356992,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "4cd997a2f02ab355",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0xBBB",
+   "kind": "region",
+   "description": "",
+   "offset": "0x31F64F6000",
+   "length": 1005535232,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "71b12e428e8e7b6c",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0xBBC",
+   "kind": "region",
+   "description": "",
+   "offset": "0x32323EA000",
+   "length": 61988864,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "eb7be044a9380631",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0xBBD",
+   "kind": "region",
+   "description": "",
+   "offset": "0x3235F08000",
+   "length": 16384,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "0b36176329cddaf6",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0xBBE",
+   "kind": "region",
+   "description": "",
+   "offset": "0x3235F0C000",
+   "length": 8297922560,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "380d660d1d91f5d6",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0xBBF",
+   "kind": "region",
+   "description": "",
+   "offset": "0x3424890000",
+   "length": 1384525824,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "faf4a998ee3aeb07",
+   "hash_verified": null
+  },
+  {
+   "id": "region:0xBC0",
+   "kind": "region",
+   "description": "",
+   "offset": "0x34770F3000",
+   "length": 835584,
+   "key_id": 0,
+   "flags": "0x0",
+   "hash": "cc463395825708bc",
+   "hash_verified": true
+  },
+  {
+   "id": "region:0xBC1",
+   "kind": "region",
+   "description": "",
+   "offset": "0x34771BF000",
+   "length": 28672,
+   "key_id": 0,
+   "flags": "0x4",
+   "hash": "27e2c1f0cdf20f58",
+   "hash_verified": true
+  },
+  {
+   "id": "segment:0",
+   "kind": "segment",
+   "page": "0x64564",
+   "hash": "27735d6ca90ff4eb",
+   "hash_verified": true,
+   "value_u32": "0xBDC29D4A"
+  },
+  {
+   "id": "segment:1",
+   "kind": "segment",
+   "page": "0x64566",
+   "hash": "fd347d794b12c43a",
+   "hash_verified": true,
+   "value_u32": "0x24D5F417"
+  },
+  {
+   "id": "segment:2",
+   "kind": "segment",
+   "page": "0x64567",
+   "hash": "c808254351655cc1",
+   "hash_verified": true,
+   "value_u32": "0x3BF14446"
+  },
+  {
+   "id": "segment:3",
+   "kind": "segment",
+   "page": "0x64575",
+   "hash": "e32122e4b6a4facd",
+   "hash_verified": true,
+   "value_u32": "0x764DF82D"
+  },
+  {
+   "id": "segment:4",
+   "kind": "segment",
+   "page": "0x64577",
+   "hash": "d211f31daa5d9838",
+   "hash_verified": true,
+   "value_u32": "0xB56718E3"
+  },
+  {
+   "id": "segment:5",
+   "kind": "segment",
+   "page": "0x647DC",
+   "hash": "c2d7d48d605c4e6c",
+   "hash_verified": true,
+   "value_u32": "0x0762EF83"
+  },
+  {
+   "id": "segment:6",
+   "kind": "segment",
+   "page": "0x647E4",
+   "hash": "5e580974f6773ee4",
+   "hash_verified": true,
+   "value_u32": "0x9B7F58FB"
+  },
+  {
+   "id": "segment:7",
+   "kind": "segment",
+   "page": "0x64847",
+   "hash": "72b5137efdb39c1c",
+   "hash_verified": true,
+   "value_u32": "0x668A231F"
+  },
+  {
+   "id": "segment:8",
+   "kind": "segment",
+   "page": "0x64848",
+   "hash": "b5ee2ab590a1cae6",
+   "hash_verified": true,
+   "value_u32": "0x8569853E"
+  },
+  {
+   "id": "segment:9",
+   "kind": "segment",
+   "page": "0x6484C",
+   "hash": "193faa19451f6d2c",
+   "hash_verified": true,
+   "value_u32": "0x908B386B"
+  },
+  {
+   "id": "segment:10",
+   "kind": "segment",
+   "page": "0x6484D",
+   "hash": "4afbdbe22aad2bc3",
+   "hash_verified": true,
+   "value_u32": "0x294DDDD5"
+  },
+  {
+   "id": "segment:11",
+   "kind": "segment",
+   "page": "0x64914",
+   "hash": "c30240a3dfbc82ba",
+   "hash_verified": true,
+   "value_u32": "0x19297785"
+  },
+  {
+   "id": "segment:12",
+   "kind": "segment",
+   "page": "0x64917",
+   "hash": "3b221181d8be52ba",
+   "hash_verified": true,
+   "value_u32": "0xE5046EA2"
+  },
+  {
+   "id": "segment:13",
+   "kind": "segment",
+   "page": "0x6BBB5",
+   "hash": "e2efe67f3387eefc",
+   "hash_verified": true,
+   "value_u32": "0x89C3EC93"
+  },
+  {
+   "id": "segment:14",
+   "kind": "segment",
+   "page": "0x6BBB9",
+   "hash": "83e0c2a3f0ccea40",
+   "hash_verified": true,
+   "value_u32": "0x157DF075"
+  },
+  {
+   "id": "segment:15",
+   "kind": "segment",
+   "page": "0x6BC79",
+   "hash": "ccc4f77820dd9e24",
+   "hash_verified": true,
+   "value_u32": "0x6181AE21"
+  },
+  {
+   "id": "segment:16",
+   "kind": "segment",
+   "page": "0x6BCB8",
+   "hash": "c3c8554f21f78d7b",
+   "hash_verified": true,
+   "value_u32": "0x01A29580"
+  },
+  {
+   "id": "segment:17",
+   "kind": "segment",
+   "page": "0x6BD01",
+   "hash": "abeaa851719a6c93",
+   "hash_verified": true,
+   "value_u32": "0x88073C0B"
+  },
+  {
+   "id": "segment:18",
+   "kind": "segment",
+   "page": "0x6BDF0",
+   "hash": "61ed26af36509bac",
+   "hash_verified": true,
+   "value_u32": "0x46BA57A0"
+  },
+  {
+   "id": "segment:19",
+   "kind": "segment",
+   "page": "0x6BE7A",
+   "hash": "df343cdab85e487f",
+   "hash_verified": true,
+   "value_u32": "0xB47929A0"
+  },
+  {
+   "id": "segment:20",
+   "kind": "segment",
+   "page": "0x6BE81",
+   "hash": "0b5b68890b1ae378",
+   "hash_verified": true,
+   "value_u32": "0x3140B2C1"
+  },
+  {
+   "id": "segment:21",
+   "kind": "segment",
+   "page": "0x6BEAF",
+   "hash": "c64bf6c00fea3e68",
+   "hash_verified": true,
+   "value_u32": "0xF242232E"
+  },
+  {
+   "id": "segment:22",
+   "kind": "segment",
+   "page": "0x6BEBD",
+   "hash": "9aaa815cbbcb379e",
+   "hash_verified": true,
+   "value_u32": "0xA6E3B34C"
+  },
+  {
+   "id": "segment:23",
+   "kind": "segment",
+   "page": "0x6BEC3",
+   "hash": "eaa9614977bc50eb",
+   "hash_verified": true,
+   "value_u32": "0x7DBA3749"
+  },
+  {
+   "id": "segment:24",
+   "kind": "segment",
+   "page": "0x6BF16",
+   "hash": "e81d0394f94e9e48",
+   "hash_verified": true,
+   "value_u32": "0x91E5D476"
+  },
+  {
+   "id": "segment:25",
+   "kind": "segment",
+   "page": "0x6BF28",
+   "hash": "b239519eb1039f4e",
+   "hash_verified": true,
+   "value_u32": "0xB5710C49"
+  },
+  {
+   "id": "segment:26",
+   "kind": "segment",
+   "page": "0x6BF40",
+   "hash": "fce5bc951d822c24",
+   "hash_verified": true,
+   "value_u32": "0xB72859CB"
+  },
+  {
+   "id": "segment:27",
+   "kind": "segment",
+   "page": "0x6BF4A",
+   "hash": "4e1ec1cdc6c0d27f",
+   "hash_verified": true,
+   "value_u32": "0x066643B3"
+  },
+  {
+   "id": "segment:28",
+   "kind": "segment",
+   "page": "0x6C022",
+   "hash": "47605fd18557863a",
+   "hash_verified": true,
+   "value_u32": "0x1C9E2D78"
+  },
+  {
+   "id": "segment:29",
+   "kind": "segment",
+   "page": "0x6C053",
+   "hash": "9eee4ca2e6a8d50b",
+   "hash_verified": true,
+   "value_u32": "0xC7F0623A"
+  },
+  {
+   "id": "segment:30",
+   "kind": "segment",
+   "page": "0x6E125",
+   "hash": "86458cbb6117f76c",
+   "hash_verified": null,
+   "value_u32": "0x66126A34"
+  },
+  {
+   "id": "segment:31",
+   "kind": "segment",
+   "page": "0xA2B6F",
+   "hash": "028a5a5f4285edef",
+   "hash_verified": null,
+   "value_u32": "0x3311AFD7"
+  },
+  {
+   "id": "segment:32",
+   "kind": "segment",
+   "page": "0xD83F1",
+   "hash": "c37e5626f5b509f1",
+   "hash_verified": null,
+   "value_u32": "0xC6B1DBA6"
+  },
+  {
+   "id": "segment:33",
+   "kind": "segment",
+   "page": "0x10CC8B",
+   "hash": "139672ae2ee282a7",
+   "hash_verified": null,
+   "value_u32": "0xD6331DE6"
+  },
+  {
+   "id": "segment:34",
+   "kind": "segment",
+   "page": "0x1427B0",
+   "hash": "a9f079fa67571975",
+   "hash_verified": true,
+   "value_u32": "0x7A8B138A"
+  },
+  {
+   "id": "segment:35",
+   "kind": "segment",
+   "page": "0x14B834",
+   "hash": "ed4d23b96ef5bb20",
+   "hash_verified": null,
+   "value_u32": "0x0EEB5676"
+  },
+  {
+   "id": "segment:36",
+   "kind": "segment",
+   "page": "0x1B4C17",
+   "hash": "fa872ac0acffe067",
+   "hash_verified": null,
+   "value_u32": "0x06462094"
+  },
+  {
+   "id": "segment:37",
+   "kind": "segment",
+   "page": "0x21CD63",
+   "hash": "81e745af0285c373",
+   "hash_verified": null,
+   "value_u32": "0x32044832"
+  },
+  {
+   "id": "segment:38",
+   "kind": "segment",
+   "page": "0x2893F0",
+   "hash": "f0da452b16193188",
+   "hash_verified": null,
+   "value_u32": "0x018A575B"
+  },
+  {
+   "id": "segment:39",
+   "kind": "segment",
+   "page": "0x2F3C7D",
+   "hash": "1a794ad8c39901d5",
+   "hash_verified": null,
+   "value_u32": "0x9786C012"
+  },
+  {
+   "id": "segment:40",
+   "kind": "segment",
+   "page": "0x35E929",
+   "hash": "750e3e29fc4d8249",
+   "hash_verified": null,
+   "value_u32": "0xA001342F"
+  },
+  {
+   "id": "segment:41",
+   "kind": "segment",
+   "page": "0x3CC3F3",
+   "hash": "38773e70ed671ea8",
+   "hash_verified": null,
+   "value_u32": "0x41F135B2"
+  },
+  {
+   "id": "segment:42",
+   "kind": "segment",
+   "page": "0x4344FE",
+   "hash": "de1a79461c14df3e",
+   "hash_verified": null,
+   "value_u32": "0x049CC299"
+  },
+  {
+   "id": "segment:43",
+   "kind": "segment",
+   "page": "0x49CF68",
+   "hash": "cdca07c4618488dc",
+   "hash_verified": null,
+   "value_u32": "0xE73715A1"
+  },
+  {
+   "id": "segment:44",
+   "kind": "segment",
+   "page": "0x4BA6D3",
+   "hash": "5d9fa04bb88ebfe6",
+   "hash_verified": null,
+   "value_u32": "0x45EFC190"
+  },
+  {
+   "id": "segment:45",
+   "kind": "segment",
+   "page": "0x4D8D33",
+   "hash": "6a81e2900883d39e",
+   "hash_verified": null,
+   "value_u32": "0x2272C1E9"
+  },
+  {
+   "id": "segment:46",
+   "kind": "segment",
+   "page": "0x4F61F0",
+   "hash": "4725c849e3dc168a",
+   "hash_verified": null,
+   "value_u32": "0x9AC4E491"
+  },
+  {
+   "id": "segment:47",
+   "kind": "segment",
+   "page": "0x513C4A",
+   "hash": "c47d178745fe2dbc",
+   "hash_verified": true,
+   "value_u32": "0x94767C6A"
+  },
+  {
+   "id": "segment:48",
+   "kind": "segment",
+   "page": "0x51BDAF",
+   "hash": "e4dd391933b0e67c",
+   "hash_verified": null,
+   "value_u32": "0x3AEB591B"
+  },
+  {
+   "id": "segment:49",
+   "kind": "segment",
+   "page": "0x554AA6",
+   "hash": "ca08e45a21fc00d8",
+   "hash_verified": null,
+   "value_u32": "0xFB26A4DB"
+  },
+  {
+   "id": "segment:50",
+   "kind": "segment",
+   "page": "0x58E37A",
+   "hash": "f879844dfb10a11f",
+   "hash_verified": null,
+   "value_u32": "0x6B605273"
+  },
+  {
+   "id": "segment:51",
+   "kind": "segment",
+   "page": "0x5C61BD",
+   "hash": "264345c93a9580ca",
+   "hash_verified": null,
+   "value_u32": "0xD23A96D3"
+  },
+  {
+   "id": "segment:52",
+   "kind": "segment",
+   "page": "0x5FF2AF",
+   "hash": "dcfb47a004da5625",
+   "hash_verified": null,
+   "value_u32": "0xA8452470"
+  },
+  {
+   "id": "segment:53",
+   "kind": "segment",
+   "page": "0x639CBD",
+   "hash": "c219cc3f1b3dd85c",
+   "hash_verified": null,
+   "value_u32": "0xAEA7D8E6"
+  },
+  {
+   "id": "segment:54",
+   "kind": "segment",
+   "page": "0x6878C5",
+   "hash": "61cd87941d83b57a",
+   "hash_verified": null,
+   "value_u32": "0x8F1159A4"
+  },
+  {
+   "id": "segment:55",
+   "kind": "segment",
+   "page": "0x6D2774",
+   "hash": "2785adf0870023bd",
+   "hash_verified": null,
+   "value_u32": "0x9CD84963"
+  },
+  {
+   "id": "segment:56",
+   "kind": "segment",
+   "page": "0x71C601",
+   "hash": "7686d6852d1fe0b4",
+   "hash_verified": null,
+   "value_u32": "0x15F1A60E"
+  },
+  {
+   "id": "segment:57",
+   "kind": "segment",
+   "page": "0x76B95B",
+   "hash": "31f1ac8e4b7527b9",
+   "hash_verified": null,
+   "value_u32": "0xB94BBF3D"
+  },
+  {
+   "id": "segment:58",
+   "kind": "segment",
+   "page": "0x810FE2",
+   "hash": "003ec49d9f6174cc",
+   "hash_verified": null,
+   "value_u32": "0x47AD04AF"
+  },
+  {
+   "id": "segment:59",
+   "kind": "segment",
+   "page": "0x8B446C",
+   "hash": "ffc55f5367a71d27",
+   "hash_verified": null,
+   "value_u32": "0x2B9625D2"
+  },
+  {
+   "id": "segment:60",
+   "kind": "segment",
+   "page": "0x959FC7",
+   "hash": "ba8fbf1c6cf37476",
+   "hash_verified": null,
+   "value_u32": "0x78107C16"
+  },
+  {
+   "id": "segment:61",
+   "kind": "segment",
+   "page": "0x9FC084",
+   "hash": "ac116aa6da34b4fa",
+   "hash_verified": null,
+   "value_u32": "0x89BD586A"
+  },
+  {
+   "id": "segment:62",
+   "kind": "segment",
+   "page": "0xA9F6DD",
+   "hash": "d9c1fb999a2dce2b",
+   "hash_verified": null,
+   "value_u32": "0x7B0CCCEB"
+  },
+  {
+   "id": "segment:63",
+   "kind": "segment",
+   "page": "0xB3ED5A",
+   "hash": "f8c4545a79f52f60",
+   "hash_verified": null,
+   "value_u32": "0x74B0A67D"
+  },
+  {
+   "id": "segment:64",
+   "kind": "segment",
+   "page": "0xBDF19A",
+   "hash": "a0db36884c9fce6c",
+   "hash_verified": null,
+   "value_u32": "0xFB721D0B"
+  },
+  {
+   "id": "segment:65",
+   "kind": "segment",
+   "page": "0xC87AE1",
+   "hash": "270604566a04e968",
+   "hash_verified": null,
+   "value_u32": "0xE834F952"
+  },
+  {
+   "id": "segment:66",
+   "kind": "segment",
+   "page": "0xCFBACC",
+   "hash": "a289e734a54eac0a",
+   "hash_verified": null,
+   "value_u32": "0x951EEF12"
+  },
+  {
+   "id": "segment:67",
+   "kind": "segment",
+   "page": "0xD6C62D",
+   "hash": "f26d45112d3869ad",
+   "hash_verified": true,
+   "value_u32": "0xBDAFE40C"
+  },
+  {
+   "id": "segment:68",
+   "kind": "segment",
+   "page": "0xD6C664",
+   "hash": "1dd7054a91f0bcc3",
+   "hash_verified": null,
+   "value_u32": "0xC6DB8720"
+  },
+  {
+   "id": "segment:69",
+   "kind": "segment",
+   "page": "0xD9EC5C",
+   "hash": "1394795ba7c6322f",
+   "hash_verified": null,
+   "value_u32": "0x4E1AA35F"
+  },
+  {
+   "id": "segment:70",
+   "kind": "segment",
+   "page": "0xDAA6BA",
+   "hash": "7686cd2c3c44569e",
+   "hash_verified": null,
+   "value_u32": "0x2C84A772"
+  },
+  {
+   "id": "segment:71",
+   "kind": "segment",
+   "page": "0xDDC65C",
+   "hash": "30c764ff4ff8eaba",
+   "hash_verified": null,
+   "value_u32": "0x573B636D"
+  },
+  {
+   "id": "segment:72",
+   "kind": "segment",
+   "page": "0xE11754",
+   "hash": "15d2f7b1efb640de",
+   "hash_verified": null,
+   "value_u32": "0xA6147832"
+  },
+  {
+   "id": "segment:73",
+   "kind": "segment",
+   "page": "0xE1FB29",
+   "hash": "be128d49d69b96e3",
+   "hash_verified": null,
+   "value_u32": "0x726324FF"
+  },
+  {
+   "id": "segment:74",
+   "kind": "segment",
+   "page": "0xE746D4",
+   "hash": "23877344cd99482e",
+   "hash_verified": null,
+   "value_u32": "0xB9913AB9"
+  },
+  {
+   "id": "segment:75",
+   "kind": "segment",
+   "page": "0xEA0852",
+   "hash": "f014c3716e6a6225",
+   "hash_verified": true,
+   "value_u32": "0x2D55B1E9"
+  },
+  {
+   "id": "segment:76",
+   "kind": "segment",
+   "page": "0xEA0EA8",
+   "hash": "6fb1b7d6afa17742",
+   "hash_verified": null,
+   "value_u32": "0x1365E9DC"
+  },
+  {
+   "id": "segment:77",
+   "kind": "segment",
+   "page": "0x10AF5F8",
+   "hash": "48de4e8a3e0213ee",
+   "hash_verified": null,
+   "value_u32": "0xA57C7BC5"
+  },
+  {
+   "id": "segment:78",
+   "kind": "segment",
+   "page": "0x10C7E98",
+   "hash": "9a66438e984fc770",
+   "hash_verified": null,
+   "value_u32": "0x049EA1FD"
+  },
+  {
+   "id": "segment:79",
+   "kind": "segment",
+   "page": "0x11CEA09",
+   "hash": "b3ec081c604111ca",
+   "hash_verified": null,
+   "value_u32": "0xEB144749"
+  },
+  {
+   "id": "segment:80",
+   "kind": "segment",
+   "page": "0x11EB546",
+   "hash": "417534028103e399",
+   "hash_verified": null,
+   "value_u32": "0x0B2D8828"
+  },
+  {
+   "id": "segment:81",
+   "kind": "segment",
+   "page": "0x23A6868",
+   "hash": "a531d27d4ad69a61",
+   "hash_verified": null,
+   "value_u32": "0xE62FEBED"
+  },
+  {
+   "id": "segment:82",
+   "kind": "segment",
+   "page": "0x2536531",
+   "hash": "7f8dd80e3169e835",
+   "hash_verified": null,
+   "value_u32": "0xD0A6B690"
+  },
+  {
+   "id": "segment:83",
+   "kind": "segment",
+   "page": "0x2654520",
+   "hash": "8fcf9e0ef5673587",
+   "hash_verified": null,
+   "value_u32": "0xA7384B3C"
+  },
+  {
+   "id": "segment:84",
+   "kind": "segment",
+   "page": "0x265FCCA",
+   "hash": "766ce6474daae458",
+   "hash_verified": null,
+   "value_u32": "0xADFB96BF"
+  },
+  {
+   "id": "segment:85",
+   "kind": "segment",
+   "page": "0x2D051F3",
+   "hash": "491aa7f631fcee80",
+   "hash_verified": true,
+   "value_u32": "0x60CEC4E7"
+  },
+  {
+   "id": "segment:86",
+   "kind": "segment",
+   "page": "0x2D0561C",
+   "hash": "89898c000a1f7caa",
+   "hash_verified": null,
+   "value_u32": "0x8B05D66C"
+  },
+  {
+   "id": "segment:87",
+   "kind": "segment",
+   "page": "0x2D2EF2F",
+   "hash": "98c2674fa3029ad4",
+   "hash_verified": null,
+   "value_u32": "0x39C50FE3"
+  },
+  {
+   "id": "segment:88",
+   "kind": "segment",
+   "page": "0x2D3C338",
+   "hash": "ce28f611d67783ff",
+   "hash_verified": true,
+   "value_u32": "0xBCC0E311"
+  },
+  {
+   "id": "segment:89",
+   "kind": "segment",
+   "page": "0x2D3C66C",
+   "hash": "bd4924ed70abd014",
+   "hash_verified": null,
+   "value_u32": "0x4D5BFC60"
+  },
+  {
+   "id": "segment:90",
+   "kind": "segment",
+   "page": "0x31E5D60",
+   "hash": "1c48cb7c2f02bcbb",
+   "hash_verified": true,
+   "value_u32": "0x11F80453"
+  },
+  {
+   "id": "segment:91",
+   "kind": "segment",
+   "page": "0x31EA7C9",
+   "hash": "f270d78cd0225972",
+   "hash_verified": true,
+   "value_u32": "0xEC9D5F64"
+  },
+  {
+   "id": "segment:92",
+   "kind": "segment",
+   "page": "0x31EA7CB",
+   "hash": "4cd997a2f02ab355",
+   "hash_verified": null,
+   "value_u32": "0x352D359A"
+  },
+  {
+   "id": "segment:93",
+   "kind": "segment",
+   "page": "0x31F64F6",
+   "hash": "e187d72bb9eac0eb",
+   "hash_verified": null,
+   "value_u32": "0x4757BAF4"
+  },
+  {
+   "id": "segment:94",
+   "kind": "segment",
+   "page": "0x32269FE",
+   "hash": "9faebdde2a2cd1f6",
+   "hash_verified": null,
+   "value_u32": "0x9DB263FE"
+  },
+  {
+   "id": "segment:95",
+   "kind": "segment",
+   "page": "0x323228D",
+   "hash": "2c66733520331eea",
+   "hash_verified": true,
+   "value_u32": "0x726B545A"
+  },
+  {
+   "id": "segment:96",
+   "kind": "segment",
+   "page": "0x32323EA",
+   "hash": "eb7be044a9380631",
+   "hash_verified": true,
+   "value_u32": "0xAC4F744C"
+  },
+  {
+   "id": "segment:97",
+   "kind": "segment",
+   "page": "0x3235F08",
+   "hash": "0b36176329cddaf6",
+   "hash_verified": true,
+   "value_u32": "0x7CDEF2C6"
+  },
+  {
+   "id": "segment:98",
+   "kind": "segment",
+   "page": "0x3235F0C",
+   "hash": "380d660d1d91f5d6",
+   "hash_verified": null,
+   "value_u32": "0x279F3032"
+  },
+  {
+   "id": "segment:99",
+   "kind": "segment",
+   "page": "0x3424890",
+   "hash": "bd7801918f9ec0c3",
+   "hash_verified": null,
+   "value_u32": "0xF420B17D"
+  },
+  {
+   "id": "segment:100",
+   "kind": "segment",
+   "page": "0x3471C4C",
+   "hash": "51b65c13112f425c",
+   "hash_verified": true,
+   "value_u32": "0x246E746C"
+  },
+  {
+   "id": "segment:101",
+   "kind": "segment",
+   "page": "0x3473067",
+   "hash": "2300f8548eac7dc3",
+   "hash_verified": true,
+   "value_u32": "0x7A1543EF"
+  },
+  {
+   "id": "segment:102",
+   "kind": "segment",
+   "page": "0x34747CC",
+   "hash": "0852b0063f1c9438",
+   "hash_verified": true,
+   "value_u32": "0x32F05E6B"
+  },
+  {
+   "id": "segment:103",
+   "kind": "segment",
+   "page": "0x3476973",
+   "hash": "a6305e4afcfce269",
+   "hash_verified": true,
+   "value_u32": "0x9F1BDAA5"
+  },
+  {
+   "id": "segment:104",
+   "kind": "segment",
+   "page": "0x3476DF6",
+   "hash": "e67f529d6e00782a",
+   "hash_verified": true,
+   "value_u32": "0x9774512A"
+  },
+  {
+   "id": "segment:105",
+   "kind": "segment",
+   "page": "0x34770F3",
+   "hash": "71be7e4c5a37e956",
+   "hash_verified": true,
+   "value_u32": "0x4A97CDB7"
+  },
+  {
+   "id": "segment:106",
+   "kind": "segment",
+   "page": "0x34771B5",
+   "hash": "277f0cac09f6db63",
+   "hash_verified": true,
+   "value_u32": "0xB5C96F8D"
+  },
+  {
+   "id": "segment:107",
+   "kind": "segment",
+   "page": "0x34771BF",
+   "hash": "27e2c1f0cdf20f58",
+   "hash_verified": true,
+   "value_u32": "0x16EA0DE4"
+  },
+  {
+   "id": "file:microsoft_gameconfig.bin",
+   "kind": "file",
+   "size": 8192,
+   "offset": "0x64564000",
+   "pages": 2,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:MicrosoftGame.Config",
+   "kind": "file",
+   "size": 2542,
+   "offset": "0x64566000",
+   "pages": 1,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:xbs_logo_150.png",
+   "kind": "file",
+   "size": 54536,
+   "offset": "0x64567000",
+   "pages": 14,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:xbs_logo_44.png",
+   "kind": "file",
+   "size": 7102,
+   "offset": "0x64575000",
+   "pages": 2,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:xbs_splash.png",
+   "kind": "file",
+   "size": 2507194,
+   "offset": "0x64577000",
+   "pages": 613,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:xbs_logo_store.png",
+   "kind": "file",
+   "size": 29356,
+   "offset": "0x647DC000",
+   "pages": 8,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:xbs_logo_480.png",
+   "kind": "file",
+   "size": 404663,
+   "offset": "0x647E4000",
+   "pages": 99,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:resources.pri",
+   "kind": "file",
+   "size": 1152,
+   "offset": "0x64847000",
+   "pages": 1,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml",
+   "kind": "file",
+   "size": 13698,
+   "offset": "0x64848000",
+   "pages": 4,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:appxmanifest.xml",
+   "kind": "file",
+   "size": 3394,
+   "offset": "0x6484C000",
+   "pages": 1,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:Catalog000.bin",
+   "kind": "file",
+   "size": 815104,
+   "offset": "0x6484D000",
+   "pages": 199,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:appdata0.rpf",
+   "kind": "file",
+   "size": 8880,
+   "offset": "0x64914000",
+   "pages": 3,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:game_scarlett_master.exe",
+   "kind": "file",
+   "size": 120181760,
+   "offset": "0x64917000",
+   "pages": 29342,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:amd_fidelityfx_loader_xbox.dll",
+   "kind": "file",
+   "size": 13312,
+   "offset": "0x6BBB5000",
+   "pages": 4,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:amd_fidelityfx_upscaler_xbox.dll",
+   "kind": "file",
+   "size": 786432,
+   "offset": "0x6BBB9000",
+   "pages": 192,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:Bink2Scarlett.dll",
+   "kind": "file",
+   "size": 255488,
+   "offset": "0x6BC79000",
+   "pages": 63,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:concrt140.dll",
+   "kind": "file",
+   "size": 298992,
+   "offset": "0x6BCB8000",
+   "pages": 73,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:libHttpClient.GDK.dll",
+   "kind": "file",
+   "size": 975856,
+   "offset": "0x6BD01000",
+   "pages": 239,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:msvcp140.dll",
+   "kind": "file",
+   "size": 565232,
+   "offset": "0x6BDF0000",
+   "pages": 138,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:msvcp140_1.dll",
+   "kind": "file",
+   "size": 26104,
+   "offset": "0x6BE7A000",
+   "pages": 7,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:msvcp140_2.dll",
+   "kind": "file",
+   "size": 187888,
+   "offset": "0x6BE81000",
+   "pages": 46,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:msvcp140_atomic_wait.dll",
+   "kind": "file",
+   "size": 57312,
+   "offset": "0x6BEAF000",
+   "pages": 14,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:msvcp140_codecvt_ids.dll",
+   "kind": "file",
+   "size": 22008,
+   "offset": "0x6BEBD000",
+   "pages": 6,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:vccorlib140.dll",
+   "kind": "file",
+   "size": 336888,
+   "offset": "0x6BEC3000",
+   "pages": 83,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:vcomp140.dll",
+   "kind": "file",
+   "size": 72176,
+   "offset": "0x6BF16000",
+   "pages": 18,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:vcruntime140.dll",
+   "kind": "file",
+   "size": 97776,
+   "offset": "0x6BF28000",
+   "pages": 24,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:vcruntime140_1.dll",
+   "kind": "file",
+   "size": 37848,
+   "offset": "0x6BF40000",
+   "pages": 10,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:XboxBvhBuilder.dll",
+   "kind": "file",
+   "size": 884224,
+   "offset": "0x6BF4A000",
+   "pages": 216,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:XCurl.dll",
+   "kind": "file",
+   "size": 199152,
+   "offset": "0x6C022000",
+   "pages": 49,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:data\\ttdb\\graphics\\ttdb_graphics.ttpf",
+   "kind": "file",
+   "size": 34411776,
+   "offset": "0x6C053000",
+   "pages": 8402,
+   "page_table_runs": 13
+  },
+  {
+   "id": "file:data\\ttdb\\interiors\\ttdb_interiors_0_3.ttpf",
+   "kind": "file",
+   "size": 883202048,
+   "offset": "0x6E125000",
+   "pages": 215626,
+   "page_table_runs": 37
+  },
+  {
+   "id": "file:data\\ttdb\\interiors\\ttdb_interiors_1_3.ttpf",
+   "kind": "file",
+   "size": 898113536,
+   "offset": "0xA2B6F000",
+   "pages": 219266,
+   "page_table_runs": 47
+  },
+  {
+   "id": "file:data\\ttdb\\interiors\\ttdb_interiors_2_3.ttpf",
+   "kind": "file",
+   "size": 881431552,
+   "offset": "0xD83F1000",
+   "pages": 215194,
+   "page_table_runs": 47
+  },
+  {
+   "id": "file:data\\ttdb\\interiors\\ttdb_interiors_3_3.ttpf",
+   "kind": "file",
+   "size": 900875008,
+   "offset": "0x10CC8B000",
+   "pages": 219941,
+   "page_table_runs": 38
+  },
+  {
+   "id": "file:data\\ttdb\\lighting\\lighting.ttpf",
+   "kind": "file",
+   "size": 151531776,
+   "offset": "0x1427B0000",
+   "pages": 36996,
+   "page_table_runs": 42
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_0_7.ttpf",
+   "kind": "file",
+   "size": 1765679616,
+   "offset": "0x14B834000",
+   "pages": 431075,
+   "page_table_runs": 144
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_1_7.ttpf",
+   "kind": "file",
+   "size": 1746187776,
+   "offset": "0x1B4C17000",
+   "pages": 426316,
+   "page_table_runs": 176
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_2_7.ttpf",
+   "kind": "file",
+   "size": 1818806528,
+   "offset": "0x21CD63000",
+   "pages": 444045,
+   "page_table_runs": 173
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_3_7.ttpf",
+   "kind": "file",
+   "size": 1787349760,
+   "offset": "0x2893F0000",
+   "pages": 436365,
+   "page_table_runs": 174
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_4_7.ttpf",
+   "kind": "file",
+   "size": 1791670784,
+   "offset": "0x2F3C7D000",
+   "pages": 437420,
+   "page_table_runs": 164
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_5_7.ttpf",
+   "kind": "file",
+   "size": 1840029440,
+   "offset": "0x35E929000",
+   "pages": 449226,
+   "page_table_runs": 182
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_6_7.ttpf",
+   "kind": "file",
+   "size": 1745923072,
+   "offset": "0x3CC3F3000",
+   "pages": 426251,
+   "page_table_runs": 187
+  },
+  {
+   "id": "file:data\\ttdb\\maps\\ttdb_maps_7_7.ttpf",
+   "kind": "file",
+   "size": 1755748608,
+   "offset": "0x4344FE000",
+   "pages": 428650,
+   "page_table_runs": 182
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\decorations_0_3.ttpf",
+   "kind": "file",
+   "size": 494316032,
+   "offset": "0x49CF68000",
+   "pages": 120683,
+   "page_table_runs": 13
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\decorations_1_3.ttpf",
+   "kind": "file",
+   "size": 510001152,
+   "offset": "0x4BA6D3000",
+   "pages": 124512,
+   "page_table_runs": 15
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\decorations_2_3.ttpf",
+   "kind": "file",
+   "size": 491507456,
+   "offset": "0x4D8D33000",
+   "pages": 119997,
+   "page_table_runs": 12
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\decorations_3_3.ttpf",
+   "kind": "file",
+   "size": 497391360,
+   "offset": "0x4F61F0000",
+   "pages": 121434,
+   "page_table_runs": 18
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\peds_loose.ttpf",
+   "kind": "file",
+   "size": 135676160,
+   "offset": "0x513C4A000",
+   "pages": 33125,
+   "page_table_runs": 12
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\ttdb_peds_0_3.ttpf",
+   "kind": "file",
+   "size": 953116416,
+   "offset": "0x51BDAF000",
+   "pages": 232695,
+   "page_table_runs": 60
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\ttdb_peds_1_3.ttpf",
+   "kind": "file",
+   "size": 965556736,
+   "offset": "0x554AA6000",
+   "pages": 235732,
+   "page_table_runs": 76
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\ttdb_peds_2_3.ttpf",
+   "kind": "file",
+   "size": 937699072,
+   "offset": "0x58E37A000",
+   "pages": 228931,
+   "page_table_runs": 92
+  },
+  {
+   "id": "file:data\\ttdb\\peds\\ttdb_peds_3_3.ttpf",
+   "kind": "file",
+   "size": 957291520,
+   "offset": "0x5C61BD000",
+   "pages": 233714,
+   "page_table_runs": 90
+  },
+  {
+   "id": "file:data\\ttdb\\props\\octa_imposters.ttpf",
+   "kind": "file",
+   "size": 983620352,
+   "offset": "0x5FF2AF000",
+   "pages": 240142,
+   "page_table_runs": 4
+  },
+  {
+   "id": "file:data\\ttdb\\props\\ttdb_props_0_3.ttpf",
+   "kind": "file",
+   "size": 1304458240,
+   "offset": "0x639CBD000",
+   "pages": 318472,
+   "page_table_runs": 102
+  },
+  {
+   "id": "file:data\\ttdb\\props\\ttdb_props_1_3.ttpf",
+   "kind": "file",
+   "size": 1256908800,
+   "offset": "0x6878C5000",
+   "pages": 306863,
+   "page_table_runs": 99
+  },
+  {
+   "id": "file:data\\ttdb\\props\\ttdb_props_2_3.ttpf",
+   "kind": "file",
+   "size": 1239990784,
+   "offset": "0x6D2774000",
+   "pages": 302733,
+   "page_table_runs": 108
+  },
+  {
+   "id": "file:data\\ttdb\\props\\ttdb_props_3_3.ttpf",
+   "kind": "file",
+   "size": 1328911616,
+   "offset": "0x71C601000",
+   "pages": 324442,
+   "page_table_runs": 134
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_0_7.ttpf",
+   "kind": "file",
+   "size": 2775084288,
+   "offset": "0x76B95B000",
+   "pages": 677511,
+   "page_table_runs": 38
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_1_7.ttpf",
+   "kind": "file",
+   "size": 2739444480,
+   "offset": "0x810FE2000",
+   "pages": 668810,
+   "page_table_runs": 42
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_2_7.ttpf",
+   "kind": "file",
+   "size": 2780145920,
+   "offset": "0x8B446C000",
+   "pages": 678747,
+   "page_table_runs": 45
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_3_7.ttpf",
+   "kind": "file",
+   "size": 2718679808,
+   "offset": "0x959FC7000",
+   "pages": 663741,
+   "page_table_runs": 49
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_4_7.ttpf",
+   "kind": "file",
+   "size": 2741339648,
+   "offset": "0x9FC084000",
+   "pages": 669273,
+   "page_table_runs": 53
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_5_7.ttpf",
+   "kind": "file",
+   "size": 2674379008,
+   "offset": "0xA9F6DD000",
+   "pages": 652925,
+   "page_table_runs": 51
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_6_7.ttpf",
+   "kind": "file",
+   "size": 2688808960,
+   "offset": "0xB3ED5A000",
+   "pages": 656448,
+   "page_table_runs": 47
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_7_7.ttpf",
+   "kind": "file",
+   "size": 2828296704,
+   "offset": "0xBDF19A000",
+   "pages": 690503,
+   "page_table_runs": 51
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_image_based_0_1.ttpf",
+   "kind": "file",
+   "size": 1946070528,
+   "offset": "0xC87AE1000",
+   "pages": 475115,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:data\\ttdb\\terrain\\ttdb_terrain_image_based_1_1.ttpf",
+   "kind": "file",
+   "size": 1890978048,
+   "offset": "0xCFBACC000",
+   "pages": 461665,
+   "page_table_runs": 3
+  },
+  {
+   "id": "file:data\\ttdb\\ui\\platform.ttpf",
+   "kind": "file",
+   "size": 222976,
+   "offset": "0xD6C62D000",
+   "pages": 55,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "kind": "file",
+   "size": 845115648,
+   "offset": "0xD6C664000",
+   "pages": 206328,
+   "page_table_runs": 105
+  },
+  {
+   "id": "file:data\\ttdb\\vehicles\\ttdb_vehicles.ttpf",
+   "kind": "file",
+   "size": 195418624,
+   "offset": "0xD9EC5C000",
+   "pages": 47710,
+   "page_table_runs": 6
+  },
+  {
+   "id": "file:data\\ttdb\\vehicles\\ttdb_vehicles_loose_0_1.ttpf",
+   "kind": "file",
+   "size": 838474496,
+   "offset": "0xDAA6BA000",
+   "pages": 204706,
+   "page_table_runs": 89
+  },
+  {
+   "id": "file:data\\ttdb\\vehicles\\ttdb_vehicles_loose_1_1.ttpf",
+   "kind": "file",
+   "size": 890206208,
+   "offset": "0xDDC65C000",
+   "pages": 217336,
+   "page_table_runs": 89
+  },
+  {
+   "id": "file:data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "kind": "file",
+   "size": 238897664,
+   "offset": "0xE11754000",
+   "pages": 58325,
+   "page_table_runs": 13
+  },
+  {
+   "id": "file:data\\ttdb\\weapons\\ttdb_weapons.ttpf",
+   "kind": "file",
+   "size": 1421518080,
+   "offset": "0xE1FB29000",
+   "pages": 347051,
+   "page_table_runs": 25
+  },
+  {
+   "id": "file:data\\ttdb\\weapons\\weapon_liveries.ttpf",
+   "kind": "file",
+   "size": 739758848,
+   "offset": "0xE746D4000",
+   "pages": 180606,
+   "page_table_runs": 16
+  },
+  {
+   "id": "file:common.rpf",
+   "kind": "file",
+   "size": 6642192,
+   "offset": "0xEA0852000",
+   "pages": 1622,
+   "page_table_runs": 12
+  },
+  {
+   "id": "file:movies.rpf",
+   "kind": "file",
+   "size": 8832481776,
+   "offset": "0xEA0EA8000",
+   "pages": 2156368,
+   "page_table_runs": 99
+  },
+  {
+   "id": "file:shaders.rpf",
+   "kind": "file",
+   "size": 411695600,
+   "offset": "0x10AF5F8000",
+   "pages": 100512,
+   "page_table_runs": 7
+  },
+  {
+   "id": "file:anim.rpf",
+   "kind": "file",
+   "size": 4407626384,
+   "offset": "0x10C7E98000",
+   "pages": 1076081,
+   "page_table_runs": 2478
+  },
+  {
+   "id": "file:data.rpf",
+   "kind": "file",
+   "size": 481544304,
+   "offset": "0x11CEA09000",
+   "pages": 117565,
+   "page_table_runs": 334
+  },
+  {
+   "id": "file:levels.rpf",
+   "kind": "file",
+   "size": 76155065056,
+   "offset": "0x11EB546000",
+   "pages": 18592546,
+   "page_table_runs": 22751
+  },
+  {
+   "id": "file:navmeshes.rpf",
+   "kind": "file",
+   "size": 6707512496,
+   "offset": "0x23A6868000",
+   "pages": 1637577,
+   "page_table_runs": 3024
+  },
+  {
+   "id": "file:packs.rpf",
+   "kind": "file",
+   "size": 4798213264,
+   "offset": "0x2536531000",
+   "pages": 1171439,
+   "page_table_runs": 4168
+  },
+  {
+   "id": "file:textures.rpf",
+   "kind": "file",
+   "size": 192585024,
+   "offset": "0x2654520000",
+   "pages": 47018,
+   "page_table_runs": 39
+  },
+  {
+   "id": "file:audio.rpf",
+   "kind": "file",
+   "size": 28543454672,
+   "offset": "0x265FCCA000",
+   "pages": 6968617,
+   "page_table_runs": 5164
+  },
+  {
+   "id": "file:script.rpf",
+   "kind": "file",
+   "size": 4358960,
+   "offset": "0x2D051F3000",
+   "pages": 1065,
+   "page_table_runs": 3
+  },
+  {
+   "id": "file:pack\\story000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+   "kind": "file",
+   "size": 697378560,
+   "offset": "0x2D0561C000",
+   "pages": 170259,
+   "page_table_runs": 145
+  },
+  {
+   "id": "file:pack\\story000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+   "kind": "file",
+   "size": 222333440,
+   "offset": "0x2D2EF2F000",
+   "pages": 54281,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\story000\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "kind": "file",
+   "size": 3357184,
+   "offset": "0x2D3C338000",
+   "pages": 820,
+   "page_table_runs": 3
+  },
+  {
+   "id": "file:pack\\story000\\story000.rpf",
+   "kind": "file",
+   "size": 20022508672,
+   "offset": "0x2D3C66C000",
+   "pages": 4888308,
+   "page_table_runs": 29494
+  },
+  {
+   "id": "file:pack\\story000\\story000_script.rpf",
+   "kind": "file",
+   "size": 78023728,
+   "offset": "0x31E5D60000",
+   "pages": 19049,
+   "page_table_runs": 32
+  },
+  {
+   "id": "file:pack\\story000_bvh4\\story000_bvh4.rpf",
+   "kind": "file",
+   "size": 5632,
+   "offset": "0x31EA7C9000",
+   "pages": 2,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\story000_restofworld\\story000_restofworld.rpf",
+   "kind": "file",
+   "size": 198354992,
+   "offset": "0x31EA7CB000",
+   "pages": 48427,
+   "page_table_runs": 32
+  },
+  {
+   "id": "file:pack\\shared_minigame000\\shared_minigame000.rpf",
+   "kind": "file",
+   "size": 810581008,
+   "offset": "0x31F64F6000",
+   "pages": 197896,
+   "page_table_runs": 520
+  },
+  {
+   "id": "file:pack\\shared_minigame000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+   "kind": "file",
+   "size": 193522176,
+   "offset": "0x32269FE000",
+   "pages": 47247,
+   "page_table_runs": 53
+  },
+  {
+   "id": "file:pack\\shared_minigame000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+   "kind": "file",
+   "size": 1427712,
+   "offset": "0x323228D000",
+   "pages": 349,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\shared_minigame000_bvh4\\shared_minigame000_bvh4.rpf",
+   "kind": "file",
+   "size": 61987040,
+   "offset": "0x32323EA000",
+   "pages": 15134,
+   "page_table_runs": 49
+  },
+  {
+   "id": "file:pack\\core_licenses\\core_licenses_data.rpf",
+   "kind": "file",
+   "size": 13536,
+   "offset": "0x3235F08000",
+   "pages": 4,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\core_bvh4\\core_bvh4.rpf",
+   "kind": "file",
+   "size": 8297921520,
+   "offset": "0x3235F0C000",
+   "pages": 2025860,
+   "page_table_runs": 4780
+  },
+  {
+   "id": "file:pack\\core_restofworld\\core_restofworld.rpf",
+   "kind": "file",
+   "size": 1295760752,
+   "offset": "0x3424890000",
+   "pages": 316348,
+   "page_table_runs": 69
+  },
+  {
+   "id": "file:pack\\core_restofworld\\data\\ttdb\\textures_loose.ttpf",
+   "kind": "file",
+   "size": 21081856,
+   "offset": "0x3471C4C000",
+   "pages": 5147,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\core_restofworld\\data\\ttdb\\peds\\ttdb_peds.ttpf",
+   "kind": "file",
+   "size": 24529408,
+   "offset": "0x3473067000",
+   "pages": 5989,
+   "page_table_runs": 4
+  },
+  {
+   "id": "file:pack\\core_restofworld\\data\\ttdb\\props\\ttdb_props.ttpf",
+   "kind": "file",
+   "size": 35286784,
+   "offset": "0x34747CC000",
+   "pages": 8615,
+   "page_table_runs": 3
+  },
+  {
+   "id": "file:pack\\core_restofworld\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "kind": "file",
+   "size": 4729600,
+   "offset": "0x3476973000",
+   "pages": 1155,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\core_restofworld\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "kind": "file",
+   "size": 3129600,
+   "offset": "0x3476DF6000",
+   "pages": 765,
+   "page_table_runs": 2
+  },
+  {
+   "id": "file:pack\\core_restofworld001\\core_restofworld001.rpf",
+   "kind": "file",
+   "size": 791984,
+   "offset": "0x34770F3000",
+   "pages": 194,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:pack\\core_restofworld001\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "kind": "file",
+   "size": 38656,
+   "offset": "0x34771B5000",
+   "pages": 10,
+   "page_table_runs": 1
+  },
+  {
+   "id": "file:Update.alignmentchunk",
+   "kind": "file",
+   "size": 1,
+   "offset": "0x34771BF000",
+   "pages": 1,
+   "page_table_runs": 1
+  },
+  {
+   "id": "config:appxmanifest.xml",
+   "kind": "userdata_file",
+   "size": 3394
+  },
+  {
+   "id": "config:microsoft_gameconfig.bin",
+   "kind": "userdata_file",
+   "size": 8192
+  },
+  {
+   "id": "config:MicrosoftGame.config",
+   "kind": "userdata_file",
+   "size": 2542
+  },
+  {
+   "id": "config:Summary.json",
+   "kind": "userdata_file",
+   "size": 204
+  },
+  {
+   "id": "config:Metadata.json",
+   "kind": "userdata_file",
+   "size": 2
+  },
+  {
+   "id": "config:SegmentMetadata.bin",
+   "kind": "userdata_file",
+   "size": 9128
+  },
+  {
+   "id": "dependency:Windows.Universal",
+   "kind": "os_dependency",
+   "dep_kind": "TargetDeviceFamily",
+   "MinVersion": "10.0.18362.0",
+   "MaxVersionTested": "10.0.18362.0"
+  },
+  {
+   "id": "dependency:Microsoft.GameOs",
+   "kind": "os_dependency",
+   "dep_kind": "OSPackageDependency",
+   "Version": "10.0.18362.0"
+  },
+  {
+   "id": "identity:TitleId=7952987A",
+   "kind": "identity"
+  },
+  {
+   "id": "identity:StoreId=9NL3WWNZLZZN",
+   "kind": "identity"
+  },
+  {
+   "id": "identity:MSAAppId=000000004060F900",
+   "kind": "identity"
+  },
+  {
+   "id": "embedded_xvd",
+   "kind": "xvd",
+   "offset": "0x3000",
+   "content_type": "EraOS",
+   "pduid": "b78ddf1f2d874e4abf8b9b507a3f322e",
+   "version_raw": [
+    7901,
+    26100,
+    0,
+    32778
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000005",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A27DA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000004",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A27E28"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000006",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A27EA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000001",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A27F28"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000002",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A27FA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x40000003",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28028"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3E8",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A280A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3E8",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A280AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3E9",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28128"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3E9",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2812C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3EA",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A281A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A281AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3EB",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28228"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2822C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3EC",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A282A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3EC",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A282AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3ED",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28328"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3ED",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2832C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3EE",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A283A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3EE",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A283AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3EF",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28428"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3EF",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2842C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A284A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F0",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A284AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F1",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28528"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F1",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2852C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F2",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A285A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F2",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A285AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F3",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28628"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F3",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2862C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F4",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A286A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F4",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A286AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F5",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28728"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F5",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2872C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0x3F6",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A287A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0x3F6",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A287AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBB8",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28828"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2882C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBB9",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A288A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBB9",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A288AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBA",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28928"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBA",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A2892C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBB",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A289A8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBB",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A289AC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBC",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28A28"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBC",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28A2C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBD",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28AA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBD",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28AAC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBE",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28B28"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBE",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28B2C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBBF",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28BA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28BAC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBC0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28C28"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBC0",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28C2C"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "package",
+   "relation": "CONTAINS_REGION",
+   "target": "region:0xBC1",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region header",
+    "test": "xvcinfo.struct.03",
+    "offset": "0x63A28CA8"
+   },
+   "note": "regioes ladrilham o arquivo"
+  },
+  {
+   "source": "region:0xBC1",
+   "relation": "USES_KEY_ID",
+   "target": "key:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "region KeyId",
+    "test": "xvcinfo.struct.02",
+    "offset": "0x63A28CAC"
+   },
+   "note": "KeyId como indice da lista de chaves: semantica do xvdtool (INFERRED); valor CONFIRMED"
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:0",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D28"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:1",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D34"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:2",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D40"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:3",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D4C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:4",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D58"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:5",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D64"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:6",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D70"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:7",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D7C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:8",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D88"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:9",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28D94"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x40000003",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:10",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DA0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3E8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:11",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DAC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3E9",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:12",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DB8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:13",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DC4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:14",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DD0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:15",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DDC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:16",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DE8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:17",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28DF4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:18",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E00"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:19",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E0C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:20",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E18"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:21",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E24"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:22",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E30"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:23",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E3C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:24",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E48"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:25",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E54"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:26",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E60"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:27",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E6C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:28",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E78"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:29",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E84"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:30",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E90"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:31",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28E9C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:32",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EA8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:33",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EB4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:34",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EC0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:35",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28ECC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:36",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28ED8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:37",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EE4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:38",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EF0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:39",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28EFC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:40",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F08"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:41",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F14"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:42",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F20"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:43",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F2C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:44",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F38"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:45",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F44"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:46",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F50"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:47",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F5C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:48",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F68"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:49",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F74"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:50",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F80"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:51",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F8C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:52",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28F98"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:53",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FA4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:54",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FB0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:55",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FBC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:56",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FC8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:57",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FD4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:58",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FE0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:59",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FEC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:60",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A28FF8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:61",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29004"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:62",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29010"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:63",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2901C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:64",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29028"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:65",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29034"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:66",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29040"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:67",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2904C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:68",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29058"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:69",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29064"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:70",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29070"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:71",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2907C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:72",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29088"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:73",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29094"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:74",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290A0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EC",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:75",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290AC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3ED",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:76",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290B8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EE",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:77",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290C4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3EF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:78",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290D0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F0",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:79",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290DC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F1",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:80",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290E8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F2",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:81",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A290F4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F3",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:82",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29100"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F4",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:83",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2910C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F5",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:84",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29118"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0x3F6",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:85",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29124"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:86",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29130"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:87",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2913C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:88",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29148"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:89",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29154"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB8",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:90",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29160"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBB9",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:91",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2916C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBA",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:92",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29178"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:93",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29184"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:94",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29190"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBB",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:95",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2919C"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBC",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:96",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291A8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBD",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:97",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291B4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBE",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:98",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291C0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:99",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291CC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:100",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291D8"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:101",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291E4"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:102",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291F0"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:103",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A291FC"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBBF",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:104",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29208"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBC0",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:105",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29214"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBC0",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:106",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A29220"
+   },
+   "note": ""
+  },
+  {
+   "source": "region:0xBC1",
+   "relation": "CONTAINS_SEGMENT",
+   "target": "segment:107",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:XvcInfo",
+    "field": "segment PageNum",
+    "test": "xvcinfo.struct.06",
+    "offset": "0x63A2922C"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:0",
+   "relation": "STORES_FILE",
+   "target": "file:microsoft_gameconfig.bin",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:1",
+   "relation": "STORES_FILE",
+   "target": "file:MicrosoftGame.Config",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:2",
+   "relation": "STORES_FILE",
+   "target": "file:xbs_logo_150.png",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:3",
+   "relation": "STORES_FILE",
+   "target": "file:xbs_logo_44.png",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:4",
+   "relation": "STORES_FILE",
+   "target": "file:xbs_splash.png",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:5",
+   "relation": "STORES_FILE",
+   "target": "file:xbs_logo_store.png",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:6",
+   "relation": "STORES_FILE",
+   "target": "file:xbs_logo_480.png",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:7",
+   "relation": "STORES_FILE",
+   "target": "file:resources.pri",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:8",
+   "relation": "STORES_FILE",
+   "target": "file:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:9",
+   "relation": "STORES_FILE",
+   "target": "file:appxmanifest.xml",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:10",
+   "relation": "STORES_FILE",
+   "target": "file:Catalog000.bin",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:11",
+   "relation": "STORES_FILE",
+   "target": "file:appdata0.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:12",
+   "relation": "STORES_FILE",
+   "target": "file:game_scarlett_master.exe",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:13",
+   "relation": "STORES_FILE",
+   "target": "file:amd_fidelityfx_loader_xbox.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:14",
+   "relation": "STORES_FILE",
+   "target": "file:amd_fidelityfx_upscaler_xbox.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:15",
+   "relation": "STORES_FILE",
+   "target": "file:Bink2Scarlett.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:16",
+   "relation": "STORES_FILE",
+   "target": "file:concrt140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:17",
+   "relation": "STORES_FILE",
+   "target": "file:libHttpClient.GDK.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:18",
+   "relation": "STORES_FILE",
+   "target": "file:msvcp140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:19",
+   "relation": "STORES_FILE",
+   "target": "file:msvcp140_1.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:20",
+   "relation": "STORES_FILE",
+   "target": "file:msvcp140_2.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:21",
+   "relation": "STORES_FILE",
+   "target": "file:msvcp140_atomic_wait.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:22",
+   "relation": "STORES_FILE",
+   "target": "file:msvcp140_codecvt_ids.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:23",
+   "relation": "STORES_FILE",
+   "target": "file:vccorlib140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:24",
+   "relation": "STORES_FILE",
+   "target": "file:vcomp140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:25",
+   "relation": "STORES_FILE",
+   "target": "file:vcruntime140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:26",
+   "relation": "STORES_FILE",
+   "target": "file:vcruntime140_1.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:27",
+   "relation": "STORES_FILE",
+   "target": "file:XboxBvhBuilder.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:28",
+   "relation": "STORES_FILE",
+   "target": "file:XCurl.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:29",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\graphics\\ttdb_graphics.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:30",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\interiors\\ttdb_interiors_0_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:31",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\interiors\\ttdb_interiors_1_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:32",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\interiors\\ttdb_interiors_2_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:33",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\interiors\\ttdb_interiors_3_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:34",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\lighting\\lighting.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:35",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_0_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:36",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_1_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:37",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_2_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:38",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_3_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:39",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_4_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:40",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_5_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:41",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_6_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:42",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\maps\\ttdb_maps_7_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:43",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\decorations_0_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:44",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\decorations_1_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:45",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\decorations_2_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:46",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\decorations_3_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:47",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\peds_loose.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:48",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\ttdb_peds_0_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:49",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\ttdb_peds_1_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:50",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\ttdb_peds_2_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:51",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\peds\\ttdb_peds_3_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:52",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\props\\octa_imposters.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:53",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\props\\ttdb_props_0_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:54",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\props\\ttdb_props_1_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:55",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\props\\ttdb_props_2_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:56",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\props\\ttdb_props_3_3.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:57",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_0_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:58",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_1_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:59",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_2_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:60",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_3_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:61",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_4_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:62",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_5_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:63",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_6_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:64",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_7_7.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:65",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_image_based_0_1.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:66",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\terrain\\ttdb_terrain_image_based_1_1.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:67",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\ui\\platform.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:68",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:69",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\vehicles\\ttdb_vehicles.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:70",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\vehicles\\ttdb_vehicles_loose_0_1.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:71",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\vehicles\\ttdb_vehicles_loose_1_1.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:72",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:73",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\weapons\\ttdb_weapons.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:74",
+   "relation": "STORES_FILE",
+   "target": "file:data\\ttdb\\weapons\\weapon_liveries.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:75",
+   "relation": "STORES_FILE",
+   "target": "file:common.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:76",
+   "relation": "STORES_FILE",
+   "target": "file:movies.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:77",
+   "relation": "STORES_FILE",
+   "target": "file:shaders.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:78",
+   "relation": "STORES_FILE",
+   "target": "file:anim.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:79",
+   "relation": "STORES_FILE",
+   "target": "file:data.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:80",
+   "relation": "STORES_FILE",
+   "target": "file:levels.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:81",
+   "relation": "STORES_FILE",
+   "target": "file:navmeshes.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:82",
+   "relation": "STORES_FILE",
+   "target": "file:packs.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:83",
+   "relation": "STORES_FILE",
+   "target": "file:textures.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:84",
+   "relation": "STORES_FILE",
+   "target": "file:audio.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:85",
+   "relation": "STORES_FILE",
+   "target": "file:script.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:86",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:87",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:88",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:89",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000\\story000.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:90",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000\\story000_script.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:91",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000_bvh4\\story000_bvh4.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:92",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\story000_restofworld\\story000_restofworld.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:93",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\shared_minigame000\\shared_minigame000.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:94",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\shared_minigame000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:95",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\shared_minigame000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:96",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\shared_minigame000_bvh4\\shared_minigame000_bvh4.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:97",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_licenses\\core_licenses_data.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:98",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_bvh4\\core_bvh4.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:99",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\core_restofworld.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:100",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\data\\ttdb\\textures_loose.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:101",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\data\\ttdb\\peds\\ttdb_peds.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:102",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\data\\ttdb\\props\\ttdb_props.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:103",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:104",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:105",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld001\\core_restofworld001.rpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:106",
+   "relation": "STORES_FILE",
+   "target": "file:pack\\core_restofworld001\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "segment:107",
+   "relation": "STORES_FILE",
+   "target": "file:Update.alignmentchunk",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "page[i] == segment PageNum - drive page",
+    "test": "filemap: inicio do arquivo == PageNum do segmento"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:appxmanifest.xml",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20220"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:microsoft_gameconfig.bin",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20430"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:MicrosoftGame.config",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20640"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:Summary.json",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20850"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:Metadata.json",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20A60"
+   },
+   "note": ""
+  },
+  {
+   "source": "package",
+   "relation": "HAS_USERDATA_FILE",
+   "target": "config:SegmentMetadata.bin",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:user data",
+    "field": "entry",
+    "test": null,
+    "offset": "0x63A20C70"
+   },
+   "note": ""
+  },
+  {
+   "source": "config:MicrosoftGame.config",
+   "relation": "DECLARES_EXECUTABLE",
+   "target": "file:game_scarlett_master.exe",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:MicrosoftGame.config",
+    "field": "ExecutableList/Executable@Name",
+    "test": null
+   },
+   "note": "Id=GTAO"
+  },
+  {
+   "source": "config:appxmanifest.xml",
+   "relation": "DECLARES_APPLICATION",
+   "target": "file:game_scarlett_master.exe",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:appxmanifest.xml",
+    "field": "Application@Executable",
+    "test": null
+   },
+   "note": "Id=GTAO, EntryPoint=GamingProxyApp.Application.EntryPoint"
+  },
+  {
+   "source": "config:microsoft_gameconfig.bin",
+   "relation": "DECLARES_EXECUTABLE",
+   "target": "file:game_scarlett_master.exe",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:microsoft_gameconfig.bin",
+    "field": "Executable\\00000000\\Name",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "config:appxmanifest.xml",
+   "relation": "DECLARES_DEPENDENCY",
+   "target": "dependency:Windows.Universal",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:appxmanifest.xml",
+    "field": "TargetDeviceFamily",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "config:appxmanifest.xml",
+   "relation": "DECLARES_DEPENDENCY",
+   "target": "dependency:Microsoft.GameOs",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:appxmanifest.xml",
+    "field": "OSPackageDependency",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "config:MicrosoftGame.config",
+   "relation": "DECLARES_IDENTITY",
+   "target": "identity:TitleId=7952987A",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:MicrosoftGame.config",
+    "field": "TitleId",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "config:MicrosoftGame.config",
+   "relation": "DECLARES_IDENTITY",
+   "target": "identity:StoreId=9NL3WWNZLZZN",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:MicrosoftGame.config",
+    "field": "StoreId",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "config:MicrosoftGame.config",
+   "relation": "DECLARES_IDENTITY",
+   "target": "identity:MSAAppId=000000004060F900",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:MicrosoftGame.config",
+    "field": "MSAAppId",
+    "test": null
+   },
+   "note": ""
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:amd_fidelityfx_loader_xbox.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:amd_fidelityfx_loader_xbox.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:amd_fidelityfx_upscaler_xbox.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:amd_fidelityfx_upscaler_xbox.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:Bink2Scarlett.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:Bink2Scarlett.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:concrt140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:concrt140.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:libHttpClient.GDK.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:libHttpClient.GDK.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:msvcp140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:msvcp140.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:msvcp140_1.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:msvcp140_1.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:msvcp140_2.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:msvcp140_2.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:msvcp140_atomic_wait.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:msvcp140_atomic_wait.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:msvcp140_codecvt_ids.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:msvcp140_codecvt_ids.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:vccorlib140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:vccorlib140.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:vcomp140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:vcomp140.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:vcruntime140.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:vcruntime140.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:vcruntime140_1.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:vcruntime140_1.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:XboxBvhBuilder.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:XboxBvhBuilder.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "CO_PACKAGED_WITH",
+   "target": "file:XCurl.dll",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "userdata:SegmentMetadata.bin",
+    "field": "mesmo pacote",
+    "test": null
+   },
+   "note": "nao implica import: conteudo do executavel e opaco"
+  },
+  {
+   "source": "file:game_scarlett_master.exe",
+   "relation": "IMPORTS",
+   "target": "file:XCurl.dll",
+   "confidence": "UNKNOWN",
+   "evidence": {
+    "source": "n/a",
+    "field": "tabela de imports ilegivel",
+    "test": null
+   },
+   "note": "nao determinavel sem um PE legivel"
+  },
+  {
+   "source": "package",
+   "relation": "EMBEDS_XVD",
+   "target": "embedded_xvd",
+   "confidence": "CONFIRMED",
+   "evidence": {
+    "source": "xvc:cabecalho",
+    "field": "EmbeddedXVD_PDUID",
+    "test": "embedded.pduid_link",
+    "offset": "0x32C"
+   },
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "command": "python -I scripts/test_summary.py reports/tests_summary.json  (XVC_PATH=<pacote real>, XVC_FULL=1)",
+  "XVC_PATH_set": true,
+  "XVC_FULL": true,
+  "exit_code": 0,
+  "outcomes": {
+    "passed": 143
+  },
+  "failed": [],
+  "skipped_reasons": {},
+  "python": "3.13.7",
+  "pytest": "8.3.5",
+  "finished_utc": "2026-11-22T06:25:24+00:00"
+}

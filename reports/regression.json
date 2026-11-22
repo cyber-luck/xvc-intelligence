@@ -1,0 +1,18 @@
+{
+  "schema_keys_equal": true,
+  "file_count_old": 108,
+  "file_count_new": 108,
+  "field_differences": [],
+  "source_differences": {
+    "drive_data_offset_source": {
+      "old": "layout calculado do cabecalho XVD (MDU pela regiao XVC-MDU)",
+      "new": "layout calculado do cabecalho XVD (MutableDataPageCount em 0x470, conferido com a regiao XVC-MDU)"
+    }
+  },
+  "validation_equal": true,
+  "classification_rules_equal": true,
+  "missing_in_new": [],
+  "added_in_new": [],
+  "passed": true,
+  "baseline": "C:\\Users\\Lguimaraes\\AppData\\Local\\Temp\\claude\\6eefec8481ace4a4\\ad4626f3-809d-4f34-b4d3-7eb8d9b004d7\\scratchpad\\xvc-intelligence\\tests\\fixtures\\xvc_files_report_baseline.json"
+}
