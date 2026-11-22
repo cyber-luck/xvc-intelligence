@@ -55,9 +55,12 @@ def load_validate_xts():
     path = Path(override) if override else VALIDATE_XTS_PATH
     if not path.is_file():
         raise FileNotFoundError(f"validate_xts.py nao encontrado: {path}")
-    spec = importlib.util.spec_from_file_location("validate_xts", path)
+    # nome proprio: recovery/crypto_lab/tools/validate_xts.py e outro modulo e
+    # seria sombreado se registrassemos este como "validate_xts" em sys.modules
+    name = "project_alpha_validate_xts"
+    spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
-    sys.modules.setdefault("validate_xts", mod)
+    sys.modules.setdefault(name, mod)
     spec.loader.exec_module(mod)
     return mod
 

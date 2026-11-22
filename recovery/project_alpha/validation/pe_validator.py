@@ -70,8 +70,11 @@ def validate_pe(path: Path, *, expect_machine: int | None = None, expect_magic: 
     try:
         import pefile as _pefile
         pf = _pefile.PE(str(path), fast_load=True)
-        pefile_note = {"machine_match": pf.FILE_HEADER.Machine == machine,
-                       "sections_match": pf.FILE_HEADER.NumberOfSections == nsec}
+        try:
+            pefile_note = {"machine_match": pf.FILE_HEADER.Machine == machine,
+                           "sections_match": pf.FILE_HEADER.NumberOfSections == nsec}
+        finally:
+            pf.close()  # pefile mantem um mmap aberto; no Windows isso trava o arquivo
         chk("pefile_cross_check", bool(pefile_note["machine_match"] and pefile_note["sections_match"]))
     except ImportError:
         pefile_note = "pefile nao instalado; comparacao externa nao executada"
