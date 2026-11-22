@@ -1,0 +1,192 @@
+{
+  "exact_duplicates": {
+    "078ea06e0f3fcbad186f540c1158ce8919d049082edb623032ee206d9f66f4c8": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\sample_module.dll",
+        "size": 136192
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sample_module.dll",
+        "size": 136192
+      }
+    ],
+    "260832e99865e5caa3a889ac87898798f02577d5ebc7eb01996a7f4859970cdd": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sdk\\include\\alpha\\module_api.h",
+        "size": 8105
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\include\\alpha\\module_api.h",
+        "size": 8105
+      }
+    ],
+    "32357259b965d6a8001e9e508ba60eda6034027c5923a7d226ffbaff813c2bfb": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\licenses\\AMD_FidelityFX_SDK_license.md",
+        "size": 65770
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\docs\\license.md",
+        "size": 65770
+      }
+    ],
+    "8c3f2c40c0ede6d7f34fc66a049a8a1dbdfe0b34f250954b9abab90ae4b7b4c0": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\assets\\scene.apak",
+        "size": 805537
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\assets\\scene.apak",
+        "size": 805537
+      }
+    ],
+    "8f4adc84807610b573d318c7fed84ffcaa9c674099177a15cea09b6d768196f6": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sdk\\include\\alpha\\asset_api.h",
+        "size": 3685
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\include\\alpha\\asset_api.h",
+        "size": 3685
+      }
+    ],
+    "aad4fccccb29084a655f9a4f9f613bd22c8c03fb4a0f8840148cc6543b4ccace": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\amd_fidelityfx_upscaler_dx12.dll",
+        "size": 57664272
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\amd_fidelityfx_upscaler_dx12.dll",
+        "size": 57664272
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_upscaler_dx12.dll",
+        "size": 57664272
+      }
+    ],
+    "e2191d3c0828be45eb8affd4e3ec0378f2293adc345b772a7170edcf3b021ecb": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\amd_fidelityfx_loader_dx12.dll",
+        "size": 39184
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\amd_fidelityfx_loader_dx12.dll",
+        "size": 39184
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_loader_dx12.dll",
+        "size": 39184
+      }
+    ],
+    "f2301760e6c9a8da74c3b8f4c8ad4299e046bc80fe777778a3d244960d5d6c7b": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\README_RUNTIME.txt",
+        "size": 2566
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\docs\\README_RUNTIME.txt",
+        "size": 2566
+      }
+    ]
+  },
+  "files_indexed": 369,
+  "note": "hash parcial head+tail nunca entra no indice de duplicados",
+  "same_name_different_bytes": {
+    "platform_master.exe": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\platform_master.exe",
+        "sha256": "2e38d80c17ea6a84c07ec036fb351dc70fc5db3fd657fd96590d18650c2151f8",
+        "size": 2828800
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\platform_master.exe",
+        "sha256": "cb7f95a1e032e2603ed82882b5e274133ee06a8f4d681b55e28c923ad7d8cfdd",
+        "size": 2329088
+      }
+    ],
+    "platform_master.pdb": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\platform_master.pdb",
+        "sha256": "9c4c8792325a8013ef406a1beafa7fc7286bb8e6e9f4395f654e7e1044c3989a",
+        "size": 15224832
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\symbols\\platform_master.pdb",
+        "sha256": "6783f1d9cb315e3688c678fc82b9ead100f6767f28cb44933da5b6571512c058",
+        "size": 14364672
+      }
+    ],
+    "port_status.md": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\PORT_STATUS.md",
+        "sha256": "8299b869cf12d9f50ac5befe737221ccb67f69a7cdc4e3c9846e07b255af9efc",
+        "size": 17195
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\docs\\PORT_STATUS.md",
+        "sha256": "f9ea7807eef38be4bf8f4142f4a1f9b867de58762ca1a69ece2159d15f9df2f4",
+        "size": 27579
+      }
+    ],
+    "ttdb_maps.ttpf": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\shared_minigame000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+        "sha256": "873a8c7634eacaa062a1bc48888908f3e2d3196159b9fa39e83eb6cfc18dbb06",
+        "size": 193522176
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\story000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+        "sha256": "8e362c1f39383d6ff97eeffbf963602e9ed2e2b97b707e54a3884fe7c8dd408d",
+        "size": 697378560
+      }
+    ],
+    "ttdb_terrain_image_based.ttpf": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\shared_minigame000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+        "sha256": "0354565963b8472bf2f606dc1a4089c14f45cb5ecd416984f5e4212009eb7e74",
+        "size": 1427712
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\story000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+        "sha256": "4794cbff80790c7a0b3d2959f3831b53e90c5b56b9bdb61814f98f29a4e4157f",
+        "size": 222333440
+      }
+    ],
+    "ttdb_ui.ttpf": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+        "sha256": "dc983ed7f6b78d1693fa5757f17c03bafb790e851594fdf4d412579b61d867f6",
+        "size": 845115648
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\core_restofworld001\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+        "sha256": "9bfb5f4b85be2f6d1d93b2ed83df94a2021346448816b61fd9c08d7d05b8a43c",
+        "size": 38656
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\core_restofworld\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+        "sha256": "9df804569a50dfe7d1a0f8ef71fa9a117a370616159489e9028f5acfd5118d66",
+        "size": 4729600
+      }
+    ],
+    "ttdb_vfx.ttpf": [
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+        "sha256": "7625184c4e9c899f3b708b88d61fa2e12b836db63640385cecd750cb30c8f26e",
+        "size": 238897664
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\core_restofworld\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+        "sha256": "6434287056329e60a4ca7ae26fabf91dc3ccf3b738130033400fb88ab42da8cf",
+        "size": 3129600
+      },
+      {
+        "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\story000\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+        "sha256": "79612738f51faa724cb6d30ad5465419f3038d4b3498115ec1306b0ad7d71f1c",
+        "size": 3357184
+      }
+    ]
+  },
+  "schema": "alpha_recovery.artifact_index/1",
+  "sha256_full_indexed": 364
+}

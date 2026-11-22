@@ -1,0 +1,87 @@
+[1/6] inventario...
+arquivos: 369  bytes: 449,675,896,343
+cache: 369  novas varreduras: 0
+  MSFT-XVD: 2
+  MZ: 33
+  PNG: 25
+  REGF: 1
+  XML: 3
+  unknown_bin: 305
+[2/6] localizacao do executavel...
+lendo XVC (somente leitura)...
+XVC: 108 arquivos mapeados; EncryptionDisabled=False
+  [CONFIRMED] Bink2Scarlett.dll                            PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] CMakeCXXCompilerId.exe                       PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] XCurl.dll                                    PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] XboxBvhBuilder.dll                           PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] alpha_assetgen.exe                           PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] alpha_datatool.exe                           PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] alpha_metadata.exe                           PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] alpha_tests.exe                              PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] amd_fidelityfx_loader_dx12.dll               PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] amd_fidelityfx_loader_xbox.dll               PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] amd_fidelityfx_upscaler_dx12.dll             PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] amd_fidelityfx_upscaler_xbox.dll             PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] concrt140.dll                                PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] game_scarlett_master.exe                     ENCRYPTED_UNKNOWN(opaco; KeyId 0; sem MZ) | copia_em_disco_tambem_opaca
+  [CONFIRMED] libHttpClient.GDK.dll                        PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] msvcp140.dll                                 PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] msvcp140_1.dll                               PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] msvcp140_2.dll                               PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] msvcp140_atomic_wait.dll                     PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] msvcp140_codecvt_ids.dll                     PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] platform_master.exe                          PLAINTEXT_AVAILABLE_EM_DISCO
+  [UNKNOWN  ] run GamingRepair.exe                         UNKNOWN
+  [CONFIRMED] sample_module.dll                            PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] vccorlib140.dll                              PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] vcomp140.dll                                 PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] vcruntime140.dll                             PLAINTEXT_AVAILABLE_EM_DISCO
+  [CONFIRMED] vcruntime140_1.dll                           PLAINTEXT_AVAILABLE_EM_DISCO
+[3/6] carving sobre os artefatos em disco...
+  PE@0x0 em amd_fidelityfx_loader_xbox.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_upscaler_xbox.dll: dll_candidate x64 trunc=False
+  PE@0x0 em Bink2Scarlett.dll: dll_candidate x64 trunc=False
+  PE@0x0 em Catalog000.bin: xbox_code_catalog_candidate_not_game_executable x64 trunc=False
+  PE@0x0 em concrt140.dll: dll_candidate x64 trunc=False
+  PE@0x0 em libHttpClient.GDK.dll: dll_candidate x64 trunc=False
+  PE@0x0 em msvcp140.dll: dll_candidate x64 trunc=False
+  PE@0x0 em msvcp140_1.dll: dll_candidate x64 trunc=False
+  PE@0x0 em msvcp140_2.dll: dll_candidate x64 trunc=False
+  PE@0x0 em msvcp140_atomic_wait.dll: dll_candidate x64 trunc=False
+  PE@0x0 em msvcp140_codecvt_ids.dll: dll_candidate x64 trunc=False
+  PE@0x0 em alpha_assetgen.exe: executable_candidate x64 trunc=False
+  PE@0x0 em alpha_datatool.exe: executable_candidate x64 trunc=False
+  PE@0x0 em alpha_metadata.exe: executable_candidate x64 trunc=False
+  PE@0x0 em alpha_tests.exe: executable_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_loader_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_upscaler_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em CMakeDetermineCompilerABI_CXX.bin: executable_candidate x64 trunc=False
+  PE@0x0 em CMakeCXXCompilerId.exe: executable_candidate x64 trunc=False
+  PE@0x0 em platform_master.exe: executable_candidate x64 trunc=False
+  PE@0x0 em sample_module.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_loader_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_upscaler_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em platform_master.exe: executable_candidate x64 trunc=False
+  PE@0x0 em sample_module.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_loader_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em amd_fidelityfx_upscaler_dx12.dll: dll_candidate x64 trunc=False
+  PE@0x0 em vccorlib140.dll: dll_candidate x64 trunc=False
+  PE@0x0 em vcomp140.dll: dll_candidate x64 trunc=False
+  PE@0x0 em vcruntime140.dll: dll_candidate x64 trunc=False
+  PE@0x0 em vcruntime140_1.dll: dll_candidate x64 trunc=False
+  PE@0x0 em XboxBvhBuilder.dll: dll_candidate x64 trunc=False
+  PE@0x0 em XCurl.dll: dll_candidate x64 trunc=False
+[4/6] experimentos de recuperacao nao convencionais...
+  E3: entropia medida da regiao do alvo no XVC...
+  E1-redundancia-entre-conteineres: MATCHED_COPY dos bytes gravados em 100% da sobreposicao: a copia em disco e proveniente do XVC; plai
+  E6-analise-diferencial-DLL: 0% de blocos iguais com KeyId 0 conferido: a regiao XVC contem bytes transformados (consistente com 
+  E1b-catalogo-legivel: MATCHED_COPY comprovado: o catalogo em disco e a extracao fiel da regiao legivel do XVC
+  E3-assinaturas-estruturais: resultado negativo medido: 0 PE validos entre 1874 ocorrencias de MZ no arquivo inteiro; cobre tambe
+[5/6] mapa shadow PE...
+fatos de armazenamento do XVC...
+nenhum byte de plaintext comprovadamente recuperavel: shadow_pe_partial.bin NAO foi gerado (nao ha recuperacao a registrar; preenchimento artificial nao e recuperacao)
+classificacao final: METADATA_ONLY
+relatorios -> H:\xvc-intelligence\reports\shadow_pe_final2
+[6/6] validacao do catalogo legivel (PE real de referencia)...
+  Catalog000.bin valido=True (13/13 checagens)
+concluido -> H:\xvc-intelligence\reports\shadow_pe_final2

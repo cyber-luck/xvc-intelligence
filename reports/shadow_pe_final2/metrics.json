@@ -1,0 +1,31 @@
+{
+  "bytes_conflicting": 0,
+  "bytes_encrypted_unknown": 120181760,
+  "bytes_missing": 0,
+  "bytes_original_with_proof": 0,
+  "bytes_structurally_inferred": 0,
+  "carve_fragments_total": 33,
+  "classification": "METADATA_ONLY",
+  "executable_candidates": 27,
+  "fragments_recovered": 0,
+  "fragments_recovered_note": "fragmentos DO ALVO; o carving de outros arquivos fica em carve_fragments_total",
+  "metadata_coverage": [
+    "name",
+    "architecture",
+    "version",
+    "subsystem",
+    "sections",
+    "imports",
+    "entry_point",
+    "pdb_path"
+  ],
+  "metadata_recovered": true,
+  "note": "a proveniencia MATCHED_COPY refere-se aos bytes GRAVADOS (ciphertext) e nunca e somada como recuperacao de plaintext",
+  "pct_bytes_with_proof_of_plaintext": 0.0,
+  "schema": "alpha_recovery.metrics/1",
+  "stored_bytes_provenance_pct": 100.0,
+  "target": "game_scarlett_master.exe",
+  "target_entropy_bits_per_byte": 7.999998,
+  "target_pe_validated": 0,
+  "target_raw_mz_hits": 1874
+}
