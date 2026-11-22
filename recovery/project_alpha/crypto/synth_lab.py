@@ -25,7 +25,7 @@ from pathlib import Path
 from _bootstrap import write_json_exclusive
 from validation.recovery_tests import make_minimal_pe
 from .xvc_xts_pipeline import (
-    PAGE, build_seed, cik_halves, load_validate_xts, stream_decrypt,
+    PAGE, build_seed, cik_halves, load_xts_engine, stream_decrypt,
 )
 
 TARGET_NAME = "synthetic_scarlett_master.exe"
@@ -77,7 +77,7 @@ def generate_lab(out_dir: Path, *, seed: int = 20261122,
             data_units[i] += data_unit_jump_delta
         jumps.append({"page": data_unit_jump_at, "delta": data_unit_jump_delta})
 
-    xts = load_validate_xts()
+    xts = load_xts_engine()
     data_key, tweak_key = cik_halves(cik)
     cipher_pages = []
     entries = []
@@ -262,7 +262,7 @@ def phase_c_reveal(out_dir: Path, *, custody: str = "chaves sinteticas reveladas
                    vduid8=bytes.fromhex(keys["vduid8_hex"]), out_path=wrong_dest,
                    checkpoint_path=None, resume=False)
     wrong_dec = wrong_dest.read_bytes()
-    xts = load_validate_xts()
+    xts = load_xts_engine()
     dk, tk = cik_halves(wrong)
     rt_back = b""
     cipher_concat = b""

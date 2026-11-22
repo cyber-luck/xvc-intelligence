@@ -13,7 +13,7 @@ Regras inegociaveis implementadas aqui:
     reais so acontece com CIK legitima (round-trip + comparacao com o
     ciphertext gravado).
 
-Reutiliza o transform validado de validate_xts.py (vetores IEEE P1619 e
+Reutiliza o transform validado de xts_primitive_kat.py (vetores IEEE P1619 e
 oraculo OpenSSL) e os parsers do xvcintel (SegmentMetadata, XvcInfo, hash tree).
 """
 from __future__ import annotations
@@ -38,31 +38,75 @@ CIK_SIZE = 32
 HASH_ENTRY_DATA_UNIT_OFFSET = 0x14
 CHECKPOINT_PAGES = 1024
 
-# Motor XTS validado, versionado ao lado deste modulo (copia byte-identica da
-# porta canonical de xvdtool AesXtsTransform.cs + vetores IEEE P1619 + oraculo
-# OpenSSL). Autossuficiente: nao abre nenhum XVD nem material de chave.
-VALIDATE_XTS_PATH = Path(__file__).resolve().parent / "validate_xts.py"
+# Porte de referencia do xvdtool AesXtsTransform.cs + vetores IEEE P1619 + oraculo
+# OpenSSL, versionado ao lado deste modulo. Autossuficiente: nao abre nenhum XVD
+# nem material de chave. (Antes se chamava validate_xts.py; renomeado para nao
+# colidir com recovery/crypto_lab/tools/validate_xts.py, que e outra ferramenta.)
+XTS_PRIMITIVE_PATH = Path(__file__).resolve().parent / "xts_primitive_kat.py"
 
 
-def load_validate_xts():
-    """Carrega o motor XTS ja validado (nao duplica a implementacao).
+def load_xts_primitive():
+    """Carrega o porte de referencia (laco por byte, fiel ao C#).
 
-    Resolve a copia versionada no repo por padrao; a env var
-    XVC_VALIDATE_XTS permite apontar para outra copia (ex.: a canonical em
-    outra maquina) sem editar codigo.
+    Resolve a copia versionada no repo por padrao; a env var XVC_XTS_PRIMITIVE
+    (ou a antiga XVC_VALIDATE_XTS) permite apontar para outra copia sem editar codigo.
     """
-    override = os.environ.get("XVC_VALIDATE_XTS")
-    path = Path(override) if override else VALIDATE_XTS_PATH
+    override = os.environ.get("XVC_XTS_PRIMITIVE") or os.environ.get("XVC_VALIDATE_XTS")
+    path = Path(override) if override else XTS_PRIMITIVE_PATH
     if not path.is_file():
-        raise FileNotFoundError(f"validate_xts.py nao encontrado: {path}")
-    # nome proprio: recovery/crypto_lab/tools/validate_xts.py e outro modulo e
-    # seria sombreado se registrassemos este como "validate_xts" em sys.modules
-    name = "project_alpha_validate_xts"
+        raise FileNotFoundError(f"xts_primitive_kat.py nao encontrado: {path}")
+    name = "project_alpha_xts_primitive_kat"
+    if name in sys.modules:
+        return sys.modules[name]
     spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
-    sys.modules.setdefault(name, mod)
+    sys.modules[name] = mod
     spec.loader.exec_module(mod)
     return mod
+
+
+class XtsEngine:
+    """Motor de producao com a mesma assinatura do porte de referencia.
+
+    Usa o modo XTS nativo do OpenSSL (~170x mais rapido que o porte em Python).
+    A equivalencia bit a bit com o porte e verificada por xts_primitive_kat.py
+    (matriz aleatoria + vetores IEEE) e pelo vetor oficial do xvdtool nos testes.
+    Recorre ao porte quando o OpenSSL recusa a entrada (chave de dados igual a
+    chave de tweak, que o OpenSSL rejeita como chave fraca).
+    """
+
+    def __init__(self, primitive):
+        self.primitive = primitive
+        try:
+            from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+            self._ossl = (Cipher, algorithms, modes)
+        except ImportError:
+            self._ossl = None
+
+    def transform_data_unit(self, seed: bytes, data_key: bytes, tweak_key: bytes,
+                            data: bytes, encrypt: bool) -> bytes:
+        if len(data) % 16:
+            # xvdtool nao faz ciphertext stealing; o OpenSSL faria - nunca deixar divergir
+            raise ValueError("data length must be a multiple of 16 (no ciphertext stealing)")
+        if self._ossl is not None and data_key != tweak_key:
+            Cipher, algorithms, modes = self._ossl
+            try:
+                c = Cipher(algorithms.AES(data_key + tweak_key), modes.XTS(seed))
+                ctx = c.encryptor() if encrypt else c.decryptor()
+                return ctx.update(data) + ctx.finalize()
+            except ValueError:
+                pass
+        return self.primitive.transform_data_unit(seed, data_key, tweak_key, data, encrypt)
+
+
+_ENGINE: XtsEngine | None = None
+
+
+def load_xts_engine() -> XtsEngine:
+    global _ENGINE
+    if _ENGINE is None:
+        _ENGINE = XtsEngine(load_xts_primitive())
+    return _ENGINE
 
 
 def build_seed(data_unit: int, region_id: int, vduid8: bytes) -> bytes:
@@ -93,8 +137,16 @@ def load_cik(path: Path) -> tuple[bytes, str]:
 
 
 def cik_halves(cik: bytes) -> tuple[bytes, bytes]:
-    """data_key = CIK[0:16]; tweak_key = CIK[16:32] (modelo xvdtool)."""
-    return cik[:16], cik[16:32]
+    """Retorna (data_key, tweak_key) no layout do xvdtool: CIK = tweak_key(16) || data_key(16).
+
+    xvdtool XVDFile.cs CryptSectionXts: Array.Copy(key, tweakAesKey, 0x10);
+    Array.Copy(key, 0x10, dataAesKey, 0, 0x10). Conferido contra o vetor oficial
+    xts_cipher.bin (tests/test_xts_pipeline.py::test_xvdtool_official_vector).
+    ERRATA: ate o commit 0c22d96 esta funcao invertia as metades.
+    """
+    if len(cik) != CIK_SIZE:
+        raise ValueError("CIK deve ter 32 bytes")
+    return cik[16:32], cik[:16]
 
 
 def stream_decrypt(units, cik: bytes, *, region_id: int, vduid8: bytes, out_path: Path,
@@ -107,7 +159,7 @@ def stream_decrypt(units, cik: bytes, *, region_id: int, vduid8: bytes, out_path
     data_unit de cada folha. Retomada valida o prefixo do arquivo de saida
     contra o hash do checkpoint; divergencia reinicia do zero (nunca mistura).
     """
-    xts = load_validate_xts()
+    xts = load_xts_engine()
     data_key, tweak_key = cik_halves(cik)
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -194,7 +246,7 @@ class XvcXtsPipeline:
     @property
     def xts(self):
         if self._xts is None:
-            self._xts = load_validate_xts()
+            self._xts = load_xts_engine()
         return self._xts
 
     def close(self) -> None:
@@ -253,7 +305,7 @@ class XvcXtsPipeline:
             "key_material_header": self.key_material_fingerprint(),
             "derivation_model": {
                 "step1": "CIK = AES-256-ECB-decrypt(ODK, KeyMaterial@0x34C) [requer ODK valida]",
-                "step2": "data_key = CIK[0:16] ; tweak_key = CIK[16:32]",
+                "step2": "tweak_key = CIK[0:16] ; data_key = CIK[16:32] (layout xvdtool)",
                 "step3": "por pagina: seed=[data_unit|region_id|VDUID] -> XTS-128 sobre unidade de 0x1000",
                 "odk_keyslot": "StandardOdk (retail)",
                 "model_source": "xvdtool AesXtsTransform.cs / XanaduXVD; derivado de codigo-fonte publico",
@@ -394,7 +446,7 @@ class XvcXtsPipeline:
             "elapsed_seconds": round(elapsed, 3),
             "cik_sha256_fingerprint": hashlib.sha256(cik).hexdigest(),
             "region_id": f"0x{region_id:X}",
-            "model_note": ("transform XTS validado por vetores IEEE P1619 e oraculo OpenSSL (validate_xts.py); "
+            "model_note": ("transform XTS validado por vetores IEEE P1619 e oraculo OpenSSL (xts_primitive_kat.py) e pelo vetor oficial do xvdtool; "
                            "seed [data_unit|region_id|VDUID] conforme modelo de codigo-fonte publico; "
                            "confianca EFETIVA exige round-trip contra os bytes gravados (ver encrypt_verify)"),
         }
@@ -463,7 +515,7 @@ class SyntheticVolume:
         self.cik = hashlib.sha256(b"synthetic-test-cik-only").digest()
         data_key, tweak_key = cik_halves(self.cik)
         self._keys = (data_key, tweak_key)
-        xts = load_validate_xts()
+        xts = load_xts_engine()
         self.pages: list[bytes] = []
         self.plaintext_units: list[bytes] = []
         self.data_units: list[int] = []
@@ -478,7 +530,7 @@ class SyntheticVolume:
         self.ciphertext = b"".join(self.pages) + page_slack
 
     def _append(self, unit: bytes, i: int) -> None:
-        xts = load_validate_xts()
+        xts = load_xts_engine()
         data_unit = self.data_unit_base if not self.data_units else self.data_units[-1] + 1
         seed = build_seed(data_unit, self.region_id, self.vduid8)
         cipher = xts.transform_data_unit(seed, *self._keys, unit, encrypt=True)
@@ -492,7 +544,7 @@ class SyntheticVolume:
 
     def decrypt_with(self, cik: bytes, *, region_id: int | None = None, vduid8: bytes | None = None,
                      data_unit_offset: int = 0) -> bytes:
-        xts = load_validate_xts()
+        xts = load_xts_engine()
         data_key, tweak_key = cik_halves(cik)
         out = bytearray()
         for i, cipher in enumerate(self.pages):
@@ -518,12 +570,23 @@ def run_synthetic_validation() -> dict:
     def record(name: str, ok: bool, detail: str = "") -> None:
         results.append({"test": name, "ok": bool(ok), "detail": detail})
 
+    # vetor oficial do xvdtool (AesXtsTests.cs + xts_cipher.bin): fixa o layout tweak||dados da CIK
+    xv_cik = bytes.fromhex("8221d4acf4319d95e28e722e82a3b5e232ba06dd968615913f6bf810d08916a0")
+    xv_plain = b"SOME PLAINTEXT DATA BEFORE XTS TRANSFORMATION   " * 256
+    xv_dk, xv_tk = cik_halves(xv_cik)
+    xv_ct = b"".join(load_xts_engine().transform_data_unit(
+        build_seed(u, 1, bytes.fromhex("34ff8790cadb1422")), xv_dk, xv_tk, xv_plain[u * PAGE:(u + 1) * PAGE], True)
+        for u in range(3))
+    record("xvdtool_official_vector", hashlib.sha256(xv_ct).hexdigest() ==
+           "e1c91a60d28906b7b9c99ec05cf44889b1315d3430560c7d7d1edd57ac08d9e3",
+           "CIK = tweak_key || data_key; ciphertext identico ao xts_cipher.bin do xvdtool")
+
     vol = SyntheticVolume(plaintext=pe)
     dec = vol.decrypt_with(vol.cik)
     record("decrypt_equals_known_plaintext", dec == pe, "igualdade byte a byte com o PE sintetico original")
     record("not_identity_plaintext", dec != vol.ciphertext)
 
-    xts = load_validate_xts()
+    xts = load_xts_engine()
     data_key, tweak_key = cik_halves(vol.cik)
     re = b"".join(
         xts.transform_data_unit(build_seed(vol.data_units[i], vol.region_id, vol.vduid8), data_key, tweak_key,
@@ -537,7 +600,7 @@ def run_synthetic_validation() -> dict:
            "plaintext estruturalmente incoerente com chave errada")
     record("wrong_cik_plaintext_incoherent", dec_wrong[:2] != b"MZ")
 
-    xts_w = load_validate_xts()
+    xts_w = load_xts_engine()
     dk_w, tk_w = cik_halves(wrong_cik)
     rt_back = b"".join(
         xts_w.transform_data_unit(build_seed(vol.data_units[i], vol.region_id, vol.vduid8), dk_w, tk_w,
@@ -569,6 +632,6 @@ def run_synthetic_validation() -> dict:
         "passed": ok_n,
         "total": len(results),
         "all_passed": ok_n == len(results),
-        "note": ("CIK sintetica exclusiva de teste; validade do transform coberta por validate_xts.py "
+        "note": ("CIK sintetica exclusiva de teste; validade do transform coberta por xts_primitive_kat.py e pelo vetor oficial do xvdtool "
                  "(IEEE P1619 + OpenSSL); round-trip sozinho nao basta - igualdade com o plaintext original e exigida"),
     }

@@ -6,6 +6,8 @@
 **Real-target status: `BLOCKED_MISSING_AUTHORIZED_CIK`** — full diagnostics, no CIK supplied, nothing simulated, no byte decrypted.
 **Regression:** 184 tests passed (13 new XTS tests) + CLI matrix 10/10.
 
+> **ERRATUM (2026-11-22, after integrating `crypto_lab`).** The CIK split originally described (`data_key=CIK[0:16]`, `tweak_key=CIK[16:32]`) was **inverted** relative to xvdtool. The correct layout is `CIK = tweak_key(16) ‖ data_key(16)` (`XVDFile.cs` `CryptSectionXts`), checked against xvdtool's official `xts_cipher.bin` vector. The real-target status is unchanged (no CIK was applied), but a legitimate CIK would have produced garbage **without any error**. Fixed in `cik_halves`; the engine is now named `xts_primitive_kat.py`. The JSON files in this folder are outputs of the original run and were kept as-is; their `derivation_model.step2` field reflects the error.
+
 ## Phase 1 — Regional key identification (real results)
 
 | Item | Value | Source |
@@ -19,8 +21,8 @@
 
 ## Phase 2 — AES-XTS engine (`crypto/xvc_xts_pipeline.py`)
 
-- Reuses **`validate_xts.py`** (port of `AesXtsTransform.cs`; validated against IEEE P1619/D16 and OpenSSL) — nothing re-implemented;
-- AES-128-XTS with a 32 B composite CIK (`data_key=CIK[0:16]`, `tweak_key=CIK[16:32]`); **0x1000 B** unit;
+- Reuses **`xts_primitive_kat.py`** (formerly `validate_xts.py`; port of `AesXtsTransform.cs`; validated against IEEE P1619/D16 and OpenSSL) — nothing re-implemented;
+- AES-128-XTS with a 32 B composite CIK (`tweak_key=CIK[0:16]`, `data_key=CIK[16:32]` — fixed, see erratum); **0x1000 B** unit;
 - 16 B seed = `[data_unit:4 | region_id:4 | VDUID:8]` — **real region_id (0x3E9)**, never a fixed section_id;
 - `data_unit` read **from the corresponding hash entry** (bytes 0x14..0x18 of the leaf);
 - per-page streaming, checkpoints every 1024 pages with **prefix verification on resume** (a divergent checkpoint restarts, never mixes);

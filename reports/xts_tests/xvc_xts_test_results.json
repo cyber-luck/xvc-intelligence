@@ -1,8 +1,13 @@
 {
   "all_passed": true,
-  "note": "CIK sintetica exclusiva de teste; validade do transform coberta por validate_xts.py (IEEE P1619 + OpenSSL); round-trip sozinho nao basta - igualdade com o plaintext original e exigida",
-  "passed": 12,
+  "note": "CIK sintetica exclusiva de teste; validade do transform coberta por xts_primitive_kat.py e pelo vetor oficial do xvdtool (IEEE P1619 + OpenSSL); round-trip sozinho nao basta - igualdade com o plaintext original e exigida",
+  "passed": 13,
   "results": [
+    {
+      "detail": "CIK = tweak_key || data_key; ciphertext identico ao xts_cipher.bin do xvdtool",
+      "ok": true,
+      "test": "xvdtool_official_vector"
+    },
     {
       "detail": "igualdade byte a byte com o PE sintetico original",
       "ok": true,
@@ -65,5 +70,5 @@
     }
   ],
   "schema": "alpha_recovery.xvc_xts_test_results/1",
-  "total": 12
+  "total": 13
 }

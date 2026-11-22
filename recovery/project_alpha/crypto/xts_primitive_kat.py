@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""validate_xts/1.0: validate the XVD AES-XTS transform against independent references.
+"""xts_primitive_kat/1.0 (antes validate_xts.py): validate the XVD AES-XTS transform against independent references.
 
 Scope: this validates the *cipher primitive* (xvdtool's AesXtsTransform.cs port) --
 the GF(2^128) tweak multiplication, the AES-ECB tweak encryption, and the
@@ -28,7 +28,7 @@ from pathlib import Path
 import struct
 import sys
 
-TOOL = "validate_xts/1.0"
+TOOL = "xts_primitive_kat/1.0"
 
 try:
     from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes

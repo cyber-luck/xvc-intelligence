@@ -18,7 +18,7 @@ try:
 except FileNotFoundError:
     _HAVE = False
 
-pytestmark = pytest.mark.skipif(not _HAVE, reason="validate_xts.py (motor G:) indisponivel")
+pytestmark = pytest.mark.skipif(not _HAVE, reason="xts_primitive_kat.py indisponivel")
 
 
 def test_lab_full_cycle_passes_all_criteria(tmp_path):

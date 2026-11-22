@@ -1,6 +1,6 @@
 {
   "A_generator": {
-    "container_dir": "H:\\xvc-intelligence\\reports\\blind_lab\\container",
+    "container_dir": "reports\\blind_lab\\container",
     "data_unit_jumps": [
       {
         "delta": 4096,
@@ -9,7 +9,7 @@
     ],
     "logical_size": 35840,
     "pages": 9,
-    "sealed_dir": "H:\\xvc-intelligence\\reports\\blind_lab\\sealed",
+    "sealed_dir": "reports\\blind_lab\\sealed",
     "state": "A_GENERATED"
   },
   "B_blind_analysis": {
@@ -19,7 +19,7 @@
       "plaintext": "UNKNOWN - ciphertext AES-XTS sem CIK"
     },
     "observed": {
-      "first_page_entropy": 7.95098,
+      "first_page_entropy": 7.95845,
       "mz_pe_candidates_in_ciphertext": 0
     },
     "recoverable_now": {
@@ -75,7 +75,7 @@
     "custody_claim": "chaves sinteticas reveladas pelo gerador do laboratorio",
     "identity_status": "TARGET_IDENTITY_VERIFIED",
     "pe_validation_valid": true,
-    "plaintext": "H:\\xvc-intelligence\\reports\\blind_lab\\revealed_plaintext.bin",
+    "plaintext": "reports\\blind_lab\\revealed_plaintext.bin",
     "referee_comparison": {
       "byte_for_byte_equal_to_reference": true,
       "reference_sha256": "89f8113fe06871916e31bfdf562432aeb48fe33b77e2daa8557e62a90c16ce50",

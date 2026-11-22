@@ -16,13 +16,13 @@ from _bootstrap import write_exclusive
 
 try:
     from crypto.xvc_xts_pipeline import (
-        SyntheticVolume, build_seed, load_cik, load_validate_xts, stream_decrypt,
+        SyntheticVolume, build_seed, load_cik, load_xts_engine, stream_decrypt,
     )
     _HAVE_XTS = True
 except FileNotFoundError:
     _HAVE_XTS = False
 
-pytestmark = pytest.mark.skipif(not _HAVE_XTS, reason="validate_xts.py (motor G:) indisponivel")
+pytestmark = pytest.mark.skipif(not _HAVE_XTS, reason="xts_primitive_kat.py indisponivel")
 
 
 @pytest.fixture(scope="module")
@@ -68,7 +68,7 @@ def test_decrypt_equals_known_plaintext(volume, known_pe):
 
 
 def test_reencrypt_equals_ciphertext(volume):
-    xts = load_validate_xts()
+    xts = load_xts_engine()
     from crypto.xvc_xts_pipeline import cik_halves
     data_key, tweak_key = cik_halves(volume.cik)
     re = b"".join(
@@ -146,3 +146,55 @@ def test_run_synthetic_validation_all_pass():
     res = run_synthetic_validation()
     assert res["all_passed"], [r for r in res["results"] if not r["ok"]]
     assert any(r["test"] == "decrypt_equals_known_plaintext" and r["ok"] for r in res["results"])
+
+
+# Vetor oficial do xvdtool (emoose/xvdtool @ 6fc2886, LibXboxOne.Tests/AesXtsTests.cs +
+# Resources/DataBlobs/xts_{plain,cipher}.bin). Fixa o layout da CIK: tweak(16) || dados(16).
+# Este teste nao existia quando cik_halves invertia as metades (erro so visivel com dados reais).
+XVDTOOL_CIK = bytes.fromhex("8221d4acf4319d95e28e722e82a3b5e232ba06dd968615913f6bf810d08916a0")
+XVDTOOL_VDUID8 = bytes.fromhex("34ff8790cadb1422")
+XVDTOOL_PLAIN = b"SOME PLAINTEXT DATA BEFORE XTS TRANSFORMATION   " * 256
+XVDTOOL_PLAIN_SHA256 = "aeebe0d184dfda4b9c3490ffc0b9a7f5f2b1469e9ca5521d0c519585dbac8412"
+XVDTOOL_CIPHER_SHA256 = "e1c91a60d28906b7b9c99ec05cf44889b1315d3430560c7d7d1edd57ac08d9e3"
+XVDTOOL_CIPHER_HEAD32 = "93ba1b6d50445ceb324c77f033b4cb6d909e4afd0767d0496a9b8134881f7ad5"
+
+
+def _xvdtool_encrypt(engine, data_key, tweak_key) -> bytes:
+    return b"".join(
+        engine.transform_data_unit(build_seed(u, 1, XVDTOOL_VDUID8), data_key, tweak_key,
+                                   XVDTOOL_PLAIN[u * 0x1000:(u + 1) * 0x1000], True)
+        for u in range(3))
+
+
+def test_xvdtool_official_vector():
+    import hashlib
+    from crypto.xvc_xts_pipeline import cik_halves, load_xts_primitive
+    assert hashlib.sha256(XVDTOOL_PLAIN).hexdigest() == XVDTOOL_PLAIN_SHA256
+    dk, tk = cik_halves(XVDTOOL_CIK)
+    assert (tk, dk) == (XVDTOOL_CIK[:16], XVDTOOL_CIK[16:])
+    for engine in (load_xts_engine(), load_xts_primitive()):
+        ct = _xvdtool_encrypt(engine, dk, tk)
+        assert ct[:32].hex() == XVDTOOL_CIPHER_HEAD32
+        assert hashlib.sha256(ct).hexdigest() == XVDTOOL_CIPHER_SHA256
+
+
+def test_xvdtool_vector_rejects_inverted_split():
+    import hashlib
+    ct = _xvdtool_encrypt(load_xts_engine(), XVDTOOL_CIK[:16], XVDTOOL_CIK[16:])
+    assert hashlib.sha256(ct).hexdigest() != XVDTOOL_CIPHER_SHA256
+
+
+def test_engine_matches_reference_port():
+    import os
+    from crypto.xvc_xts_pipeline import load_xts_primitive
+    eng, port = load_xts_engine(), load_xts_primitive()
+    for length in (16, 3072, 0x1000):
+        dk, tk, seed, pt = os.urandom(16), os.urandom(16), os.urandom(16), os.urandom(length)
+        ct = eng.transform_data_unit(seed, dk, tk, pt, True)
+        assert ct == port.transform_data_unit(seed, dk, tk, pt, True)
+        assert eng.transform_data_unit(seed, dk, tk, ct, False) == pt
+    k = os.urandom(16)  # chaves iguais: OpenSSL recusa, o motor recorre ao porte
+    pt = os.urandom(64)
+    assert eng.transform_data_unit(bytes(16), k, k, pt, True) == port.transform_data_unit(bytes(16), k, k, pt, True)
+    with pytest.raises(ValueError):
+        eng.transform_data_unit(bytes(16), os.urandom(16), os.urandom(16), b"x" * 17, True)

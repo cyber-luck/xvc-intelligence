@@ -2,6 +2,8 @@
 
 **Data:** 2026-11-22 · **Regressão:** 188 testes aprovados (4 novos do laboratório) · **Alvo real:** `BLOCKED_MISSING_AUTHORIZED_CIK` (mantido, correto).
 
+> **ERRATA (2026-11-22).** `reports/blind_lab/` foi regenerado com o mesmo comando abaixo depois da correção da ordem da CIK (ver errata em `reports/xts_real/`). Chave sintética e plaintext são os mesmos (seed determinística); o ciphertext mudou e agora é decifrável pelo `recovery/crypto_lab/lab_xts.py`, que segue o xvdtool. A matriz `xts-tests` ganhou o caso `xvdtool_official_vector` (13/13).
+
 ## As duas ressalvas — absorvidas e demonstradas
 
 **Ressalva 1 — amostragem não prova numeração.**
