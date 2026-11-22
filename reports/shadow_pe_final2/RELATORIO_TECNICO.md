@@ -1,9 +1,11 @@
 # PROJECT_ALPHA: relatório técnico da Shadow PE Reconstruction (execução 2)
 
+**Idioma / Language:** Português · [English](TECHNICAL_REPORT.en.md)
+
 **Alvo:** `game_scarlett_master.exe` (Xbox Series X|S / Scarlett, pacote 1.0.2.1)
 **Data da execução:** 2026-11-22 · **Classificação final: `METADATA_ONLY`**
-**Ferramenta:** `recovery/project_alpha/shadow_pe_reconstructor.py run-all` (commit `30515f0` + correções não commitadas
-nesse arquivo, descritas na seção 9). Somente leitura; log completo em `reports/shadow_pe_final2.log`.
+**Ferramenta:** `recovery/project_alpha/shadow_pe_reconstructor.py run-all` (commit `7be3f47`; as correções estão
+descritas na seção 9). Somente leitura; log completo em `reports/shadow_pe_final2.log`.
 
 Este relatório substitui `reports/shadow_pe_final/RELATORIO_TECNICO.md`. As conclusões não mudaram; mudou a
 origem dos números: todos os valores abaixo foram **medidos nesta execução** e podem ser conferidos nos JSON
