@@ -1,0 +1,179 @@
+{
+  "schema": "crypto_lab.xts_roundtrip/1",
+  "generated_utc": "2026-11-22T17:46:50+00:00",
+  "known_vectors": {
+    "all_pass": true,
+    "results": [
+      {
+        "vector": "FIPS-197 C.3 AES-256-ECB",
+        "encrypt_ok": true,
+        "decrypt_ok": true
+      },
+      {
+        "vector": "IEEE P1619 XTS-AES-128 vetor 1",
+        "fast_ok": true,
+        "literal_ok": true,
+        "decrypt_ok": true,
+        "openssl_ok": null
+      },
+      {
+        "vector": "IEEE P1619 XTS-AES-128 vetor 2 (data unit 0x3333333333: byte 4 cai no campo section_id)",
+        "fast_ok": true,
+        "literal_ok": true,
+        "decrypt_ok": true,
+        "openssl_ok": true
+      },
+      {
+        "vector": "IEEE P1619 XTS-AES-128 vetor 3",
+        "fast_ok": true,
+        "literal_ok": true,
+        "decrypt_ok": true,
+        "openssl_ok": true
+      },
+      {
+        "vector": "xvdtool AesXtsTests (xts_plain.bin -> xts_cipher.bin, data units 0..2, headerId 1)",
+        "plaintext_sha256_ok": true,
+        "fast_ok": true,
+        "literal_ok": true,
+        "openssl_ok": true,
+        "decrypt_ok": true,
+        "wrong_data_unit_differs": true
+      }
+    ]
+  },
+  "property_tests": {
+    "cases": 40,
+    "decrypt_encrypt_identity": 40,
+    "fast_equals_literal": 40,
+    "fast_equals_openssl": 40,
+    "all_pass": true
+  },
+  "container_roundtrip": {
+    "xvd": true,
+    "xvc": true,
+    "xvc_regions": [
+      {
+        "region": "0x3E9",
+        "section_id_used": "0x3E9",
+        "pages": 181,
+        "roundtrip_reencrypt_equals_stored": true
+      },
+      {
+        "region": "0x3EA",
+        "section_id_used": "0x3EA",
+        "pages": 181,
+        "roundtrip_reencrypt_equals_stored": true
+      }
+    ]
+  },
+  "roundtrip_is_not_correctness": [
+    {
+      "control": "wrong_cik",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "wrong_odk",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "wrong_vduid",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "wrong_region_id",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "data_unit_page_index",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "PASS"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "PASS"
+        }
+      }
+    },
+    {
+      "control": "data_unit_plus_one",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "swapped_cik_halves",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvd": {
+          "lab_plaintext.exe": "FAIL"
+        },
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "wrong_region_key",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvc": {
+          "lab_plaintext.exe": "PASS",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    },
+    {
+      "control": "missing_key",
+      "roundtrip_always_exact": true,
+      "observed": {
+        "xvc": {
+          "lab_plaintext.exe": "FAIL",
+          "lab_plaintext_build_b.exe": "FAIL"
+        }
+      }
+    }
+  ],
+  "note": "XTS e uma permutacao para qualquer chave: re-cifrar com parametros ERRADOS devolve o ciphertext original (round-trip exato) mesmo quando o plaintext esta errado. So a comparacao com o plaintext conhecido (SHA-256) prova a recuperacao."
+}

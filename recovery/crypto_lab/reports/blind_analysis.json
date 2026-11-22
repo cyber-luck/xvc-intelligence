@@ -1,0 +1,1149 @@
+{
+  "schema": "crypto_lab.blind_analysis/1",
+  "generated_utc": "2026-11-22T17:46:22+00:00",
+  "input_dir": "recovery\\crypto_lab\\fixtures\\generated\\public",
+  "inputs": [
+    {
+      "file": "lab_xvc_encrypted.bin",
+      "size": 1544192,
+      "sha256": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8"
+    },
+    {
+      "file": "lab_xvd_encrypted.bin",
+      "size": 770048,
+      "sha256": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38"
+    }
+  ],
+  "manifest_public": {
+    "marker": "LAB_SYNTHETIC",
+    "banner": "LAB_SYNTHETIC - PROJECT_ALPHA CRYPTO LAB - conteiner sintetico de teste; NAO e um pacote Xbox oficial; chaves sinteticas geradas localmente",
+    "compatibility_claim": "nenhuma: conteineres sinteticos sem assinatura; nao sao pacotes Xbox oficiais",
+    "not_included": [
+      "chaves (ODK, CIK)",
+      "plaintext",
+      "verdade de referencia"
+    ]
+  },
+  "keys_available": false,
+  "tools": {
+    "xvc_probe_xvc": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\xvc_probe.py",
+      "argv": [
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin",
+        "--list-files",
+        "--json-report",
+        "recovery\\crypto_lab\\reports\\work\\blind\\xvc_probe_xvc.json"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\xvc_probe_xvc.log",
+      "log_tail": [
+        "   'XVC-MDU'      utf16 x1     0x9e38 [XvcInfo]",
+        "   'XVC-MD'       utf16 x1     0x9eb8 [XvcInfo]",
+        "   'FS-MD'        utf16 x1     0x9f38 [XvcInfo]",
+        "   'FS-MD'        ascii x1     0xb08c [drive data +0x8c]",
+        "== janelas H<6.0 (16 KB a cada 256 KB)",
+        "   0x0 - 0x4000  (0.0 MB, 1 janelas, H_min=0.22)  [cabecalho]"
+      ]
+    },
+    "xvc_probe_xvd": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\xvc_probe.py",
+      "argv": [
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvd_encrypted.bin",
+        "--json-report",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\xvc_probe_xvd.json"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\xvc_probe_xvd.log",
+      "log_tail": [
+        "   ! user data: [UserData] truncated @0x0: precisa de 0x220 bytes, buffer tem 0x84",
+        "== relatorio JSON nao gerado: mapa de arquivos indisponivel",
+        "== strings de regiao ate 0xbc000",
+        "   'msft-xvd'     ascii x1     0x200 [cabecalho]",
+        "== janelas H<6.0 (16 KB a cada 256 KB)",
+        "   0x0 - 0x4000  (0.0 MB, 1 janelas, H_min=0.29)  [cabecalho]"
+      ]
+    },
+    "bin_pe_recovery_xvc": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\bin_pe_recovery.py",
+      "argv": [
+        "scan",
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin",
+        "--json",
+        "recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvc.json",
+        "--compressed",
+        "--extract-dir",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\carved_xvc"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\bin_pe_recovery_xvc.log",
+      "log_tail": [
+        "Input: D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin (1,544,192 bytes) | scan: 1,544,192 bytes | PE candidates: 0",
+        "Recovered PE candidates: 0; extracted files: 0",
+        "Note: container may contain AES-XTS-encrypted regions; this scan does NOT decrypt them.",
+        "JSON report: D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvc.json"
+      ]
+    },
+    "bin_pe_recovery_xvd": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\bin_pe_recovery.py",
+      "argv": [
+        "scan",
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvd_encrypted.bin",
+        "--json",
+        "recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvd.json",
+        "--compressed",
+        "--extract-dir",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\carved_xvd"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\bin_pe_recovery_xvd.log",
+      "log_tail": [
+        "Input: D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvd_encrypted.bin (770,048 bytes) | scan: 770,048 bytes | PE candidates: 0",
+        "Recovered PE candidates: 0; extracted files: 0",
+        "Note: container may contain AES-XTS-encrypted regions; this scan does NOT decrypt them.",
+        "JSON report: D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvd.json"
+      ]
+    },
+    "pe_check_lab_plaintext.exe.stored.bin": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\pe_check.py",
+      "argv": [
+        "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext.exe.stored.bin",
+        "--json",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\pe_check_lab_plaintext.exe.stored.bin.json"
+      ],
+      "exit": 1,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_plaintext.exe.stored.bin.log",
+      "log_tail": [
+        "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+      ]
+    },
+    "pe_check_lab_plaintext_build_b.exe.stored.bin": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\pe_check.py",
+      "argv": [
+        "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext_build_b.exe.stored.bin",
+        "--json",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\pe_check_lab_plaintext_build_b.exe.stored.bin.json"
+      ],
+      "exit": 1,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_plaintext_build_b.exe.stored.bin.log",
+      "log_tail": [
+        "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+      ]
+    },
+    "pe_check_lab_decoy_fake_pe.bin": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\pe_check.py",
+      "argv": [
+        "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_decoy_fake_pe.bin",
+        "--json",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\pe_check_lab_decoy_fake_pe.bin.json"
+      ],
+      "exit": 1,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_decoy_fake_pe.bin.log",
+      "log_tail": [
+        "Nao e um PE legivel: [PE] truncated @0x94: optional header ausente ou curto (SizeOfOptionalHeader 0x10)"
+      ]
+    },
+    "pe_check_lab_public_notes.txt": {
+      "script": "recovery\\bin_pe_recovery\\scripts\\pe_check.py",
+      "argv": [
+        "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_public_notes.txt",
+        "--json",
+        "D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\pe_check_lab_public_notes.txt.json"
+      ],
+      "exit": 1,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_public_notes.txt.log",
+      "log_tail": [
+        "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+      ]
+    },
+    "shadow_pe_lab_plaintext.exe": {
+      "script": "recovery\\project_alpha\\shadow_pe_reconstructor.py",
+      "argv": [
+        "run-all",
+        "--xvc",
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin",
+        "--disk",
+        "recovery\\crypto_lab\\fixtures\\generated\\public",
+        "--target",
+        "lab_plaintext.exe",
+        "--out",
+        "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\shadow_pe_lab_plaintext.exe.log",
+      "log_tail": [
+        "fatos de armazenamento do XVC...",
+        "nenhum byte de plaintext comprovadamente recuperavel: shadow_pe_partial.bin NAO foi gerado (nao ha recuperacao a registrar; preenchimento artificial nao e recuperacao)",
+        "classificacao final: METADATA_ONLY",
+        "relatorios -> D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext",
+        "[6/6] validacao do catalogo legivel (PE real de referencia)...",
+        "concluido -> D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext"
+      ]
+    },
+    "shadow_pe_lab_plaintext_build_b.exe": {
+      "script": "recovery\\project_alpha\\shadow_pe_reconstructor.py",
+      "argv": [
+        "run-all",
+        "--xvc",
+        "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin",
+        "--disk",
+        "recovery\\crypto_lab\\fixtures\\generated\\public",
+        "--target",
+        "lab_plaintext_build_b.exe",
+        "--out",
+        "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b"
+      ],
+      "exit": 0,
+      "log": "recovery\\crypto_lab\\reports\\work\\blind\\logs\\shadow_pe_lab_plaintext_build_b.exe.log",
+      "log_tail": [
+        "fatos de armazenamento do XVC...",
+        "nenhum byte de plaintext comprovadamente recuperavel: shadow_pe_partial.bin NAO foi gerado (nao ha recuperacao a registrar; preenchimento artificial nao e recuperacao)",
+        "classificacao final: METADATA_ONLY",
+        "relatorios -> D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b",
+        "[6/6] validacao do catalogo legivel (PE real de referencia)...",
+        "concluido -> D:\\Reverse Engeenering\\xvc-intelligence\\recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b"
+      ]
+    }
+  },
+  "containers": {
+    "xvc": {
+      "file": "lab_xvc_encrypted.bin",
+      "signatures": {
+        "offset0": "4c41425f53594e544845544943004c41",
+        "magic_0x200": "msft-xvd",
+        "lab_marker_at_0": true
+      },
+      "inspect_xvd": {
+        "tool": "inspect_xvd",
+        "keyless": true,
+        "file": "lab_xvc_encrypted.bin",
+        "size": 1544192,
+        "sha256": "55e9ced708f90c376cba828dd63c860c5d7e0196cef8efc649e577e58619ccd8",
+        "lab_marker": {
+          "signature_area": true,
+          "product_id": true
+        },
+        "xvd_magic": true,
+        "header": {
+          "volume_flags": "0x41",
+          "flag_names": [
+            "ReadOnly",
+            "RegionIdInXts"
+          ],
+          "encryption_declared": true,
+          "integrity_declared": true,
+          "region_id_in_xts_flag": true,
+          "content_type": 6,
+          "content_type_name": "Application",
+          "is_xvc_by_xvcintel": true,
+          "is_xvc_by_xvdtool_content_type": true,
+          "vduid": "074bf18d-082b-46c8-937b-0692223e86bd",
+          "vduid_bytes_le_0_8": "8df14b072b08c846",
+          "odk_keyslot_id": "0x0",
+          "key_material": {
+            "all_zero": true,
+            "entropy_bits_per_byte": -0.0,
+            "length": 32,
+            "interpretation": "vazio (XVC: CIKs por GUID, ODK nao usada)"
+          },
+          "drive_size": 1499136,
+          "user_data_length": 2153,
+          "xvc_data_length": 8192,
+          "top_hash_block_hash": "71c011758856b9dbefb9d35fd98cb388c0971b3e791a1e40b134067ec62d41cc",
+          "product_id": "4c41425f53594e544845544943000000"
+        },
+        "layout": [
+          {
+            "name": "cabecalho",
+            "offset": 0,
+            "size": 12288
+          },
+          {
+            "name": "XVD embutido",
+            "offset": 12288,
+            "size": 0
+          },
+          {
+            "name": "mutable data (MDU)",
+            "offset": 12288,
+            "size": 4096
+          },
+          {
+            "name": "hash tree",
+            "offset": 16384,
+            "size": 16384
+          },
+          {
+            "name": "user data",
+            "offset": 32768,
+            "size": 4096
+          },
+          {
+            "name": "XvcInfo",
+            "offset": 36864,
+            "size": 8192
+          },
+          {
+            "name": "dynamic header",
+            "offset": 45056,
+            "size": 0
+          },
+          {
+            "name": "drive data",
+            "offset": 45056,
+            "size": 1499136
+          }
+        ],
+        "hash_tree_levels": [
+          3,
+          1
+        ],
+        "user_data_parsed": true,
+        "parse_errors": [],
+        "xvcinfo": {
+          "content_id_equals_vduid": true,
+          "description": "LAB_SYNTHETIC crypto_lab XVC (synthetic, not an Xbox package)",
+          "key_count": 2,
+          "cik_guids": [
+            "64a803b6-2523-4906-845d-a64fd964a55b",
+            "aaadbc56-03b9-4729-8ef8-78864958cfe3"
+          ],
+          "regions": [
+            {
+              "id": "0x40000005",
+              "desc": "XVC-HD",
+              "key_id": 65535,
+              "encrypted_by_keyid": false,
+              "key_guid": null,
+              "offset": 0,
+              "length": 12288
+            },
+            {
+              "id": "0x40000006",
+              "desc": "XVC-MDU",
+              "key_id": 65535,
+              "encrypted_by_keyid": false,
+              "key_guid": null,
+              "offset": 12288,
+              "length": 4096
+            },
+            {
+              "id": "0x40000001",
+              "desc": "XVC-MD",
+              "key_id": 65535,
+              "encrypted_by_keyid": false,
+              "key_guid": null,
+              "offset": 16384,
+              "length": 28672
+            },
+            {
+              "id": "0x40000002",
+              "desc": "FS-MD",
+              "key_id": 65535,
+              "encrypted_by_keyid": false,
+              "key_guid": null,
+              "offset": 45056,
+              "length": 8192
+            },
+            {
+              "id": "0x40000003",
+              "desc": "",
+              "key_id": 65535,
+              "encrypted_by_keyid": false,
+              "key_guid": null,
+              "offset": 53248,
+              "length": 8192
+            },
+            {
+              "id": "0x3E9",
+              "desc": "",
+              "key_id": 0,
+              "encrypted_by_keyid": true,
+              "key_guid": "64a803b6-2523-4906-845d-a64fd964a55b",
+              "offset": 61440,
+              "length": 741376
+            },
+            {
+              "id": "0x3EA",
+              "desc": "",
+              "key_id": 1,
+              "encrypted_by_keyid": true,
+              "key_guid": "aaadbc56-03b9-4729-8ef8-78864958cfe3",
+              "offset": 802816,
+              "length": 741376
+            }
+          ]
+        },
+        "files": [
+          {
+            "name": "lab_public_notes.txt",
+            "size": 263,
+            "offset": 53248,
+            "region": "0x40000003",
+            "key_id": 65535,
+            "encrypted_by_keyid": false
+          },
+          {
+            "name": "lab_decoy_fake_pe.bin",
+            "size": 1024,
+            "offset": 57344,
+            "region": "0x40000003",
+            "key_id": 65535,
+            "encrypted_by_keyid": false
+          },
+          {
+            "name": "lab_plaintext.exe",
+            "size": 739840,
+            "offset": 61440,
+            "region": "0x3E9",
+            "key_id": 0,
+            "encrypted_by_keyid": true
+          },
+          {
+            "name": "lab_plaintext_build_b.exe",
+            "size": 739840,
+            "offset": 802816,
+            "region": "0x3EA",
+            "key_id": 1,
+            "encrypted_by_keyid": true
+          }
+        ],
+        "observable_without_key": [
+          "flags 0x41 (ReadOnly, RegionIdInXts) - declaracao do cabecalho, nao prova",
+          "VDUID 074bf18d-082b-46c8-937b-0692223e86bd (entra no tweak: bytes 8..15 = 8df14b072b08c846)",
+          "ODK slot 0x0; KeyMaterial: vazio (XVC: CIKs por GUID, ODK nao usada)",
+          "2 GUID(s) de CIK: 64a803b6-2523-4906-845d-a64fd964a55b, aaadbc56-03b9-4729-8ef8-78864958cfe3",
+          "regioes com KeyId (cifradas segundo o XvcInfo): ['0x3E9', '0x3EA']",
+          "4 arquivos com nome, tamanho exato, offset e regiao"
+        ]
+      },
+      "validate_xts": {
+        "tool": "validate_xts",
+        "keyless": true,
+        "file": "lab_xvc_encrypted.bin",
+        "encryption_declared": true,
+        "region_id_in_xts_flag": true,
+        "xts_sections": [
+          {
+            "name": "regiao 0x3E9",
+            "section_id": 1001,
+            "offset": 61440,
+            "length": 741376,
+            "key_id": 0,
+            "aligned_0x1000": true,
+            "first_hashed_page": 7,
+            "pages": 181,
+            "data_units": {
+              "runs": [
+                {
+                  "first_page_in_section": 0,
+                  "start_value": 2050756608,
+                  "length": 20
+                },
+                {
+                  "first_page_in_section": 20,
+                  "start_value": 1024,
+                  "length": 161
+                }
+              ],
+              "run_count": 2,
+              "sequential_single_run": false,
+              "equals_page_index_in_section": false,
+              "duplicates_in_section": 0
+            },
+            "tweak_inputs_public": {
+              "section_id": "0x3E9",
+              "vduid_0_8": "8df14b072b08c846",
+              "data_unit_source": "folha nivel 0, entry+0x14"
+            }
+          },
+          {
+            "name": "regiao 0x3EA",
+            "section_id": 1002,
+            "offset": 802816,
+            "length": 741376,
+            "key_id": 1,
+            "aligned_0x1000": true,
+            "first_hashed_page": 188,
+            "pages": 181,
+            "data_units": {
+              "runs": [
+                {
+                  "first_page_in_section": 0,
+                  "start_value": 0,
+                  "length": 181
+                }
+              ],
+              "run_count": 1,
+              "sequential_single_run": true,
+              "equals_page_index_in_section": true,
+              "duplicates_in_section": 0
+            },
+            "tweak_inputs_public": {
+              "section_id": "0x3EA",
+              "vduid_0_8": "8df14b072b08c846",
+              "data_unit_source": "folha nivel 0, entry+0x14"
+            }
+          }
+        ],
+        "hash_tree": {
+          "levels": [
+            3,
+            1
+          ],
+          "top_ok": true,
+          "links_checked": 3,
+          "links_bad": 0,
+          "leaves": {
+            "keyed_ok": 362,
+            "keyed_bad": 0,
+            "plain_ok": 7,
+            "plain_bad": 0,
+            "ok": true
+          },
+          "bad_leaves": []
+        },
+        "entropy": {
+          "encrypted_pages": {
+            "pages": 362,
+            "min": 7.9441,
+            "mean": 7.9543,
+            "max": 7.9651,
+            "above_7.9": 362
+          },
+          "plain_pages": {
+            "pages": 7,
+            "min": -0.0,
+            "mean": 0.4758,
+            "max": 1.0645,
+            "above_7.9": 0
+          },
+          "warning": "entropia alta e indicio, nao prova de criptografia"
+        },
+        "repeated_ciphertext_pages": 0,
+        "conclusions": [
+          "estrutura XTS consistente: secoes alinhadas em 0x1000",
+          "integridade conferida sobre o ciphertext gravado (nao diz nada sobre o plaintext)",
+          "todas as entradas do tweak sao publicas (section id, VDUID[0:8], data unit); faltam apenas as chaves AES"
+        ]
+      },
+      "entropy_profile": [
+        {
+          "range": "0x40000005 XVC-HD KeyId=65535",
+          "pages": 3,
+          "min": -0.0,
+          "mean": 0.2508,
+          "max": 0.7523,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "0x40000006 XVC-MDU KeyId=65535",
+          "pages": 1,
+          "min": -0.0,
+          "mean": 0.0,
+          "max": -0.0,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "0x40000001 XVC-MD KeyId=65535",
+          "pages": 7,
+          "min": 0.2334,
+          "mean": 2.7171,
+          "max": 7.6298,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "0x40000002 FS-MD KeyId=65535",
+          "pages": 2,
+          "min": -0.0,
+          "mean": 0.2592,
+          "max": 0.5185,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "0x40000003  KeyId=65535",
+          "pages": 2,
+          "min": 0.2155,
+          "mean": 0.4357,
+          "max": 0.6559,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "0x3E9  KeyId=0",
+          "pages": 181,
+          "min": 7.9441,
+          "mean": 7.9541,
+          "max": 7.9646,
+          "pages_above_7_9": 181
+        },
+        {
+          "range": "0x3EA  KeyId=1",
+          "pages": 181,
+          "min": 7.9444,
+          "mean": 7.9546,
+          "max": 7.9651,
+          "pages_above_7_9": 181
+        }
+      ],
+      "generic_tokens_in_encrypted_ranges": {
+        "MZ": 24,
+        "PE\u0000\u0000": 0,
+        "This program cannot": 0,
+        ".text": 0,
+        ".rdata": 0,
+        ".data": 0,
+        "KERNEL32": 0,
+        "kernel32": 0,
+        "USER32": 0,
+        "LAB_SYNTHETIC": 0,
+        "LABID-": 0
+      },
+      "generic_tokens_in_plain_ranges": {
+        "MZ": 1,
+        "PE\u0000\u0000": 1,
+        "This program cannot": 0,
+        ".text": 0,
+        ".rdata": 0,
+        ".data": 0,
+        "KERNEL32": 0,
+        "kernel32": 0,
+        "USER32": 0,
+        "LAB_SYNTHETIC": 8,
+        "LABID-": 0
+      },
+      "printable_runs_in_encrypted_ranges": {
+        "count": 327,
+        "sample": [
+          "3Kg\\P6%iI",
+          "bb\\E\\)/D",
+          "+-/ub'4@(",
+          "M6kNT:(<",
+          "mh:/HPLVi"
+        ],
+        "expected_random": 335.37
+      }
+    },
+    "xvd": {
+      "file": "lab_xvd_encrypted.bin",
+      "signatures": {
+        "offset0": "4c41425f53594e544845544943004c41",
+        "magic_0x200": "msft-xvd",
+        "lab_marker_at_0": true
+      },
+      "inspect_xvd": {
+        "tool": "inspect_xvd",
+        "keyless": true,
+        "file": "lab_xvd_encrypted.bin",
+        "size": 770048,
+        "sha256": "cd87693d06c383371c9e652870414069978b2b97e036d9097712a8e3bdebcb38",
+        "lab_marker": {
+          "signature_area": true,
+          "product_id": true
+        },
+        "xvd_magic": true,
+        "header": {
+          "volume_flags": "0x1",
+          "flag_names": [
+            "ReadOnly"
+          ],
+          "encryption_declared": true,
+          "integrity_declared": true,
+          "region_id_in_xts_flag": false,
+          "content_type": 0,
+          "content_type_name": "Data",
+          "is_xvc_by_xvcintel": false,
+          "is_xvc_by_xvdtool_content_type": false,
+          "vduid": "e391750c-1077-4711-bee2-cb217c20f3f2",
+          "vduid_bytes_le_0_8": "0c7591e377101147",
+          "odk_keyslot_id": "0x1AB5",
+          "key_material": {
+            "all_zero": false,
+            "entropy_bits_per_byte": 4.875,
+            "length": 32,
+            "interpretation": "CIK selada (AES-256-ECB com a ODK do slot); ilegivel sem a ODK"
+          },
+          "drive_size": 741376,
+          "user_data_length": 132,
+          "xvc_data_length": 0,
+          "top_hash_block_hash": "389598376062c2dd15c8d50c505dacf85dc9cf7a21ca3ea41c08c4b32c405f37",
+          "product_id": "4c41425f53594e544845544943000000"
+        },
+        "layout": [
+          {
+            "name": "cabecalho",
+            "offset": 0,
+            "size": 12288
+          },
+          {
+            "name": "XVD embutido",
+            "offset": 12288,
+            "size": 0
+          },
+          {
+            "name": "mutable data (MDU)",
+            "offset": 12288,
+            "size": 0
+          },
+          {
+            "name": "hash tree",
+            "offset": 12288,
+            "size": 12288
+          },
+          {
+            "name": "user data",
+            "offset": 24576,
+            "size": 4096
+          },
+          {
+            "name": "XvcInfo",
+            "offset": 28672,
+            "size": 0
+          },
+          {
+            "name": "dynamic header",
+            "offset": 28672,
+            "size": 0
+          },
+          {
+            "name": "drive data",
+            "offset": 28672,
+            "size": 741376
+          }
+        ],
+        "hash_tree_levels": [
+          2,
+          1
+        ],
+        "user_data_parsed": false,
+        "parse_errors": [
+          "user data: [UserData] truncated @0x0: precisa de 0x220 bytes, buffer tem 0x84"
+        ],
+        "observable_without_key": [
+          "flags 0x1 (ReadOnly) - declaracao do cabecalho, nao prova",
+          "VDUID e391750c-1077-4711-bee2-cb217c20f3f2 (entra no tweak: bytes 8..15 = 0c7591e377101147)",
+          "ODK slot 0x1AB5; KeyMaterial: CIK selada (AES-256-ECB com a ODK do slot); ilegivel sem a ODK",
+          "sem XvcInfo: XVD nao-XVC; user data cifrado (nao parseavel)"
+        ]
+      },
+      "validate_xts": {
+        "tool": "validate_xts",
+        "keyless": true,
+        "file": "lab_xvd_encrypted.bin",
+        "encryption_declared": true,
+        "region_id_in_xts_flag": false,
+        "xts_sections": [
+          {
+            "name": "user data .. fim (XVD nao-XVC)",
+            "section_id": 1,
+            "offset": 24576,
+            "length": 745472,
+            "key_id": null,
+            "aligned_0x1000": true,
+            "first_hashed_page": 0,
+            "pages": 182,
+            "data_units": {
+              "runs": [
+                {
+                  "first_page_in_section": 0,
+                  "start_value": 0,
+                  "length": 182
+                }
+              ],
+              "run_count": 1,
+              "sequential_single_run": true,
+              "equals_page_index_in_section": true,
+              "duplicates_in_section": 0
+            },
+            "tweak_inputs_public": {
+              "section_id": "0x1",
+              "vduid_0_8": "0c7591e377101147",
+              "data_unit_source": "folha nivel 0, entry+0x14"
+            }
+          }
+        ],
+        "hash_tree": {
+          "levels": [
+            2,
+            1
+          ],
+          "top_ok": true,
+          "links_checked": 2,
+          "links_bad": 0,
+          "leaves": {
+            "keyed_ok": 182,
+            "keyed_bad": 0,
+            "plain_ok": 0,
+            "plain_bad": 0,
+            "ok": true
+          },
+          "bad_leaves": []
+        },
+        "entropy": {
+          "encrypted_pages": {
+            "pages": 182,
+            "min": 7.9428,
+            "mean": 7.9546,
+            "max": 7.9661,
+            "above_7.9": 182
+          },
+          "plain_pages": {
+            "pages": 0
+          },
+          "warning": "entropia alta e indicio, nao prova de criptografia"
+        },
+        "repeated_ciphertext_pages": 0,
+        "conclusions": [
+          "estrutura XTS consistente: secoes alinhadas em 0x1000",
+          "integridade conferida sobre o ciphertext gravado (nao diz nada sobre o plaintext)",
+          "todas as entradas do tweak sao publicas (section id, VDUID[0:8], data unit); faltam apenas as chaves AES"
+        ]
+      },
+      "entropy_profile": [
+        {
+          "range": "cabecalho (claro)",
+          "pages": 3,
+          "min": -0.0,
+          "mean": 0.2816,
+          "max": 0.8447,
+          "pages_above_7_9": 0
+        },
+        {
+          "range": "user data .. fim (cifra declarada)",
+          "pages": 182,
+          "min": 7.9428,
+          "mean": 7.9546,
+          "max": 7.9661,
+          "pages_above_7_9": 182
+        }
+      ],
+      "generic_tokens_in_encrypted_ranges": {
+        "MZ": 6,
+        "PE\u0000\u0000": 0,
+        "This program cannot": 0,
+        ".text": 0,
+        ".rdata": 0,
+        ".data": 0,
+        "KERNEL32": 0,
+        "kernel32": 0,
+        "USER32": 0,
+        "LAB_SYNTHETIC": 0,
+        "LABID-": 0
+      },
+      "generic_tokens_in_plain_ranges": {
+        "MZ": 0,
+        "PE\u0000\u0000": 0,
+        "This program cannot": 0,
+        ".text": 0,
+        ".rdata": 0,
+        ".data": 0,
+        "KERNEL32": 0,
+        "kernel32": 0,
+        "USER32": 0,
+        "LAB_SYNTHETIC": 3,
+        "LABID-": 0
+      },
+      "printable_runs_in_encrypted_ranges": {
+        "count": 191,
+        "sample": [
+          ".9%4#dsF@",
+          "'sj|=Z&t~xF",
+          ",-=@{Yw/A",
+          "q)47RSQ&",
+          "o>-FIwJ3"
+        ],
+        "expected_random": 168.61
+      }
+    }
+  },
+  "xvc_files": [
+    {
+      "name": "lab_public_notes.txt",
+      "size": 263,
+      "offset": 53248,
+      "region": "0x40000003",
+      "key_id": 65535,
+      "encrypted_by_keyid": false,
+      "stored_path": "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_public_notes.txt",
+      "stored_starts_with_MZ": false,
+      "entropy": 4.8583,
+      "size_mod_0x200": 263
+    },
+    {
+      "name": "lab_decoy_fake_pe.bin",
+      "size": 1024,
+      "offset": 57344,
+      "region": "0x40000003",
+      "key_id": 65535,
+      "encrypted_by_keyid": false,
+      "stored_path": "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_decoy_fake_pe.bin",
+      "stored_starts_with_MZ": true,
+      "entropy": 0.7166,
+      "size_mod_0x200": 0
+    },
+    {
+      "name": "lab_plaintext.exe",
+      "size": 739840,
+      "offset": 61440,
+      "region": "0x3E9",
+      "key_id": 0,
+      "encrypted_by_keyid": true,
+      "stored_path": "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext.exe.stored.bin",
+      "stored_starts_with_MZ": false,
+      "entropy": 7.9997,
+      "size_mod_0x200": 0
+    },
+    {
+      "name": "lab_plaintext_build_b.exe",
+      "size": 739840,
+      "offset": 802816,
+      "region": "0x3EA",
+      "key_id": 1,
+      "encrypted_by_keyid": true,
+      "stored_path": "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext_build_b.exe.stored.bin",
+      "stored_starts_with_MZ": false,
+      "entropy": 7.9998,
+      "size_mod_0x200": 0
+    }
+  ],
+  "pe_carving": {
+    "xvc": {
+      "raw_mz_hits": 25,
+      "bytes_scanned": 1544192,
+      "entire_file_scanned": true,
+      "expected_random_mz_hits": 23.6,
+      "pe_candidates": 0,
+      "mz_hits_rejected": 25,
+      "candidates": [],
+      "capability": {
+        "plain_pe_carving": true,
+        "known_compression": true,
+        "cryptographic_decryption": false,
+        "xvd_key_recovery": false
+      },
+      "header_kind": "xvd_or_xvc_container_header"
+    },
+    "xvd": {
+      "raw_mz_hits": 6,
+      "bytes_scanned": 770048,
+      "entire_file_scanned": true,
+      "expected_random_mz_hits": 11.8,
+      "pe_candidates": 0,
+      "mz_hits_rejected": 6,
+      "candidates": [],
+      "capability": {
+        "plain_pe_carving": true,
+        "known_compression": true,
+        "cryptographic_decryption": false,
+        "xvd_key_recovery": false
+      },
+      "header_kind": "xvd_or_xvc_container_header"
+    }
+  },
+  "pe_check": {
+    "lab_plaintext.exe.stored.bin": {
+      "exit": 1,
+      "is_pe": false,
+      "conclusion": "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+    },
+    "lab_plaintext_build_b.exe.stored.bin": {
+      "exit": 1,
+      "is_pe": false,
+      "conclusion": "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+    },
+    "lab_decoy_fake_pe.bin": {
+      "exit": 1,
+      "is_pe": false,
+      "conclusion": "Nao e um PE legivel: [PE] truncated @0x94: optional header ausente ou curto (SizeOfOptionalHeader 0x10)"
+    },
+    "lab_public_notes.txt": {
+      "exit": 1,
+      "is_pe": false,
+      "conclusion": "Nao e um PE legivel: [PE] bad_magic @0x0: sem cabecalho MZ"
+    }
+  },
+  "shadow_pe_reconstructor": {
+    "lab_plaintext.exe": {
+      "classification": "METADATA_ONLY",
+      "bytes_original_with_proof": 0,
+      "pct_bytes_with_proof_of_plaintext": 0.0,
+      "bytes_encrypted_unknown": 739840,
+      "target_entropy_bits_per_byte": 7.999742,
+      "target_pe_validated": null,
+      "target_raw_mz_hits": null,
+      "metadata_recovered": true,
+      "executable_candidates": 3,
+      "partial_pe_written": false
+    },
+    "lab_plaintext_build_b.exe": {
+      "classification": "METADATA_ONLY",
+      "bytes_original_with_proof": 0,
+      "pct_bytes_with_proof_of_plaintext": 0.0,
+      "bytes_encrypted_unknown": 739840,
+      "target_entropy_bits_per_byte": 7.999775,
+      "target_pe_validated": null,
+      "target_raw_mz_hits": null,
+      "metadata_recovered": true,
+      "executable_candidates": 3,
+      "partial_pe_written": false
+    }
+  },
+  "build_distinction": {
+    "size_equal": true,
+    "pages": [
+      181,
+      181
+    ],
+    "regions": [
+      "0x3E9",
+      "0x3EA"
+    ],
+    "key_ids": [
+      0,
+      1
+    ],
+    "identical_ciphertext_pages_same_position": 0,
+    "verdict": "INDETERMINADO sem chave",
+    "reason": "ciphertexts diferentes nao provam builds diferentes: RegionId, KeyId (CIK) e data units diferem entre as regioes, entao ate plaintexts identicos dariam ciphertexts diferentes; tamanhos iguais tambem nao provam o mesmo build"
+  },
+  "classification": [
+    {
+      "file": "lab_public_notes.txt",
+      "classification": "EM CLARO (legivel sem chave)",
+      "evidence": [
+        "entropia 4.8583 bits/byte",
+        "nao comeca com MZ",
+        "pe_check: nao e PE"
+      ]
+    },
+    {
+      "file": "lab_decoy_fake_pe.bin",
+      "classification": "EM CLARO, cabecalho MZ/PE INVALIDO (falso positivo rejeitado)",
+      "evidence": [
+        "entropia 0.7166 bits/byte",
+        "comeca com MZ",
+        "pe_check: nao e PE"
+      ]
+    },
+    {
+      "file": "lab_plaintext.exe",
+      "classification": "CIFRADO (INFERIDO por evidencias independentes; nao ha prova criptografica sem chave)",
+      "evidence": [
+        "KeyId 0 no XvcInfo (declaracao de metadado)",
+        "entropia 7.9997 bits/byte",
+        "nao comeca com MZ",
+        "pe_check: nao e PE"
+      ]
+    },
+    {
+      "file": "lab_plaintext_build_b.exe",
+      "classification": "CIFRADO (INFERIDO por evidencias independentes; nao ha prova criptografica sem chave)",
+      "evidence": [
+        "KeyId 1 no XvcInfo (declaracao de metadado)",
+        "entropia 7.9998 bits/byte",
+        "nao comeca com MZ",
+        "pe_check: nao e PE"
+      ]
+    },
+    {
+      "file": "lab_xvd_encrypted.bin (drive)",
+      "classification": "CIFRADO (INFERIDO): flag de cifra, user data nao parseavel, entropia ~7.95, folhas no formato 0x14+data unit",
+      "evidence": [
+        "carving: 0 candidatos PE"
+      ]
+    },
+    {
+      "file": "_carving_xvc",
+      "classification": "0 candidatos PE no XVC",
+      "evidence": [
+        "[]"
+      ]
+    }
+  ],
+  "observable": [
+    "marcador LAB_SYNTHETIC na area de assinatura e no ProductId (conteineres sinteticos)",
+    "cabecalho XVD inteiro: flags, VDUID, tamanhos, slot de ODK, KeyMaterial selado (XVD) / vazio (XVC)",
+    "XVC: 4 arquivos com nome, tamanho exato, offset, regiao, KeyId e GUID da CIK",
+    "XVC: quais regioes estao cifradas (KeyId != 0xFFFF) e com qual GUID de chave",
+    "arvore de hashes integra nos dois conteineres: XVD 182 folhas cifradas ok, XVC 362 cifradas + 7 em claro ok, 0 falhas",
+    "data unit de cada pagina cifrada (entry+0x14): XVD sequencial a partir de 0; XVC 0x3E9 com 2 runs nao sequenciais; 0x3EA sequencial",
+    "todas as entradas do tweak (section id, VDUID[0:8], data unit) por pagina",
+    "entropia ~7.95 bits/byte em todas as paginas cifradas (consistente com cifra, nao prova)",
+    "arquivos de regiao sem KeyId (notas publicas, isca MZ) legiveis integralmente",
+    "XVD: so o tamanho do drive alinhado em pagina e o tamanho do user data (0x84)"
+  ],
+  "unknown": [
+    "qualquer byte de plaintext dos executaveis (codigo, dados, cabecalhos)",
+    "secoes PE, imports, exports, recursos, strings, ponto de entrada, timestamp",
+    "se o conteudo cifrado e de fato um PE (so o nome .exe e o tamanho sugerem; INFERIDO)",
+    "XVD: nome e tamanho exato do PE (o descritor no user data esta cifrado)",
+    "se lab_plaintext.exe e lab_plaintext_build_b.exe sao o mesmo build ou builds diferentes",
+    "as CIKs (o KeyMaterial selado exige a ODK; as CIKs XVC exigem o armazenamento por GUID)",
+    "se a cifra e mesmo AES-XTS com estas chaves: sem chave nao ha teste; a estrutura so e CONSISTENTE com o modelo"
+  ],
+  "recovery_claim": {
+    "target_plaintext_bytes_recovered": {
+      "lab_plaintext.exe": 0,
+      "lab_plaintext_build_b.exe": 0,
+      "xvd_embedded_pe": 0
+    },
+    "public_plaintext_bytes_read": 1287,
+    "note": "nenhum byte de codigo dos executaveis foi recuperado sem chave; os bytes publicos lidos sao arquivos de regiao sem KeyId e NAO contam como recuperacao do alvo"
+  },
+  "access_audit": {
+    "events_recorded": 342,
+    "distinct_paths": 112,
+    "data_files_opened": [
+      "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_manifest.json",
+      "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvc_encrypted.bin",
+      "recovery\\crypto_lab\\fixtures\\generated\\public\\lab_xvd_encrypted.bin",
+      "recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvc.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\bin_pe_recovery_xvd.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext.exe.stored.bin",
+      "recovery\\crypto_lab\\reports\\work\\blind\\extracted_ciphertext\\lab_plaintext_build_b.exe.stored.bin",
+      "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_decoy_fake_pe.bin",
+      "recovery\\crypto_lab\\reports\\work\\blind\\extracted_public\\lab_public_notes.txt",
+      "recovery\\crypto_lab\\reports\\work\\blind\\inspect_xvd_xvc.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\inspect_xvd_xvd.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\bin_pe_recovery_xvc.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\bin_pe_recovery_xvd.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_decoy_fake_pe.bin.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_plaintext.exe.stored.bin.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_plaintext_build_b.exe.stored.bin.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\pe_check_lab_public_notes.txt.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\shadow_pe_lab_plaintext.exe.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\shadow_pe_lab_plaintext_build_b.exe.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\xvc_probe_xvc.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\logs\\xvc_probe_xvd.log",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\.cache\\inventory_cache.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\artifact_index.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\binary_inventory.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\carve_fragment_manifest.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\carve_provenance.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\executable_candidates.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\experiments.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\fragment_manifest.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\metrics.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\recovery_provenance.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\shadow_pe_map.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\shadow_pe_report.html",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext\\shadow_pe_report_data.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\.cache\\inventory_cache.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\artifact_index.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\binary_inventory.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\carve_fragment_manifest.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\carve_provenance.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\executable_candidates.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\experiments.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\fragment_manifest.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\metrics.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\recovery_provenance.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\shadow_pe_map.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\shadow_pe_report.html",
+      "recovery\\crypto_lab\\reports\\work\\blind\\shadow_pe_lab_plaintext_build_b\\shadow_pe_report_data.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\validate_xts_xvc.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\validate_xts_xvd.json",
+      "recovery\\crypto_lab\\reports\\work\\blind\\xvc_probe_xvc.json"
+    ],
+    "violations": [],
+    "separation_respected": true
+  }
+}

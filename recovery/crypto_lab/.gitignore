@@ -1,0 +1,3 @@
+# artefatos regeneraveis (python -I recovery/crypto_lab/crypto_lab.py run-all --seed 20261122)
+fixtures/generated/
+reports/work/

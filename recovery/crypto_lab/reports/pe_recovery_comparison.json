@@ -1,0 +1,497 @@
+{
+  "schema": "crypto_lab.pe_recovery_comparison/1",
+  "generated_utc": "2026-11-22T17:46:28+00:00",
+  "summary": {
+    "target_bytes_total": 2219520,
+    "blind_bytes_recovered": 0,
+    "blind_pct": 0.0,
+    "reveal_bytes_recovered": 2219520,
+    "reveal_pct": 100.0,
+    "all_sha256_equal": true,
+    "blind_access_audit_respected": true
+  },
+  "per_target": {
+    "xvd/lab_plaintext.exe": {
+      "ground_truth": {
+        "size": 739840,
+        "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "strings": 7
+      },
+      "blind": {
+        "bytes_recovered": 0,
+        "pct_recovered": 0.0,
+        "sections_identified": 0,
+        "imports_identified": 0,
+        "ground_truth_strings_found_in_ciphertext": 0,
+        "pe_valid": false,
+        "size_known": false,
+        "size_source": "desconhecido: descritor cifrado; so o limite superior (DriveSize) e visivel"
+      },
+      "after_key_reveal": {
+        "bytes_recovered": 739840,
+        "pct_recovered": 100.0,
+        "sha256_equal": true,
+        "bytes_different": 0,
+        "sections_identified": 4,
+        "sections_match_truth": true,
+        "imports_identified": 5,
+        "imports_match_truth": true,
+        "ground_truth_strings_found": 7,
+        "pe_valid_project_alpha": true,
+        "pe_problems": []
+      }
+    },
+    "xvc/lab_plaintext.exe": {
+      "ground_truth": {
+        "size": 739840,
+        "sha256": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "strings": 7
+      },
+      "blind": {
+        "bytes_recovered": 0,
+        "pct_recovered": 0.0,
+        "sections_identified": 0,
+        "imports_identified": 0,
+        "ground_truth_strings_found_in_ciphertext": 0,
+        "pe_valid": false,
+        "size_known": true,
+        "size_source": "SegmentMetadata (metadado em claro)"
+      },
+      "after_key_reveal": {
+        "bytes_recovered": 739840,
+        "pct_recovered": 100.0,
+        "sha256_equal": true,
+        "bytes_different": 0,
+        "sections_identified": 4,
+        "sections_match_truth": true,
+        "imports_identified": 5,
+        "imports_match_truth": true,
+        "ground_truth_strings_found": 7,
+        "pe_valid_project_alpha": true,
+        "pe_problems": []
+      }
+    },
+    "xvc/lab_plaintext_build_b.exe": {
+      "ground_truth": {
+        "size": 739840,
+        "sha256": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175",
+        "sections": [
+          ".text",
+          ".rdata",
+          ".data",
+          ".rsrc"
+        ],
+        "imports": {
+          "KERNEL32.dll": [
+            "ExitProcess",
+            "GetTickCount64",
+            "OutputDebugStringA",
+            "GetModuleHandleW"
+          ],
+          "USER32.dll": [
+            "MessageBoxW"
+          ]
+        },
+        "strings": 7
+      },
+      "blind": {
+        "bytes_recovered": 0,
+        "pct_recovered": 0.0,
+        "sections_identified": 0,
+        "imports_identified": 0,
+        "ground_truth_strings_found_in_ciphertext": 0,
+        "pe_valid": false,
+        "size_known": true,
+        "size_source": "SegmentMetadata (metadado em claro)"
+      },
+      "after_key_reveal": {
+        "bytes_recovered": 739840,
+        "pct_recovered": 100.0,
+        "sha256_equal": true,
+        "bytes_different": 0,
+        "sections_identified": 4,
+        "sections_match_truth": true,
+        "imports_identified": 5,
+        "imports_match_truth": true,
+        "ground_truth_strings_found": 7,
+        "pe_valid_project_alpha": true,
+        "pe_problems": []
+      }
+    }
+  },
+  "false_positives": {
+    "pe_carving": {
+      "raw_mz_hits_total": 31,
+      "accepted_as_pe": 0,
+      "false_positive_rate": 0.0,
+      "expected_random_mz_hits": 35.400000000000006
+    },
+    "decoy_fake_pe": {
+      "rejected_by_pe_check": true,
+      "reason": "Nao e um PE legivel: [PE] truncated @0x94: optional header ausente ou curto (SizeOfOptionalHeader 0x10)"
+    },
+    "printable_strings_in_ciphertext_xvc": {
+      "count": 327,
+      "expected_random": 335.37,
+      "ground_truth_strings_among_them": 0,
+      "note": "strings >= 8 imprimiveis no ciphertext sao acaso"
+    },
+    "entropy_classifier": {
+      "threshold_bits_per_byte": 7.9,
+      "containers_hashed_pages": {
+        "true_positive": 544,
+        "false_negative": 0,
+        "false_positive": 0,
+        "true_negative": 7
+      },
+      "plaintext_pe_pages": {
+        "pages": 181,
+        "classified_encrypted_but_plaintext": 175,
+        "false_positive_rate": 0.9669
+      },
+      "conclusion": "175 de 181 paginas do PE EM CLARO (dados aleatorios controlados da .data) seriam classificadas como 'cifradas' por entropia: entropia alta nao prova criptografia"
+    },
+    "shadow_pe_false_claims": {
+      "lab_plaintext.exe": 0,
+      "lab_plaintext_build_b.exe": 0
+    }
+  },
+  "build_distinction": {
+    "blind": {
+      "size_equal": true,
+      "pages": [
+        181,
+        181
+      ],
+      "regions": [
+        "0x3E9",
+        "0x3EA"
+      ],
+      "key_ids": [
+        0,
+        1
+      ],
+      "identical_ciphertext_pages_same_position": 0,
+      "verdict": "INDETERMINADO sem chave",
+      "reason": "ciphertexts diferentes nao provam builds diferentes: RegionId, KeyId (CIK) e data units diferem entre as regioes, entao ate plaintexts identicos dariam ciphertexts diferentes; tamanhos iguais tambem nao provam o mesmo build"
+    },
+    "after_key_reveal": {
+      "sha256_A": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+      "sha256_B": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175",
+      "distinguishable": true,
+      "recovered_sha256_A": "e3189670d67d11b0bd41c35bfc3120c902740b3eed42147aab9ce8596b8d646a",
+      "recovered_sha256_B": "bf81bc88edc90ac71959115a2e3668a53af854c8477ee419d0d685ae90016175",
+      "different_pages": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        21,
+        22,
+        180
+      ],
+      "different_page_count": 8,
+      "declared_changes_B": {
+        "data_pages": [
+          3,
+          17
+        ],
+        "text_functions": [
+          200,
+          259
+        ],
+        "strings": true,
+        "time_date_stamp": true
+      }
+    },
+    "xts_determinism_leakage": {
+      "pages": 181,
+      "plaintext_equal_pages": 173,
+      "plaintext_different_pages": 8,
+      "scenarios": {
+        "same_key_same_tweak": {
+          "equal_ciphertext_pages": 173,
+          "matches_plaintext_equality": true
+        },
+        "same_key_different_region_id": {
+          "equal_ciphertext_pages": 0
+        },
+        "same_key_different_data_units": {
+          "equal_ciphertext_pages": 0
+        },
+        "same_key_different_vduid": {
+          "equal_ciphertext_pages": 0
+        }
+      },
+      "different_pages_plaintext": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        21,
+        22,
+        180
+      ],
+      "conclusion": "Com chave E tweak (RegionId, VDUID, data unit) iguais, o XTS revela SEM CHAVE quais paginas mudaram entre dois builds (nao o conteudo). Mudando qualquer entrada do tweak, nenhuma pagina coincide. No conteiner do laboratorio os builds estao em regioes/chaves diferentes: nada vaza."
+    }
+  },
+  "negative_controls": {
+    "all_match_expectation": true,
+    "rows": [
+      {
+        "control": "wrong_cik",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "wrong_odk",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "wrong_vduid",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "wrong_region_id",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "data_unit_page_index",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "PASS"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "PASS"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "PASS"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "PASS"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": "PASS esperado no XVD e no build B: a numeracao deles e sequencial a partir de 0 e coincide com o indice da pagina. So a numeracao NAO sequencial (build A) expoe o erro - por isso o laboratorio inclui as duas."
+      },
+      {
+        "control": "data_unit_plus_one",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "swapped_cik_halves",
+        "expected": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvd": {
+            "lab_plaintext.exe": "FAIL"
+          },
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      },
+      {
+        "control": "wrong_region_key",
+        "expected": {
+          "xvc": {
+            "lab_plaintext.exe": "PASS",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvc": {
+            "lab_plaintext.exe": "PASS",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": "PASS esperado no build A: a regiao 0x3E9 continua com a sua propria CIK; so 0x3EA recebe a errada."
+      },
+      {
+        "control": "missing_key",
+        "expected": {
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "observed": {
+          "xvc": {
+            "lab_plaintext.exe": "FAIL",
+            "lab_plaintext_build_b.exe": "FAIL"
+          }
+        },
+        "matches_expectation": true,
+        "roundtrip_always_exact": true,
+        "note": null
+      }
+    ]
+  },
+  "algorithm_vs_key": {
+    "known_to_blind_analyzer": [
+      "algoritmo completo (AES-XTS, modelo xvdtool, publico)",
+      "seed do tweak de toda pagina (section id, VDUID[0:8], data unit)",
+      "geometria da arvore e integridade do ciphertext",
+      "nomes, tamanhos e offsets dos arquivos XVC"
+    ],
+    "unknown_to_blind_analyzer": [
+      "ODK",
+      "CIK (XVD selada; XVC por GUID)"
+    ],
+    "result": "conhecer o algoritmo e todas as entradas do tweak rendeu 0 bytes de plaintext; a chave e o unico segredo"
+  },
+  "impossible_without_keys": [
+    "qualquer byte de plaintext dos executaveis (codigo, dados, cabecalhos)",
+    "secoes PE, imports, exports, recursos, strings, ponto de entrada, timestamp",
+    "se o conteudo cifrado e de fato um PE (so o nome .exe e o tamanho sugerem; INFERIDO)",
+    "XVD: nome e tamanho exato do PE (o descritor no user data esta cifrado)",
+    "se lab_plaintext.exe e lab_plaintext_build_b.exe sao o mesmo build ou builds diferentes",
+    "as CIKs (o KeyMaterial selado exige a ODK; as CIKs XVC exigem o armazenamento por GUID)",
+    "se a cifra e mesmo AES-XTS com estas chaves: sem chave nao ha teste; a estrutura so e CONSISTENTE com o modelo"
+  ]
+}

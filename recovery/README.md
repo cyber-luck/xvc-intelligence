@@ -12,6 +12,9 @@ executados. **Nenhuma delas recupera dados de regiões cifradas.**
 | [`bin_pe_recovery/`](bin_pe_recovery/README.md) | Scanner de PE32/PE32+ em qualquer offset, inclusive em fluxos comprimidos. Traz também versões atualizadas dos wrappers (`--scan-bin`, `--pe-scan`, `--find-exe`), ainda não instaladas em `scripts/` | Biblioteca padrão (+ `zstandard`/`lz4` opcionais) | 13, pytest |
 | [`project_alpha/`](project_alpha/README.md) | Pipeline modular sobre o `xvcintel`: inventário, localização, carving, experimentos com controle negativo, mapa de proveniência por faixa de bytes, validação | `src/xvcintel` + `bin_pe_recovery` | 14 cenários (`selftest`) + pytest, incluído no `pytest` da raiz |
 | [`shadow_pe_standalone/`](shadow_pe_standalone/README.md) | Versão autônoma em arquivo único | Biblioteca padrão | 18, unittest |
+| [`crypto_lab/`](crypto_lab/README.md) | Laboratório **sintético**: reproduz o AES-XTS do xvdtool sobre contêineres e PEs gerados localmente (`LAB_SYNTHETIC`), mede o que as ferramentas acima veem sem chave e confirma a recuperação com a chave sintética. Nunca toca o pacote real | `cryptography` (extra `lab`) | 61 (pytest/unittest), incluído no `pytest` da raiz |
+
+O `crypto_lab` é a única pasta que usa chaves, e só chaves sintéticas geradas por ele mesmo.
 
 ## Rodar os testes
 
