@@ -1,0 +1,9 @@
+{
+  "cik_hex": "992433f6dd98178a614c3b5e25409f72297443c66de8275af19c4b2eb590af42",
+  "cik_sha256": "b2442d29e1c65c7936c566474c83a19107c82d712385746f5039447b8a75f315",
+  "note": "ODK e CIK exclusivas do laboratorio sintetico; sem relacao com qualquer volume real",
+  "odk_hex": "79841356bdf8f7ea41ac1bbe05a07fd209d423264d4807bad1fc2b8e95f08fa2",
+  "region_id": "0x3E9",
+  "schema": "alpha_recovery.blind_lab.sealed_keys/1",
+  "vduid8_hex": "b9c45396fd38372a"
+}

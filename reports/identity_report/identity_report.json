@@ -1,0 +1,2294 @@
+{
+  "conclusion": "identidade declarada e armazenamento CONFIRMADOS; correspondencia com o manifesto de build com pendencias; correspondencia ao CONTEUDO do executavel permanece dependente de copia autorizada em texto claro",
+  "declared_identity": {
+    "application_id": "GTAO",
+    "name": "game_scarlett_master.exe",
+    "package_identity": {
+      "Name": "RockstarGamesInc.28872443D20A7",
+      "Publisher": "CN=3164F9C2-2C28-4832-BBE3-A642A4EF0054",
+      "Version": "1.0.2.1"
+    },
+    "package_version": "1.0.2.1",
+    "sources_agreeing": 1,
+    "version_consistent": true
+  },
+  "dependency_build_environment": {
+    "note": "RSDS de DLLs distribuidas provam a geracao de build dos FORNECEDORES; nao sao evidencia de import nem de identidade do executavel alvo",
+    "records": [
+      {
+        "age": 1,
+        "dll": "Bink2Scarlett.dll",
+        "guid": "bdb42aa9-a227-44a5-ab73-97e08a2c003d",
+        "pdb_path": "C:\\devel\\projects\\bink\\build\\Bink2Scarlett.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 198796
+      },
+      {
+        "age": 1,
+        "dll": "XCurl.dll",
+        "guid": "48ea46ef-ea0f-5a4b-9b8a-ad80808f7f5e",
+        "pdb_path": "XCurl.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 148368
+      },
+      {
+        "dll": "XboxBvhBuilder.dll",
+        "status": "sem registro RSDS"
+      },
+      {
+        "age": 1,
+        "dll": "amd_fidelityfx_loader_xbox.dll",
+        "guid": "ce5fc0de-7ee1-41c0-8a82-1554f869ca88",
+        "pdb_path": "C:\\F\\Kits\\FidelityFX\\amdinternal\\api\\xbox\\Gaming.Xbox.Scarlett.x64\\Release\\amd_fidelityfx_loader_xbox.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 13396
+      },
+      {
+        "dll": "amd_fidelityfx_upscaler_xbox.dll",
+        "status": "sem registro RSDS"
+      },
+      {
+        "age": 1,
+        "dll": "concrt140.dll",
+        "guid": "5af663c9-df20-4229-9fc0-829019584ccf",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\concrt140.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 218316
+      },
+      {
+        "age": 1,
+        "dll": "libHttpClient.GDK.dll",
+        "guid": "9db57e31-8a86-4a2a-89bc-c0d58adf1e87",
+        "pdb_path": "C:\\__w\\1\\s\\libHttpClient\\Out\\x64\\ReleaseSuffix\\libHttpClient.GDK\\libHttpClient.GDK.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 801008
+      },
+      {
+        "age": 1,
+        "dll": "msvcp140.dll",
+        "guid": "23b9777b-7712-4031-b591-b304701c1e0f",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 388148
+      },
+      {
+        "age": 1,
+        "dll": "msvcp140_1.dll",
+        "guid": "4aaeb569-93d1-4b29-96b0-5f7efe1442fa",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_1.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 14876
+      },
+      {
+        "age": 1,
+        "dll": "msvcp140_2.dll",
+        "guid": "cb08c1d7-4bd0-4395-b19b-889dcb7f7cc3",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_2.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 156124
+      },
+      {
+        "age": 1,
+        "dll": "msvcp140_atomic_wait.dll",
+        "guid": "b6742449-ef09-4b23-aa2e-6e769600e9c8",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_atomic_wait.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 23508
+      },
+      {
+        "age": 1,
+        "dll": "msvcp140_codecvt_ids.dll",
+        "guid": "bddc4c0d-3664-415b-9892-d1984112b7f7",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_codecvt_ids.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 9168
+      },
+      {
+        "age": 1,
+        "dll": "vccorlib140.dll",
+        "guid": "3cd91d25-852e-4a0d-8922-2f52e7f90626",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\vccorlib140.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 239536
+      },
+      {
+        "age": 3,
+        "dll": "vcomp140.dll",
+        "guid": "bfe4e219-4ce5-44e8-a904-17b669189591",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcomp140.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 50912
+      },
+      {
+        "age": 1,
+        "dll": "vcruntime140.dll",
+        "guid": "41fa1cfd-9788-4d3d-9a3f-836bbb7d4516",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcruntime140.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 78740
+      },
+      {
+        "age": 1,
+        "dll": "vcruntime140_1.dll",
+        "guid": "275ae621-c2e7-46b9-8596-f47ed3e3a546",
+        "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcruntime140_1.amd64.onecore.pdb",
+        "role": "dependencia; evidencia do ambiente de build do fornecedor, nao do executavel alvo",
+        "rva": 25868
+      }
+    ]
+  },
+  "generated_utc": "2026-11-22T16:36:00+00:00",
+  "layout_evidence": {
+    "chunks": [
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "MicrosoftGame.Config",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "xbs_logo_150.png",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "xbs_logo_44.png",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "xbs_splash.png",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "xbs_logo_store.png",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "xbs_logo_480.png",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "resources.pri",
+            "SourcePath": ".\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "appdata0.rpf",
+            "SourcePath": ".\\"
+          }
+        ],
+        "id": "1000",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "game_scarlett_master.exe",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1001",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "amd_fidelityfx_loader_xbox.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "amd_fidelityfx_upscaler_xbox.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "Bink2Scarlett.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "concrt140.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "libHttpClient.GDK.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "msvcp140.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "msvcp140_1.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "msvcp140_2.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "msvcp140_atomic_wait.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "msvcp140_codecvt_ids.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "vccorlib140.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "vcomp140.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "vcruntime140.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "vcruntime140_1.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "XboxBvhBuilder.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          },
+          {
+            "DestinationPath": "\\",
+            "Include": "XCurl.dll",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1002",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\data\\ttdb\\graphics\\",
+            "Include": "ttdb_graphics.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\graphics\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\interiors\\",
+            "Include": "ttdb_interiors_0_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\interiors\\",
+            "Include": "ttdb_interiors_1_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\interiors\\",
+            "Include": "ttdb_interiors_2_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\interiors\\",
+            "Include": "ttdb_interiors_3_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\lighting\\",
+            "Include": "lighting.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\lighting\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_0_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_1_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_2_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_3_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_4_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_5_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_6_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps_7_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "decorations_0_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "decorations_1_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "decorations_2_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "decorations_3_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "peds_loose.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "ttdb_peds_0_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "ttdb_peds_1_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "ttdb_peds_2_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\peds\\",
+            "Include": "ttdb_peds_3_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\props\\",
+            "Include": "octa_imposters.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\props\\",
+            "Include": "ttdb_props_0_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\props\\",
+            "Include": "ttdb_props_1_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\props\\",
+            "Include": "ttdb_props_2_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\props\\",
+            "Include": "ttdb_props_3_3.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_0_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_1_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_2_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_3_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_4_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_5_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_6_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_7_7.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_image_based_0_1.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_image_based_1_1.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\ui\\",
+            "Include": "platform.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\ui\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\ui\\",
+            "Include": "ttdb_ui.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\ui\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\vehicles\\",
+            "Include": "ttdb_vehicles.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\vehicles\\",
+            "Include": "ttdb_vehicles_loose_0_1.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\vehicles\\",
+            "Include": "ttdb_vehicles_loose_1_1.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\vfx\\",
+            "Include": "ttdb_vfx.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\vfx\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\weapons\\",
+            "Include": "ttdb_weapons.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\weapons\\"
+          },
+          {
+            "DestinationPath": "\\data\\ttdb\\weapons\\",
+            "Include": "weapon_liveries.ttpf",
+            "SourcePath": ".\\..\\..\\content\\data\\ttdb\\weapons\\"
+          }
+        ],
+        "id": "1003",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "common.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1004",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "movies.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1005",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "shaders.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1006",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "anim.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1007",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "data.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1008",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "levels.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1009",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "navmeshes.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1010",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "packs.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1011",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "textures.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1012",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "audio.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1013",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "script.rpf",
+            "SourcePath": ".\\..\\..\\content\\"
+          }
+        ],
+        "id": "1014",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\story000\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\pack\\story000\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_image_based.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\terrain\\"
+          },
+          {
+            "DestinationPath": "\\pack\\story000\\data\\ttdb\\vfx\\",
+            "Include": "ttdb_vfx.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\vfx\\"
+          },
+          {
+            "DestinationPath": "\\pack\\story000\\",
+            "Include": "story000.rpf",
+            "SourcePath": ".\\..\\..\\packs\\story000\\content\\"
+          },
+          {
+            "DestinationPath": "\\pack\\story000\\",
+            "Include": "story000_script.rpf",
+            "SourcePath": ".\\..\\..\\packs\\story000\\content\\"
+          }
+        ],
+        "id": "3000",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\story000_bvh4\\",
+            "Include": "story000_bvh4.rpf",
+            "SourcePath": ".\\..\\..\\packs\\story000_bvh4\\content\\"
+          }
+        ],
+        "id": "3001",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\story000_restofworld\\",
+            "Include": "story000_restofworld.rpf",
+            "SourcePath": ".\\..\\..\\packs\\story000_restofworld\\content\\"
+          }
+        ],
+        "id": "3002",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\shared_minigame000\\",
+            "Include": "shared_minigame000.rpf",
+            "SourcePath": ".\\..\\..\\packs\\shared_minigame000\\content\\"
+          },
+          {
+            "DestinationPath": "\\pack\\shared_minigame000\\data\\ttdb\\maps\\",
+            "Include": "ttdb_maps.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\maps\\"
+          },
+          {
+            "DestinationPath": "\\pack\\shared_minigame000\\data\\ttdb\\terrain\\",
+            "Include": "ttdb_terrain_image_based.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\terrain\\"
+          }
+        ],
+        "id": "3003",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\shared_minigame000_bvh4\\",
+            "Include": "shared_minigame000_bvh4.rpf",
+            "SourcePath": ".\\..\\..\\packs\\shared_minigame000_bvh4\\content\\"
+          }
+        ],
+        "id": "3004",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\core_licenses\\",
+            "Include": "core_licenses_data.rpf",
+            "SourcePath": ".\\..\\..\\packs\\core_licenses\\content\\"
+          }
+        ],
+        "id": "3005",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\core_bvh4\\",
+            "Include": "core_bvh4.rpf",
+            "SourcePath": ".\\..\\..\\packs\\core_bvh4\\content\\"
+          }
+        ],
+        "id": "3006",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\",
+            "Include": "core_restofworld.rpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\data\\ttdb\\",
+            "Include": "textures_loose.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\data\\ttdb\\peds\\",
+            "Include": "ttdb_peds.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\peds\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\data\\ttdb\\props\\",
+            "Include": "ttdb_props.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\props\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\data\\ttdb\\ui\\",
+            "Include": "ttdb_ui.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\ui\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld\\data\\ttdb\\vfx\\",
+            "Include": "ttdb_vfx.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\vfx\\"
+          }
+        ],
+        "id": "3007",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\pack\\core_restofworld001\\",
+            "Include": "core_restofworld001.rpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld001\\content\\"
+          },
+          {
+            "DestinationPath": "\\pack\\core_restofworld001\\data\\ttdb\\ui\\",
+            "Include": "ttdb_ui.ttpf",
+            "SourcePath": ".\\..\\..\\packs\\core_restofworld001\\content\\data\\ttdb\\ui\\"
+          }
+        ],
+        "id": "3008",
+        "marker": null
+      },
+      {
+        "file_groups": [
+          {
+            "DestinationPath": "\\",
+            "Include": "Update.alignmentchunk",
+            "SourcePath": ".\\"
+          }
+        ],
+        "id": "3009",
+        "marker": "Launch"
+      }
+    ],
+    "files": [
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "MicrosoftGame.Config",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "xbs_logo_150.png",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "xbs_logo_44.png",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "xbs_splash.png",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "xbs_logo_store.png",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "xbs_logo_480.png",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "resources.pri",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1000",
+        "destination": "\\",
+        "include": "appdata0.rpf",
+        "source": ".\\"
+      },
+      {
+        "chunk": "1001",
+        "destination": "\\",
+        "include": "game_scarlett_master.exe",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "amd_fidelityfx_loader_xbox.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "amd_fidelityfx_upscaler_xbox.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "Bink2Scarlett.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "concrt140.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "libHttpClient.GDK.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "msvcp140.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "msvcp140_1.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "msvcp140_2.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "msvcp140_atomic_wait.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "msvcp140_codecvt_ids.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "vccorlib140.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "vcomp140.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "vcruntime140.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "vcruntime140_1.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "XboxBvhBuilder.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1002",
+        "destination": "\\",
+        "include": "XCurl.dll",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\graphics\\",
+        "include": "ttdb_graphics.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\graphics\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\interiors\\",
+        "include": "ttdb_interiors_0_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\interiors\\",
+        "include": "ttdb_interiors_1_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\interiors\\",
+        "include": "ttdb_interiors_2_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\interiors\\",
+        "include": "ttdb_interiors_3_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\interiors\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\lighting\\",
+        "include": "lighting.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\lighting\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_0_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_1_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_2_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_3_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_4_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_5_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_6_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps_7_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "decorations_0_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "decorations_1_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "decorations_2_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "decorations_3_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "peds_loose.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "ttdb_peds_0_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "ttdb_peds_1_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "ttdb_peds_2_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\peds\\",
+        "include": "ttdb_peds_3_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\props\\",
+        "include": "octa_imposters.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\props\\",
+        "include": "ttdb_props_0_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\props\\",
+        "include": "ttdb_props_1_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\props\\",
+        "include": "ttdb_props_2_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\props\\",
+        "include": "ttdb_props_3_3.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_0_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_1_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_2_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_3_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_4_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_5_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_6_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_7_7.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_image_based_0_1.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_image_based_1_1.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\ui\\",
+        "include": "platform.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\ui\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\ui\\",
+        "include": "ttdb_ui.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\ui\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\vehicles\\",
+        "include": "ttdb_vehicles.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\vehicles\\",
+        "include": "ttdb_vehicles_loose_0_1.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\vehicles\\",
+        "include": "ttdb_vehicles_loose_1_1.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\vehicles\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\vfx\\",
+        "include": "ttdb_vfx.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\vfx\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\weapons\\",
+        "include": "ttdb_weapons.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\weapons\\"
+      },
+      {
+        "chunk": "1003",
+        "destination": "\\data\\ttdb\\weapons\\",
+        "include": "weapon_liveries.ttpf",
+        "source": ".\\..\\..\\content\\data\\ttdb\\weapons\\"
+      },
+      {
+        "chunk": "1004",
+        "destination": "\\",
+        "include": "common.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1005",
+        "destination": "\\",
+        "include": "movies.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1006",
+        "destination": "\\",
+        "include": "shaders.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1007",
+        "destination": "\\",
+        "include": "anim.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1008",
+        "destination": "\\",
+        "include": "data.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1009",
+        "destination": "\\",
+        "include": "levels.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1010",
+        "destination": "\\",
+        "include": "navmeshes.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1011",
+        "destination": "\\",
+        "include": "packs.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1012",
+        "destination": "\\",
+        "include": "textures.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1013",
+        "destination": "\\",
+        "include": "audio.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "1014",
+        "destination": "\\",
+        "include": "script.rpf",
+        "source": ".\\..\\..\\content\\"
+      },
+      {
+        "chunk": "3000",
+        "destination": "\\pack\\story000\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps.ttpf",
+        "source": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "3000",
+        "destination": "\\pack\\story000\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_image_based.ttpf",
+        "source": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "3000",
+        "destination": "\\pack\\story000\\data\\ttdb\\vfx\\",
+        "include": "ttdb_vfx.ttpf",
+        "source": ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\vfx\\"
+      },
+      {
+        "chunk": "3000",
+        "destination": "\\pack\\story000\\",
+        "include": "story000.rpf",
+        "source": ".\\..\\..\\packs\\story000\\content\\"
+      },
+      {
+        "chunk": "3000",
+        "destination": "\\pack\\story000\\",
+        "include": "story000_script.rpf",
+        "source": ".\\..\\..\\packs\\story000\\content\\"
+      },
+      {
+        "chunk": "3001",
+        "destination": "\\pack\\story000_bvh4\\",
+        "include": "story000_bvh4.rpf",
+        "source": ".\\..\\..\\packs\\story000_bvh4\\content\\"
+      },
+      {
+        "chunk": "3002",
+        "destination": "\\pack\\story000_restofworld\\",
+        "include": "story000_restofworld.rpf",
+        "source": ".\\..\\..\\packs\\story000_restofworld\\content\\"
+      },
+      {
+        "chunk": "3003",
+        "destination": "\\pack\\shared_minigame000\\",
+        "include": "shared_minigame000.rpf",
+        "source": ".\\..\\..\\packs\\shared_minigame000\\content\\"
+      },
+      {
+        "chunk": "3003",
+        "destination": "\\pack\\shared_minigame000\\data\\ttdb\\maps\\",
+        "include": "ttdb_maps.ttpf",
+        "source": ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\maps\\"
+      },
+      {
+        "chunk": "3003",
+        "destination": "\\pack\\shared_minigame000\\data\\ttdb\\terrain\\",
+        "include": "ttdb_terrain_image_based.ttpf",
+        "source": ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\terrain\\"
+      },
+      {
+        "chunk": "3004",
+        "destination": "\\pack\\shared_minigame000_bvh4\\",
+        "include": "shared_minigame000_bvh4.rpf",
+        "source": ".\\..\\..\\packs\\shared_minigame000_bvh4\\content\\"
+      },
+      {
+        "chunk": "3005",
+        "destination": "\\pack\\core_licenses\\",
+        "include": "core_licenses_data.rpf",
+        "source": ".\\..\\..\\packs\\core_licenses\\content\\"
+      },
+      {
+        "chunk": "3006",
+        "destination": "\\pack\\core_bvh4\\",
+        "include": "core_bvh4.rpf",
+        "source": ".\\..\\..\\packs\\core_bvh4\\content\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\",
+        "include": "core_restofworld.rpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\data\\ttdb\\",
+        "include": "textures_loose.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\data\\ttdb\\peds\\",
+        "include": "ttdb_peds.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\peds\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\data\\ttdb\\props\\",
+        "include": "ttdb_props.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\props\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\data\\ttdb\\ui\\",
+        "include": "ttdb_ui.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\ui\\"
+      },
+      {
+        "chunk": "3007",
+        "destination": "\\pack\\core_restofworld\\data\\ttdb\\vfx\\",
+        "include": "ttdb_vfx.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\vfx\\"
+      },
+      {
+        "chunk": "3008",
+        "destination": "\\pack\\core_restofworld001\\",
+        "include": "core_restofworld001.rpf",
+        "source": ".\\..\\..\\packs\\core_restofworld001\\content\\"
+      },
+      {
+        "chunk": "3008",
+        "destination": "\\pack\\core_restofworld001\\data\\ttdb\\ui\\",
+        "include": "ttdb_ui.ttpf",
+        "source": ".\\..\\..\\packs\\core_restofworld001\\content\\data\\ttdb\\ui\\"
+      },
+      {
+        "chunk": "3009",
+        "destination": "\\",
+        "include": "Update.alignmentchunk",
+        "source": ".\\"
+      }
+    ],
+    "launch_marker_chunk": "3009",
+    "layout": "G:\\MyGame_v1\\PROJECT_ALPHA\\layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml",
+    "note": "o nome do arquivo de layout embute o VDUID do pacote (3202719e-...); os caminhos-fonte apontam para a maquina de build, fora do conjunto sobrevivente",
+    "source_roots": [
+      ".\\",
+      ".\\..\\..\\content\\",
+      ".\\..\\..\\content\\data\\ttdb\\graphics\\",
+      ".\\..\\..\\content\\data\\ttdb\\interiors\\",
+      ".\\..\\..\\content\\data\\ttdb\\lighting\\",
+      ".\\..\\..\\content\\data\\ttdb\\maps\\",
+      ".\\..\\..\\content\\data\\ttdb\\peds\\",
+      ".\\..\\..\\content\\data\\ttdb\\props\\",
+      ".\\..\\..\\content\\data\\ttdb\\terrain\\",
+      ".\\..\\..\\content\\data\\ttdb\\ui\\",
+      ".\\..\\..\\content\\data\\ttdb\\vehicles\\",
+      ".\\..\\..\\content\\data\\ttdb\\vfx\\",
+      ".\\..\\..\\content\\data\\ttdb\\weapons\\",
+      ".\\..\\..\\packs\\core_bvh4\\content\\",
+      ".\\..\\..\\packs\\core_licenses\\content\\",
+      ".\\..\\..\\packs\\core_restofworld001\\content\\",
+      ".\\..\\..\\packs\\core_restofworld001\\content\\data\\ttdb\\ui\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\peds\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\props\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\ui\\",
+      ".\\..\\..\\packs\\core_restofworld\\content\\data\\ttdb\\vfx\\",
+      ".\\..\\..\\packs\\shared_minigame000\\content\\",
+      ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\maps\\",
+      ".\\..\\..\\packs\\shared_minigame000\\content\\data\\ttdb\\terrain\\",
+      ".\\..\\..\\packs\\shared_minigame000_bvh4\\content\\",
+      ".\\..\\..\\packs\\story000\\content\\",
+      ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\maps\\",
+      ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\terrain\\",
+      ".\\..\\..\\packs\\story000\\content\\data\\ttdb\\vfx\\",
+      ".\\..\\..\\packs\\story000_bvh4\\content\\",
+      ".\\..\\..\\packs\\story000_restofworld\\content\\"
+    ]
+  },
+  "manifest_correspondence": {
+    "checks": [
+      {
+        "file": "MicrosoftGame.Config",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 1,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "xbs_logo_150.png",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 2,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "xbs_logo_44.png",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 3,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "xbs_splash.png",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 4,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "xbs_logo_store.png",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 5,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "xbs_logo_480.png",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 6,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "resources.pri",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 7,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "appdata0.rpf",
+        "in_layout_chunk": "1000",
+        "in_xvc_segment": 11,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "game_scarlett_master.exe",
+        "in_layout_chunk": "1001",
+        "in_xvc_segment": 12,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "amd_fidelityfx_loader_xbox.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 13,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "amd_fidelityfx_upscaler_xbox.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 14,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "Bink2Scarlett.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 15,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "concrt140.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 16,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "libHttpClient.GDK.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 17,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "msvcp140.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 18,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "msvcp140_1.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 19,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "msvcp140_2.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 20,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "msvcp140_atomic_wait.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 21,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "msvcp140_codecvt_ids.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 22,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "vccorlib140.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 23,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "vcomp140.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 24,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "vcruntime140.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 25,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "vcruntime140_1.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 26,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "XboxBvhBuilder.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 27,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "XCurl.dll",
+        "in_layout_chunk": "1002",
+        "in_xvc_segment": 28,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "ttdb_graphics.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_interiors_0_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_interiors_1_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_interiors_2_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_interiors_3_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "lighting.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_0_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_1_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_2_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_3_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_4_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_5_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_6_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps_7_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "decorations_0_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "decorations_1_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "decorations_2_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "decorations_3_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "peds_loose.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_peds_0_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_peds_1_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_peds_2_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_peds_3_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "octa_imposters.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_props_0_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_props_1_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_props_2_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_props_3_3.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_0_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_1_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_2_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_3_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_4_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_5_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_6_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_7_7.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_image_based_0_1.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_image_based_1_1.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "platform.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_ui.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vehicles.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vehicles_loose_0_1.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vehicles_loose_1_1.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vfx.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_weapons.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "weapon_liveries.ttpf",
+        "in_layout_chunk": "1003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "common.rpf",
+        "in_layout_chunk": "1004",
+        "in_xvc_segment": 75,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "movies.rpf",
+        "in_layout_chunk": "1005",
+        "in_xvc_segment": 76,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "shaders.rpf",
+        "in_layout_chunk": "1006",
+        "in_xvc_segment": 77,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "anim.rpf",
+        "in_layout_chunk": "1007",
+        "in_xvc_segment": 78,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "data.rpf",
+        "in_layout_chunk": "1008",
+        "in_xvc_segment": 79,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "levels.rpf",
+        "in_layout_chunk": "1009",
+        "in_xvc_segment": 80,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "navmeshes.rpf",
+        "in_layout_chunk": "1010",
+        "in_xvc_segment": 81,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "packs.rpf",
+        "in_layout_chunk": "1011",
+        "in_xvc_segment": 82,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "textures.rpf",
+        "in_layout_chunk": "1012",
+        "in_xvc_segment": 83,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "audio.rpf",
+        "in_layout_chunk": "1013",
+        "in_xvc_segment": 84,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "script.rpf",
+        "in_layout_chunk": "1014",
+        "in_xvc_segment": 85,
+        "status": "CONFIRMED"
+      },
+      {
+        "file": "ttdb_maps.ttpf",
+        "in_layout_chunk": "3000",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_image_based.ttpf",
+        "in_layout_chunk": "3000",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vfx.ttpf",
+        "in_layout_chunk": "3000",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "story000.rpf",
+        "in_layout_chunk": "3000",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "story000_script.rpf",
+        "in_layout_chunk": "3000",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "story000_bvh4.rpf",
+        "in_layout_chunk": "3001",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "story000_restofworld.rpf",
+        "in_layout_chunk": "3002",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "shared_minigame000.rpf",
+        "in_layout_chunk": "3003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_maps.ttpf",
+        "in_layout_chunk": "3003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_terrain_image_based.ttpf",
+        "in_layout_chunk": "3003",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "shared_minigame000_bvh4.rpf",
+        "in_layout_chunk": "3004",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "core_licenses_data.rpf",
+        "in_layout_chunk": "3005",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "core_bvh4.rpf",
+        "in_layout_chunk": "3006",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "core_restofworld.rpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "textures_loose.ttpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_peds.ttpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_props.ttpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_ui.ttpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_vfx.ttpf",
+        "in_layout_chunk": "3007",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "core_restofworld001.rpf",
+        "in_layout_chunk": "3008",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "ttdb_ui.ttpf",
+        "in_layout_chunk": "3008",
+        "in_xvc_segment": null,
+        "status": "MISMATCH"
+      },
+      {
+        "file": "Update.alignmentchunk",
+        "in_layout_chunk": "3009",
+        "in_xvc_segment": 107,
+        "status": "CONFIRMED"
+      }
+    ],
+    "confirmed_in_xvc": 37,
+    "executable_in_layout": [
+      "game_scarlett_master.exe"
+    ],
+    "executable_in_xvc": [
+      "game_scarlett_master.exe"
+    ],
+    "layout_chunk_order_equals_segment_order": true,
+    "layout_files": 104,
+    "missing_from_xvc": [
+      "ttdb_graphics.ttpf",
+      "ttdb_interiors_0_3.ttpf",
+      "ttdb_interiors_1_3.ttpf",
+      "ttdb_interiors_2_3.ttpf",
+      "ttdb_interiors_3_3.ttpf",
+      "lighting.ttpf",
+      "ttdb_maps_0_7.ttpf",
+      "ttdb_maps_1_7.ttpf",
+      "ttdb_maps_2_7.ttpf",
+      "ttdb_maps_3_7.ttpf",
+      "ttdb_maps_4_7.ttpf",
+      "ttdb_maps_5_7.ttpf",
+      "ttdb_maps_6_7.ttpf",
+      "ttdb_maps_7_7.ttpf",
+      "decorations_0_3.ttpf",
+      "decorations_1_3.ttpf",
+      "decorations_2_3.ttpf",
+      "decorations_3_3.ttpf",
+      "peds_loose.ttpf",
+      "ttdb_peds_0_3.ttpf",
+      "ttdb_peds_1_3.ttpf",
+      "ttdb_peds_2_3.ttpf",
+      "ttdb_peds_3_3.ttpf",
+      "octa_imposters.ttpf",
+      "ttdb_props_0_3.ttpf",
+      "ttdb_props_1_3.ttpf",
+      "ttdb_props_2_3.ttpf",
+      "ttdb_props_3_3.ttpf",
+      "ttdb_terrain_0_7.ttpf",
+      "ttdb_terrain_1_7.ttpf",
+      "ttdb_terrain_2_7.ttpf",
+      "ttdb_terrain_3_7.ttpf",
+      "ttdb_terrain_4_7.ttpf",
+      "ttdb_terrain_5_7.ttpf",
+      "ttdb_terrain_6_7.ttpf",
+      "ttdb_terrain_7_7.ttpf",
+      "ttdb_terrain_image_based_0_1.ttpf",
+      "ttdb_terrain_image_based_1_1.ttpf",
+      "platform.ttpf",
+      "ttdb_ui.ttpf",
+      "ttdb_vehicles.ttpf",
+      "ttdb_vehicles_loose_0_1.ttpf",
+      "ttdb_vehicles_loose_1_1.ttpf",
+      "ttdb_vfx.ttpf",
+      "ttdb_weapons.ttpf",
+      "weapon_liveries.ttpf",
+      "ttdb_maps.ttpf",
+      "ttdb_terrain_image_based.ttpf",
+      "ttdb_vfx.ttpf",
+      "story000.rpf",
+      "story000_script.rpf",
+      "story000_bvh4.rpf",
+      "story000_restofworld.rpf",
+      "shared_minigame000.rpf",
+      "ttdb_maps.ttpf",
+      "ttdb_terrain_image_based.ttpf",
+      "shared_minigame000_bvh4.rpf",
+      "core_licenses_data.rpf",
+      "core_bvh4.rpf",
+      "core_restofworld.rpf",
+      "textures_loose.ttpf",
+      "ttdb_peds.ttpf",
+      "ttdb_props.ttpf",
+      "ttdb_ui.ttpf",
+      "ttdb_vfx.ttpf",
+      "core_restofworld001.rpf",
+      "ttdb_ui.ttpf"
+    ],
+    "schema": "alpha_recovery.manifest_correspondence/1",
+    "xvc_files_absent_from_layout": [
+      "microsoft_gameconfig.bin",
+      "layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml",
+      "appxmanifest.xml",
+      "Catalog000.bin",
+      "data\\ttdb\\graphics\\ttdb_graphics.ttpf",
+      "data\\ttdb\\interiors\\ttdb_interiors_0_3.ttpf",
+      "data\\ttdb\\interiors\\ttdb_interiors_1_3.ttpf",
+      "data\\ttdb\\interiors\\ttdb_interiors_2_3.ttpf",
+      "data\\ttdb\\interiors\\ttdb_interiors_3_3.ttpf",
+      "data\\ttdb\\lighting\\lighting.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_0_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_1_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_2_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_3_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_4_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_5_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_6_7.ttpf",
+      "data\\ttdb\\maps\\ttdb_maps_7_7.ttpf",
+      "data\\ttdb\\peds\\decorations_0_3.ttpf",
+      "data\\ttdb\\peds\\decorations_1_3.ttpf",
+      "data\\ttdb\\peds\\decorations_2_3.ttpf",
+      "data\\ttdb\\peds\\decorations_3_3.ttpf",
+      "data\\ttdb\\peds\\peds_loose.ttpf",
+      "data\\ttdb\\peds\\ttdb_peds_0_3.ttpf",
+      "data\\ttdb\\peds\\ttdb_peds_1_3.ttpf",
+      "data\\ttdb\\peds\\ttdb_peds_2_3.ttpf",
+      "data\\ttdb\\peds\\ttdb_peds_3_3.ttpf",
+      "data\\ttdb\\props\\octa_imposters.ttpf",
+      "data\\ttdb\\props\\ttdb_props_0_3.ttpf",
+      "data\\ttdb\\props\\ttdb_props_1_3.ttpf",
+      "data\\ttdb\\props\\ttdb_props_2_3.ttpf",
+      "data\\ttdb\\props\\ttdb_props_3_3.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_0_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_1_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_2_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_3_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_4_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_5_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_6_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_7_7.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_image_based_0_1.ttpf",
+      "data\\ttdb\\terrain\\ttdb_terrain_image_based_1_1.ttpf",
+      "data\\ttdb\\ui\\platform.ttpf",
+      "data\\ttdb\\ui\\ttdb_ui.ttpf",
+      "data\\ttdb\\vehicles\\ttdb_vehicles.ttpf",
+      "data\\ttdb\\vehicles\\ttdb_vehicles_loose_0_1.ttpf",
+      "data\\ttdb\\vehicles\\ttdb_vehicles_loose_1_1.ttpf",
+      "data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+      "data\\ttdb\\weapons\\ttdb_weapons.ttpf",
+      "data\\ttdb\\weapons\\weapon_liveries.ttpf",
+      "pack\\story000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+      "pack\\story000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+      "pack\\story000\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+      "pack\\story000\\story000.rpf",
+      "pack\\story000\\story000_script.rpf",
+      "pack\\story000_bvh4\\story000_bvh4.rpf",
+      "pack\\story000_restofworld\\story000_restofworld.rpf",
+      "pack\\shared_minigame000\\shared_minigame000.rpf",
+      "pack\\shared_minigame000\\data\\ttdb\\maps\\ttdb_maps.ttpf",
+      "pack\\shared_minigame000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+      "pack\\shared_minigame000_bvh4\\shared_minigame000_bvh4.rpf",
+      "pack\\core_licenses\\core_licenses_data.rpf",
+      "pack\\core_bvh4\\core_bvh4.rpf",
+      "pack\\core_restofworld\\core_restofworld.rpf",
+      "pack\\core_restofworld\\data\\ttdb\\textures_loose.ttpf",
+      "pack\\core_restofworld\\data\\ttdb\\peds\\ttdb_peds.ttpf",
+      "pack\\core_restofworld\\data\\ttdb\\props\\ttdb_props.ttpf",
+      "pack\\core_restofworld\\data\\ttdb\\ui\\ttdb_ui.ttpf",
+      "pack\\core_restofworld\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+      "pack\\core_restofworld001\\core_restofworld001.rpf",
+      "pack\\core_restofworld001\\data\\ttdb\\ui\\ttdb_ui.ttpf"
+    ]
+  },
+  "prior_evidence_reused": "evidencia previa reaproveitada de H:\\xvc-intelligence\\reports\\shadow_pe_v3\\catalog_semantic.json",
+  "schema": "alpha_recovery.identity_report/1",
+  "storage": {
+    "absolute_offset": "0x64917000",
+    "end_offset_exclusive": "0x6BBB4400",
+    "filename": "game_scarlett_master.exe",
+    "key_id": 0,
+    "key_id_guid": "d4b2880b-884d-cf1b-eea5-bef5a2a7d4f6",
+    "segment_index": 12,
+    "size": 120181760
+  },
+  "target": "game_scarlett_master.exe",
+  "target_pdb": {
+    "evidence": "nenhum PDB do alvo existe no conjunto sobrevivente; validador GUID/age pronto e demonstrado em par real (platform_master.exe x platform_master.pdb)",
+    "status": "ABSENT"
+  },
+  "verification_ladder": {
+    "coincidences_not_sufficient": [
+      "tamanho igual",
+      "versao igual",
+      "hash isolado fora do catalogo"
+    ],
+    "ready_implementations": [
+      "reconstruct (mapa+identidade)",
+      "catalog (busca semantica)",
+      "cross_validate_rsds_pdb (GUID/age)"
+    ],
+    "required_chain": [
+      "PE valido x64/PE32+ com tamanho exatamente igual ao SegmentMetadata",
+      "hash (Authenticide ou bruto) presente no Catalog000.bin legivel",
+      "GUID/age de RSDS coerentes com PDB correspondente, quando existir",
+      "custodia documentada; coincidencias de tamanho/versao nunca bastam"
+    ],
+    "statement": "o proximo avanco depende de uma copia autorizada em texto claro demonstrada como correspondente ao executavel esperado"
+  }
+}

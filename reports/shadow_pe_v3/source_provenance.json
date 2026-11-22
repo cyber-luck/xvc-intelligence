@@ -1,0 +1,23 @@
+{
+  "custody_claim": null,
+  "custody_claim_is_not_proof": true,
+  "extra": {
+    "note": "copia de ciphertext: proveniencia dos bytes gravados por E1 (blocos identicos)",
+    "stored_bytes_equal_to_xvc_region": true
+  },
+  "schema": "alpha_recovery.source_provenance/1",
+  "source": {
+    "digests": {
+      "sha1": "3b221181d8be52ba20364482e37e8fac8defa648264856b765b48f008678c3e6",
+      "sha256": "589242e175e2fa0619a5cfc209f2f246abc0f070"
+    },
+    "mtime_utc": "2026-11-22T03:50:49+00:00",
+    "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+    "size": 120184832
+  },
+  "statements": [
+    "a declaracao de custodia e um registro declaratorio; a ferramenta nao pode autenticar origem",
+    "prova de identidade ao alvo e calculada separadamente (identity/assessment) e exige tamanho exato + hash no catalogo + custodia documentada",
+    "bytes desta fonte sao SOURCE_RECOVERED; correspondencia ao alvo e TARGET_IDENTITY_VERIFIED, conceito distinto"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "catalog_present": true,
+  "container_size": 38912,
+  "has_page_slack": true,
+  "hash_entry_data_unit_offset": 20,
+  "hash_entry_size": 24,
+  "keys_provided": false,
+  "logical_size": 35840,
+  "page_size": 4096,
+  "pages": 9,
+  "partial_last_page_bytes": 3072,
+  "region_id": "0x3E9",
+  "schema": "alpha_recovery.blind_lab.public/1",
+  "target_name": "synthetic_scarlett_master.exe",
+  "vduid8_hex": "b9c45396fd38372a"
+}

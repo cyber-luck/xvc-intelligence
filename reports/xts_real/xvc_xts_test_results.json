@@ -1,0 +1,59 @@
+{
+  "all_passed": true,
+  "note": "CIK sintetica exclusiva de teste; validade do transform coberta por validate_xts.py (IEEE P1619 + OpenSSL); round-trip sozinho nao basta - igualdade com o plaintext original e exigida",
+  "passed": 10,
+  "results": [
+    {
+      "detail": "igualdade byte a byte com o PE sintetico original",
+      "ok": true,
+      "test": "decrypt_equals_known_plaintext"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "not_identity_plaintext"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "reencrypt_equals_ciphertext"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "wrong_cik_fails"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "wrong_region_id_fails"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "wrong_vduid_fails"
+    },
+    {
+      "detail": "",
+      "ok": true,
+      "test": "wrong_data_unit_fails"
+    },
+    {
+      "detail": "folha detecta alteracao antes da descriptografia",
+      "ok": true,
+      "test": "tampered_page_detected_by_leaf"
+    },
+    {
+      "detail": "truncamento detectavel por tamanho/pagina final",
+      "ok": true,
+      "test": "truncated_ciphertext_rejected"
+    },
+    {
+      "detail": "slack apos o fim logico nunca entra no plaintext",
+      "ok": true,
+      "test": "page_slack_excluded"
+    }
+  ],
+  "schema": "alpha_recovery.xvc_xts_test_results/1",
+  "total": 10
+}

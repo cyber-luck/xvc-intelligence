@@ -1,0 +1,304 @@
+{
+  "count": 33,
+  "fragments": [
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_loade_eabe5e_0x00000000.dll",
+      "length": 13312,
+      "sha256_source_region": "431bdd2e26c0c8214fd7601140eb9fe6d8a249f5000539453a9a9b6a0b7c0ee8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_loader_xbox.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_upsca_1267ac_0x00000000.dll",
+      "length": 786432,
+      "sha256_source_region": "faff02f294a7e9149ce079dffe3dedbcabe99b1f180ab14222aa8689e00a75fa",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_upscaler_xbox.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_Bink2Scarlett_0a4501_0x00000000.dll",
+      "length": 255488,
+      "sha256_source_region": "9eaf045d004cd7d6a8382aaff0c6ea23a29fec4ef8bfacd726b54f5bc26fafd0",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\Bink2Scarlett.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_Catalog000_ffdfa4_0x00000000.catalog.bin",
+      "length": 815104,
+      "sha256_source_region": "4afbdbe22aad2bc338a5ba1ffe83cccb96e072eb4e92f6a5dd90b49b2e227c59",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\Catalog000.bin",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_concrt140_73ed5c_0x00000000.dll",
+      "length": 298992,
+      "sha256_source_region": "554168b99726cbe982b542ec97c493f48483b20a4ea4e54e102ba3a0d098e75f",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\concrt140.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_libHttpClient.GDK_f3cc08_0x00000000.dll",
+      "length": 975856,
+      "sha256_source_region": "14d97b3d071e0ce461e758dbcf1511941ae5c0bdd6e32ed33cb87aaae0414d3a",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\libHttpClient.GDK.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_msvcp140_7f7e51_0x00000000.dll",
+      "length": 565232,
+      "sha256_source_region": "6036fdb3ee3a5813ef0b17462219ebcee5f06b46ef738bacde07aa797e6d2b75",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_msvcp140_1_a919dc_0x00000000.dll",
+      "length": 26104,
+      "sha256_source_region": "c56b530e0894d9c4d11b12d389786fef40463dbd81d4438b8414f909d6226211",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_1.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_msvcp140_2_122e09_0x00000000.dll",
+      "length": 187888,
+      "sha256_source_region": "276813083c55c079120e0db49898088bb0c8d1c912ed59ec0d00fedf56a694a8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_2.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_msvcp140_atomic_wait_ff9d9a_0x00000000.dll",
+      "length": 57312,
+      "sha256_source_region": "b7f879662095f71dc08efcbc0d24ac3c0ff2dde8d475f92f5c5646a39bf8f2c3",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_atomic_wait.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_msvcp140_codecvt_ids_308b46_0x00000000.dll",
+      "length": 22008,
+      "sha256_source_region": "89cf5b07b98709277e8511d9a402ce72279e8df3ae24a8dd641ab0265c799a0c",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_codecvt_ids.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_alpha_assetgen_26c694_0x00000000.exe",
+      "length": 564224,
+      "sha256_source_region": "06451cb2ae272a7ad626c6a7817878ebafa4bb1001655a677367fc543d8f4239",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_assetgen.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_alpha_datatool_091d88_0x00000000.exe",
+      "length": 647680,
+      "sha256_source_region": "7ab25717a48fa12678e8ecbce0447753c1fefdc2f908d9ae80b1b633b38d0eef",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_datatool.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_alpha_metadata_359310_0x00000000.exe",
+      "length": 655360,
+      "sha256_source_region": "b675baece44dd7a41330e81038841bf19c74a97c7a7b70ae857518d7913c95ec",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_metadata.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_alpha_tests_26a8a8_0x00000000.exe",
+      "length": 1700864,
+      "sha256_source_region": "0d69899d28cc68eea9a7af1091eb9fbfb46fa36dfd1ec73fa162781f6f90b0f7",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_tests.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_loade_4490e3_0x00000000.dll",
+      "length": 39184,
+      "sha256_source_region": "e2191d3c0828be45eb8affd4e3ec0378f2293adc345b772a7170edcf3b021ecb",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\amd_fidelityfx_loader_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_upsca_80435a_0x00000000.dll",
+      "length": 57664272,
+      "sha256_source_region": "aad4fccccb29084a655f9a4f9f613bd22c8c03fb4a0f8840148cc6543b4ccace",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\amd_fidelityfx_upscaler_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_CMakeDetermineCompil_cb4493_0x00000000.exe",
+      "length": 53248,
+      "sha256_source_region": "de48d374593a2b91d49648a2e9359e5936b4726892127b19de34950d3a8341f2",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\4.1.0\\CMakeDetermineCompilerABI_CXX.bin",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_CMakeCXXCompilerId_2e1de2_0x00000000.exe",
+      "length": 108032,
+      "sha256_source_region": "cb32209852cc9de33095edaffc4201391814881ccc297c2d8820d4f45f2cc71f",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\4.1.0\\CompilerIdCXX\\CMakeCXXCompilerId.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_platform_master_ea962a_0x00000000.exe",
+      "length": 2828800,
+      "sha256_source_region": "2e38d80c17ea6a84c07ec036fb351dc70fc5db3fd657fd96590d18650c2151f8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\platform_master.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_sample_module_694491_0x00000000.dll",
+      "length": 136192,
+      "sha256_source_region": "078ea06e0f3fcbad186f540c1158ce8919d049082edb623032ee206d9f66f4c8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\sample_module.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_loade_3fe132_0x00000000.dll",
+      "length": 39184,
+      "sha256_source_region": "e2191d3c0828be45eb8affd4e3ec0378f2293adc345b772a7170edcf3b021ecb",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\amd_fidelityfx_loader_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_upsca_0e80b3_0x00000000.dll",
+      "length": 57664272,
+      "sha256_source_region": "aad4fccccb29084a655f9a4f9f613bd22c8c03fb4a0f8840148cc6543b4ccace",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\amd_fidelityfx_upscaler_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_platform_master_0a07f6_0x00000000.exe",
+      "length": 2329088,
+      "sha256_source_region": "cb7f95a1e032e2603ed82882b5e274133ee06a8f4d681b55e28c923ad7d8cfdd",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\platform_master.exe",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_sample_module_ff360e_0x00000000.dll",
+      "length": 136192,
+      "sha256_source_region": "078ea06e0f3fcbad186f540c1158ce8919d049082edb623032ee206d9f66f4c8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sample_module.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_loade_8bf053_0x00000000.dll",
+      "length": 39184,
+      "sha256_source_region": "e2191d3c0828be45eb8affd4e3ec0378f2293adc345b772a7170edcf3b021ecb",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_loader_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_amd_fidelityfx_upsca_56509f_0x00000000.dll",
+      "length": 57664272,
+      "sha256_source_region": "aad4fccccb29084a655f9a4f9f613bd22c8c03fb4a0f8840148cc6543b4ccace",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_upscaler_dx12.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_vccorlib140_8bc881_0x00000000.dll",
+      "length": 336888,
+      "sha256_source_region": "79ee6fa49aa2c6f0dfbc1279273fd619e1a9285995ff53a8bc183000c8895b91",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\vccorlib140.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_vcomp140_9b825b_0x00000000.dll",
+      "length": 72176,
+      "sha256_source_region": "91e249c0f66f827bcacd0be4931b1cec3e4907cc05ea0a5bcd83696c70908963",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcomp140.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_vcruntime140_1396ae_0x00000000.dll",
+      "length": 97776,
+      "sha256_source_region": "9385104cc3e031dbbcb63f156134a0f6afff455e0ff6887f5a9e1c5f7e2706b0",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_vcruntime140_1_1ae4f9_0x00000000.dll",
+      "length": 37848,
+      "sha256_source_region": "0dbd6859f825ab8acab1fa25b6bd1a091d35ca2dbe3185c1187192f2d2ac8154",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140_1.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_XboxBvhBuilder_95c7d3_0x00000000.dll",
+      "length": 884224,
+      "sha256_source_region": "99f803ac22c01ef329dddb1d40be67238d2a812d01e8d040b3cb5135bc23707e",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\XboxBvhBuilder.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    },
+    {
+      "classification": "EXACT_RECOVERED",
+      "destination": "H:\\xvc-intelligence\\reports\\shadow_pe_v3\\recovered_fragments\\direct_XCurl_88771d_0x00000000.dll",
+      "length": 199152,
+      "sha256_source_region": "d11ba4e4a07f42f8d80c48553c5c2588ab4114ecdbe023305f5f8fa8262131f8",
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\XCurl.dll",
+      "source_offset": 0,
+      "transform": "identity_carve"
+    }
+  ],
+  "out_dir": "H:\\xvc-intelligence\\reports\\shadow_pe_v3",
+  "schema": "alpha_recovery.fragment_manifest/1"
+}

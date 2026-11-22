@@ -83,13 +83,27 @@ def validate_pe(path: Path, *, expect_machine: int | None = None, expect_magic: 
     }
 
 
-def classify_recovery(coverage: dict, *, validated_complete: bool, metadata_recovered: bool) -> str:
+CLASSIFICATIONS = ("COMPLETE_VERIFIED", "COMPLETE_UNVERIFIED", "PARTIAL_RECOVERED",
+                   "STRUCTURE_ONLY", "METADATA_ONLY", "NO_RECOVERABLE_PE")
+
+
+def classify_recovery(coverage: dict, *, validated_complete: bool, metadata_recovered: bool,
+                      identity_verified: bool | None = None) -> str:
+    """Classificacao final com separacao rigida entre recuperacao e identidade.
+
+    COMPLETE_VERIFIED exige TODOS: bytes 100% com prova, PE valido, tamanho
+    exato e IDENTIDADE VERIFICADA (evidencia confiavel de correspondencia
+    exata ao alvo). Sem identidade verificada, a classificacao maxima para
+    um arquivo completo e COMPLETE_UNVERIFIED.
+    """
     by = coverage.get("by_class_bytes", {})
     total = coverage.get("total_bytes", 0)
     exact = by.get("EXACT_RECOVERED", 0) + by.get("MATCHED_COPY", 0)
     inferred = by.get("STRUCTURAL_INFERENCE", 0)
     if validated_complete and total and exact == total:
-        return "COMPLETE_VERIFIED"
+        if identity_verified is None:
+            return "COMPLETE_VERIFIED"
+        return "COMPLETE_VERIFIED" if identity_verified else "COMPLETE_UNVERIFIED"
     if exact > 0:
         return "PARTIAL_RECOVERED"
     if inferred > 0:

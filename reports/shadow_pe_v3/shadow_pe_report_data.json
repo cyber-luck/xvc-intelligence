@@ -1,0 +1,2394 @@
+{
+  "authorized_copy": null,
+  "candidates": [
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\Bink2Scarlett.dll",
+          "size": 255488
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BC79000",
+        "xvc_size": 255488
+      },
+      "name": "Bink2Scarlett.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 255488
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=Bink2Scarlett.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 15 offset 0x6BC79000 tamanho 255488 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\4.1.0\\CompilerIdCXX\\CMakeCXXCompilerId.exe",
+          "size": 108032
+        }
+      },
+      "name": "CMakeCXXCompilerId.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 108032
+      },
+      "sources": [
+        {
+          "detail": "arquivo CMakeCXXCompilerId.exe tamanho 108032 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\XCurl.dll",
+          "size": 199152
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6C022000",
+        "xvc_size": 199152
+      },
+      "name": "XCurl.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 199152
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=XCurl.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 28 offset 0x6C022000 tamanho 199152 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\XboxBvhBuilder.dll",
+          "size": 884224
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BF4A000",
+        "xvc_size": 884224
+      },
+      "name": "XboxBvhBuilder.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 884224
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=XboxBvhBuilder.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 27 offset 0x6BF4A000 tamanho 884224 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_assetgen.exe",
+          "size": 564224
+        }
+      },
+      "name": "alpha_assetgen.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 564224
+      },
+      "sources": [
+        {
+          "detail": "arquivo alpha_assetgen.exe tamanho 564224 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_datatool.exe",
+          "size": 647680
+        }
+      },
+      "name": "alpha_datatool.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 647680
+      },
+      "sources": [
+        {
+          "detail": "arquivo alpha_datatool.exe tamanho 647680 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_metadata.exe",
+          "size": 655360
+        }
+      },
+      "name": "alpha_metadata.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 655360
+      },
+      "sources": [
+        {
+          "detail": "arquivo alpha_metadata.exe tamanho 655360 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_tests.exe",
+          "size": 1700864
+        }
+      },
+      "name": "alpha_tests.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 1700864
+      },
+      "sources": [
+        {
+          "detail": "arquivo alpha_tests.exe tamanho 1700864 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_loader_dx12.dll",
+          "size": 39184
+        }
+      },
+      "name": "amd_fidelityfx_loader_dx12.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 39184
+      },
+      "sources": [
+        {
+          "detail": "arquivo amd_fidelityfx_loader_dx12.dll tamanho 39184 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_loader_xbox.dll",
+          "size": 13312
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BBB5000",
+        "xvc_size": 13312
+      },
+      "name": "amd_fidelityfx_loader_xbox.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 13312
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=amd_fidelityfx_loader_xbox.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 13 offset 0x6BBB5000 tamanho 13312 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_upscaler_dx12.dll",
+          "size": 57664272
+        }
+      },
+      "name": "amd_fidelityfx_upscaler_dx12.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 57664272
+      },
+      "sources": [
+        {
+          "detail": "arquivo amd_fidelityfx_upscaler_dx12.dll tamanho 57664272 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_upscaler_xbox.dll",
+          "size": 786432
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BBB9000",
+        "xvc_size": 786432
+      },
+      "name": "amd_fidelityfx_upscaler_xbox.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 786432
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=amd_fidelityfx_upscaler_xbox.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 14 offset 0x6BBB9000 tamanho 786432 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\concrt140.dll",
+          "size": 298992
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BCB8000",
+        "xvc_size": 298992
+      },
+      "name": "concrt140.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 298992
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=concrt140.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 16 offset 0x6BCB8000 tamanho 298992 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "unknown_bin",
+          "format_kinds": [],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+          "size": 120184832
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x64917000",
+        "xvc_size": 120181760
+      },
+      "name": "game_scarlett_master.exe",
+      "recovery_state": "ENCRYPTED_UNKNOWN(opaco; KeyId 0; sem MZ) | copia_em_disco_tambem_opaca",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 120181760
+      },
+      "sources": [
+        {
+          "detail": "Executable Name=game_scarlett_master.exe Id=GTAO TDF=Scarlett IsDevOnly=false",
+          "level": "CONFIRMED",
+          "source": "MicrosoftGame.Config (disco)"
+        },
+        {
+          "detail": "Application Executable=game_scarlett_master.exe Id=GTAO",
+          "level": "CONFIRMED",
+          "source": "appxmanifest.xml (disco)"
+        },
+        {
+          "detail": "Executable key=game_scarlett_master.exe",
+          "level": "CONFIRMED",
+          "source": "microsoft_gameconfig.bin (hive)"
+        },
+        {
+          "detail": "FileGroup Include=game_scarlett_master.exe Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 12 offset 0x64917000 tamanho 120181760 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=12,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\libHttpClient.GDK.dll",
+          "size": 975856
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BD01000",
+        "xvc_size": 975856
+      },
+      "name": "libHttpClient.GDK.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 975856
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=libHttpClient.GDK.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 17 offset 0x6BD01000 tamanho 975856 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140.dll",
+          "size": 565232
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BDF0000",
+        "xvc_size": 565232
+      },
+      "name": "msvcp140.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 565232
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=msvcp140.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 18 offset 0x6BDF0000 tamanho 565232 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_1.dll",
+          "size": 26104
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BE7A000",
+        "xvc_size": 26104
+      },
+      "name": "msvcp140_1.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 26104
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=msvcp140_1.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 19 offset 0x6BE7A000 tamanho 26104 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_2.dll",
+          "size": 187888
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BE81000",
+        "xvc_size": 187888
+      },
+      "name": "msvcp140_2.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 187888
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=msvcp140_2.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 20 offset 0x6BE81000 tamanho 187888 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_atomic_wait.dll",
+          "size": 57312
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BEAF000",
+        "xvc_size": 57312
+      },
+      "name": "msvcp140_atomic_wait.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 57312
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=msvcp140_atomic_wait.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 21 offset 0x6BEAF000 tamanho 57312 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_codecvt_ids.dll",
+          "size": 22008
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BEBD000",
+        "xvc_size": 22008
+      },
+      "name": "msvcp140_codecvt_ids.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 22008
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=msvcp140_codecvt_ids.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 22 offset 0x6BEBD000 tamanho 22008 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\platform_master.exe",
+          "size": 2329088
+        }
+      },
+      "name": "platform_master.exe",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 2329088
+      },
+      "sources": [
+        {
+          "detail": "arquivo platform_master.exe tamanho 2828800 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "UNKNOWN",
+      "details": {},
+      "name": "run GamingRepair.exe",
+      "recovery_state": "UNKNOWN",
+      "role": "main_executable",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": null
+      },
+      "sources": [
+        {
+          "detail": "string bruta: run GamingRepair.exe",
+          "level": "UNKNOWN",
+          "source": "strings:XCurl.dll@0x202ae"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sample_module.dll",
+          "size": 136192
+        }
+      },
+      "name": "sample_module.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "arquivo em disco",
+        "value": 136192
+      },
+      "sources": [
+        {
+          "detail": "arquivo sample_module.dll tamanho 136192 formato MZ",
+          "level": "CONFIRMED",
+          "source": "inventario em disco"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vccorlib140.dll",
+          "size": 336888
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BEC3000",
+        "xvc_size": 336888
+      },
+      "name": "vccorlib140.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 336888
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=vccorlib140.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 23 offset 0x6BEC3000 tamanho 336888 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcomp140.dll",
+          "size": 72176
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BF16000",
+        "xvc_size": 72176
+      },
+      "name": "vcomp140.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 72176
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=vcomp140.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 24 offset 0x6BF16000 tamanho 72176 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=7,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140.dll",
+          "size": 97776
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BF28000",
+        "xvc_size": 97776
+      },
+      "name": "vcruntime140.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 97776
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=vcruntime140.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 25 offset 0x6BF28000 tamanho 97776 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    },
+    {
+      "confidence": "CONFIRMED",
+      "details": {
+        "disk_copy": {
+          "format": "MZ",
+          "format_kinds": [
+            "MZ",
+            "PE(machine=0x8664,sections=6,magic=0x020b)"
+          ],
+          "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140_1.dll",
+          "size": 37848
+        },
+        "key_id": 0,
+        "layout_source_path": ".\\..\\..\\content\\",
+        "xvc_offset": "0x6BF40000",
+        "xvc_size": 37848
+      },
+      "name": "vcruntime140_1.dll",
+      "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+      "role": "dependency_dll",
+      "size_estimated": null,
+      "size_known": {
+        "basis": "XVC SegmentMetadata",
+        "value": 37848
+      },
+      "sources": [
+        {
+          "detail": "FileGroup Include=vcruntime140_1.dll Dest=\\",
+          "level": "INFERRED",
+          "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+        },
+        {
+          "detail": "segmento 26 offset 0x6BF40000 tamanho 37848 KeyId 0",
+          "level": "CONFIRMED",
+          "source": "XVC SegmentMetadata + XvcInfo"
+        }
+      ]
+    }
+  ],
+  "catalog_semantics": {
+    "candidate_digests": null,
+    "catalog": "G:\\MyGame_v1\\PROJECT_ALPHA\\Catalog000.bin",
+    "hash_hits": [],
+    "name_string_hits": [],
+    "name_string_note": "nome do executavel NAO encontrado em texto claro; associacao por nome UNKNOWN",
+    "pe": {
+      "conclusion": "conteiner de catalogo de codigo Xbox; sem codigo nem ponto de entrada, nao e um programa",
+      "machine": "0x8664",
+      "magic": "0x020b",
+      "sections": [
+        {
+          "name": "#0",
+          "raw_offset": 4096,
+          "raw_size": 811008
+        }
+      ],
+      "subsystem": 17,
+      "subsystem_name": "XBOX_CODE_CATALOG"
+    },
+    "schema": "alpha_recovery.catalog_semantic/1",
+    "section_profile": {
+      "interpretation": "pagina 0 com cabecalho curto + paginas densas de dados binarios: consistente com tabela de hashes do catalogo de codigo; decodificacao campo a campo do formato interno e UNKNOWN (formato interno nao documentado publicamente)",
+      "mean_nonzero_per_full_page": 4070.0,
+      "nonzero_page0_bytes": 64,
+      "pages_4k": 198,
+      "pages_with_content": 198,
+      "raw_offset": 4096,
+      "raw_size": 811008
+    },
+    "signature": {
+      "cryptographic_verification_performed": false,
+      "note": "nenhuma assinatura embutida no catalogo; nada a verificar",
+      "pkcs7_oid_present": false,
+      "security_directory_present": false
+    },
+    "size": 815104
+  },
+  "classification": "METADATA_ONLY",
+  "coverage": {
+    "by_class_bytes": {
+      "CONFLICTING_EVIDENCE": 0,
+      "ENCRYPTED_UNKNOWN": 120181760,
+      "EXACT_RECOVERED": 0,
+      "MATCHED_COPY": 0,
+      "MISSING": 0,
+      "STRUCTURAL_INFERENCE": 0,
+      "UNVERIFIED": 0
+    },
+    "note": "bytes recuperados com prova e bytes inferidos nunca sao somados na mesma taxa",
+    "pct": {
+      "CONFLICTING_EVIDENCE": 0.0,
+      "ENCRYPTED_UNKNOWN": 100.0,
+      "EXACT_RECOVERED": 0.0,
+      "MATCHED_COPY": 0.0,
+      "MISSING": 0.0,
+      "STRUCTURAL_INFERENCE": 0.0,
+      "UNVERIFIED": 0.0
+    },
+    "total_bytes": 120181760
+  },
+  "disk_copy": {
+    "e3_scan": {
+      "bytes_scanned": 120184832,
+      "entire_file_scanned": true,
+      "mz_limit_reached": {
+        "bzip2": false,
+        "gzip": false,
+        "lz4": false,
+        "mz": false,
+        "xz": false,
+        "zstd": false
+      },
+      "pe_offsets": [],
+      "pe_validated": 0,
+      "raw_mz_hits": 1874,
+      "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe"
+    },
+    "format": "0 PE validos / 1874 MZ (arquivo inteiro=True); bytes identicos a regiao XVC (E1)",
+    "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+    "size": 120184832
+  },
+  "experiments": [
+    {
+      "conclusion": "MATCHED_COPY dos bytes gravados em 100% da sobreposicao: a copia em disco e proveniente do XVC; plaintext continua ENCRYPTED_UNKNOWN",
+      "data_used": {
+        "disk": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+        "disk_len": 120184832,
+        "xvc_len": 120181760,
+        "xvc_offset": "0x64917000"
+      },
+      "hypothesis": "a copia em disco do executavel e a mesma sequencia de bytes gravados no XVC (ciphertext), com um excedente de cauda",
+      "id": "E1-redundancia-entre-conteineres",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [
+        "so cobre a faixa de sobreposicao; cauda do disco analisada apenas por entropia/amostra",
+        "disco e XVC identicos sao a MESMA evidencia, nao dois testemunhos independentes"
+      ],
+      "negative_control": {
+        "control_offset": "0x164917000",
+        "result": {
+          "blocks_compared": 29,
+          "blocks_equal": 0,
+          "bytes_compared": 120181760,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "563a3c3f08dfb66a83566d5a0e9e53127969d12340578b9e024cdb7d434bf30c",
+              "sha256_b": "a6ceb4fd15afe96d709c0c5dc0075929977e36517beaf22cd508c4ecf043232e"
+            },
+            {
+              "relative_offset": 4194304,
+              "sha256_a": "6411b1f72e1def4607f0f4e3bb127ae8d9d4d649644bae9427a8e4d426df5e04",
+              "sha256_b": "bb8a9d6780aacfcb7dd46e5bb5a0f0499e38149358f61acc601e7e5e246d7b31"
+            },
+            {
+              "relative_offset": 8388608,
+              "sha256_a": "ac6edde90d830790b702703adc9ab11fed785eafd6d7715615592ed68408aab0",
+              "sha256_b": "d01594c793226f5b3b9bbec6b5fced071487af24df5b8d1aaec059e84d0c8576"
+            },
+            {
+              "relative_offset": 12582912,
+              "sha256_a": "5560f9a665312df37d2b7584850afa9f3e7782187664a40a676ec49f45a7bf50",
+              "sha256_b": "6eb4705a651b8c4cf8ee44773a3bbd64bc7ed55a30682525c10ea1527af8b719"
+            },
+            {
+              "relative_offset": 16777216,
+              "sha256_a": "560d8f1d7c2794d3deb3916dfec57d90fa59afb0d1f048e512a5d5445672fea9",
+              "sha256_b": "3a50ba03afc61c1cba632f2756b12cb1a3f09c05020099f6e217bdd73ac5ff14"
+            },
+            {
+              "relative_offset": 20971520,
+              "sha256_a": "acf3f6862138ff8e5a7d9fda05f4d8d1d02a1361d97c2672b245469fd3d8b086",
+              "sha256_b": "c33961f96df84691ff4776f2ee32537c0be8f5cde3e7bc66060aa03d6b2f723b"
+            },
+            {
+              "relative_offset": 25165824,
+              "sha256_a": "691507a3b0e993bfdec41c5c263794656df4bdc9279e3b35349e44fd47f2bcdb",
+              "sha256_b": "4d9151bd3196e12bd9fd5c3c2a357185fae7d1865710e701de48225c095d8b99"
+            },
+            {
+              "relative_offset": 29360128,
+              "sha256_a": "3f9304bb4d50fc4b73ae43a3484e54b1e556dee1407192f7117c891e99f1f15f",
+              "sha256_b": "099375af635fcd881b3287f681bace086e18d152884985d8c5fd7bb83ab764dc"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        },
+        "teste": "mesmo arquivo contra regiao nao sobreposta do XVC em 0x164917000 (deslocamento +0x100000000); espera ~0% de blocos iguais"
+      },
+      "result": {
+        "disk_tail_beyond_xvc": {
+          "all_zero": false,
+          "entropy": 7.94092,
+          "head_hex": "4d192c771e0c3f0b73150a8b547a0dabbadba0990646414e943f6c5129ab3e5f",
+          "length": 3072,
+          "offset": 120181760,
+          "sampled_bytes": 3072
+        },
+        "match": {
+          "blocks_compared": 29,
+          "blocks_equal": 29,
+          "bytes_compared": 120181760,
+          "equal_intervals": [
+            {
+              "end": 120181760,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        }
+      },
+      "technical_basis": "correspondencia por SHA-256 de blocos de 4 MiB alinhados entre disco e a regiao do segmento no XVC; igualdade de ciphertext nao diz nada sobre plaintext"
+    },
+    {
+      "conclusion": "0% de blocos iguais com KeyId 0 conferido: a regiao XVC contem bytes transformados (consistente com cifragem); nenhuma vulnerabilidade criptografica alegada",
+      "data_used": {
+        "dll": "amd_fidelityfx_loader_xbox.dll",
+        "key_id": 0,
+        "len": 13312,
+        "xvc_offset": "0x6BBB5000"
+      },
+      "hypothesis": "a regiao da DLL no XVC (KeyId 0, opaca) nao contem os mesmos bytes do PE legivel em disco; a diferenca e o estado de cifragem, nao conteudo diferente",
+      "id": "E6-analise-diferencial-DLL",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [
+        "nao estabelece relacao plaintext-ciphertext; nao permite nenhuma conclusao sobre a chave"
+      ],
+      "negative_control": {
+        "result": {
+          "blocks_compared": 1,
+          "blocks_equal": 1,
+          "bytes_compared": 13312,
+          "equal_intervals": [
+            {
+              "end": 13312,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        },
+        "teste": "arquivo contra ele mesmo; espera 100% (sanidade do comparador)"
+      },
+      "result": {
+        "match_disk_vs_xvc": {
+          "blocks_compared": 1,
+          "blocks_equal": 0,
+          "bytes_compared": 13312,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "431bdd2e26c0c8214fd7601140eb9fe6d8a249f5000539453a9a9b6a0b7c0ee8",
+              "sha256_b": "371bfad44b1b1bef7d961f928d5a66459d721272db5355ed032744e53a9ea94f"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        }
+      },
+      "technical_basis": "comparacao por blocos entre plaintext em disco (PE validado) e bytes gravados no XVC; nenhuma derivacao de chave e tentada (regra absoluta)"
+    },
+    {
+      "conclusion": "MATCHED_COPY comprovado: o catalogo em disco e a extracao fiel da regiao legivel do XVC",
+      "data_used": {
+        "key_id": 65535,
+        "len": 815104,
+        "xvc_offset": "0x6484D000"
+      },
+      "hypothesis": "Catalog000.bin em disco e identico a sua regiao no XVC (KeyId 65535)",
+      "id": "E1b-catalogo-legivel",
+      "implementation": "correlation/block_matching.block_match",
+      "limitations": [],
+      "negative_control": {
+        "control_offset": "0x16484D000",
+        "result": {
+          "blocks_compared": 1,
+          "blocks_equal": 0,
+          "bytes_compared": 815104,
+          "equal_intervals": [],
+          "first_divergence_relative": 0,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [
+            {
+              "relative_offset": 0,
+              "sha256_a": "4afbdbe22aad2bc338a5ba1ffe83cccb96e072eb4e92f6a5dd90b49b2e227c59",
+              "sha256_b": "bd27cdbed5cc1bb27ceb8dc13ec5eb076c38b794893c51de1bfbd34879bd230d"
+            }
+          ],
+          "pct_equal_blocks": 0.0
+        },
+        "teste": "mesmo arquivo contra regiao nao sobreposta do XVC em 0x16484D000 (deslocamento +0x100000000); espera ~0% de blocos iguais"
+      },
+      "result": {
+        "match": {
+          "blocks_compared": 1,
+          "blocks_equal": 1,
+          "bytes_compared": 815104,
+          "equal_intervals": [
+            {
+              "end": 815104,
+              "start": 0
+            }
+          ],
+          "first_divergence_relative": null,
+          "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+          "mismatch_block_samples": [],
+          "pct_equal_blocks": 100.0
+        }
+      },
+      "technical_basis": "correspondencia por blocos entre o arquivo em disco e a regiao XVC"
+    },
+    {
+      "conclusion": "resultado negativo medido: 0 PE validos entre 1874 ocorrencias de MZ no arquivo inteiro; cobre tambem a regiao XVC por identidade de bytes (E1)",
+      "data_used": {
+        "disk": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+        "len": 120181760,
+        "xvc_offset": "0x64917000"
+      },
+      "hypothesis": "nenhum cabecalho PE (MZ + PE\\0\\0 validos) existe em nenhuma das copias do executavel alvo",
+      "id": "E3-assinaturas-estruturais",
+      "implementation": "scanners/pe_carver.carve_file + _stream_entropy",
+      "limitations": [
+        "ausencia de PE nao prova criptografia por si; combinada com KeyId e entropia medida e consistente com cifragem (INFERIDO)"
+      ],
+      "negative_control": {
+        "passed": true,
+        "result": {
+          "bytes_scanned": 815104,
+          "entire_file_scanned": true,
+          "mz_limit_reached": {
+            "bzip2": false,
+            "gzip": false,
+            "lz4": false,
+            "mz": false,
+            "xz": false,
+            "zstd": false
+          },
+          "pe_offsets": [
+            0
+          ],
+          "pe_validated": 1,
+          "raw_mz_hits": 18,
+          "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\Catalog000.bin"
+        },
+        "teste": "controle positivo executado: o mesmo detector sobre Catalog000.bin (PE real conhecido); espera >= 1 PE"
+      },
+      "result": {
+        "entropy_xvc_region": {
+          "bits_per_byte": 7.999998,
+          "bytes_measured": 120181760,
+          "complete": true,
+          "distinct_byte_values": 256,
+          "length_requested": 120181760,
+          "offset": 1687252992,
+          "source": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc"
+        },
+        "scan_disk_copy": {
+          "bytes_scanned": 120184832,
+          "entire_file_scanned": true,
+          "mz_limit_reached": {
+            "bzip2": false,
+            "gzip": false,
+            "lz4": false,
+            "mz": false,
+            "xz": false,
+            "zstd": false
+          },
+          "pe_offsets": [],
+          "pe_validated": 0,
+          "raw_mz_hits": 1874,
+          "source": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe"
+        },
+        "xvc_region_covered_via_E1": true
+      },
+      "technical_basis": "varredura MZ no arquivo inteiro com validacao estrita (e_lfanew, COFF, optional, secoes) via scanners/pe_carver; MZ isolado nao e PE; entropia medida na regiao gravada do XVC"
+    }
+  ],
+  "generated_utc": "2026-11-22T16:29:21+00:00",
+  "identity": {
+    "source_recovered": {
+      "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+      "pe_valid": null,
+      "sha256": null,
+      "size": 120184832
+    },
+    "target_identity": null,
+    "warning": "SOURCE_RECOVERED != TARGET_IDENTITY_VERIFIED; PE valido nao e correspondencia comprovada a build"
+  },
+  "identity_sources": {
+    "candidates": [
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\Bink2Scarlett.dll",
+            "size": 255488
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BC79000",
+          "xvc_size": 255488
+        },
+        "name": "Bink2Scarlett.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 255488
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=Bink2Scarlett.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 15 offset 0x6BC79000 tamanho 255488 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\4.1.0\\CompilerIdCXX\\CMakeCXXCompilerId.exe",
+            "size": 108032
+          }
+        },
+        "name": "CMakeCXXCompilerId.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 108032
+        },
+        "sources": [
+          {
+            "detail": "arquivo CMakeCXXCompilerId.exe tamanho 108032 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\XCurl.dll",
+            "size": 199152
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6C022000",
+          "xvc_size": 199152
+        },
+        "name": "XCurl.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 199152
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=XCurl.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 28 offset 0x6C022000 tamanho 199152 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\XboxBvhBuilder.dll",
+            "size": 884224
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BF4A000",
+          "xvc_size": 884224
+        },
+        "name": "XboxBvhBuilder.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 884224
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=XboxBvhBuilder.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 27 offset 0x6BF4A000 tamanho 884224 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_assetgen.exe",
+            "size": 564224
+          }
+        },
+        "name": "alpha_assetgen.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 564224
+        },
+        "sources": [
+          {
+            "detail": "arquivo alpha_assetgen.exe tamanho 564224 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_datatool.exe",
+            "size": 647680
+          }
+        },
+        "name": "alpha_datatool.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 647680
+        },
+        "sources": [
+          {
+            "detail": "arquivo alpha_datatool.exe tamanho 647680 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_metadata.exe",
+            "size": 655360
+          }
+        },
+        "name": "alpha_metadata.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 655360
+        },
+        "sources": [
+          {
+            "detail": "arquivo alpha_metadata.exe tamanho 655360 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_tests.exe",
+            "size": 1700864
+          }
+        },
+        "name": "alpha_tests.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 1700864
+        },
+        "sources": [
+          {
+            "detail": "arquivo alpha_tests.exe tamanho 1700864 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_loader_dx12.dll",
+            "size": 39184
+          }
+        },
+        "name": "amd_fidelityfx_loader_dx12.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 39184
+        },
+        "sources": [
+          {
+            "detail": "arquivo amd_fidelityfx_loader_dx12.dll tamanho 39184 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_loader_xbox.dll",
+            "size": 13312
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BBB5000",
+          "xvc_size": 13312
+        },
+        "name": "amd_fidelityfx_loader_xbox.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 13312
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=amd_fidelityfx_loader_xbox.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 13 offset 0x6BBB5000 tamanho 13312 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\third_party\\fidelityfx-sdk-v2.4.0\\signedbin\\amd_fidelityfx_upscaler_dx12.dll",
+            "size": 57664272
+          }
+        },
+        "name": "amd_fidelityfx_upscaler_dx12.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 57664272
+        },
+        "sources": [
+          {
+            "detail": "arquivo amd_fidelityfx_upscaler_dx12.dll tamanho 57664272 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\amd_fidelityfx_upscaler_xbox.dll",
+            "size": 786432
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BBB9000",
+          "xvc_size": 786432
+        },
+        "name": "amd_fidelityfx_upscaler_xbox.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 786432
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=amd_fidelityfx_upscaler_xbox.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 14 offset 0x6BBB9000 tamanho 786432 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\concrt140.dll",
+            "size": 298992
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BCB8000",
+          "xvc_size": 298992
+        },
+        "name": "concrt140.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 298992
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=concrt140.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 16 offset 0x6BCB8000 tamanho 298992 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "unknown_bin",
+            "format_kinds": [],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\game_scarlett_master.exe",
+            "size": 120184832
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x64917000",
+          "xvc_size": 120181760
+        },
+        "name": "game_scarlett_master.exe",
+        "recovery_state": "ENCRYPTED_UNKNOWN(opaco; KeyId 0; sem MZ) | copia_em_disco_tambem_opaca",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 120181760
+        },
+        "sources": [
+          {
+            "detail": "Executable Name=game_scarlett_master.exe Id=GTAO TDF=Scarlett IsDevOnly=false",
+            "level": "CONFIRMED",
+            "source": "MicrosoftGame.Config (disco)"
+          },
+          {
+            "detail": "Application Executable=game_scarlett_master.exe Id=GTAO",
+            "level": "CONFIRMED",
+            "source": "appxmanifest.xml (disco)"
+          },
+          {
+            "detail": "Executable key=game_scarlett_master.exe",
+            "level": "CONFIRMED",
+            "source": "microsoft_gameconfig.bin (hive)"
+          },
+          {
+            "detail": "FileGroup Include=game_scarlett_master.exe Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 12 offset 0x64917000 tamanho 120181760 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=12,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\libHttpClient.GDK.dll",
+            "size": 975856
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BD01000",
+          "xvc_size": 975856
+        },
+        "name": "libHttpClient.GDK.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 975856
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=libHttpClient.GDK.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 17 offset 0x6BD01000 tamanho 975856 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140.dll",
+            "size": 565232
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BDF0000",
+          "xvc_size": 565232
+        },
+        "name": "msvcp140.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 565232
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=msvcp140.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 18 offset 0x6BDF0000 tamanho 565232 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_1.dll",
+            "size": 26104
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BE7A000",
+          "xvc_size": 26104
+        },
+        "name": "msvcp140_1.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 26104
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=msvcp140_1.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 19 offset 0x6BE7A000 tamanho 26104 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_2.dll",
+            "size": 187888
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BE81000",
+          "xvc_size": 187888
+        },
+        "name": "msvcp140_2.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 187888
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=msvcp140_2.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 20 offset 0x6BE81000 tamanho 187888 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_atomic_wait.dll",
+            "size": 57312
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BEAF000",
+          "xvc_size": 57312
+        },
+        "name": "msvcp140_atomic_wait.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 57312
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=msvcp140_atomic_wait.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 21 offset 0x6BEAF000 tamanho 57312 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\msvcp140_codecvt_ids.dll",
+            "size": 22008
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BEBD000",
+          "xvc_size": 22008
+        },
+        "name": "msvcp140_codecvt_ids.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 22008
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=msvcp140_codecvt_ids.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 22 offset 0x6BEBD000 tamanho 22008 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\platform_master.exe",
+            "size": 2329088
+          }
+        },
+        "name": "platform_master.exe",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 2329088
+        },
+        "sources": [
+          {
+            "detail": "arquivo platform_master.exe tamanho 2828800 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "UNKNOWN",
+        "details": {},
+        "name": "run GamingRepair.exe",
+        "recovery_state": "UNKNOWN",
+        "role": "main_executable",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": null
+        },
+        "sources": [
+          {
+            "detail": "string bruta: run GamingRepair.exe",
+            "level": "UNKNOWN",
+            "source": "strings:XCurl.dll@0x202ae"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\sample_module.dll",
+            "size": 136192
+          }
+        },
+        "name": "sample_module.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "arquivo em disco",
+          "value": 136192
+        },
+        "sources": [
+          {
+            "detail": "arquivo sample_module.dll tamanho 136192 formato MZ",
+            "level": "CONFIRMED",
+            "source": "inventario em disco"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vccorlib140.dll",
+            "size": 336888
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BEC3000",
+          "xvc_size": 336888
+        },
+        "name": "vccorlib140.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 336888
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=vccorlib140.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 23 offset 0x6BEC3000 tamanho 336888 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcomp140.dll",
+            "size": 72176
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BF16000",
+          "xvc_size": 72176
+        },
+        "name": "vcomp140.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 72176
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=vcomp140.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 24 offset 0x6BF16000 tamanho 72176 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=7,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140.dll",
+            "size": 97776
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BF28000",
+          "xvc_size": 97776
+        },
+        "name": "vcruntime140.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 97776
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=vcruntime140.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 25 offset 0x6BF28000 tamanho 97776 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      },
+      {
+        "confidence": "CONFIRMED",
+        "details": {
+          "disk_copy": {
+            "format": "MZ",
+            "format_kinds": [
+              "MZ",
+              "PE(machine=0x8664,sections=6,magic=0x020b)"
+            ],
+            "path": "G:\\MyGame_v1\\PROJECT_ALPHA\\vcruntime140_1.dll",
+            "size": 37848
+          },
+          "key_id": 0,
+          "layout_source_path": ".\\..\\..\\content\\",
+          "xvc_offset": "0x6BF40000",
+          "xvc_size": 37848
+        },
+        "name": "vcruntime140_1.dll",
+        "recovery_state": "PLAINTEXT_AVAILABLE_EM_DISCO",
+        "role": "dependency_dll",
+        "size_estimated": null,
+        "size_known": {
+          "basis": "XVC SegmentMetadata",
+          "value": 37848
+        },
+        "sources": [
+          {
+            "detail": "FileGroup Include=vcruntime140_1.dll Dest=\\",
+            "level": "INFERRED",
+            "source": "layout:layout_3202719e-b4b4-421c-9f8f-70d1c4a7d60b_xs.xml"
+          },
+          {
+            "detail": "segmento 26 offset 0x6BF40000 tamanho 37848 KeyId 0",
+            "level": "CONFIRMED",
+            "source": "XVC SegmentMetadata + XvcInfo"
+          }
+        ]
+      }
+    ],
+    "note": "tamanhos estimados nunca sao apresentados como confirmados",
+    "schema": "alpha_recovery.executable_candidates/1"
+  },
+  "impediments": [
+    "INFERIDO (nao verificado pela ferramenta): o conteudo do alvo esta cifrado — KeyId 0 no XVC, entropia medida 7.999998 bits/byte, 0 PE validos / 1874 MZ (arquivo inteiro=True), E6 mostra PE legivel != sua regiao XVC; o esquema esperado para XVD/XVC e AES-XTS e a chave de conteudo nao esta disponivel",
+    "se a inferencia acima estiver correta, nenhum byte de codigo ou dado do executavel e recuperavel sem a chave; impedimento criptografico, nao limitacao de ferramenta",
+    "nenhum PDB/MAP/OBJ/ILK/dump do executavel existe no conjunto sobrevivente (auditoria de sessoes anteriores)",
+    "a recuperacao do codigo permanece bloqueada ate que um artefato legitimo apareça: build de desenvolvimento do detentor, PDB correspondente, ou copia decifrada por processo autorizado",
+    "nada nesta analise deve ser interpretado como bypass de protecao; nenhum foi tentado"
+  ],
+  "inferred_structure": {
+    "fields": {
+      "architecture": {
+        "basis": "plataforma Scarlett; 16 DLLs distribuidas sao PE32+ AMD64 (CONFIRMED nos bytes em disco); o header do alvo nunca foi observado",
+        "level": "INFERRED",
+        "value": "x64 (PE32+ esperado)"
+      },
+      "entry_point": {
+        "basis": "cabeçalho nao observado",
+        "level": "UNKNOWN",
+        "value": null
+      },
+      "imports": {
+        "basis": "os nomes das DLLs distribuidas NAO sao evidencia de import do alvo",
+        "level": "UNKNOWN",
+        "value": null
+      },
+      "name": {
+        "basis": "MicrosoftGame.Config + appxmanifest + hive + layout XVC",
+        "level": "CONFIRMED",
+        "value": "game_scarlett_master.exe"
+      },
+      "pdb_path": {
+        "basis": "nenhum PDB/MAP/OBJ/ILK do alvo existe no conjunto sobrevivente (auditoria anterior)",
+        "level": "UNKNOWN",
+        "value": null
+      },
+      "sections": {
+        "basis": "conteudo cifrado; nenhuma secao observada",
+        "level": "UNKNOWN",
+        "value": null
+      },
+      "subsystem": {
+        "basis": "imagens de console tipicamente nao usam subsystem Windows, mas nenhum byte do header foi observado; nao inferido",
+        "level": "UNKNOWN",
+        "value": null
+      },
+      "version": {
+        "basis": "PackageVersion do cabecalho XVC == Identity@Version do config; versao do PE interna UNKNOWN",
+        "level": "INFERRED",
+        "value": "1.0.2.1"
+      }
+    },
+    "schema": "alpha_recovery.inferred_structure/1",
+    "warning": "nenhum byte do executavel alvo foi recuperado; nada abaixo substitui bytes comprovados"
+  },
+  "map": {
+    "base_label": "ENCRYPTED_UNKNOWN",
+    "conflicts": [],
+    "coverage": {
+      "by_class_bytes": {
+        "CONFLICTING_EVIDENCE": 0,
+        "ENCRYPTED_UNKNOWN": 120181760,
+        "EXACT_RECOVERED": 0,
+        "MATCHED_COPY": 0,
+        "MISSING": 0,
+        "STRUCTURAL_INFERENCE": 0,
+        "UNVERIFIED": 0
+      },
+      "note": "bytes recuperados com prova e bytes inferidos nunca sao somados na mesma taxa",
+      "pct": {
+        "CONFLICTING_EVIDENCE": 0.0,
+        "ENCRYPTED_UNKNOWN": 100.0,
+        "EXACT_RECOVERED": 0.0,
+        "MATCHED_COPY": 0.0,
+        "MISSING": 0.0,
+        "STRUCTURAL_INFERENCE": 0.0,
+        "UNVERIFIED": 0.0
+      },
+      "total_bytes": 120181760
+    },
+    "intervals": [
+      {
+        "classification": "ENCRYPTED_UNKNOWN",
+        "end": 120181760,
+        "evidence": [
+          {
+            "note": "segmento 12, KeyId 0; entropia medida 7.999998 bits/byte sobre 120,181,760 bytes; 0 PE validos / 1874 MZ (arquivo inteiro=True) (E3); cifragem INFERIDA, nao verificada",
+            "sha256_of_stored_bytes": null,
+            "source_file": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc",
+            "source_offset": 1687252992
+          }
+        ],
+        "pe_section": null,
+        "region_segment": "XVC segment 12",
+        "start": 0,
+        "virtual_offset": 0
+      }
+    ],
+    "schema": "alpha_recovery.shadow_pe_map/1",
+    "total_bytes": 120181760
+  },
+  "schema": "alpha_recovery.shadow_pe_report/1",
+  "size_reconciliation": {
+    "actual_size": 120184832,
+    "delta": 3072,
+    "expected_size_stored": 120181760,
+    "hypotheses": [
+      {
+        "delta_matches": true,
+        "detail": "o arquivo gravado termina em 0x400 dentro da pagina; o excedente de 3072 byte(s) bate com os 3072 byte(s) de folga ate o limite da pagina do segmento",
+        "expected_delta": 3072,
+        "id": "page_slack_included_by_extraction",
+        "level": "CONFIRMED",
+        "tail_bytes_equal_xvc_continuation": true
+      }
+    ],
+    "page_math": {
+      "bytes_to_next_page_boundary": 3072,
+      "file_end_within_page": 1024,
+      "page_bytes": 4096,
+      "size_page_aligned": 120184832
+    },
+    "policy": "nenhum truncamento automatico e aplicado; o arquivo real permanece intacto",
+    "schema": "alpha_recovery.size_reconciliation/1"
+  },
+  "stored": {
+    "key_id": 0,
+    "segment": 12,
+    "size": 120181760,
+    "xvc_offset": "0x64917000"
+  },
+  "stored_bytes_provenance": {
+    "match": {
+      "blocks_compared": 29,
+      "blocks_equal": 29,
+      "bytes_compared": 120181760,
+      "equal_intervals": [
+        {
+          "end": 120181760,
+          "start": 0
+        }
+      ],
+      "first_divergence_relative": null,
+      "interpretation": "igualdade de bytes gravados entre as duas fontes; nao e declara sobre plaintext quando a regiao e cifrada",
+      "mismatch_block_samples": [],
+      "pct_equal_blocks": 100.0
+    },
+    "statement": "os bytes gravados do XVC existem identicamente na copia em disco (MATCHED_COPY de ciphertext)"
+  },
+  "target": "game_scarlett_master.exe"
+}

@@ -1,0 +1,653 @@
+{
+  "classification_table": [
+    {
+      "basis": "E1: 29/29 blocos de 4 MiB identicos aos bytes gravados do XVC + page slack provado (3.072 B)",
+      "classification": "CIPHERTEXT_PACKAGE_IDENTICAL",
+      "object": "executavel_em_disco"
+    },
+    {
+      "basis": "regiao 0x3EA KeyId 0: plaintext x ciphertext = 0% por natureza; bytes do pacote nao comparaveis sem chave",
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "object": "16_dlls_legiveis"
+    },
+    {
+      "basis": "diff byte a byte: 3/3 arquivos identicos aos embutidos no XVC",
+      "classification": "PACKAGE_IDENTICAL",
+      "object": "configuracoes_comparadas"
+    },
+    {
+      "basis": "tamanhos logicos exatos (16/16) sao CORRESPONDENCIA DE METADADOS, nao identidade de build; identidade de build exige RSDS/GUID/age/registros de compilacao ou comparacao byte a byte pos-chave",
+      "classification": "PROVENANCE_UNKNOWN",
+      "object": "origem_das_dlls"
+    },
+    {
+      "basis": "CIK da regiao 0x3E9 ausente; pipeline e laboratorio prontos",
+      "classification": "BLOCKED_MISSING_AUTHORIZED_CIK",
+      "object": "recuperacao_do_exe"
+    }
+  ],
+  "disk_dir": "G:\\MyGame_v1\\PROJECT_ALPHA",
+  "generated_utc": "2026-11-22T19:13:26+00:00",
+  "hybrid_assembly_conclusion": "todas as DLLs estao em regioes CIFRADAS do XVC (KeyId 0): os bytes gravados nao sao o PE em disco; a comparacao plaintext x ciphertext e 0% por natureza e NAO e evidencia de build diferente. Os 16/16 tamanhos logicos iguais sao CORRESPONDENCIA DE METADADOS (necesaria, jamais suficiente para identidade de build). A identidade de build de cada DLL em disco esta estabelecida por RSDS (GUID+age+pdb path) na secao build_identity; a EQUIVALENCIA BYTE A BYTE com as copias protegidas do pacote permanece INDEMONSTRAVEL sem chave. A pasta e MONTAGEM HIBRIDA quanto ao ESTADO dos arquivos: exe = CIPHERTEXT_PACKAGE_IDENTICAL; DLLs = ENCRYPTED_UNCOMPARABLE com origem PROVENANCE_UNKNOWN",
+  "note": "sem uso de chaves: a comparacao usa apenas bytes gravados; regioes cifradas sao declaradas incomparaveis, nunca 'diferentes'",
+  "rows": [
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.51",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "ce5fc0de-7ee1-41c0-8a82-1554f869ca88",
+            "pdb_path": "C:\\F\\Kits\\FidelityFX\\amdinternal\\api\\xbox\\Gaming.Xbox.Scarlett.x64\\Release\\amd_fidelityfx_loader_xbox.pdb"
+          }
+        ],
+        "sha256": "431bdd2e26c0c8214fd7601140eb9fe6d8a249f5000539453a9a9b6a0b7c0ee8",
+        "size": 13312,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2026-07-14T01:30:19+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 13312,
+      "dll": "amd_fidelityfx_loader_xbox.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 13,
+      "size_match": true,
+      "stored_size": 13312,
+      "xvc_offset": "0x6BBB5000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.52",
+        "prior_session_crosscheck": {
+          "checks": {
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [],
+        "sha256": "faff02f294a7e9149ce079dffe3dedbcabe99b1f180ab14222aa8689e00a75fa",
+        "size": 786432,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2058-07-13T07:46:38+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 786432,
+      "dll": "amd_fidelityfx_upscaler_xbox.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 14,
+      "size_match": true,
+      "stored_size": 786432,
+      "xvc_offset": "0x6BBB9000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "bdb42aa9-a227-44a5-ab73-97e08a2c003d",
+            "pdb_path": "C:\\devel\\projects\\bink\\build\\Bink2Scarlett.pdb"
+          }
+        ],
+        "sha256": "9eaf045d004cd7d6a8382aaff0c6ea23a29fec4ef8bfacd726b54f5bc26fafd0",
+        "size": 255488,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2023-02-08T06:36:22+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 255488,
+      "dll": "Bink2Scarlett.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 15,
+      "size_match": true,
+      "stored_size": 255488,
+      "xvc_offset": "0x6BC79000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "5af663c9-df20-4229-9fc0-829019584ccf",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\concrt140.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "554168b99726cbe982b542ec97c493f48483b20a4ea4e54e102ba3a0d098e75f",
+        "size": 298992,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:58+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 298992,
+      "dll": "concrt140.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 16,
+      "size_match": true,
+      "stored_size": 298992,
+      "xvc_offset": "0x6BCB8000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.44",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "9db57e31-8a86-4a2a-89bc-c0d58adf1e87",
+            "pdb_path": "C:\\__w\\1\\s\\libHttpClient\\Out\\x64\\ReleaseSuffix\\libHttpClient.GDK\\libHttpClient.GDK.pdb"
+          }
+        ],
+        "sha256": "14d97b3d071e0ce461e758dbcf1511941ae5c0bdd6e32ed33cb87aaae0414d3a",
+        "size": 975856,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2026-08-31T14:51:26+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 975856,
+      "dll": "libHttpClient.GDK.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 17,
+      "size_match": true,
+      "stored_size": 975856,
+      "xvc_offset": "0x6BD01000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "23b9777b-7712-4031-b591-b304701c1e0f",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "6036fdb3ee3a5813ef0b17462219ebcee5f06b46ef738bacde07aa797e6d2b75",
+        "size": 565232,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:55+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 565232,
+      "dll": "msvcp140.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 18,
+      "size_match": true,
+      "stored_size": 565232,
+      "xvc_offset": "0x6BDF0000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "4aaeb569-93d1-4b29-96b0-5f7efe1442fa",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_1.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "c56b530e0894d9c4d11b12d389786fef40463dbd81d4438b8414f909d6226211",
+        "size": 26104,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:58+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 26104,
+      "dll": "msvcp140_1.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 19,
+      "size_match": true,
+      "stored_size": 26104,
+      "xvc_offset": "0x6BE7A000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "cb08c1d7-4bd0-4395-b19b-889dcb7f7cc3",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_2.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "276813083c55c079120e0db49898088bb0c8d1c912ed59ec0d00fedf56a694a8",
+        "size": 187888,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:23:02+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 187888,
+      "dll": "msvcp140_2.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 20,
+      "size_match": true,
+      "stored_size": 187888,
+      "xvc_offset": "0x6BE81000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "b6742449-ef09-4b23-aa2e-6e769600e9c8",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_atomic_wait.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "b7f879662095f71dc08efcbc0d24ac3c0ff2dde8d475f92f5c5646a39bf8f2c3",
+        "size": 57312,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:58+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 57312,
+      "dll": "msvcp140_atomic_wait.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 21,
+      "size_match": true,
+      "stored_size": 57312,
+      "xvc_offset": "0x6BEAF000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "bddc4c0d-3664-415b-9892-d1984112b7f7",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\msvcp140_codecvt_ids.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "89cf5b07b98709277e8511d9a402ce72279e8df3ae24a8dd641ab0265c799a0c",
+        "size": 22008,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:59+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 22008,
+      "dll": "msvcp140_codecvt_ids.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 22,
+      "size_match": true,
+      "stored_size": 22008,
+      "xvc_offset": "0x6BEBD000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "3cd91d25-852e-4a0d-8922-2f52e7f90626",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\vccorlib140.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "79ee6fa49aa2c6f0dfbc1279273fd619e1a9285995ff53a8bc183000c8895b91",
+        "size": 336888,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T06:00:54+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 336888,
+      "dll": "vccorlib140.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 23,
+      "size_match": true,
+      "stored_size": 336888,
+      "xvc_offset": "0x6BEC3000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 3,
+            "guid": "bfe4e219-4ce5-44e8-a904-17b669189591",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcomp140.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "91e249c0f66f827bcacd0be4931b1cec3e4907cc05ea0a5bcd83696c70908963",
+        "size": 72176,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T06:00:57+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 72176,
+      "dll": "vcomp140.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 24,
+      "size_match": true,
+      "stored_size": 72176,
+      "xvc_offset": "0x6BF16000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "41fa1cfd-9788-4d3d-9a3f-836bbb7d4516",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcruntime140.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "9385104cc3e031dbbcb63f156134a0f6afff455e0ff6887f5a9e1c5f7e2706b0",
+        "size": 97776,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:51+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 97776,
+      "dll": "vcruntime140.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 25,
+      "size_match": true,
+      "stored_size": 97776,
+      "xvc_offset": "0x6BF28000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.29",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "275ae621-c2e7-46b9-8596-f47ed3e3a546",
+            "pdb_path": "D:\\a\\_work\\1\\s\\\\binaries\\amd64ret\\bin\\amd64\\onecore\\\\vcruntime140_1.amd64.onecore.pdb"
+          }
+        ],
+        "sha256": "0dbd6859f825ab8acab1fa25b6bd1a091d35ca2dbe3185c1187192f2d2ac8154",
+        "size": 37848,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2024-10-13T05:22:55+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 37848,
+      "dll": "vcruntime140_1.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 26,
+      "size_match": true,
+      "stored_size": 37848,
+      "xvc_offset": "0x6BF40000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.38",
+        "prior_session_crosscheck": {
+          "checks": {
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [],
+        "sha256": "99f803ac22c01ef329dddb1d40be67238d2a812d01e8d040b3cb5135bc23707e",
+        "size": 884224,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "2026-03-27T15:55:39+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 884224,
+      "dll": "XboxBvhBuilder.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 27,
+      "size_match": true,
+      "stored_size": 884224,
+      "xvc_offset": "0x6BF4A000"
+    },
+    {
+      "blocks_equal_pct": 0.0,
+      "build_identity": {
+        "linker": "14.38",
+        "prior_session_crosscheck": {
+          "checks": {
+            "rsds_age": true,
+            "rsds_guid": true,
+            "size": true,
+            "timestamp": true
+          },
+          "prior_generated_utc_note": "registros da sessao anterior lidos por referencia, nao reexecutados",
+          "status": "CONSISTENT"
+        },
+        "rsds": [
+          {
+            "age": 1,
+            "guid": "48ea46ef-ea0f-5a4b-9b8a-ad80808f7f5e",
+            "pdb_path": "XCurl.pdb"
+          }
+        ],
+        "sha256": "d11ba4e4a07f42f8d80c48553c5c2588ab4114ecdbe023305f5f8fa8262131f8",
+        "size": 199152,
+        "size_equality_is_metadata_correspondence_only": true,
+        "size_equality_note": "tamanho logico igual ao SegmentMetadata e correspondencia de metadados; NAO prova identidade de build",
+        "timestamp_utc": "1972-10-25T11:29:54+00:00"
+      },
+      "classification": "ENCRYPTED_UNCOMPARABLE",
+      "disk_size": 199152,
+      "dll": "XCurl.dll",
+      "first_divergence": 0,
+      "key_id": 0,
+      "manifest_chunk": "1002",
+      "region_encrypted": true,
+      "segment": 28,
+      "size_match": true,
+      "stored_size": 199152,
+      "xvc_offset": "0x6C022000"
+    }
+  ],
+  "schema": "alpha_recovery.dll_provenance/2",
+  "summary": {
+    "by_classification": {
+      "ENCRYPTED_UNCOMPARABLE": 16
+    },
+    "dlls": 16,
+    "sizes_exactly_equal": 16,
+    "sizes_note": "correspondencia de metadados; nao e identidade de build"
+  },
+  "xvc": "G:\\MyGame_v1\\28872443D20A7_1.0.2.1_neutral__k2ss7vbb13xte_xs.xvc"
+}

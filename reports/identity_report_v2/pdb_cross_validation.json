@@ -1,0 +1,21 @@
+{
+  "age_match": true,
+  "guid_match": true,
+  "meaning": "o PDB corresponde exatamente ao link que gerou este PE; evidencia forte de par PE/PDB",
+  "pdb": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\symbols\\platform_master.pdb",
+  "pdb_info": {
+    "age": 19,
+    "guid": "c9822067-6fea-4aa9-9daa-84a94ef73d08",
+    "msf_version": "VC80",
+    "pdb": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\symbols\\platform_master.pdb",
+    "signature": "0x6B00BAE2"
+  },
+  "pe": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\dist\\Release\\platform_master.exe",
+  "rsds": {
+    "age": 19,
+    "guid": "c9822067-6fea-4aa9-9daa-84a94ef73d08",
+    "pdb_path": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\platform_master.pdb",
+    "rva": 2046216
+  },
+  "verdict": "GUID_AGE_MATCH"
+}

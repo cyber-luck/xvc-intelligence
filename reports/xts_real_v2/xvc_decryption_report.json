@@ -1,0 +1,115 @@
+{
+  "key_mapping": {
+    "available_cik": false,
+    "cik_provisioning": {
+      "accepted": "arquivo com 32 bytes binarios ou 64 hex chars (CIK ja desembrulhada, fornecida pelo detentor/canal autorizado)",
+      "mode": "externa e legitima somente",
+      "never_done": [
+        "extracao de chave",
+        "descoberta de chave",
+        "contorno de ODK",
+        "forca bruta"
+      ]
+    },
+    "data_unit_full_audit": {
+      "data_unit_max": "0xE504E13F",
+      "data_unit_min": "0xE5046EA2",
+      "jumps": [],
+      "note": "auditoria integral das entradas de folha; a descriptografia le o data_unit de CADA folha independente desta caracterizacao; descontinuidades, se houver, nao afetam a execucao",
+      "pages_audited": 29342,
+      "strictly_consecutive": true
+    },
+    "data_unit_model": {
+      "first_data_unit": "0xE5046EA2",
+      "first_page": "0x64917",
+      "last_page": "0x6BBB4",
+      "linear_data_unit_sequence": true,
+      "note": "data_unit lidos da entrada de hash (bytes 0x14..0x18); sequencia linear com base propria confirmada por amostragem real; em execucao o valor por pagina SEMPRE vem da folha, nunca extrapolado",
+      "pages": 29342,
+      "samples": [
+        {
+          "data_unit": "0xE5046EA2",
+          "expected_if_linear": "0xE5046EA2",
+          "linear_match": true,
+          "page": "0x64917"
+        },
+        {
+          "data_unit": "0xE5046EA3",
+          "expected_if_linear": "0xE5046EA3",
+          "linear_match": true,
+          "page": "0x64918"
+        },
+        {
+          "data_unit": "0xE504A7F0",
+          "expected_if_linear": "0xE504A7F0",
+          "linear_match": true,
+          "page": "0x68265"
+        },
+        {
+          "data_unit": "0xE504E13E",
+          "expected_if_linear": "0xE504E13E",
+          "linear_match": true,
+          "page": "0x6BBB3"
+        },
+        {
+          "data_unit": "0xE504E13F",
+          "expected_if_linear": "0xE504E13F",
+          "linear_match": true,
+          "page": "0x6BBB4"
+        }
+      ]
+    },
+    "derivation_model": {
+      "applicability_note": "o modelo de derivação ODK->CIK descreve volumes com KeyMaterial preenchido (ex.: gameos.xvd); neste XVC o campo e zero e a CIK regional e externa",
+      "model_source": "xvdtool AesXtsTransform.cs / XanaduXVD; derivado de codigo-fonte publico",
+      "odk_keyslot": "StandardOdk (retail)",
+      "step1": "CIK = AES-256-ECB-decrypt(ODK, KeyMaterial@0x34C) [requer ODK valida]",
+      "step2": "data_key = CIK[0:16] ; tweak_key = CIK[16:32]",
+      "step3": "por pagina: seed=[data_unit|region_id|VDUID] -> XTS-128 sobre unidade de 0x1000"
+    },
+    "key_material_header": {
+      "entropy": -0.0,
+      "is_all_zero": true,
+      "length": 32,
+      "note": "campo ZERO neste XVC: o titulo NAO carrega nem a CIK embrulhada no cabecalho; a chave regional e provisionada externamente (console/licenciamento) pelo keyslot do XvcInfo; o modelo ODK->CIK de KeyMaterial aplica-se a volumes de sistema como gameos.xvd, nao a este titulo",
+      "offset": "0x34C",
+      "present": false,
+      "sha256_fingerprint": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925"
+    },
+    "region": {
+      "id": "0x3E9",
+      "key_id_guid": "d4b2880b-884d-cf1b-eea5-bef5a2a7d4f6",
+      "key_id_index": 0,
+      "keyed": true,
+      "length": 120184832,
+      "offset": "0x64917000",
+      "segment": 12
+    },
+    "schema": "alpha_recovery.xvc_crypto_key_mapping/1",
+    "standard_odk_vs_regional_key": {
+      "consequence": "uma ODK/CIK do gameos.xvd nao se aplica ao XVC do titulo e vice-versa; cada volume desembrulha sua propria CIK",
+      "gameos_xvd": "gameos.xvd (EraOS) usa ODK keyslot StandardOdk para desembrulhar a CIK do PROPRIO volume de sistema; e uma relacao header<->ODK daquele XVD",
+      "xvc_title": "o XVC do titulo tem seu proprio KeyMaterial@0x34C e seu array de keyslots no XvcInfo; a regiao 0x3E9 do executavel usa KeyId 0 do TITULO - nao a mesma relacao do gameos"
+    },
+    "target": "game_scarlett_master.exe"
+  },
+  "note": "nenhuma CIK fornecida; nada foi simulado, nenhum byte decifrado; o pipeline permanece operacional em modo diagnostico",
+  "plaintext": null,
+  "plaintext_validation": null,
+  "roundtrip": null,
+  "schema": "alpha_recovery.xvc_decryption_report/1",
+  "status": "BLOCKED_MISSING_AUTHORIZED_CIK",
+  "storage": {
+    "key_id": 0,
+    "offset": "0x64917000",
+    "region_id": "0x3E9",
+    "segment": 12,
+    "sha256_matches_prior_evidence": true,
+    "sha256_stored_bytes": "79fe15101c861d0e6e3353d24ebba158ae7e0ed61ea79ece199ca91763dba89a",
+    "size": 120181760,
+    "size_matches_expected": true,
+    "stored_bytes_read": 120181760,
+    "target": "game_scarlett_master.exe"
+  },
+  "target": "game_scarlett_master.exe"
+}

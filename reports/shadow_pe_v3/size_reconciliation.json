@@ -1,0 +1,23 @@
+{
+  "actual_size": 120184832,
+  "delta": 3072,
+  "expected_size_stored": 120181760,
+  "hypotheses": [
+    {
+      "delta_matches": true,
+      "detail": "o arquivo gravado termina em 0x400 dentro da pagina; o excedente de 3072 byte(s) bate com os 3072 byte(s) de folga ate o limite da pagina do segmento",
+      "expected_delta": 3072,
+      "id": "page_slack_included_by_extraction",
+      "level": "CONFIRMED",
+      "tail_bytes_equal_xvc_continuation": true
+    }
+  ],
+  "page_math": {
+    "bytes_to_next_page_boundary": 3072,
+    "file_end_within_page": 1024,
+    "page_bytes": 4096,
+    "size_page_aligned": 120184832
+  },
+  "policy": "nenhum truncamento automatico e aplicado; o arquivo real permanece intacto",
+  "schema": "alpha_recovery.size_reconciliation/1"
+}

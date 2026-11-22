@@ -1,0 +1,103 @@
+{
+  "A_generator": {
+    "container_dir": "H:\\xvc-intelligence\\reports\\blind_lab\\container",
+    "data_unit_jumps": [
+      {
+        "delta": 4096,
+        "page": 3
+      }
+    ],
+    "logical_size": 35840,
+    "pages": 9,
+    "sealed_dir": "H:\\xvc-intelligence\\reports\\blind_lab\\sealed",
+    "state": "A_GENERATED"
+  },
+  "B_blind_analysis": {
+    "honest_conclusion": "identificou estrutura, paginas, folhas e data_units; declarou plaintext irrecuperavel sem chave; nenhum byte apresentado como recuperado",
+    "not_recoverable_without_key": {
+      "note": "nada foi simulado; entropia alta nao e prova, mas ausencia de MZ/PE e fato observado",
+      "plaintext": "UNKNOWN - ciphertext AES-XTS sem CIK"
+    },
+    "observed": {
+      "first_page_entropy": 7.95098,
+      "mz_pe_candidates_in_ciphertext": 0
+    },
+    "recoverable_now": {
+      "data_unit_audit": {
+        "entries_read": 9,
+        "jumps": [
+          {
+            "delta": 4097,
+            "page": 3
+          }
+        ],
+        "note": "auditoria integral; a descriptografia le cada folha individualmente",
+        "strictly_consecutive": false
+      },
+      "entry_hash_prefixes_readable": true,
+      "metadata_public": {
+        "catalog_present": true,
+        "container_size": 38912,
+        "has_page_slack": true,
+        "hash_entry_data_unit_offset": 20,
+        "hash_entry_size": 24,
+        "keys_provided": false,
+        "logical_size": 35840,
+        "page_size": 4096,
+        "pages": 9,
+        "partial_last_page_bytes": 3072,
+        "region_id": "0x3E9",
+        "schema": "alpha_recovery.blind_lab.public/1",
+        "target_name": "synthetic_scarlett_master.exe",
+        "vduid8_hex": "b9c45396fd38372a"
+      },
+      "page_structure": {
+        "page_slack_bytes": 3072,
+        "pages": 9,
+        "partial_last_page": 3072
+      }
+    },
+    "state": "B_BLIND_NO_KEYS",
+    "status": "BLOCKED_MISSING_AUTHORIZED_CIK",
+    "target": "synthetic_scarlett_master.exe"
+  },
+  "C_reveal_and_validation": {
+    "catalog_hits": 6,
+    "caveat_demonstrations": {
+      "data_unit_from_every_leaf": true,
+      "note": "round-trip e igual ate com chave errada (nao autentica); a autenticacao veio do plaintext coerente + hash no catalogo + comparacao com a referencia; data_unit lido folha a folha",
+      "wrong_cik_catalog_hits": 0,
+      "wrong_cik_plaintext_incoherent": true,
+      "wrong_cik_reference_mismatch": true,
+      "wrong_cik_roundtrip_still_equal": true
+    },
+    "classification": "COMPLETE_VERIFIED",
+    "custody_claim": "chaves sinteticas reveladas pelo gerador do laboratorio",
+    "identity_status": "TARGET_IDENTITY_VERIFIED",
+    "pe_validation_valid": true,
+    "plaintext": "H:\\xvc-intelligence\\reports\\blind_lab\\revealed_plaintext.bin",
+    "referee_comparison": {
+      "byte_for_byte_equal_to_reference": true,
+      "reference_sha256": "89f8113fe06871916e31bfdf562432aeb48fe33b77e2daa8557e62a90c16ce50",
+      "sha256_matches_reference": true
+    },
+    "state": "C_KEYS_REVEALED"
+  },
+  "all_passed": true,
+  "data_unit_jump_injected": [
+    {
+      "delta": 4096,
+      "page": 3
+    }
+  ],
+  "schema": "alpha_recovery.blind_lab/1",
+  "seed": 20261122,
+  "success_criteria": {
+    "blind_declares_blocked": true,
+    "classification": true,
+    "reveal_byte_equal": true,
+    "reveal_identity": true,
+    "reveal_pe_valid": true,
+    "wrong_cik_rejected_by_evidence": true
+  }
+}

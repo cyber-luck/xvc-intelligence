@@ -1,0 +1,148 @@
+{
+  "schema": "alpha_recovery.key_remnant_hunt/1",
+  "root": "G:\\MyGame_v1\\PROJECT_ALPHA",
+  "files_scanned": 368,
+  "bytes_scanned": 224339248663,
+  "big_files_critical_only": 16,
+  "sensitive_needle": {
+    "kind": "gameos KeyMaterial 32B (CIK embrulhada)",
+    "sha256_fingerprint": "0a95c5a35d35e2ff697cbe53c4e97f66fd7dca6641380b37cd39d068a640a5c8",
+    "raw_bytes_recorded": false
+  },
+  "filename_pattern_hits": [],
+  "content_hits": [
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\common.rpf",
+      "offset": 1979182,
+      "needle": "keyword:ODK",
+      "context_hex": "a990b2ec6a5fd66d270785ccd96798364f444b29bc99e6f49ab9b3df3379a4a4dcfe30a99d6b45c3b74c998b98bd3552",
+      "size": 6642192
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\gameos.xvd",
+      "offset": 844,
+      "needle": "km_raw_32B",
+      "context_hex": "[suprimido: material sensivel]",
+      "size": 348069888
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\gameos.xvd",
+      "offset": 544,
+      "needle": "vduid_gameos_bytes_le",
+      "context_hex": "0000002000000000e8a81ea399293a4f8f22658edd493b6b0000000000000000",
+      "size": 348069888
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\gameos.xvd",
+      "offset": 940,
+      "needle": "pduid_gameos_raw",
+      "context_hex": "0000000000000000b78ddf1f2d874e4abf8b9b507a3f322edd1ef46500000a80",
+      "size": 348069888
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\resource_splash.png",
+      "offset": 282187,
+      "needle": "keyword:CIK",
+      "context_hex": "7795b8d1a26ff6d9cb77b8b2731da3ef43494b96e4d8f25c6d9d835cd00cbae464a42645293563a438510ab15d85fca6",
+      "size": 4014392
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\communication\\2026-11-22_triagem_criptografica_xvc_xvd.md",
+      "offset": 2129,
+      "needle": "vduid_titulo_str",
+      "context_hex": "74494429207c206033323032373139652d623462342d343231632d396638662d37306431633461376436306260207c206f757472",
+      "size": 8126
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\communication\\2026-11-22_triagem_criptografica_xvc_xvd.md",
+      "offset": 4038,
+      "needle": "keyword:CIK",
+      "context_hex": "6520646520636f6e7465c3ba646f202843494b2920c3a920677261766164612063696672616461206e6f0a2020202020",
+      "size": 8126
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\communication\\2026-11-22_triagem_criptografica_xvc_xvd.md",
+      "offset": 4103,
+      "needle": "keyword:ODK",
+      "context_hex": "6d6272756c6861646120636f6d2061204f444b20282a4f66666c696e6520446973747269627574696f6e204b65792a29",
+      "size": 8126
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\shared_minigame000\\data\\ttdb\\terrain\\ttdb_terrain_image_based.ttpf",
+      "offset": 73813,
+      "needle": "keyword:ODK",
+      "context_hex": "ddc528c8a43f6dbfb920933ff45c4de64f444b0ce9a84e0f1e1864feb7f560fd54953871d7b104f97775f983f7a95f3a",
+      "size": 1427712
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\pack\\story000\\data\\ttdb\\vfx\\ttdb_vfx.ttpf",
+      "offset": 1183826,
+      "needle": "keyword:ODK",
+      "context_hex": "1e9f335a77e95f7dc1bd41e709e0a3ec4f444bf4a7fc9a9df0bbb14c81df7c1632ccd5d309f89b4063fd6886e6146e3f",
+      "size": 3357184
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\alpha_inspect.lib",
+      "offset": 534691,
+      "needle": "keyword:CIK",
+      "context_hex": "355240003f3f5f43405f30434c40465043494b4c414c40747261696c65725f73697a653f353f24484c3f333f24434478",
+      "size": 7338900
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\alpha_core.dir\\src\\resources\\asset_io.cpp.obj",
+      "offset": 1527343,
+      "needle": "keyword:CIK",
+      "context_hex": "30003f3f5f43405f30424b40484a494543494b4340656e636f64655f706e673f333f3573697a653f356d69736d617463",
+      "size": 1537890
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\alpha_inspect.dir\\src\\recovered\\rpf9_archive.cpp.obj",
+      "offset": 1407746,
+      "needle": "keyword:CIK",
+      "context_hex": "666940003f3f5f43405f30434c40465043494b4c414c40747261696c65725f73697a653f353f24484c3f333f24434478",
+      "size": 1417695
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\alpha_metadata.dir\\tools\\metadata\\metadata.cpp.obj",
+      "offset": 1298045,
+      "needle": "keyword:ODK",
+      "context_hex": "403f3640003f3f5f43405f30384943424f444b454940646973636f76657240003f3f5f43405f304d40454f4b4a4c4b43",
+      "size": 1307941
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\CMakeFiles\\alpha_tests.dir\\tests\\test_inspect.cpp.obj",
+      "offset": 1483993,
+      "needle": "keyword:ODK",
+      "context_hex": "70616340003f3f5f43405f30434140494f444b45434a4a40696e666c6174655f73746f7265645f626c6f636b735f726f",
+      "size": 2670503
+    },
+    {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\port\\build\\Release\\test_logs\\scene3d_frame.png",
+      "offset": 85233,
+      "needle": "keyword:ODK",
+      "context_hex": "bb1d60d5b63996e8ec356b6ab56a4b874f444b3348ab6a99122676dbd65a65cb6aab3cf120d2a8582a873abdeb5e5648",
+      "size": 737025
+    }
+  ],
+  "hits_classification": {
+    "sensitive_material_outside_source": 0,
+    "identifier_hits_in_docs": [
+      {
+        "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\communication\\2026-11-22_triagem_criptografica_xvc_xvd.md",
+        "offset": 2129,
+        "needle": "vduid_titulo_str",
+        "context_hex": "74494429207c206033323032373139652d623462342d343231632d396638662d37306431633461376436306260207c206f757472",
+        "size": 8126
+      }
+    ],
+    "keyword_hits_note": "palavras-chave de 3 bytes (CIK/ODK) em dados comprimidos/aleatorios sao coincidencias estatisticas esperadas; nenhuma ocorrencia esta em contexto de chave",
+    "in_source_occurrence": {
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\gameos.xvd",
+      "offset": 844,
+      "note": "ocorrencia unica dentro da origem (gameos.xvd 0x34C); nenhum vestigio fora dela"
+    }
+  },
+  "key_material_found_outside_source": 0,
+  "note": "busca de VESTIGIOS deixados em arquivos do ambiente autorizado; nenhuma extracao de chave de conteudo protegido; material sensivel referenciado apenas por fingerprint",
+  "conclusion": "VARREDURA NEGATIVA: o KeyMaterial de 32 bytes (CIK embrulhada, fingerprint 0a95c5a35d35e2ff...) existe APENAS em sua origem (gameos.xvd 0x34C); nenhuma copia em nenhum outro arquivo das 224,339,248,663 bytes varridas; GUIDs de identificacao aparecem apenas em gameos.xvd (origem) e em um documento tecnico benigno; keywords CIK/ODK em dados comprimidos sao coincidencias de 3 bytes sem contexto de chave"
+}

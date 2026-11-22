@@ -1,0 +1,38 @@
+{
+  "candidate_digests": null,
+  "catalog": "G:\\MyGame_v1\\PROJECT_ALPHA\\Catalog000.bin",
+  "hash_hits": [],
+  "name_string_hits": [],
+  "name_string_note": "nome do executavel NAO encontrado em texto claro; associacao por nome UNKNOWN",
+  "pe": {
+    "conclusion": "conteiner de catalogo de codigo Xbox; sem codigo nem ponto de entrada, nao e um programa",
+    "machine": "0x8664",
+    "magic": "0x020b",
+    "sections": [
+      {
+        "name": "#0",
+        "raw_offset": 4096,
+        "raw_size": 811008
+      }
+    ],
+    "subsystem": 17,
+    "subsystem_name": "XBOX_CODE_CATALOG"
+  },
+  "schema": "alpha_recovery.catalog_semantic/1",
+  "section_profile": {
+    "interpretation": "pagina 0 com cabecalho curto + paginas densas de dados binarios: consistente com tabela de hashes do catalogo de codigo; decodificacao campo a campo do formato interno e UNKNOWN (formato interno nao documentado publicamente)",
+    "mean_nonzero_per_full_page": 4070.0,
+    "nonzero_page0_bytes": 64,
+    "pages_4k": 198,
+    "pages_with_content": 198,
+    "raw_offset": 4096,
+    "raw_size": 811008
+  },
+  "signature": {
+    "cryptographic_verification_performed": false,
+    "note": "nenhuma assinatura embutida no catalogo; nada a verificar",
+    "pkcs7_oid_present": false,
+    "security_directory_present": false
+  },
+  "size": 815104
+}

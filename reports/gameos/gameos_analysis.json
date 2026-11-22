@@ -1,0 +1,524 @@
+{
+  "tool": "inspect_xvd/3.0",
+  "files": [
+    {
+      "tool": "inspect_xvd/3.0",
+      "generated_utc": "2026-11-22T17:38:35+00:00",
+      "file": "G:\\MyGame_v1\\PROJECT_ALPHA\\gameos.xvd",
+      "size_bytes": 348069888,
+      "sha256": "d02ff50ae9164e540ce55b60b2f128b5c78bab6bace6e5eee46e584438d9af36",
+      "sha256_note": "full file hash",
+      "header": {
+        "magic": "msft-xvd",
+        "format_version": 3,
+        "volume_flags": {
+          "raw": "0x00000001",
+          "enabled": [
+            "ReadOnly"
+          ],
+          "unknown_mask": "0x00000000"
+        },
+        "encryption_enabled": true,
+        "integrity_enabled": true,
+        "resiliency_enabled": false,
+        "sector_size": 4096,
+        "creation_filetime": 134333841994778172,
+        "creation_utc": "2026-09-08T23:36:39.477817+00:00",
+        "xvd_type": "Dynamic",
+        "content_type": {
+          "id": 3,
+          "name": "EraOS"
+        },
+        "is_xvc_by_content_type": false,
+        "identity": {
+          "content_id": "a31ea8e8-2999-4f3a-8f22-658edd493b6b",
+          "user_id": "00000000-0000-0000-0000-000000000000",
+          "embedded_xvd_pduid": "00000000-0000-0000-0000-000000000000",
+          "sandbox_id": "",
+          "product_id": "00000000-0000-0000-0000-000000000000",
+          "package_pduid_build_id": "1fdf8db7-872d-4a4e-bf8b-9b507a3f322e",
+          "package_version": "32778.0.26100.7901",
+          "required_system_version": "0.0.0.0"
+        },
+        "sizes": {
+          "drive_size": 536870912,
+          "embedded_xvd_length": 0,
+          "user_data_length": 33107968,
+          "xvc_data_length": 0,
+          "dynamic_header_length": 3276,
+          "block_size": 696320
+        },
+        "hashes": {
+          "top_hash_block_sha256": "b9b8b7584b86acef9eb68826f27b6f87b4dbd90af52d422a710f67a6515a182e",
+          "original_xvc_data_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "pe_catalog_hash": "3f4dce53319da61603392e9155da0e0ee84d5f1f9be2df560f8c93f5a98f44f1",
+          "user_data_hash": "272894d4c0eeaa87005c6f91a82f412e41ca0d93b8f3b2538e97500460d1bfd1"
+        },
+        "capabilities": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pe_catalog_caps": [
+          3,
+          0,
+          0,
+          0,
+          16385,
+          8193,
+          9,
+          24605,
+          16387,
+          8194,
+          9,
+          0,
+          16385,
+          8193,
+          9,
+          0
+        ],
+        "pe_catalogs_sha256": [
+          "60b2ddf64368a7f41b4846b6294245914a28fcbf57daa2d94cd16263ea7fe56f",
+          "bc2779c13e5d8d70f45af427068d5d0635f37350f3a34083e83811988615e06d",
+          "6eddec4e4ba8a93f2e6e8382c1d84a121bb26cf9eedb121ec41da3e2f5a6232c",
+          "bea01d05c96524e12c06b405b9732fa7f8fcef8d0e921a6e005663b9b8b3b509"
+        ],
+        "key_material_present": true,
+        "key_material_note": "key material deliberately not included in JSON output",
+        "mutable_data_page_count": 0,
+        "platform_mask_candidate": 0,
+        "sequence_number": 0,
+        "odk_keyslot_id": 0,
+        "persistent_local_storage_size": 0,
+        "writeable_expiration_date_raw": 0,
+        "writeable_policy_flags": 0,
+        "resilient_data_offset": 0,
+        "resilient_data_length": 0,
+        "extensions": [
+          {
+            "index": 0,
+            "header_offset": "0x29c",
+            "code": 0,
+            "length": 0,
+            "offset": 0,
+            "data_length": 0,
+            "reserved": 0,
+            "empty": true
+          },
+          {
+            "index": 1,
+            "header_offset": "0x2b4",
+            "code": 0,
+            "length": 0,
+            "offset": 0,
+            "data_length": 0,
+            "reserved": 0,
+            "empty": true
+          },
+          {
+            "index": 2,
+            "header_offset": "0x2cc",
+            "code": 0,
+            "length": 0,
+            "offset": 0,
+            "data_length": 0,
+            "reserved": 0,
+            "empty": true
+          },
+          {
+            "index": 3,
+            "header_offset": "0x2e4",
+            "code": 0,
+            "length": 0,
+            "offset": 0,
+            "data_length": 0,
+            "reserved": 0,
+            "empty": true
+          }
+        ],
+        "signature": {
+          "offset": 0,
+          "length": 512,
+          "nonzero": true,
+          "entropy": 7.5956,
+          "cryptographically_verified": false
+        }
+      },
+      "layout": {
+        "sections": [
+          {
+            "name": "header",
+            "offset": 0,
+            "end_exclusive": 12288,
+            "length": 12288,
+            "fits_in_file": true,
+            "meaning": "XVD reserved header (0x200 RSA + 0x2E00)"
+          },
+          {
+            "name": "embedded_xvd",
+            "offset": 12288,
+            "end_exclusive": 12288,
+            "length": 0,
+            "fits_in_file": true,
+            "meaning": "embedded XVD, page-padded"
+          },
+          {
+            "name": "mutable_metadata",
+            "offset": 12288,
+            "end_exclusive": 12288,
+            "length": 0,
+            "fits_in_file": true,
+            "meaning": "mutable metadata pages"
+          },
+          {
+            "name": "hash_tree",
+            "offset": 12288,
+            "end_exclusive": 3391488,
+            "length": 3379200,
+            "fits_in_file": true,
+            "meaning": "integrity hash-tree pages; if enabled"
+          },
+          {
+            "name": "user_data",
+            "offset": 3391488,
+            "end_exclusive": 36499456,
+            "length": 33107968,
+            "fits_in_file": true,
+            "meaning": "persistent local storage (user data)"
+          },
+          {
+            "name": "xvc_info",
+            "offset": 36499456,
+            "end_exclusive": 36499456,
+            "length": 0,
+            "fits_in_file": true,
+            "meaning": "XVC descriptor (when present)"
+          },
+          {
+            "name": "dynamic_header",
+            "offset": 36499456,
+            "end_exclusive": 36503552,
+            "length": 4096,
+            "fits_in_file": true,
+            "meaning": "BAT/dynamic header (when present)"
+          },
+          {
+            "name": "drive_data",
+            "offset": 36503552,
+            "end_exclusive": 36503552,
+            "length": 0,
+            "fits_in_file": true,
+            "meaning": "data section starts here; physical allocation varies"
+          }
+        ],
+        "hash_tree_levels": 3,
+        "hash_tree_pages": 825,
+        "hashed_pages": 139156,
+        "drive_data_offset_estimate": 36503552,
+        "note": "Metadata layout follows xvdtool; dynamic/BAT and XVC regions may be noncontiguous."
+      },
+      "xvc_descriptor": null,
+      "first_nonzero_in_probe_after_0x3000": 12288,
+      "first_nonzero_note": "probe only up to 0x10000; NOT a filesystem offset",
+      "hex_0x200_0x2c0": [
+        "00000200  6d 73 66 74 2d 78 76 64 01 00 00 00 03 00 00 00 |msft-xvd........|",
+        "00000210  3c 86 69 e5 ea 3f dd 01 00 00 00 20 00 00 00 00 |<.i..?..... ....|",
+        "00000220  e8 a8 1e a3 99 29 3a 4f 8f 22 65 8e dd 49 3b 6b |.....):O.\"e..I;k|",
+        "00000230  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|",
+        "00000240  b9 b8 b7 58 4b 86 ac ef 9e b6 88 26 f2 7b 6f 87 |...XK......&.{o.|",
+        "00000250  b4 db d9 0a f5 2d 42 2a 71 0f 67 a6 51 5a 18 2e |.....-B*q.g.QZ..|",
+        "00000260  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|",
+        "00000270  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|",
+        "00000280  01 00 00 00 03 00 00 00 00 00 00 00 00 30 f9 01 |.............0..|",
+        "00000290  00 00 00 00 cc 0c 00 00 00 a0 0a 00 00 00 00 00 |................|",
+        "000002a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|",
+        "000002b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|"
+      ],
+      "warnings": [],
+      "not_performed": [
+        "RSA signature verification",
+        "decryption",
+        "mount",
+        "filesystem extraction"
+      ],
+      "sources": [
+        "https://github.com/emoose/xvdtool/blob/master/LibXboxOne/XVD/XVDStructs.cs",
+        "https://github.com/emoose/xvdtool/blob/master/LibXboxOne/XVD/XVDFile.cs",
+        "https://github.com/xboxoneresearch/XanaduXVD/blob/main/src/XVDTypes.h"
+      ],
+      "integrity_verification": {
+        "mode": "full",
+        "status": "partial",
+        "root": {
+          "verified": true,
+          "expected": "b9b8b7584b86acef9eb68826f27b6f87b4dbd90af52d422a710f67a6515a182e",
+          "computed": "b9b8b7584b86acef9eb68826f27b6f87b4dbd90af52d422a710f67a6515a182e"
+        },
+        "tree": {
+          "checked": 824,
+          "mismatches": 0,
+          "verified": true
+        },
+        "data": {
+          "expected_pages": 139156,
+          "checked_pages": 84150,
+          "mismatches": 0,
+          "coverage_complete": false
+        },
+        "errors": [],
+        "limitations": [
+          "dynamic XVD: checked sequential physical pages, not all virtual BAT mappings",
+          "expected 139156 hashed pages, 84150 physical pages checked"
+        ]
+      },
+      "crypto_audit": {
+        "performed": true,
+        "cipher": "AES-128-XTS, 0x1000-byte data unit (page)",
+        "reference": "xvdtool AesXtsTransform.cs / XVDFile.cs; XanaduXVD XVDTypes.h",
+        "encryption_enabled": true,
+        "integrity_enabled": true,
+        "key_derivation_model": {
+          "step1": "CIK = AES-256-ECB-decrypt(ODK, KeyMaterial@0x34c)   [requires a valid ODK]",
+          "step2": "data_key = CIK[0:16] ; tweak_key = CIK[16:32]",
+          "step3": "per page: build 16-byte seed, AES-ECB(tweak_key) it, then XOR/AES/XOR (XTS)",
+          "odk_keyslot_id": 0,
+          "odk_keyslot_name": "StandardOdk",
+          "odk_available": false,
+          "cik_source": "derived from the header KeyMaterial via the ODK; not a separate file"
+        },
+        "key_material": {
+          "offset": "0x34c",
+          "length": 32,
+          "present": true,
+          "entropy": 4.875,
+          "sha256_fingerprint": "0a95c5a35d35e2ff697cbe53c4e97f66fd7dca6641380b37cd39d068a640a5c8",
+          "note": "ODK-wrapped CIK; raw bytes deliberately NOT exported (fingerprint is one-way)"
+        },
+        "tweak_model": {
+          "data_unit_size": 4096,
+          "seed_layout": [
+            {
+              "bytes": "0x00-0x03",
+              "field": "data_unit (uint32 LE)",
+              "source": "trailing 4 bytes of this page's hash-tree entry"
+            },
+            {
+              "bytes": "0x04-0x07",
+              "field": "section_id (uint32 LE)",
+              "source": "1 for non-XVC (reference model)"
+            },
+            {
+              "bytes": "0x08-0x0f",
+              "field": "VDUID[0:8]",
+              "source": "header 0x220",
+              "value": "e8a81ea399293a4f"
+            }
+          ],
+          "post_transform": "seed -> AES-ECB(tweak_key); per 16-byte block multiply in GF(2^128) with 0x87",
+          "caveat": "bytes 0x04-0x0f follow the xvdtool reference model; not independently confirmed without a key"
+        },
+        "diffusive": {
+          "DiffusiveDisabled_flag": false,
+          "note": "xvdtool's XTS path shows no separate diffuser; whether EraOS applies a second diffusive pass is a hypothesis to verify, not an established fact."
+        },
+        "regions": {
+          "plaintext": [
+            "header (0x0-0x3000)",
+            "hash_tree (hashes over ciphertext pages)"
+          ],
+          "encrypted_requires_key": [
+            {
+              "name": "user_data",
+              "offset": "0x33c000",
+              "length": 33107968
+            },
+            {
+              "name": "dynamic_header_BAT",
+              "offset": "0x22cf000",
+              "length": 4096,
+              "note": "left encrypted; not decoded until a valid key is present"
+            },
+            {
+              "name": "drive_data",
+              "offset": "0x22d0000",
+              "length": 0,
+              "note": "dynamic image: physical allocation driven by the (encrypted) BAT"
+            }
+          ]
+        },
+        "sample_data_units": [
+          {
+            "virtual_block": 0,
+            "physical_offset": "0x33c000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x0",
+            "data_unit": 0,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0000000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 1,
+            "physical_offset": "0x33d000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x18",
+            "data_unit": 1,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0100000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 2,
+            "physical_offset": "0x33e000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x30",
+            "data_unit": 2,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0200000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 3,
+            "physical_offset": "0x33f000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x48",
+            "data_unit": 3,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0300000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 4,
+            "physical_offset": "0x340000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x60",
+            "data_unit": 4,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0400000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 5,
+            "physical_offset": "0x341000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x78",
+            "data_unit": 5,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0500000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 6,
+            "physical_offset": "0x342000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x90",
+            "data_unit": 6,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0600000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 7,
+            "physical_offset": "0x343000",
+            "hash_tree_page": 6,
+            "entry_offset": "0xa8",
+            "data_unit": 7,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0700000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 8,
+            "physical_offset": "0x344000",
+            "hash_tree_page": 6,
+            "entry_offset": "0xc0",
+            "data_unit": 8,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0800000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 9,
+            "physical_offset": "0x345000",
+            "hash_tree_page": 6,
+            "entry_offset": "0xd8",
+            "data_unit": 9,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0900000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 10,
+            "physical_offset": "0x346000",
+            "hash_tree_page": 6,
+            "entry_offset": "0xf0",
+            "data_unit": 10,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0a00000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 11,
+            "physical_offset": "0x347000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x108",
+            "data_unit": 11,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0b00000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 12,
+            "physical_offset": "0x348000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x120",
+            "data_unit": 12,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0c00000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 13,
+            "physical_offset": "0x349000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x138",
+            "data_unit": 13,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0d00000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 14,
+            "physical_offset": "0x34a000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x150",
+            "data_unit": 14,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0e00000001000000e8a81ea399293a4f"
+          },
+          {
+            "virtual_block": 15,
+            "physical_offset": "0x34b000",
+            "hash_tree_page": 6,
+            "entry_offset": "0x168",
+            "data_unit": 15,
+            "data_unit_equals_block": true,
+            "tweak_seed_model": "0f00000001000000e8a81ea399293a4f"
+          }
+        ],
+        "sample_note": "data_unit is read from the hash entry via CalculateHashBlockNumForBlockNum; for a dynamic XVD it need not equal the physical index everywhere, since the BAT remaps virtual to physical pages.",
+        "decryption_prerequisites": [
+          "Valid ODK for keyslot 0 (StandardOdk) - NOT present",
+          "Unwrap the CIK from KeyMaterial@0x34c via AES-256-ECB",
+          "AES-128-XTS decrypt each data unit using its hash-entry unit number",
+          "Decode the (still-encrypted here) BAT to map virtual->physical, then mount the filesystem"
+        ],
+        "can_decrypt_now": false,
+        "guarantees": [
+          "no key material exported (one-way fingerprint only)",
+          "no decryption attempted",
+          "BAT / dynamic header left encrypted",
+          "source image not modified"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "correlations": {
+    "product_id": [],
+    "content_id": [],
+    "package_pduid_build_id": [],
+    "embedded_xvd_pduid": []
+  }
+}
