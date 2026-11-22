@@ -214,7 +214,9 @@ class XvdHeader:
             "OriginalXvcDataHash": self.original_xvc_data_hash.hex(),
             "PECatalogHash": self.pe_catalog_hash.hex(),
             "EmbeddedXVD_PDUID": self.embedded_xvd_pduid.hex(),
-            "KeyMaterial": "zeros" if not any(self.key_material) else "nao-zero (nao usado)",
+            "KeyMaterial": ("zeros" if not any(self.key_material) else
+                            "nao-zero (XVC: nao usado pelo xvdtool)" if self.is_xvc else
+                            "nao-zero (XVD nao-XVC: CIK selada com a ODK, xvdtool CryptHeaderCik)"),
             "UserDataHash": self.user_data_hash.hex(),
             "SandboxId": self.sandbox_id.hex(),
             "ProductId": self.product_id.hex(),
