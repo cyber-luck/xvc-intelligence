@@ -59,4 +59,4 @@ Dependências: `formats` não conhece `engines`; `engines` lê o pacote só por 
 | Folha × página de dados | início, meio e fim de cada região, mais 32 páginas aleatórias | `--samples` |
 | Modelo RLE da tabela | início, meio e fim de cada uma das 76.469 sequências | `--full-pages` (todas as 54.605.307 páginas de drive, lendo só as folhas) |
 
-Por regra, o projeto **não** calcula o hash completo das regiões e segmentos grandes. No pacote real ficaram fora 15 regiões e 59 segmentos acima de 160 MB. Para eles, as regras de hash continuam INFERRED.
+Por padrão, o projeto calcula o hash completo apenas das regiões e segmentos até 160 MB; acima disso é pulado e relatado. Rodando com `--cap-mb` acima do tamanho do pacote (hash completo, ~440 GB lidos), as 15 regiões e 59 segmentos acima de 160 MB **foram verificados**: 28/28 regiões e 108/108 segmentos conferem. As regras de hash de região e segmento estão, portanto, CONFIRMED em cobertura completa — ver [resumo-hashes-completos.md](resumo-hashes-completos.md) e `reports/full_hashes_result.json`.
